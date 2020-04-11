@@ -15,7 +15,7 @@ $flexColumn: column;
 
 // layout
 body {
-  font-family: proxima-nova-condensed, 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
@@ -29,6 +29,7 @@ body {
     flex-direction: column;
   }
 }
+
 
 // parts
 a {
@@ -123,58 +124,56 @@ small {
 
 // margin
 $marginL : 0 1vw;
-$marginM : 0 5.625rem;
-$marginS : 0 2.5rem;
-// "width:1641px以上　広がる（参考URLのとおり）
-@media screen and (min-width: 1641px) {
-  header {
-    margin: $marginL;
-    &.flex-box {
-    justify-content: space-around;
-    }
-    #header-top {
-      padding: $marginL;
-    }
-  }
-}
+$marginM : 0 90px;
+$marginS : 0 40px;
+
 
 // width:1201px〜1640px　マージン左右:90px
 @media screen and (min-width: 1201px) and (max-width: 1640px) {
-  header, section, footer {
+  section {
     margin: $marginM;
-    #header-top {
-      padding: $marginM;
-    }
   }
 }
 
 // width:769px〜1200px　マージン左右:40px"
 @media screen and (min-width: 769px) and (max-width: 1200px) {
-  header, section, footer {
+  section {
     margin: $marginS;
-    #header-top {
-      padding: $marginS;
-    }
   }
 }
 
 /* header 
 通常h320 スクロールh200
 */
+
+header {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 #header-top {
   height: 160px;
-  width: auto;
-  transition: .3s;
+  max-width: 1440px;
+  margin: 0 auto;
+  transition: 0.5s;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 999;
   background-color: #fff;
+  &::before {
+    content: "";
+    background: #fff;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
   .logo {
     img {
-      transition: .3s;
-      transform-origin: left;
+      width: 169px;
     }
   }
   &.flex-box {
@@ -182,31 +181,29 @@ $marginS : 0 2.5rem;
     align-items: center;
   }
   &.scrolled {
-    height: 100px;
-    .logo {
-      img {
-        transform: scale(.5) ;
-      }
-    }
+    height: 80px;
   }
-
-  .header-inner {
-    &.menu {
+  .menu {
+    ul {
+      margin: 0;
       li {
         &:not(:last-child) {
-          margin-right: 2.38vw;
+          margin-right: 42px;
         }
       }
-      a {
-        font-size: 15px;
+    }
+    a {
+      font-family: proxima-nova-condensed, sans-serif !important;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      color: transparent;
+      background: linear-gradient(to right, #000 0%,#000 100%);
+      -webkit-background-clip: text;
+      &:hover {
         color: transparent;
-        background: linear-gradient(to right, #000 0%,#000 100%);
+        background: linear-gradient(to right, #fb5fb7 0%,#00a1d7 100%);
         -webkit-background-clip: text;
-        &:hover {
-          color: transparent;
-          background: linear-gradient(to right, #fb5fb7 0%,#00a1d7 100%);
-          -webkit-background-clip: text;
-        }
       }
     }
   }
@@ -360,7 +357,7 @@ section {
   }
   h2 {
     font-size: 40px;
-    font-family: abril-text, serif;
+    font-family: "abril-text", serif;
     font-weight: 400;
     font-style: normal;
   }
@@ -797,8 +794,11 @@ section {
   }
 }
 
+
 // footer
-#footer {
+footer {
+  width: 960px;
+  margin: 0 auto;
   padding-top: 75px;
   h2 {
   }
@@ -863,4 +863,42 @@ small {
   text-align: center;
   font-size: 10px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1640px) {
+  footer {
+    width: auto;
+    margin: $marginM;
+  }
+}
+
+@media (max-width: 1440px) {
+  header {
+    margin: $marginM;
+  }
+  #header-top {
+    padding: $marginM;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  header {
+    margin: $marginS;
+  }
+  #header-top {
+    padding: $marginS;
+    .menu {
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-right: 35px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    margin: $marginS;
+  }
 }
