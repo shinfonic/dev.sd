@@ -127,25 +127,9 @@ $marginL : 0 1vw;
 $marginM : 0 90px;
 $marginS : 0 40px;
 
-
-// width:1201px〜1640px　マージン左右:90px
-@media screen and (min-width: 1201px) and (max-width: 1640px) {
-  section {
-    margin: $marginM;
-  }
-}
-
-// width:769px〜1200px　マージン左右:40px"
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  section {
-    margin: $marginS;
-  }
-}
-
 /* header 
 通常h320 スクロールh200
 */
-
 header {
   max-width: 1440px;
   margin: 0 auto;
@@ -337,9 +321,11 @@ header {
   img {
     margin-right: 25px;
     width: 80px;
+    height: 2px;
   }
   span {
     font-size: 16px;
+    font-family: proxima-nova-condensed, sans-serif !important;
   }
   +h2 {
     margin-bottom: 40px;
@@ -351,10 +337,11 @@ header {
   margin-bottom: 50px; //仮
 }
 
+
 section {
-  &.section {
-    margin-bottom: 125px;
-  }
+  width: 1280px;
+  padding: 70px 160px;
+  margin: 0 auto 25px;
   h2 {
     font-size: 40px;
     font-family: "abril-text", serif;
@@ -730,7 +717,7 @@ section {
 // news
 #news {
   position: relative;
-  padding: 75px 90px 65px;
+  padding-bottom: 50px;
   margin-bottom: 150px;
   &::before,
   &::after {
@@ -745,7 +732,7 @@ section {
   }
   &::before {
     z-index: -1;
-    background-image: url('../img/bg-service-noise.png');
+    background-image: url('/img/bg-service-noise.png');
   }
   &::after {
     z-index: -2;
@@ -753,25 +740,30 @@ section {
     opacity: .1; //仮
   }
   .title-head {
-    margin-bottom: 50px; //仮
+    margin-bottom: 35px; //仮
   }
   h2 {
-    margin-bottom: 50px; //仮
+    margin-bottom: 40px; //仮
   }
   ul {
     li {
-      padding: 15px 0; //仮
-      border-bottom: 2px dashed $colorBlack;
+      font-size: 14px;
+      padding: 11px 0; //仮
+      border-bottom: 1px dashed $colorBlack;
     }
   }
   .news-date {
+    font-size: 13px;
     font-weight: bold;
-    margin-right: 100px;
+    letter-spacing: 0.25em;
+    width: 165px;
+    flex-shrink: 0;
   }
 }
 
 // contact
 #contact {
+  width: auto;
   margin: 0;
   padding: 95px 0 85px;
   background-color: #000;
@@ -867,6 +859,12 @@ small {
 }
 
 @media (max-width: 1640px) {
+  section {
+    width: auto;
+    margin: $marginM;
+    padding-left: 9%;
+    padding-right: 9%;
+  }
   footer {
     width: auto;
     margin: $marginM;
@@ -898,6 +896,9 @@ small {
         }
       }
     }
+  }
+  section {
+    margin: $marginS;
   }
   footer {
     margin: $marginS;

@@ -348,12 +348,6 @@ ul {
 .cont-fade.slide-up {
   transform: translate(0, 100px); }
 
-@media screen and (min-width: 1201px) and (max-width: 1640px) {
-  section {
-    margin: 0 90px; } }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  section {
-    margin: 0 40px; } }
 /* header 
 通常h320 スクロールh200
 */
@@ -497,23 +491,27 @@ header {
   margin-bottom: 50px; }
   .title-head img {
     margin-right: 25px;
-    width: 80px; }
+    width: 80px;
+    height: 2px; }
   .title-head span {
-    font-size: 16px; }
+    font-size: 16px;
+    font-family: proxima-nova-condensed, sans-serif !important; }
   .title-head + h2 {
     margin-bottom: 40px; }
 
 .cont-box {
   margin-bottom: 50px; }
 
-section.section {
-  margin-bottom: 125px; }
-section h2 {
-  font-size: 40px;
-  font-family: "abril-text", serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1; }
+section {
+  width: 1280px;
+  padding: 70px 160px;
+  margin: 0 auto 25px; }
+  section h2 {
+    font-size: 40px;
+    font-family: "abril-text", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1; }
 
 .common #concept .sec-content {
   padding: 0; }
@@ -780,7 +778,7 @@ section h2 {
     transform: translateX(-200%); } }
 #news {
   position: relative;
-  padding: 75px 90px 65px;
+  padding-bottom: 50px;
   margin-bottom: 150px; }
   #news::before, #news::after {
     content: '';
@@ -793,23 +791,28 @@ section h2 {
     height: 100%; }
   #news::before {
     z-index: -1;
-    background-image: url("../img/bg-service-noise.png"); }
+    background-image: url("/img/bg-service-noise.png"); }
   #news::after {
     z-index: -2;
     background: linear-gradient(to right, #fb5fb7 0%, #00a1d7 100%);
     opacity: .1; }
   #news .title-head {
-    margin-bottom: 50px; }
+    margin-bottom: 35px; }
   #news h2 {
-    margin-bottom: 50px; }
+    margin-bottom: 40px; }
   #news ul li {
-    padding: 15px 0;
-    border-bottom: 2px dashed #000; }
+    font-size: 14px;
+    padding: 11px 0;
+    border-bottom: 1px dashed #000; }
   #news .news-date {
+    font-size: 13px;
     font-weight: bold;
-    margin-right: 100px; }
+    letter-spacing: 0.25em;
+    width: 165px;
+    flex-shrink: 0; }
 
 #contact {
+  width: auto;
   margin: 0;
   padding: 95px 0 85px;
   background-color: #000;
@@ -882,6 +885,12 @@ small {
   margin-bottom: 30px; }
 
 @media (max-width: 1640px) {
+  section {
+    width: auto;
+    margin: 0 90px;
+    padding-left: 9%;
+    padding-right: 9%; }
+
   footer {
     width: auto;
     margin: 0 90px; } }
@@ -899,6 +908,9 @@ small {
     padding: 0 40px; }
     #header-top .menu ul li:not(:last-child) {
       margin-right: 35px; }
+
+  section {
+    margin: 0 40px; }
 
   footer {
     margin: 0 40px; } }
