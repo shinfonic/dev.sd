@@ -360,6 +360,7 @@ section {
     font-family: "abril-text", serif;
     font-weight: 400;
     font-style: normal;
+    line-height: 1;
   }
 }
 
@@ -772,15 +773,17 @@ section {
 // contact
 #contact {
   margin: 0;
-  padding: 180px 0;
+  padding: 95px 0 85px;
   background-color: #000;
-  background-image: url('../img/bg-noise.png');
+  background-image: url('/img/bg-noise.png');
   background-size: cover;
   color: $colorWhite;
-  h2, p {
-    text-align: center;
+  text-align: center;
+  h2 {
+    margin-bottom: 45px
   }
   p {
+    line-height: 2.14;
     margin-bottom: 50px;
   }
   .link-box {
@@ -800,8 +803,6 @@ footer {
   width: 960px;
   margin: 0 auto;
   padding-top: 75px;
-  h2 {
-  }
   .footer-logo {
     width: 143px;
     height: 39px;
