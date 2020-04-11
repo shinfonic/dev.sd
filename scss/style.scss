@@ -15,7 +15,7 @@ $flexColumn: column;
 
 // layout
 body {
-  font-family: 'proxima-nova', 'Noto Sans JP', sans-serif;
+  font-family: proxima-nova-condensed, 'Noto Sans JP', sans-serif;
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
@@ -360,7 +360,7 @@ section {
   }
   h2 {
     font-size: 40px;
-    font-family: abril-display, serif;
+    font-family: abril-text, serif;
     font-weight: 400;
     font-style: normal;
   }
