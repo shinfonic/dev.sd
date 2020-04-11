@@ -1,0 +1,16 @@
+AuthUserFile /home/i-bcy/www/dev/.htpasswd
+AuthType Basic
+AuthName "Web access"
+Require valid-user
+Satisfy any
+Order allow,deny
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  
+  RewriteCond %{THE_REQUEST} ^.*/index.(html|php)
+  RewriteRule ^(.*)index.(html|php)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
