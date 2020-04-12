@@ -452,32 +452,30 @@ header {
       left: 0; }
   #main-visual .arrowWrap {
     position: absolute;
-    right: -2px;
-    bottom: -70px;
-    left: 0;
+    bottom: -63px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1; }
-  #main-visual .arrowInner p {
-    font-size: 12px;
-    text-align: center;
-    margin-bottom: 0; }
-  #main-visual .arrow {
-    width: 1px;
-    height: 100px;
-    margin: 50px auto 0;
-    background-color: #eee;
-    position: relative;
-    overflow: hidden; }
-  #main-visual .arrow::before {
-    content: '';
-    width: 2px;
-    height: 140px;
-    margin: 50px auto 0;
-    background-color: #000;
-    position: absolute;
-    top: -150px;
-    left: 0;
-    -webkit-animation: arrow 2.5s ease 0s infinite normal;
-    animation: arrow 2.5s ease 0s infinite normal; }
+    #main-visual .arrowWrap .arrowInner .arrow {
+      width: 1px;
+      height: 70px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden; }
+      #main-visual .arrowWrap .arrowInner .arrow::before {
+        content: '';
+        width: 1px;
+        height: 70px;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: scroll_effect 2s 2s cubic-bezier(0.3, 0.4, 0.1, 1) infinite; }
+    #main-visual .arrowWrap .arrowInner p {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 0; }
 
 @keyframes arrow {
   0% {
@@ -489,6 +487,15 @@ header {
   100% {
     -webkit-transform: translate3d(-50%, 100px, 0);
     transform: translate3d(-50%, 100px, 0); } }
+@keyframes scroll_effect {
+  0% {
+    height: 0; }
+  50% {
+    height: 70px; }
+  75% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(100%); } }
 .title-head {
   margin-bottom: 35px; }
   .title-head img {
@@ -508,7 +515,7 @@ section {
   width: 1280px;
   padding-top: 70px;
   padding-bottom: 70px;
-  margin: 0 auto 25px; }
+  margin: 0 auto; }
   section h2 {
     font-size: 40px;
     font-family: "abril-text", serif;
@@ -522,67 +529,53 @@ section {
   width: 50%; }
 
 #concept {
+  background: #fff;
   position: relative;
   margin-top: 60px;
-  margin-right: 0;
-  margin-left: 0;
-  overflow: hidden;
-  padding-bottom: 140px; }
-  #concept::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 90px;
-    z-index: -1;
-    background-image: url("../img/bg-noise.png");
-    width: 100%;
-    height: 400px; }
-  #concept::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 90px;
-    z-index: -2;
-    background: linear-gradient(to right, #fb5fb7 0%, #00a1d7 100%);
-    width: 100%;
-    height: 100%;
-    height: 400px; }
-  #concept h3 {
-    font-size: 18px; }
+  padding-top: 100px;
+  padding-bottom: 125px; }
   #concept .sec-content {
-    background-color: #fff;
-    padding: 90px 90px 125px; }
-    @media screen and (min-width: 1641px) {
-      #concept .sec-content {
-        margin: 0 1vw;
-        margin-right: 180px; } }
-    @media screen and (min-width: 1201px) and (max-width: 1440px) {
-      #concept .sec-content {
-        margin: 0 90px;
-        margin-right: 180px; } }
-    @media screen and (min-width: 769px) and (max-width: 1200px) {
-      #concept .sec-content {
-        margin: 0 40px;
-        margin-right: 180px; } }
-  #concept .sec-content-item {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between; }
-    #concept .sec-content-item:nth-child(1) {
-      margin-right: 10vw; }
-    #concept .sec-content-item:nth-child(2) {
-      position: relative; }
-    #concept .sec-content-item p {
-      line-height: 2;
-      font-size: 14px;
-      margin-bottom: 50px; }
-      #concept .sec-content-item p:last-child {
-        margin-bottom: 0; }
+    #concept .sec-content .sec-content-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      #concept .sec-content .sec-content-item:nth-child(1) {
+        margin-right: 40px; }
+      #concept .sec-content .sec-content-item:nth-child(2) {
+        width: 600px;
+        position: relative; }
+      #concept .sec-content .sec-content-item p {
+        line-height: 2.14;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        margin-bottom: 30px; }
+        #concept .sec-content .sec-content-item p:last-child {
+          margin-bottom: 0; }
   #concept .bg-concept {
     position: absolute;
     top: 0;
-    right: 90px;
-    width: 45%; }
+    right: -80px;
+    width: 51%; }
+
+.concept-bg {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: -10; }
+  .concept-bg::before, .concept-bg::after {
+    content: '';
+    position: absolute;
+    top: -310px;
+    left: 0;
+    width: 100vw;
+    height: 450px; }
+  .concept-bg::before {
+    background-image: url("/img/bg-noise.png");
+    z-index: -10; }
+  .concept-bg::after {
+    z-index: -20;
+    background: linear-gradient(to right, #fb5fb7 0%, #00a1d7 100%); }
 
 @media screen and (min-width: 1641px) {
   .common .section {
@@ -601,7 +594,8 @@ section {
 
 #service {
   position: relative;
-  margin-bottom: 150px; }
+  margin-top: 220px;
+  margin-bottom: 80px; }
   #service::before, #service::after {
     content: '';
     position: absolute;
@@ -679,7 +673,7 @@ section {
     margin: 0 auto; }
 
 #works {
-  display: none; }
+  margin-bottom: 55px; }
   #works .flex-box {
     justify-content: space-between;
     align-items: start; }
@@ -705,9 +699,12 @@ section {
       #works .loop-box li img {
         width: 100%; }
   #works .loop-box ul:first-child {
+    animation: loop 120s -60s linear infinite;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     will-change: transform; }
+  #works .loop-box ul + ul {
+    animation: loop2 120s linear infinite; }
 @keyframes loop {
   0% {
     transform: translateX(90%); }
@@ -826,7 +823,8 @@ small {
   margin-bottom: 30px; }
 
 @media (max-width: 1640px) {
-  section {
+  section,
+  .concept-bg {
     width: auto;
     margin: 0 90px; } }
 @media (max-width: 1440px) {
@@ -844,7 +842,11 @@ small {
     #header-top .menu ul li:not(:last-child) {
       margin-right: 35px; }
 
-  section {
+  #concept .bg-concept {
+    right: -30px; }
+
+  section,
+  .concept-bg {
     margin: 0 40px;
     padding-left: 40px;
     padding-right: 40px; }

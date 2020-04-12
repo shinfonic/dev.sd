@@ -263,41 +263,41 @@ header {
     }
   }
 
-.arrowWrap {
-  position: absolute;
-  right: -2px;
-  bottom: -70px;
-  left: 0;
-  z-index: 1;
-}
-
-.arrowInner p {
-  font-size: 12px;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.arrow {
-  width: 1px;
-  height: 100px;
-  margin: 50px auto 0;
-  background-color: #eee;
-  position: relative;
-  overflow: hidden;
-}
-
-.arrow::before {
-  content: '';
-  width: 2px;
-  height: 140px;
-  margin: 50px auto 0;
-  background-color: #000;
-  position: absolute;
-  top: -150px;
-  left: 0;
-  -webkit-animation: arrow 2.5s ease 0s infinite normal;
-  animation: arrow 2.5s ease 0s infinite normal;
-}
+  .arrowWrap {
+    position: absolute;
+    bottom: -63px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    .arrowInner {
+      .arrow {
+        width: 1px;
+        height: 70px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        &::before {
+          content: '';
+          width: 1px;
+          height: 70px;
+          // margin: 50px auto 0;
+          background-color: #000;
+          position: absolute;
+          top: 0;
+          left: 0;
+          // -webkit-animation: arrow 2.5s ease 0s infinite normal;
+          // animation: arrow 2.5s ease 0s infinite normal;
+          animation: scroll_effect 2s 2s cubic-bezier(.3,.4,.1,1) infinite;
+        }
+      }
+      p {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 @keyframes arrow {
@@ -316,6 +316,25 @@ header {
     transform: translate3d(-50%, 100px, 0);
   }
 }
+
+@keyframes scroll_effect {
+  0% {
+    height: 0
+  }
+
+  50% {
+    height: 70px
+  }
+
+  75% {
+    transform: translateY(0)
+  }
+
+  100% {
+    transform: translateY(100%)
+  }
+}
+
 
 // ---- title head
 .title-head {
@@ -345,7 +364,7 @@ section {
   // padding: 70px 160px;
   padding-top: 70px;
   padding-bottom: 70px;
-  margin: 0 auto 25px;
+  margin: 0 auto;
   h2 {
     font-size: 40px;
     font-family: "abril-text", serif;
@@ -372,76 +391,83 @@ section {
 
 // concept
 #concept {
+  background: #fff;
   position: relative;
   margin-top: 60px;
-  margin-right: 0;
-  margin-left: 0;
-  overflow: hidden;
-  padding-bottom: 140px;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 90px;
-    z-index: -1;
-    background-image: url('../img/bg-noise.png');
-    width: 100%;
-    height: 400px;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 90px;
-    z-index: -2;
-    background: linear-gradient(to right, #fb5fb7 0%,#00a1d7 100%);
-    width: 100%;
-    height: 100%;
-    height: 400px;
-  }
-  h3 {
-    font-size: 18px;
-  }
+  // margin-right: 0;
+  // margin-left: 0;
+  // overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 125px;
+  // .sec-content {
+  //   background-color: $colorWhite;
+  //   padding: 90px 90px 125px;
+  //   @media screen and (min-width: 1641px) {
+  //     margin: $marginL;
+  //     margin-right: 180px;
+  //   }
+  //   @media screen and (min-width: 1201px) and (max-width: 1440px){
+  //     margin: $marginM;
+  //     margin-right: 180px;
+  //   }
+  //   @media screen and (min-width: 769px) and (max-width: 1200px){
+  //     margin: $marginS;
+  //     margin-right: 180px;
+  //   }
+  // }
   .sec-content {
-    background-color: $colorWhite;
-    padding: 90px 90px 125px;
-    @media screen and (min-width: 1641px) {
-      margin: $marginL;
-      margin-right: 180px;
-    }
-    @media screen and (min-width: 1201px) and (max-width: 1440px){
-      margin: $marginM;
-      margin-right: 180px;
-    }
-    @media screen and (min-width: 769px) and (max-width: 1200px){
-      margin: $marginS;
-      margin-right: 180px;
-    }
-  }
-  .sec-content-item {
-    display: $flex;
-    flex-direction: $flexColumn;
     justify-content: space-between;
-    &:nth-child(1) {
-      margin-right: 10vw;
-    }
-    &:nth-child(2) {
-      position: relative;
-    }
-    p {
-      line-height: 2;
-      font-size: 14px;
-      margin-bottom: 50px;
-      &:last-child {
-        margin-bottom: 0;
+    .sec-content-item {
+      display: $flex;
+      flex-direction: $flexColumn;
+      justify-content: space-between;
+      &:nth-child(1) {
+        margin-right: 40px;
+      }
+      &:nth-child(2) {
+        width: 600px;
+        position: relative;
+      }
+      p {
+        line-height: 2.14;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
   .bg-concept {
     position: absolute;
     top: 0;
-    right: 90px;
-    width: 45%;
+    right: -80px;
+    width: 51%;
+  }
+}
+
+.concept-bg {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: -10;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -310px;
+    left: 0;
+    width: 100vw;
+    height: 450px;
+  }
+  &::before {
+    background-image: url('/img/bg-noise.png');
+    z-index: -10;
+  }
+  &::after {
+    z-index: -20;
+    background: linear-gradient(to right, #fb5fb7 0%,#00a1d7 100%);
   }
 }
 
@@ -475,7 +501,8 @@ section {
   position: relative;
   // margin-right: 0;
   // margin-left: 0;
-  margin-bottom: 150px;
+  margin-top: 220px;
+  margin-bottom: 80px;
   // padding: 0 90px 60px;
   &::before,
   &::after {
@@ -593,7 +620,8 @@ section {
 
 // works
 #works {
-  display: none;
+  // display: none;
+  margin-bottom: 55px;
   // margin-right: 0;
   // margin-left: 0;
   // .cont-box {
@@ -654,13 +682,13 @@ section {
   }
 
   .loop-box ul:first-child {
-    // animation: loop 120s -60s linear infinite;
+    animation: loop 120s -60s linear infinite;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     will-change: transform;
   }
   .loop-box ul + ul {
-    // animation: loop2 120s linear infinite;
+    animation: loop2 120s linear infinite;
   }
 
   @keyframes loop {
@@ -824,7 +852,8 @@ small {
 }
 
 @media (max-width: 1640px) {
-  section {
+  section,
+  .concept-bg {
     width: auto;
     margin: $marginM;
     // padding-left: 15%;
@@ -858,7 +887,13 @@ small {
       }
     }
   }
-  section {
+  #concept {
+    .bg-concept {
+      right: -30px;
+    }
+  }
+  section,
+  .concept-bg {
     margin: $marginS;
     padding-left: 40px;
     padding-right: 40px;
