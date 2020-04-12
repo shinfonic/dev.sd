@@ -273,6 +273,7 @@ template {
 /*# sourceMappingURL=bootstrap-reboot.css.map */
 /* 変数 */
 body {
+  font-size: 14px;
   font-family: 'Noto Sans JP', sans-serif;
   -webkit-font-smoothing: antialiased;
   position: relative; }
@@ -488,7 +489,7 @@ header {
     -webkit-transform: translate3d(-50%, 100px, 0);
     transform: translate3d(-50%, 100px, 0); } }
 .title-head {
-  margin-bottom: 50px; }
+  margin-bottom: 35px; }
   .title-head img {
     margin-right: 25px;
     width: 80px;
@@ -683,99 +684,47 @@ section {
     #service .cont-box .link-box {
       margin: 0 auto; }
 
-#works {
-  overflow: hidden;
-  margin-right: 0;
-  margin-left: 0; }
-  @media screen and (min-width: 1641px) {
-    #works .cont-box {
-      margin: 0 1vw; } }
-  @media screen and (min-width: 1201px) and (max-width: 1440px) {
-    #works .cont-box {
-      margin: 0 90px; } }
-  @media screen and (min-width: 769px) and (max-width: 1200px) {
-    #works .cont-box {
-      margin: 0 40px; } }
-  #works .cont-box .flex-box {
-    justify-content: space-between;
-    padding: 0 64px; }
-  #works .loop-box {
-    position: relative;
-    display: -webkit-flex;
+#works .flex-box {
+  justify-content: space-between;
+  align-items: start; }
+#works .loop-box {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 75px 0 60px; }
+  #works .loop-box ul {
     display: flex;
-    -webkit-flex-flow: row nowrap;
     flex-flow: row nowrap;
-    width: 100vw;
-    overflow: hidden;
-    margin: 100px 0; }
-    #works .loop-box ul {
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-flow: row nowrap;
-      flex-flow: row nowrap;
-      width: 100%;
-      margin: 0;
-      padding: 0; }
-    #works .loop-box li {
-      display: inline-block;
-      width: calc(100vw / 2);
-      min-width: 150px;
-      margin: 0;
-      list-style: none;
-      text-align: center; }
-      #works .loop-box li:first-child {
-        margin-top: 50px; }
-      #works .loop-box li:nth-child(3) {
-        margin-top: 40px; }
-      #works .loop-box li img {
-        display: block;
-        width: 100%;
-        height: auto; }
-  #works .loop-box ul:first-child {
-    -webkit-animation: loop 50s -25s linear infinite;
-    animation: loop 50s -25s linear infinite;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform; }
-  #works .loop-box ul + ul {
-    -webkit-animation: loop2 50s  linear infinite;
-    animation: loop2 50s linear infinite; }
-@-webkit-keyframes loop {
-  0% {
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%); }
-  to {
-    -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%); } }
+    margin: 0; }
+  #works .loop-box li {
+    width: calc(100vw / 3.2); }
+    #works .loop-box li:first-child {
+      margin-top: 25px; }
+    #works .loop-box li:nth-child(2) {
+      margin-top: 0; }
+    #works .loop-box li:nth-child(3) {
+      margin-top: 20px; }
+    #works .loop-box li:nth-child(4) {
+      margin-top: 40px; }
+    #works .loop-box li img {
+      width: 100%; }
+#works .loop-box ul:first-child {
+  animation: loop 120s -60s linear infinite;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform; }
+#works .loop-box ul + ul {
+  animation: loop2 120s linear infinite; }
 @keyframes loop {
   0% {
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%); }
+    transform: translateX(75%); }
   to {
-    -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%); } }
-@-webkit-keyframes loop2 {
-  0% {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0); }
-  to {
-    -webkit-transform: translateX(-200%);
-    -ms-transform: translateX(-200%);
-    transform: translateX(-200%); } }
+    transform: translateX(-125%); } }
 @keyframes loop2 {
   0% {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0); }
+    transform: translateX(-25%); }
   to {
-    -webkit-transform: translateX(-200%);
-    -ms-transform: translateX(-200%);
-    transform: translateX(-200%); } }
+    transform: translateX(-225%); } }
 #news {
   position: relative;
   padding-bottom: 50px;
@@ -796,10 +745,6 @@ section {
     z-index: -2;
     background: linear-gradient(to right, #fb5fb7 0%, #00a1d7 100%);
     opacity: .1; }
-  #news .title-head {
-    margin-bottom: 35px; }
-  #news h2 {
-    margin-bottom: 40px; }
   #news ul li {
     font-size: 14px;
     padding: 11px 0;

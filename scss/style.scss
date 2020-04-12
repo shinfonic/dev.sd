@@ -15,6 +15,7 @@ $flexColumn: column;
 
 // layout
 body {
+  font-size: 14px;
   font-family: 'Noto Sans JP', sans-serif;
   -webkit-font-smoothing: antialiased;
   position: relative;
@@ -317,7 +318,7 @@ header {
 
 // ---- title head
 .title-head {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   img {
     margin-right: 25px;
     width: 80px;
@@ -585,131 +586,89 @@ section {
 
 // works
 #works {
-  overflow: hidden;
-  margin-right: 0;
-  margin-left: 0;
-  .cont-box {
-    @media screen and (min-width: 1641px) {
-      margin: $marginL;
-    }
-    @media screen and (min-width: 1201px) and (max-width: 1440px){
-      margin: $marginM;
-    }
-    @media screen and (min-width: 769px) and (max-width: 1200px){
-      margin: $marginS;
-    }
-    .flex-box {
-      justify-content: space-between;
-      padding: 0 64px;
-    }
+  // margin-right: 0;
+  // margin-left: 0;
+  // .cont-box {
+  //   @media screen and (min-width: 1641px) {
+  //     // margin: $marginL;
+  //   }
+  //   @media screen and (min-width: 1201px) and (max-width: 1440px){
+  //     margin: $marginM;
+  //   }
+  //   @media screen and (min-width: 769px) and (max-width: 1200px){
+  //     margin: $marginS;
+  //   }
+  // }
+  .flex-box {
+    justify-content: space-between;
+    align-items: start;
+    // padding: 0 64px;
   }
   .loop-box {
     position: relative;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: row nowrap;
     flex-flow: row nowrap;
-    width: 100vw;
-    overflow: hidden;
-    margin: 100px 0; //仮
+    // width: 100vw;
+    margin: 75px 0 60px;
     ul {
-      display: -webkit-flex;
       display: flex;
-      -webkit-flex-flow: row nowrap;
       flex-flow: row nowrap;
-      width: 100%;
+      // width: 100%;
       margin: 0;
-      padding: 0;
+      // padding: 0;
     }
     li {
-      display: inline-block;
-      width: calc(100vw / 2);
-      min-width: 150px;
-      margin: 0;
-      list-style: none;
-      text-align: center;
+      // display: inline-block;
+      width: calc(100vw / 3.2);
+      // width: 514px;
+      // min-width: 150px;
+      // margin: 0;
+      // list-style: none;
+      // text-align: center;
       &:first-child {
-        margin-top: 50px;
+        margin-top: 25px;
       }
       &:nth-child(2) {
-        // margin-top: 40px;
+        margin-top: 0;
       }
       &:nth-child(3) {
-        margin-top: 40px;
+        margin-top: 20px;
       }
       &:nth-child(4) {
-        // margin-top: 20px;
+        margin-top: 40px;
       }
       img {
-        display: block;
+        // display: block;
         width: 100%;
-        height: auto;
+        // height: auto;
       }
     }
   }
 
   .loop-box ul:first-child {
-    -webkit-animation: loop 50s -25s linear infinite;
-    animation: loop 50s -25s linear infinite;
+    animation: loop 120s -60s linear infinite;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     will-change: transform;
   }
-
   .loop-box ul + ul {
-    -webkit-animation: loop2 50s  linear infinite;
-    animation: loop2 50s linear infinite;
-  }
-
-  @-webkit-keyframes loop {
-    0% {
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-    to {
-      -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
+    animation: loop2 120s linear infinite;
   }
 
   @keyframes loop {
     0% {
-      -webkit-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      transform: translateX(100%);
+      transform: translateX(75%);
     }
     to {
-      -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-      transform: translateX(-100%);
+      transform: translateX(-125%);
     }
   }
-
-  @-webkit-keyframes loop2 {
-    0% {
-      -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-      transform: translateX(0);
-    }
-    to {
-      -webkit-transform: translateX(-200%);
-      -ms-transform: translateX(-200%);
-      transform: translateX(-200%);
-    }
-  }
-
   @keyframes loop2 {
     0% {
-      -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-      transform: translateX(0);
+      transform: translateX(-25%);
     }
     to {
-      -webkit-transform: translateX(-200%);
-      -ms-transform: translateX(-200%);
-      transform: translateX(-200%);
+      transform: translateX(-225%);
     }
   }
 }
@@ -738,12 +697,6 @@ section {
     z-index: -2;
     background: linear-gradient(to right, #fb5fb7 0%,#00a1d7 100%);
     opacity: .1; //仮
-  }
-  .title-head {
-    margin-bottom: 35px; //仮
-  }
-  h2 {
-    margin-bottom: 40px; //仮
   }
   ul {
     li {
