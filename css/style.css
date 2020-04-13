@@ -571,11 +571,9 @@ section {
     width: 100vw;
     height: 450px; }
   .concept-bg::before {
-    background-image: url("/img/bg-noise.png");
-    z-index: -10; }
-  .concept-bg::after {
-    z-index: -20;
-    background: linear-gradient(to right, #fb5fb7 0%, #00a1d7 100%); }
+    background-image: url("/img/bg-concept.png");
+    z-index: -10;
+    background-size: cover; }
 
 @media screen and (min-width: 1641px) {
   .common .section {
@@ -597,7 +595,7 @@ section {
   margin-top: 220px;
   margin-bottom: 80px;
   padding-bottom: 60px; }
-  #service::before, #service::after {
+  #service::before {
     content: '';
     position: absolute;
     right: 0;
@@ -606,17 +604,15 @@ section {
     height: 460px; }
   #service::before {
     z-index: -1;
-    background-image: url("/img/bg-service-noise.png"); }
-  #service::after {
-    z-index: -2;
-    background: linear-gradient(to right, #fb5fb7 0%, #00a1d7 100%);
-    opacity: .1; }
+    background-image: url("/img/bg-service.jpg");
+    background-size: cover; }
   #service .sec-content-upper {
     justify-content: space-between;
     margin: 60px 0; }
     #service .sec-content-upper .sec-content-item {
       background-color: #fff;
       background-image: url("/img/BG_New.png");
+      background-size: cover;
       color: #fff;
       position: relative;
       min-height: 340px;
@@ -720,7 +716,7 @@ section {
   position: relative;
   padding-bottom: 50px;
   margin-bottom: 150px; }
-  #news::before, #news::after {
+  #news::before {
     content: '';
     position: absolute;
     top: 0;
@@ -731,11 +727,8 @@ section {
     height: 100%; }
   #news::before {
     z-index: -1;
-    background-image: url("/img/bg-service-noise.png"); }
-  #news::after {
-    z-index: -2;
-    background: linear-gradient(to right, #fb5fb7 0%, #00a1d7 100%);
-    opacity: .1; }
+    background-image: url("/img/bg-news.jpg");
+    background-size: cover; }
   #news ul li {
     font-size: 14px;
     padding: 11px 0;
@@ -752,7 +745,7 @@ section {
   margin: 0;
   padding: 95px 40px 85px;
   background-color: #000;
-  background-image: url("/img/bg-noise.png");
+  background-image: url("/img/bg-contact.jpg");
   background-size: cover;
   color: #fff;
   text-align: center; }
@@ -804,6 +797,10 @@ footer {
         list-style-type: disc;
         font-size: 12px;
         margin-bottom: 10px; }
+        footer .sec-content-item .content-link li a {
+          color: #8f8f8f; }
+          footer .sec-content-item .content-link li a:hover {
+            text-decoration: underline; }
     footer .sec-content-item .link-box {
       display: flex;
       justify-content: center;
