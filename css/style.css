@@ -314,10 +314,25 @@ ul {
   transition: .3s;
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
-  font-size: 14px; }
+  font-size: 14px;
+  position: relative;
+  overflow: hidden; }
   .link-box:hover {
-    color: #fff;
-    background-color: #000; }
+    color: #fff; }
+    .link-box:hover::before {
+      transform: rotate(-8deg) translate(-50%, -50%) scaleX(1); }
+  .link-box::before {
+    content: '';
+    width: 105%;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #000;
+    z-index: -1;
+    transition: all 0.6s cubic-bezier(0.24, 1, 0.32, 1);
+    transform: rotate(-8deg) translate(-50%, -50%) scaleX(0);
+    transform-origin: 0 0; }
 
 .res-pc {
   display: block; }
@@ -787,8 +802,9 @@ section {
     border-color: #fff;
     margin: 0 auto; }
     #contact .link-box:hover {
-      background-color: #fff;
       color: #000; }
+    #contact .link-box::before {
+      background-color: #fff; }
 
 .sec-inner {
   max-width: 960px;
