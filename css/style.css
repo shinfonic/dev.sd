@@ -520,16 +520,9 @@ header {
       margin-top: 10px;
       margin-bottom: 0; }
 
-@keyframes arrow {
-  0% {
-    -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0); }
-  60% {
-    -webkit-transform: translate3d(-50%, 100px, 0);
-    transform: translate3d(-50%, 100px, 0); }
-  100% {
-    -webkit-transform: translate3d(-50%, 100px, 0);
-    transform: translate3d(-50%, 100px, 0); } }
+@media (max-height: 890px) {
+  #main-visual {
+    margin-top: 14vh; } }
 @keyframes scroll_effect {
   0% {
     height: 0; }
