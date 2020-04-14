@@ -350,6 +350,34 @@ ul {
 .cont-fade.slide-up {
   transform: translate(0, 100px); }
 
+#pagetop {
+  position: absolute;
+  right: 0;
+  top: -65px;
+  padding-left: 12px;
+  font-size: 11px;
+  color: #000;
+  transform: rotate(90deg); }
+  #pagetop .pagetop-arrow {
+    width: 50px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transition: .3s; }
+    #pagetop .pagetop-arrow::after {
+      content: '';
+      background-color: #000;
+      position: absolute;
+      left: 0;
+      top: -4px;
+      width: 10px;
+      height: 1px;
+      transform: rotate(-45deg); }
+  #pagetop:hover .pagetop-arrow {
+    width: 60px; }
+
 /* header 
 通常h320 スクロールh200
 */

@@ -67,3 +67,13 @@ $(function () {
     menuBtn.toggleClass('close');
   });
 });
+
+// pagetop
+$(function () {
+  var pagetop = $('#pagetop');
+  
+  pagetop.click(function () {
+    $('body, html').animate({ scrollTop: 0 }, 500);
+    return false;
+  });
+});
