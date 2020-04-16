@@ -193,13 +193,13 @@ header {
   height: 160px;
   max-width: 1440px;
   margin: 0 auto;
-  transition: 0.5s;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 999;
   background-color: #fff;
+  transition: 0.5s ease-out;
   &::before {
     content: "";
     background: #fff;
@@ -211,8 +211,11 @@ header {
     z-index: -10;
   }
   .logo {
-    img {
-      width: 169px;
+    h1 {
+      margin: 0;
+      img {
+        width: 163px;
+      }
     }
   }
   &.flex-box {
@@ -221,13 +224,17 @@ header {
   }
   &.scrolled {
     height: 80px;
+    // transform: translateY(-50%);
+    .header-inner {
+      // transform: translateY(-25%);
+    }
   }
   .menu {
     ul {
       margin: 0;
       li {
         &:not(:last-child) {
-          margin-right: 42px;
+          margin-right: 37px;
         }
       }
     }
@@ -251,7 +258,7 @@ header {
 #header-top {
   &.scrolled {
     +#main-visual {
-      margin-top: 100px;
+      // margin-top: 100px;
     }
   }
 }
@@ -351,7 +358,7 @@ header {
 }
 @media (max-height: 890px) {
   #main-visual {
-    margin-top: 14vh;
+    // margin-top: 14vh;
   }
 }
 
