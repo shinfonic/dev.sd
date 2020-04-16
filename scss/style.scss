@@ -780,19 +780,33 @@ section {
   ul {
     li {
       font-size: 14px;
-      padding: 11px 0; //仮
-      border-bottom: 1px dashed $colorBlack;
+      padding: 10px 0 11px;
+      // border-bottom: 1px dashed $colorBlack;
+      position: relative;
       a {
+        letter-spacing: 0.1em;
         &:hover {
           color: $colorBlack;
           text-decoration: underline;
         }
       }
+      &::after {
+        content: "";
+        height: 1px;
+        background-image: linear-gradient(to right, $colorBlack, $colorBlack 2px, transparent 2px, transparent 4px);
+        background-size: 4px 1px;
+        background-repeat: repeat-x;
+        position: absolute;
+        /* top: 0; */
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
     }
   }
   .news-date {
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: 0.25em;
     width: 165px;
     flex-shrink: 0;
