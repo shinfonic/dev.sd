@@ -617,7 +617,7 @@ section {
 #service {
   position: relative;
   margin-top: 215px;
-  margin-bottom: 80px;
+  margin-bottom: 75px;
   padding-bottom: 60px; }
   #service::before {
     content: '';
@@ -699,6 +699,8 @@ section {
 
 #works {
   margin-bottom: 55px; }
+  #works p {
+    letter-spacing: 0.1em; }
   #works .flex-box {
     justify-content: space-between;
     align-items: start; }
@@ -706,7 +708,7 @@ section {
     position: relative;
     display: flex;
     flex-flow: row nowrap;
-    margin: 75px 0 60px; }
+    margin: 70px 0 60px; }
     #works .loop-box ul {
       display: flex;
       flex-flow: row nowrap;
