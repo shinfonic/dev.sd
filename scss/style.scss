@@ -302,27 +302,9 @@ header {
       max-width: 100%;
     }
   }
-  // scroll icon
-  .scroll {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 2px;
-    height: 140px;
-    background-color: #000;
-    margin: auto;
-    &::after {
-      content: 'SCROLL';
-      display: block;
-      margin: auto;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-    }
-  }
+  // scroll
   .arrowWrap {
+    width: 100px; // 偶数の幅を指定しないと微妙に滲むため
     position: absolute;
     bottom: -63px;
     left: 50%;
@@ -348,7 +330,9 @@ header {
         }
       }
       p {
+        font-family: proxima-nova-condensed, sans-serif !important;
         font-size: 12px;
+        letter-spacing: 0.1em;
         text-align: center;
         margin-top: 10px;
         margin-bottom: 0;

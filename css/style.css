@@ -475,24 +475,8 @@ header {
     display: block;
     margin: auto;
     max-width: 100%; }
-  #main-visual .scroll {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 2px;
-    height: 140px;
-    background-color: #000;
-    margin: auto; }
-    #main-visual .scroll::after {
-      content: 'SCROLL';
-      display: block;
-      margin: auto;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0; }
   #main-visual .arrowWrap {
+    width: 100px;
     position: absolute;
     bottom: -63px;
     left: 50%;
@@ -514,7 +498,9 @@ header {
         left: 0;
         animation: scroll_effect 2s 2s cubic-bezier(0.3, 0.4, 0.1, 1) infinite; }
     #main-visual .arrowWrap .arrowInner p {
+      font-family: proxima-nova-condensed, sans-serif !important;
       font-size: 12px;
+      letter-spacing: 0.1em;
       text-align: center;
       margin-top: 10px;
       margin-bottom: 0; }
