@@ -599,7 +599,7 @@ section {
     width: 100vw;
     height: 450px; }
   .concept-bg::before {
-    background-image: url("/img/bg-concept.png");
+    background-image: url("/img/bg-concept.jpg");
     z-index: -10;
     background-size: cover; }
 
@@ -639,7 +639,7 @@ section {
     margin: 56px 0 52px; }
     #service .sec-content-upper .sec-content-item {
       background-color: #fff;
-      background-image: url("/img/BG_New.png");
+      background-image: url("/img/bg-service-box.jpg");
       background-size: cover;
       color: #fff;
       position: relative;
