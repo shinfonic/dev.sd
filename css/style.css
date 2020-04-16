@@ -370,13 +370,16 @@ ul {
 #pagetop {
   position: absolute;
   right: 0;
-  top: -65px;
+  top: -66px;
   padding-left: 12px;
+  font-family: proxima-nova-condensed, sans-serif !important;
   font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   color: #000;
   transform: rotate(90deg); }
   #pagetop .pagetop-arrow {
-    width: 50px;
+    width: 52px;
     height: 1px;
     background-color: #000;
     position: absolute;
@@ -388,8 +391,8 @@ ul {
       background-color: #000;
       position: absolute;
       left: 0;
-      top: -4px;
-      width: 10px;
+      top: -3px;
+      width: 7px;
       height: 1px;
       transform: rotate(-45deg); }
   #pagetop:hover .pagetop-arrow {
@@ -788,17 +791,19 @@ section {
 #contact {
   width: auto;
   margin: 0;
-  padding: 95px 40px 85px;
+  padding: 90px 40px 85px;
   background-color: #000;
   background-image: url("/img/bg-contact.jpg");
   background-size: cover;
   color: #fff;
   text-align: center; }
   #contact h2 {
-    margin-bottom: 45px; }
+    font-size: 35px;
+    margin-bottom: 32px; }
   #contact p {
-    line-height: 2.14;
-    margin-bottom: 50px; }
+    line-height: 2.2;
+    letter-spacing: 0.1em;
+    margin-bottom: 48px; }
   #contact .link-box {
     color: #fff;
     border-color: #fff;
