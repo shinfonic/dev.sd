@@ -435,9 +435,9 @@ header {
     justify-content: space-between;
     align-items: center; }
   #header-top.scrolled {
-    height: 80px; }
+    height: 100px; }
     #header-top.scrolled::before {
-      height: 80px; }
+      height: 100px; }
   #header-top .menu ul {
     margin: 0; }
     #header-top .menu ul li:not(:last-child) {
@@ -773,8 +773,7 @@ section {
     #news ul li a {
       letter-spacing: 0.1em; }
       #news ul li a:hover {
-        color: #000;
-        text-decoration: underline; }
+        color: #000; }
     #news ul li::after {
       content: "";
       height: 1px;
@@ -847,6 +846,8 @@ footer {
         margin-bottom: 7px; }
     footer .sec-content-item:nth-child(2) {
       justify-content: space-between; }
+    footer .sec-content-item .content-link h3 a:hover {
+      color: #000; }
     footer .sec-content-item .content-link ul {
       margin-left: -5px;
       margin-bottom: 24px; }

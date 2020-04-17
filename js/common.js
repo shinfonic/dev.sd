@@ -31,7 +31,7 @@ $(function () {
 $(function () {
   $(window).on('load scroll', function () {
     var scrollPos = $(this).scrollTop();
-    if (scrollPos > 75) {
+    if (scrollPos > 57) {
       $('#header-top').addClass('scrolled');
     } else {
       $('#header-top').removeClass('scrolled');
