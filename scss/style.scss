@@ -270,13 +270,6 @@ header {
   }
 }
 
-#header-top {
-  &.scrolled {
-    +#main-visual {
-      // margin-top: 100px;
-    }
-  }
-}
 
 // common parts (scrolled)
 #header-common {
@@ -325,34 +318,32 @@ header {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    .arrowInner {
-      .arrow {
+    .arrow {
+      width: 1px;
+      height: 70px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      &::before {
+        content: '';
         width: 1px;
         height: 70px;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-        &::before {
-          content: '';
-          width: 1px;
-          height: 70px;
-          // margin: 50px auto 0;
-          background-color: #000;
-          position: absolute;
-          top: 0;
-          left: 0;
-          animation: scroll_effect 2s 2s cubic-bezier(.3,.4,.1,1) infinite;
-        }
+        // margin: 50px auto 0;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: scroll_effect 2s 2s cubic-bezier(.3,.4,.1,1) infinite;
       }
-      p {
-        font-family: $font-proxima;
-        font-weight: 400;
-        font-size: 12px;
-        letter-spacing: 0.1em;
-        text-align: center;
-        margin-top: 12px;
-        margin-bottom: 0;
-      }
+    }
+    p {
+      font-family: $font-proxima;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-align: center;
+      margin-top: 12px;
+      margin-bottom: 0;
     }
   }
 }

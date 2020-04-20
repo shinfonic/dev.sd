@@ -492,13 +492,13 @@ header {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1; }
-    #main-visual .arrowWrap .arrowInner .arrow {
+    #main-visual .arrowWrap .arrow {
       width: 1px;
       height: 70px;
       margin: 0 auto;
       position: relative;
       overflow: hidden; }
-      #main-visual .arrowWrap .arrowInner .arrow::before {
+      #main-visual .arrowWrap .arrow::before {
         content: '';
         width: 1px;
         height: 70px;
@@ -507,7 +507,7 @@ header {
         top: 0;
         left: 0;
         animation: scroll_effect 2s 2s cubic-bezier(0.3, 0.4, 0.1, 1) infinite; }
-    #main-visual .arrowWrap .arrowInner p {
+    #main-visual .arrowWrap p {
       font-family: proxima-nova-condensed, sans-serif !important;
       font-weight: 400;
       font-size: 12px;
