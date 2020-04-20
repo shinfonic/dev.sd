@@ -273,8 +273,9 @@ template {
 /*# sourceMappingURL=bootstrap-reboot.css.map */
 /* 変数 */
 body {
-  font-size: 14px;
   font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   color: #000; }
 
@@ -314,7 +315,7 @@ ul {
   text-align: center;
   padding: 13.5px 0;
   transition: .3s;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Serif JP", serif !important;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.1em;
@@ -374,8 +375,8 @@ ul {
   top: -66px;
   padding-left: 12px;
   font-family: proxima-nova-condensed, sans-serif !important;
-  font-size: 11px;
   font-weight: 500;
+  font-size: 11px;
   letter-spacing: 0.1em;
   color: #000;
   transform: rotate(90deg); }
@@ -508,6 +509,7 @@ header {
         animation: scroll_effect 2s 2s cubic-bezier(0.3, 0.4, 0.1, 1) infinite; }
     #main-visual .arrowWrap .arrowInner p {
       font-family: proxima-nova-condensed, sans-serif !important;
+      font-weight: 400;
       font-size: 12px;
       letter-spacing: 0.1em;
       text-align: center;
@@ -531,9 +533,9 @@ header {
     width: 80px;
     height: 2px; }
   .title-head span {
-    font-size: 16px;
     font-family: proxima-nova-condensed, sans-serif !important;
     font-weight: 400;
+    font-size: 16px;
     letter-spacing: 0.05em; }
   .title-head + h2 {
     margin-bottom: 40px; }
@@ -547,10 +549,9 @@ section {
   padding-bottom: 70px;
   margin: 0 auto; }
   section h2 {
-    font-size: 40px;
-    font-family: "abril-text", serif;
+    font-family: abril-text, serif !important;
     font-weight: 400;
-    font-style: normal;
+    font-size: 40px;
     line-height: 1; }
 
 .common #concept .sec-content {
@@ -669,9 +670,9 @@ section {
         line-height: 1.5; }
       #service .sec-content-upper .sec-content-item a {
         color: #fff;
+        font-family: "Noto Serif JP", serif !important;
+        font-weight: 600;
         font-size: 13px;
-        font-family: 'Noto Serif JP', serif;
-        font-weight: 700;
         letter-spacing: 0.1em;
         position: absolute;
         right: 20px;
@@ -828,8 +829,8 @@ footer {
     width: 143px; }
   footer h3 {
     font-family: proxima-nova-condensed, sans-serif !important;
-    font-size: 14px;
     font-weight: 500;
+    font-size: 14px;
     letter-spacing: 0.05em;
     line-height: 1;
     margin-bottom: 13px; }
