@@ -273,7 +273,7 @@ template {
 /*# sourceMappingURL=bootstrap-reboot.css.map */
 /* 変数 */
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", serif !important;
   font-weight: 400;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
@@ -463,7 +463,7 @@ header {
     font-size: 40px;
     position: relative;
     display: inline-block;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Noto Sans JP", serif !important;
     font-weight: normal; }
     #header-common h1::after {
       content: '';
@@ -483,7 +483,7 @@ header {
   max-width: 1620px;
   padding: 0 90px;
   transition: .3s; }
-  #main-visual .mv-area img {
+  #main-visual img {
     display: block;
     margin: auto;
     max-width: 100%; }
@@ -555,6 +555,10 @@ section {
     font-weight: 400;
     font-size: 40px;
     line-height: 1; }
+
+.sec-inner {
+  max-width: 960px;
+  margin: 0 auto; }
 
 .common #concept .sec-content {
   padding: 0; }
@@ -724,18 +728,18 @@ section {
       display: flex;
       flex-flow: row nowrap;
       margin: 0; }
-    #works .loop-box li {
-      width: calc(100vw / 3.2); }
-      #works .loop-box li:first-child {
-        margin-top: 25px; }
-      #works .loop-box li:nth-child(2) {
-        margin-top: 0; }
-      #works .loop-box li:nth-child(3) {
-        margin-top: 20px; }
-      #works .loop-box li:nth-child(4) {
-        margin-top: 40px; }
-      #works .loop-box li img {
-        width: 100%; }
+      #works .loop-box ul li {
+        width: calc(100vw / 3.2); }
+        #works .loop-box ul li:nth-child(1) {
+          margin-top: 25px; }
+        #works .loop-box ul li:nth-child(2) {
+          margin-top: 0; }
+        #works .loop-box ul li:nth-child(3) {
+          margin-top: 20px; }
+        #works .loop-box ul li:nth-child(4) {
+          margin-top: 40px; }
+        #works .loop-box ul li img {
+          width: 100%; }
   #works .loop-box ul:first-child {
     animation: loop 120s -60s linear infinite;
     -webkit-backface-visibility: hidden;
@@ -775,7 +779,6 @@ section {
       background-size: 4px 1px;
       background-repeat: repeat-x;
       position: absolute;
-      /* top: 0; */
       bottom: 0;
       left: 0;
       right: 0; }
@@ -810,10 +813,6 @@ section {
       color: #000; }
     #contact .link-box::before {
       background-color: #fff; }
-
-.sec-inner {
-  max-width: 960px;
-  margin: 0 auto; }
 
 footer {
   margin: 0 auto;
@@ -864,20 +863,18 @@ footer {
       align-items: center;
       font-size: 12px;
       width: 150px;
-      padding: 7.5px 0; }
-      footer .sec-content-item .link-box:nth-child(1) {
-        margin-right: 15px; }
+      padding: 7.5px 0;
+      margin-right: 15px; }
   footer address {
     font-size: 12px;
     margin-bottom: 18px;
     letter-spacing: 0.05em; }
-
-small {
-  display: block;
-  text-align: center;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  margin-bottom: 30px; }
+  footer small {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px; }
 
 @media (max-width: 1640px) {
   section,
