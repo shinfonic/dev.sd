@@ -202,8 +202,9 @@ header {
 }
 #header-top {
   height: 160px;
-  max-width: 1440px;
+  max-width: 1620px; // 1440 + 90 + 90
   margin: 0 auto;
+  padding: $marginM;
   position: fixed;
   top: 0;
   right: 0;
@@ -239,12 +240,8 @@ header {
     &::before {
       height: 100px;
     }
-    // transform: translateY(-50%);
-    .header-inner {
-      // transform: translateY(-25%);
-    }
   }
-  .menu {
+  nav {
     ul {
       margin: 0;
       li {
@@ -258,13 +255,15 @@ header {
       font-weight: 600;
       font-size: 15px;
       letter-spacing: 0.1em;
-      color: transparent;
-      background: linear-gradient(to right, #000 0%,#000 100%);
+      color: $colorBlack;
+      background-image: linear-gradient(to right, rgba(251, 95, 183, 0.8), rgba(0, 161, 215, 0.8));
       -webkit-background-clip: text;
+      transition: 0.5s;
       &:hover {
         color: transparent;
-        background: linear-gradient(to right, #fb5fb7 0%,#00a1d7 100%);
-        -webkit-background-clip: text;
+        // background-image: linear-gradient(to right, #fb5fb7,#00a1d7);
+        background-image: linear-gradient(to right, rgba(251, 95, 183, 1), rgba(0, 161, 215, 1));
+        // -webkit-background-clip: text;
       }
     }
   }
@@ -300,8 +299,10 @@ header {
 
 #main-visual {
   position: relative;
-  margin-top: 160px;
-  width: 100%;
+  margin: 160px auto 0;
+  // width: 100%;
+  max-width: 1620px; // 1440 + 90 + 90
+  padding: $marginM;
   transition: .3s;
   .mv-area {
     img {
@@ -746,18 +747,18 @@ section {
 
   @keyframes loop {
     0% {
-      transform: translateX(90%);
+      transform: translateX(70%);
     }
     to {
-      transform: translateX(-110%);
+      transform: translateX(-130%);
     }
   }
   @keyframes loop2 {
     0% {
-      transform: translateX(-10%);
+      transform: translateX(-30%);
     }
     to {
-      transform: translateX(-210%);
+      transform: translateX(-230%);
     }
   }
 }
@@ -767,21 +768,9 @@ section {
   position: relative;
   padding-bottom: 52px;
   margin-bottom: 150px;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: url('/img/bg-news.jpg');
-    // background-color: rgba(255,255,255,0.8);
-    // background-blend-mode: lighten;
-    background-size: cover;
-  }
+  background-image: url('/img/bg-news.jpg');
+  background-size: cover;
+  background-color: #fff;
   ul {
     li {
       font-size: 14px;
@@ -902,20 +891,20 @@ footer {
         &:last-child {
           margin-bottom: 7px;
         }
-      }
-      li {
-        list-style: none; 
-        color: #8f8f8f;
-        font-size: 12px;
-        margin-bottom: 7px;
-        a {
-          color: #8f8f8f;
-          &:hover {
-            text-decoration: underline;
+        li {
+          list-style: none;
+          font-size: 12px;
+          margin-bottom: 7px;
+          &::before {
+            content: "・";
+            color: #8f8f8f;
           }
-        }
-        &::before {
-          content: "・";
+          a {
+            color: #8f8f8f;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
@@ -960,23 +949,23 @@ small {
   }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1640px) {
   header {
     margin: $marginM;
-  }
-  #header-top {
-    padding: $marginM;
   }
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   header {
     margin: $marginS;
   }
+  #main-visual {
+    padding: $marginS;
+  }
   #header-top {
     padding: $marginS;
-    .menu {
+    nav {
       ul {
         li {
           &:not(:last-child) {
@@ -992,11 +981,8 @@ small {
     }
   }
   #service {
-    .sec-content-upper {
-      .sec-content-item {
-        a {
-        }
-      }
+    &::before {
+      width: calc(100vw - 40px);
     }
   }
   section,
@@ -1006,7 +992,6 @@ small {
     padding-right: 40px;
   }
   footer {
-    // width: auto;
     margin: $marginS;
   }
 }
