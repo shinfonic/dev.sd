@@ -528,19 +528,23 @@ header {
   100% {
     transform: translateY(100%); } }
 .title-head {
-  margin-bottom: 34px; }
-  .title-head img {
-    margin-right: 22px;
-    margin-bottom: 4px;
-    width: 80px;
-    height: 2px; }
+  position: relative; }
   .title-head span {
     font-family: proxima-nova-condensed, sans-serif !important;
     font-weight: 400;
     font-size: 16px;
-    letter-spacing: 0.05em; }
-  .title-head + h2 {
-    margin-bottom: 40px; }
+    letter-spacing: 0.05em;
+    margin-left: 106px; }
+    .title-head span::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 80px;
+      height: 2px;
+      background-image: linear-gradient(to right, #fb5fb7, #00a1d7); }
+  .title-head h2 {
+    margin: 34px 0 40px; }
 
 .cont-box {
   margin-bottom: 50px; }
