@@ -470,11 +470,10 @@ section {
     content: '';
     position: absolute;
     top: -310px;
-    left: 0;
-    width: 100vw;
+    left: 1px;
+    width: 89vw; // max-width:1640 でギリギリ見切れる値
     height: 450px;
     background-image: url('/img/bg-concept.jpg');
-    z-index: -10;
     background-size: cover;
   }
 }
@@ -847,7 +846,8 @@ footer {
     margin-left: 90px;
     margin-right: 90px;
   }
-  #service {
+  #service,
+  .concept-bg {
     &::before {
       width: calc(100vw - 90px);
     }
@@ -864,9 +864,15 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
-  #service {
+  #service,
+  .concept-bg {
     &::before {
       width: calc(100vw - 40px);
+    }
+  }
+  #concept {
+    .bg-concept {
+      right: -30px;
     }
   }
 }
@@ -879,10 +885,5 @@ footer {
   .concept-bg {
     margin-left: 40px;
     margin-right: 40px;
-  }
-  #concept {
-    .bg-concept {
-      right: -30px;
-    }
   }
 }
