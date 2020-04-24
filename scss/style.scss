@@ -55,6 +55,12 @@ a {
   }
 }
 
+p {
+  line-height: 2.2;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -443,10 +449,6 @@ section {
         position: relative;
       }
       p {
-        line-height: 2.2;
-        font-size: 14px;
-        letter-spacing: 0.1em;
-        margin-bottom: 30px;
         &:last-child {
           margin-bottom: 0;
         }
@@ -482,8 +484,8 @@ section {
 .common {
   .section {
     @media screen and (min-width: 1641px) {
-      margin: $marginL;
-      margin-right: 180px;
+      // margin: $marginL;
+      // margin-right: 180px;
     }
     @media screen and (min-width: 1201px) and (max-width: 1440px){
       margin: $marginM;
@@ -555,6 +557,7 @@ section {
       p {
         font-size: 13px;
         line-height: 1.5;
+        letter-spacing: 0;
       }
       a {
         color: $colorWhite;
@@ -597,8 +600,6 @@ section {
   }
   .sec-content-lower {
     p {
-      line-height: 2.2;
-      letter-spacing: 0.1em;
       margin-bottom: 41px;
     }
     .link-box {
@@ -611,7 +612,7 @@ section {
 #works {
   margin-bottom: 55px;
   p {
-    letter-spacing: 0.1em;
+    margin-bottom: 0;
   }
   .flex-box {
     justify-content: space-between;
@@ -732,8 +733,6 @@ section {
     margin-bottom: 32px
   }
   p {
-    line-height: 2.2;
-    letter-spacing: 0.1em;
     margin-bottom: 48px;
   }
   .link-box {

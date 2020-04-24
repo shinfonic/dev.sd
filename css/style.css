@@ -294,6 +294,11 @@ a {
   a:hover {
     text-decoration: none; }
 
+p {
+  line-height: 2.2;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px; }
+
 .text-left {
   text-align: left; }
 
@@ -581,13 +586,8 @@ section {
       #concept .sec-content .sec-content-item:nth-child(2) {
         width: 600px;
         position: relative; }
-      #concept .sec-content .sec-content-item p {
-        line-height: 2.2;
-        font-size: 14px;
-        letter-spacing: 0.1em;
-        margin-bottom: 30px; }
-        #concept .sec-content .sec-content-item p:last-child {
-          margin-bottom: 0; }
+      #concept .sec-content .sec-content-item p:last-child {
+        margin-bottom: 0; }
   #concept .bg-concept {
     position: absolute;
     top: -17px;
@@ -609,10 +609,6 @@ section {
     background-image: url("/img/bg-concept.jpg");
     background-size: cover; }
 
-@media screen and (min-width: 1641px) {
-  .common .section {
-    margin: 0 1vw;
-    margin-right: 180px; } }
 @media screen and (min-width: 1201px) and (max-width: 1440px) {
   .common .section {
     margin: 0 90px;
@@ -668,7 +664,8 @@ section {
         margin-bottom: 16px; }
       #service .sec-content-upper .sec-content-item p {
         font-size: 13px;
-        line-height: 1.5; }
+        line-height: 1.5;
+        letter-spacing: 0; }
       #service .sec-content-upper .sec-content-item a {
         color: #fff;
         font-family: "Noto Serif JP", serif !important;
@@ -701,8 +698,6 @@ section {
         #service .sec-content-upper .sec-content-item a:hover .link-arrow {
           width: 35px; }
   #service .sec-content-lower p {
-    line-height: 2.2;
-    letter-spacing: 0.1em;
     margin-bottom: 41px; }
   #service .sec-content-lower .link-box {
     margin: 0 auto; }
@@ -710,7 +705,7 @@ section {
 #works {
   margin-bottom: 55px; }
   #works p {
-    letter-spacing: 0.1em; }
+    margin-bottom: 0; }
   #works .flex-box {
     justify-content: space-between;
     align-items: start; }
@@ -798,8 +793,6 @@ section {
     font-size: 35px;
     margin-bottom: 32px; }
   #contact p {
-    line-height: 2.2;
-    letter-spacing: 0.1em;
     margin-bottom: 48px; }
   #contact .link-box {
     color: #fff;
