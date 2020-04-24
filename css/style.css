@@ -512,10 +512,11 @@ header {
       font-family: proxima-nova-condensed, sans-serif !important;
       font-weight: 400;
       font-size: 12px;
+      line-height: 1;
       letter-spacing: 0.1em;
       text-align: center;
       margin-top: 12px;
-      margin-bottom: 0; }
+      margin-bottom: 3px; }
 
 @keyframes scroll_effect {
   0% {
@@ -527,13 +528,15 @@ header {
   100% {
     transform: translateY(100%); } }
 .title-head {
-  position: relative; }
+  position: relative;
+  margin-bottom: 40px; }
   .title-head span {
     font-family: proxima-nova-condensed, sans-serif !important;
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 0.05em;
-    margin-left: 106px; }
+    margin: 0 0 34px 106px;
+    display: block; }
     .title-head span::before {
       content: "";
       position: absolute;
@@ -542,8 +545,9 @@ header {
       width: 80px;
       height: 2px;
       background-image: linear-gradient(to right, #fb5fb7, #00a1d7); }
-  .title-head h2 {
-    margin: 34px 0 40px; }
+
+.common .title-head {
+  margin-bottom: 95px; }
 
 .cont-box {
   margin-bottom: 50px; }
@@ -562,6 +566,9 @@ section {
   max-width: 960px;
   margin: 0 auto; }
 
+.common section {
+  width: 960px;
+  padding: 70px 0; }
 .common #concept .sec-content {
   padding: 0; }
 .common img.profile {
@@ -705,6 +712,7 @@ section {
 #works {
   margin-bottom: 55px; }
   #works p {
+    line-height: 1rem;
     margin-bottom: 0; }
   #works .flex-box {
     justify-content: space-between;
