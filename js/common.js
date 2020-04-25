@@ -31,7 +31,8 @@ $(function () {
 $(function () {
   $(window).on('load scroll', function () {
     var scrollPos = $(this).scrollTop();
-    if (scrollPos > 57) {
+    // if (scrollPos > 57) {
+    if (scrollPos > 47) {
       $('header').addClass('scrolled');
     } else {
       $('header').removeClass('scrolled');
@@ -68,12 +69,14 @@ $(function () {
   });
 });
 
-// pagetop
+// pagetop & smooth scroll
 $(function () {
-  var pagetop = $('#pagetop');
-  
-  pagetop.click(function () {
-    $('body, html').animate({ scrollTop: 0 }, 500);
+  $('a[href^="#"]').click(function () {
+    var speed = 500;
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top - 50;
+    $("html, body").animate({ scrollTop: position }, speed, "swing");
     return false;
   });
 });
