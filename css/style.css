@@ -476,7 +476,7 @@ header {
       left: 0;
       width: 100%;
       height: 2px;
-      background: linear-gradient(to right, #fb5fb7 0%, #00a1d7 100%); }
+      background: linear-gradient(to right, #fb5fb7, #00a1d7); }
   #header-common .flex-box {
     justify-content: space-between;
     font-size: 11px;
@@ -556,6 +556,7 @@ header {
         line-height: 50px; }
 
 #p-top #main-visual {
+  overflow: hidden;
   position: relative;
   margin: 160px auto 0;
   width: 1440px;
@@ -571,7 +572,7 @@ header {
     bottom: -65px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1; }
+    z-index: 100; }
     #p-top #main-visual .arrowWrap .arrow {
       width: 1px;
       height: 70px;
@@ -596,6 +597,227 @@ header {
       text-align: center;
       margin-top: 12px;
       margin-bottom: 3px; }
+
+#slider {
+  width: 100%;
+  margin: 0 auto;
+  padding: 56.25% 0 0;
+  position: relative; }
+
+.sld_fade {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none; }
+
+.p-index-kv-img {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2; }
+
+.p-index-kv-img__wrap {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.p-index-kv-img__item {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center bottom; }
+
+.p-index-kv-img__item {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.p-index-kv-img__item.is-shown {
+  -webkit-animation-name: showKvImage;
+  animation-name: showKvImage;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@keyframes showKvImage {
+  0% {
+    z-index: 99;
+    opacity: 0;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  10% {
+    opacity: 1; }
+  100% {
+    z-index: 1;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+.p-index-kv-pager {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  z-index: 200; }
+
+.p-index-kv-pager {
+  width: 5%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  right: 5%;
+  bottom: 90px; }
+
+.p-index-kv-pager__item {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex; }
+
+.p-index-kv-pager__item-label, .p-index-kv-pager__item-circle {
+  width: 50%;
+  height: 100%; }
+
+.p-index-kv-pager__item-label {
+  line-height: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #fff;
+  font-size: 15px;
+  font-family: proxima-nova-condensed, sans-serif !important;
+  text-align: center; }
+
+.p-index-kv-pager__item-circle {
+  position: relative; }
+
+.p-index-kv-pager__item-circle:before, .p-index-kv-pager__item-circle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%; }
+
+.p-index-kv-pager__item-circle:before {
+  width: 4px;
+  height: 4px;
+  z-index: 10;
+  margin-top: -2px;
+  margin-left: -2px;
+  background-color: #999; }
+
+.p-index-kv-pager__item-circle:after {
+  background: linear-gradient(220deg, #fb5fb7, #00a1d7); }
+
+.p-index-kv-pager__item {
+  opacity: 0; }
+
+.p-index-kv-pager__item {
+  height: 35px; }
+
+.is-shown .p-index-kv-pager__item {
+  opacity: 1;
+  -webkit-transition-duration: .8s;
+  transition-duration: .8s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity; }
+
+.is-shown .p-index-kv-pager__item:nth-of-type(1) {
+  -webkit-transition-delay: 1.6s;
+  transition-delay: 1.6s; }
+
+.is-shown .p-index-kv-pager__item:nth-of-type(2) {
+  -webkit-transition-delay: 1.65s;
+  transition-delay: 1.65s; }
+
+.is-shown .p-index-kv-pager__item:nth-of-type(3) {
+  -webkit-transition-delay: 1.7s;
+  transition-delay: 1.7s; }
+
+.is-shown .p-index-kv-pager__item:nth-of-type(4) {
+  -webkit-transition-delay: 1.75s;
+  transition-delay: 1.75s; }
+
+.is-shown .p-index-kv-pager__item:nth-of-type(5) {
+  -webkit-transition-delay: 1.8s;
+  transition-delay: 1.8s; }
+
+.is-shown .p-index-kv-pager__item:nth-of-type(6) {
+  -webkit-transition-delay: 1.85s;
+  transition-delay: 1.85s; }
+
+.p-index-kv-pager__item-label {
+  opacity: 0;
+  -webkit-transition-duration: .8s;
+  transition-duration: .8s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity; }
+
+.is-current .p-index-kv-pager__item-label {
+  opacity: 1; }
+
+.p-index-kv-pager__item-circle:before {
+  -webkit-transition-duration: .8s;
+  transition-duration: .8s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color; }
+
+.is-current .p-index-kv-pager__item-circle:before {
+  background-color: #fff;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+
+.p-index-kv-pager__item-circle:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-duration: .8s;
+  transition-duration: .8s;
+  -webkit-transition-property: opacity,-webkit-transform;
+  transition-property: opacity,-webkit-transform;
+  transition-property: opacity,transform;
+  transition-property: opacity, transform, -webkit-transform; }
+
+.p-index-kv-pager__item-circle:after {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px; }
+
+.is-current .p-index-kv-pager__item-circle:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-timing-function: cubic-bezier(0.3, 1.81, 0.57, 0.83);
+  transition-timing-function: cubic-bezier(0.3, 1.81, 0.57, 0.83); }
 
 @keyframes scroll_effect {
   0% {
