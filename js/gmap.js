@@ -3,6 +3,10 @@ function initMap() {
     lat: 35.694057,
     lng: 139.761723
   }
+  var latlng_view = {
+    lat: latlng.lat + 0.0004,
+    lng: latlng.lng
+  }
   var mapstyle = 
   [
     {
@@ -166,7 +170,7 @@ function initMap() {
   ]
 
   var map = new google.maps.Map(document.getElementById('gmap'), {
-    center: latlng,
+    center: latlng_view,
     zoom: 16,
     mapTypeControl: false,
     fullscreenControl: false,
