@@ -1,7 +1,7 @@
 function initMap() {
   var latlng = {
-    lat: 35.694070,
-    lng: 139.761721
+    lat: 35.694057,
+    lng: 139.761723
   }
   var mapstyle = 
   [
