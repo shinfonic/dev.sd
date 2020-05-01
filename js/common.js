@@ -89,7 +89,7 @@ $(function () {
     sld_pre = 'sld',
     pager_pre = 'pager',
     sld_time = 1000,
-    sld_wait = 5000;
+    sld_wait = 6000;
 
   $.fn.slide_fade = function () {
     return this.each(function (i, elem) {

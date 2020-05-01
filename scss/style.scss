@@ -30,9 +30,9 @@ body {
   font-family: $font-sanserif;
   font-weight: 400;
   font-size: 14px;
-  -webkit-font-smoothing: antialiased;
   color: $colorBlack;
-  letter-spacing: 0.1em;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt";
 }
 
 html, body {
@@ -60,7 +60,7 @@ a {
 
 p {
   line-height: 2.2;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   margin-bottom: 30px;
 }
 
@@ -381,6 +381,7 @@ header {
       justify-content: center;
       align-items: center;
       text-align: center;
+      letter-spacing: 0.2em;
       a {
         width: 100%;
         line-height: 50px;
@@ -438,42 +439,6 @@ header {
     margin: auto;
     width: 100%;
   }
-  // scroll
-  .arrowWrap {
-    width: 100px; // 偶数の幅を指定しないと微妙に滲むため
-    position: absolute;
-    bottom: -65px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    .arrow {
-      width: 1px;
-      height: 70px;
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-      &::before {
-        content: '';
-        width: 1px;
-        height: 70px;
-        background-color: $colorBlack;
-        position: absolute;
-        top: 0;
-        left: 0;
-        animation: scroll_effect 2s 2s cubic-bezier(.3,.4,.1,1) infinite;
-      }
-    }
-    p {
-      font-family: $font-proxima;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 1;
-      letter-spacing: 0.1em;
-      text-align: center;
-      margin-top: 12px;
-      margin-bottom: 3px;
-    }
-  }
 }
 @media (max-height: 890px) {
   #p-top #main-visual {
@@ -481,6 +446,43 @@ header {
   }
 }
 
+
+// scroll
+.arrowWrap {
+  width: 100px; // 偶数の幅を指定しないと微妙に滲むため
+  position: relative;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  .arrow {
+    width: 1px;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      width: 1px;
+      height: 70px;
+      background-color: $colorBlack;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: scroll_effect 2s 2s cubic-bezier(.3,.4,.1,1) infinite;
+    }
+  }
+  p {
+    font-family: $font-proxima;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+}
 
 
 @keyframes scroll_effect {
@@ -561,7 +563,7 @@ section {
 #p-top #concept {
   background: $colorWhite;
   position: relative;
-  margin-top: 62px;
+  margin-top: -35px;
   padding-top: 90px;
   padding-bottom: 115px;
   .sec-content {
@@ -581,6 +583,7 @@ section {
         position: relative;
       }
       p {
+        letter-spacing: 0.18em;
         &:last-child {
           margin-bottom: 0;
         }
@@ -641,15 +644,9 @@ section {
       background-size: cover;
       color: $colorWhite;
       position: relative;
+      width: 23.2%;
       min-height: 340px;
-      padding: 170px 25px 0;
-      margin-right: 25px;
-      &:last-child {
-        margin-right: 0;
-        h3 {
-          letter-spacing: -0.05em;
-        }
-      }
+      padding: 170px 25px 20px;
       img {
         width: 80%;
         position: absolute;
@@ -666,7 +663,7 @@ section {
       p {
         font-size: 13px;
         line-height: 1.5;
-        letter-spacing: 0;
+        letter-spacing: 0.14em;
       }
       a {
         color: $colorWhite;
@@ -800,7 +797,7 @@ section {
       padding: 10px 0 11px;
       position: relative;
       a {
-        letter-spacing: 0.1em;
+        letter-spacing: 0.18em;
         &:hover {
           color: $colorBlack;
         }
@@ -906,7 +903,7 @@ footer {
         }
       }
       ul {
-        margin-left: -5px;
+        margin-left: -2px;
         margin-bottom: 24px;
         &:last-child {
           margin-bottom: 7px;
@@ -914,11 +911,12 @@ footer {
         li {
           list-style: none;
           font-size: 12px;
-          letter-spacing: 0;
+          letter-spacing: 0.1em;
           margin-bottom: 7px;
           &::before {
             content: "・";
             color: #8f8f8f;
+            margin-right: 3px;
           }
           a {
             color: #8f8f8f;
@@ -963,6 +961,7 @@ footer {
     .profile-name {
       font-size: 15px;
       line-height: 1.7;
+      letter-spacing: 0.1em;
       margin-bottom: 44px;
       .en {
         font-size: 16px;
@@ -982,6 +981,9 @@ footer {
         }
       }
     }
+    p {
+      letter-spacing: 0.18em;
+    }
     h3 {
       font-size: 16px;
       font-family: $font-proxima;
@@ -992,7 +994,7 @@ footer {
     ul {
       li {
         font-size: 13px;
-        letter-spacing: 0;
+        letter-spacing: 0.1em;
         margin-bottom: 7px;
         &::before {
           content: "-";
@@ -1005,7 +1007,7 @@ footer {
       flex-wrap: wrap;
       margin: 50px 0 40px;
       dt, dd {
-        letter-spacing: 0.1em;
+        letter-spacing: 0.18em;
         line-height: 1.8;
         margin: 0;
         padding: 27px 0;
@@ -1084,6 +1086,26 @@ footer {
     .bg-concept {
       right: -30px;
     }
+  }
+  #slider {
+    .sld-label {
+      font-size: 1.2vw;
+      span {
+        right: 22%;
+        &:nth-child(1) {
+          margin-right: 2.2vw;
+          &::after {
+            right: -1.2vw;
+          }
+        }
+      }
+    }
+  }
+  .p-index-kv-pager {
+    width: 7.2%;
+  }
+  .p-index-kv-pager__item-label {
+    font-size: 1.3vw;
   }
 }
 
