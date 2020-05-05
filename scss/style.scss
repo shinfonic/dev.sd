@@ -60,7 +60,7 @@ a {
 
 p {
   line-height: 2.2;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   margin-bottom: 30px;
 }
 
@@ -72,6 +72,9 @@ p {
 }
 .text-right {
   text-align: right;
+}
+.ls-0 {
+  letter-spacing: 0 !important;
 }
 
 ul {
@@ -280,7 +283,7 @@ header {
     display: inline-block;
     font-size: 40px;
     font-weight: 400;
-    letter-spacing: 0;
+    letter-spacing: 0.12em;
     margin-bottom: 63px;
     &::after {
       content: '';
@@ -374,9 +377,10 @@ header {
     background: $colorWhite;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     li {
       position: relative;
-      width: 100%;
+      width: 33.33333%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -583,7 +587,6 @@ section {
         position: relative;
       }
       p {
-        letter-spacing: 0.18em;
         &:last-child {
           margin-bottom: 0;
         }
@@ -656,6 +659,7 @@ section {
       }
       h3 {
         font-size: 18px;
+        font-weight: 600px;
         text-align: center;
         margin-bottom: 16px;
         letter-spacing: 0;
@@ -981,9 +985,6 @@ footer {
         }
       }
     }
-    p {
-      letter-spacing: 0.18em;
-    }
     h3 {
       font-size: 16px;
       font-family: $font-proxima;
@@ -1005,7 +1006,7 @@ footer {
     dl {
       display: flex;
       flex-wrap: wrap;
-      margin: 50px 0 40px;
+      margin: 65px 0 40px;
       dt, dd {
         letter-spacing: 0.18em;
         line-height: 1.8;
@@ -1045,6 +1046,111 @@ footer {
     p {
       font-size: 13px;
       line-height: 1.5;
+    }
+  }
+}
+
+#p-faq {
+  .faq-title {
+    padding-top: 50px;
+    padding-bottom: 5px;
+    text-align: center;
+    div {
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      margin: 0 auto 40px;
+    }
+    p {
+      font-size: 15px;
+      letter-spacing: 0.23em;
+    }
+  }
+  section:nth-last-of-type(2) {
+    padding-bottom: 120px;
+  }
+  .faq-sec {
+    padding-bottom: 68px;
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      line-height: 1.4;
+      padding-left: 24px;
+      margin-bottom: 50px;
+      border-left: 3px solid;
+      border-image: linear-gradient(to bottom, $gradation-from, $gradation-to);
+      border-image-slice: 1;
+    }
+    .faq-block {
+      position: relative;
+      border: 1px solid #ccc;
+      padding: 26px 93px 4px;
+      margin-bottom: 30px;
+      input[type=checkbox] {
+        display: none;
+        &:checked + h3 label:before {
+          content: "−";
+          transform: rotate(180deg);
+          transform-origin: center center;
+          padding: 5px 0 0 1px;
+        }
+        &:checked + h3 + .block-accordion {
+          opacity: 1;
+          max-height: 1000px;
+        }
+      }
+      h3 {
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        margin-bottom: 21px;
+        label {
+          cursor: pointer;
+          position: relative;
+          width: 100%;
+          margin: 0;
+          &::before {
+            content: "＋";
+            position: absolute;
+            top: -2px;
+            right: -58px;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background: $colorBlack;
+            color: $colorWhite;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1;
+            padding: 4px 0 0 2px;
+            transition: 0.4s ease-in;
+          }
+        }
+      }
+      .block-accordion {
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 1.0s ease-in-out 0s,
+                    opacity 0.4s ease 0.1s;
+        p {
+          font-size: 16px;
+          line-height: 1.9;
+          letter-spacing: 0.1em;
+          margin-bottom: 18px;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 23px;
+        left: 30px;
+        width: 35px;
+        height: 40px;
+        background-image: url("/img/q.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
     }
   }
 }
@@ -1124,5 +1230,13 @@ footer {
   #header-common,
   section {
     width: auto;
+  }
+
+  .anker-link ul li a {
+    font-size: 13px;
+    letter-spacing: 0;
+    &::after {
+      right: 16px;
+    }
   }
 }
