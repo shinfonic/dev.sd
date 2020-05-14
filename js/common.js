@@ -117,3 +117,17 @@ $(function () {
     $(sld_wrap).data('sldnum', 1).slide_fade();
   });
 });
+
+
+// FAQ accordion
+$('input').change(function () {
+
+  $(this).each(function () {
+    if ($(this).is(':checked')) {
+      $(this).nextAll('.block-accordion').slideDown();
+    }
+    else {
+      $(this).nextAll('.block-accordion').slideUp();
+    }
+  })
+})
