@@ -131,3 +131,24 @@ $('input').change(function () {
     }
   })
 })
+
+// WORKS sort
+$(".sort-menu li").on("click", function () {
+  var cateSelected = $(this).data('category');
+
+  $(".sort-menu li").removeClass('current');
+  $(this).addClass('current');
+
+  $('#works-view').fadeOut(500, function () {
+    $('#works-view article').each(function () {
+      var cateData = $(this).data('category');
+
+      if ((cateData.match(cateSelected)) || (cateSelected == 'all')) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+    $('#works-view').fadeIn(300);
+  });
+});

@@ -799,7 +799,7 @@ header {
         #header-common .flex-box .sublink li:nth-child(2) a::before {
           background-image: url("/img/pen.png"); }
 
-.anker-link {
+.block-submenu {
   width: 100%;
   height: 250px;
   padding: 0 40px;
@@ -809,14 +809,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .anker-link ul {
+  .block-submenu .anker-link {
     width: 960px;
     margin: 0;
     background: #fff;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; }
-    .anker-link ul li {
+    .block-submenu .anker-link li {
       position: relative;
       width: 33.33333%;
       display: flex;
@@ -824,19 +824,19 @@ header {
       align-items: center;
       text-align: center;
       letter-spacing: 0.2em; }
-      .anker-link ul li a {
+      .block-submenu .anker-link li a {
         width: 100%;
         line-height: 50px;
         position: relative;
         overflow: hidden;
         z-index: 0; }
-        .anker-link ul li a:hover {
+        .block-submenu .anker-link li a:hover {
           color: #fff; }
-          .anker-link ul li a:hover::before {
+          .block-submenu .anker-link li a:hover::before {
             transform: rotate(-8deg) translate(-50%, -50%) scaleX(1); }
-          .anker-link ul li a:hover::after {
+          .block-submenu .anker-link li a:hover::after {
             border-color: #fff; }
-        .anker-link ul li a::before {
+        .block-submenu .anker-link li a::before {
           content: '';
           width: 105%;
           height: 300%;
@@ -848,7 +848,7 @@ header {
           transition: all 0.6s cubic-bezier(0.24, 1, 0.32, 1);
           transform: rotate(-8deg) translate(-50%, -50%) scaleX(0);
           transform-origin: 0 0; }
-        .anker-link ul li a::after {
+        .block-submenu .anker-link li a::after {
           content: "";
           position: absolute;
           top: 18px;
@@ -859,6 +859,22 @@ header {
           border-right: 1px solid #000;
           transform: rotate(135deg);
           transition: 0.5s; }
+  .block-submenu .sort-menu {
+    display: flex;
+    width: 960px;
+    margin: 0; }
+    .block-submenu .sort-menu li {
+      margin-right: 60px;
+      font-family: proxima-nova-condensed, sans-serif !important;
+      font-size: 16px;
+      letter-spacing: 0.07em;
+      color: #979b9e;
+      transition: 0.3s;
+      cursor: pointer; }
+      .block-submenu .sort-menu li:last-child {
+        margin: 0; }
+      .block-submenu .sort-menu li.current, .block-submenu .sort-menu li:hover {
+        color: #000; }
 
 #p-top #main-visual {
   overflow: hidden;
@@ -1418,6 +1434,43 @@ footer {
       background-repeat: no-repeat;
       background-size: contain; }
 
+#p-works #works-view {
+  padding-top: 60px;
+  padding-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  transition: opacity 0s; }
+  #p-works #works-view article {
+    width: 29.5%;
+    margin-right: 3.833333%;
+    margin-bottom: 10%; }
+    #p-works #works-view article a .works-veiw-img {
+      width: 100%;
+      padding-top: 66.666666%;
+      position: relative;
+      overflow: hidden; }
+      #p-works #works-view article a .works-veiw-img img {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: 0.8s cubic-bezier(0.05, 0.75, 0.35, 0.93); }
+    #p-works #works-view article a:hover img {
+      width: 110%;
+      opacity: 0.8; }
+    #p-works #works-view article a .works-veiw-text h2 {
+      font-size: 15px;
+      font-weight: 400;
+      margin: 20px 0 5px; }
+    #p-works #works-view article a .works-veiw-text p {
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+      margin: 0; }
+
 @media (max-width: 1640px) {
   header,
   #p-top #main-visual,
@@ -1472,10 +1525,13 @@ footer {
   section {
     width: auto; }
 
-  .anker-link ul li a {
+  .anker-link li a {
     font-size: 13px;
     letter-spacing: 0; }
-    .anker-link ul li a::after {
-      right: 16px; } }
+    .anker-link li a::after {
+      right: 16px; }
+
+  #p-works #works-view {
+    padding-right: 10px; } }
 
 /*# sourceMappingURL=style.css.map */

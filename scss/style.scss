@@ -360,7 +360,7 @@ header {
   }
 }
 
-.anker-link {
+.block-submenu {
   width: 100%;
   height: 250px;
   padding: 0 40px;
@@ -370,7 +370,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  ul {
+  .anker-link {
     width: 960px;
     // height: 50px;
     margin: 0;
@@ -426,6 +426,27 @@ header {
           transform: rotate(135deg);
           transition: 0.5s;
         }
+      }
+    }
+  }
+  .sort-menu {
+    display: flex;
+    width: 960px;
+    margin: 0;
+    li {
+      margin-right: 60px;
+      font-family: $font-proxima;
+      font-size: 16px;
+      letter-spacing: 0.07em;
+      color: #979b9e;
+      transition: 0.3s;
+      cursor: pointer;
+      &:last-child {
+        margin: 0;
+      }
+      &.current,
+      &:hover {
+        color: $colorBlack;
       }
     }
   }
@@ -1180,6 +1201,58 @@ footer {
   }
 }
 
+#p-works {
+  #works-view {
+    padding-top: 60px;
+    padding-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    transition: opacity 0s;
+    article {
+      width: 29.5%;
+      margin-right: 3.833333%;
+      margin-bottom: 10%;
+      a {
+        .works-veiw-img {
+          width: 100%;
+          padding-top: 66.666666%;
+          position: relative;
+          overflow: hidden;
+          img {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            transition: 0.8s cubic-bezier(.05,.75,.35,.93);
+          }
+        }
+        &:hover {
+          img {
+            width: 110%;
+            opacity: 0.8;
+          }
+        }
+        .works-veiw-text {
+          h2 {
+            font-size: 15px;
+            font-weight: 400;
+            margin: 20px 0 5px;
+          }
+          p {
+            font-size: 10px;
+            letter-spacing: 0.05em;
+            line-height: 1.2;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1640px) {
   header,
   #p-top #main-visual,
@@ -1257,11 +1330,17 @@ footer {
     width: auto;
   }
 
-  .anker-link ul li a {
+  .anker-link li a {
     font-size: 13px;
     letter-spacing: 0;
     &::after {
       right: 16px;
+    }
+  }
+
+  #p-works {
+    #works-view {
+      padding-right: 10px;
     }
   }
 }
