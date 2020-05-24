@@ -11,8 +11,11 @@ $flex: flex;
 $flexColumn: column;
 $font-abril: abril-text, serif !important;
 $font-proxima: proxima-nova-condensed, sans-serif !important;
-$font-sanserif: 'Noto Sans JP', serif !important;
-$font-serif: 'Noto Serif JP', serif !important;
+// $font-sanserif: 'Noto Sans JP', sans-serif !important;
+$font-sanserif: source-han-sans-japanese, sans-serif !important;
+// $font-serif: 'Noto Serif JP', serif !important;
+$font-serif: source-han-serif-japanese, serif !important;
+$font-ryo: ryo-gothic-plusn, sans-serif !important;
 $gradation-from: #fb5fb7;
 $gradation-to: #00a1d7;
 
@@ -76,6 +79,16 @@ p {
 .ls-0 {
   letter-spacing: 0 !important;
 }
+.a-url {
+  font-size: 13px;
+  letter-spacing: 0;
+}
+.a-text {
+  font-size: 13px;
+  letter-spacing: 0;
+  border-bottom: 1px solid $colorBlack;
+  margin-bottom: 2px;
+}
 
 ul {
   padding-left: 0;
@@ -93,9 +106,8 @@ ul {
   padding: 13.5px 0;
   transition: .3s;
   font-family: $font-serif;
-  font-weight: 600;
   font-size: 14px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   position: relative;
   overflow: hidden;
   &:hover {
@@ -139,7 +151,7 @@ ul {
 // fade animation / header
 .effect-fade {
   opacity: 0;
-  transform: translate(0, 5px);
+  // transform: translate(0, 5px);
   transition: all 2s;
 }
 
@@ -200,7 +212,9 @@ ul {
     }
   }
 }
-
+#p-works #pagetop {
+  top: -190px;
+}
 
 
 /* header */
@@ -693,7 +707,6 @@ section {
       a {
         color: $colorWhite;
         font-family: $font-serif;
-        font-weight: 600;
         font-size: 13px;
         letter-spacing: 0.1em;
         position: absolute;
@@ -740,7 +753,7 @@ section {
 }
 
 // works
-#p-top #works {
+#p-top #top-works {
   margin-bottom: 55px;
   p {
     line-height: 1rem;
@@ -1201,7 +1214,7 @@ footer {
   }
 }
 
-#p-works {
+#p-works-view {
   #works-view {
     padding-top: 60px;
     padding-right: 0;
@@ -1213,40 +1226,183 @@ footer {
       width: 29.5%;
       margin-right: 3.833333%;
       margin-bottom: 10%;
-      a {
-        .works-veiw-img {
-          width: 100%;
-          padding-top: 66.666666%;
-          position: relative;
-          overflow: hidden;
-          img {
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 1;
-            transition: 0.8s cubic-bezier(.05,.75,.35,.93);
-          }
-        }
-        &:hover {
-          img {
-            width: 110%;
-            opacity: 0.8;
-          }
-        }
-        .works-veiw-text {
-          h2 {
-            font-size: 15px;
-            font-weight: 400;
-            margin: 20px 0 5px;
-          }
-          p {
-            font-size: 10px;
-            letter-spacing: 0.05em;
-            line-height: 1.2;
-            margin: 0;
-          }
+    }
+  }
+}
+
+a {
+  .works-veiw-img {
+    width: 100%;
+    padding-top: 66.666666%;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      transition: 0.8s cubic-bezier(.05,.75,.35,.93);
+    }
+  }
+  &:hover {
+    .works-veiw-img {
+      img {
+        width: 110% !important;
+        opacity: 0.8;
+      }
+    }
+  }
+  .works-veiw-text {
+    h2, h3 {
+      font-size: 15px;
+      font-weight: 400;
+      margin: 20px 0 5px;
+    }
+    p {
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+      margin: 0;
+    }
+  }
+}
+#p-works {
+  .works-header {
+    margin: 160px 0 36px;
+    width: 100%;
+    height: 635px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+  }
+  .works-text-wrap-01 {
+    margin: 0 0 40px;
+    h1 {
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      margin-bottom: 88px;
+      span {
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        display: block;
+        margin-top: 12px;
+      }
+    }
+  }
+  .works-text-wrap-02 {
+    margin: 90px 0;
+  }
+  .works-text-wrap-03 {
+    margin: 75px 0;
+    .works-credits {
+      font-size: 13px;
+      letter-spacing: 0;
+      line-height: 2.35;
+      margin-bottom: 80px;
+    }
+    h2 {
+      font-family: $font-proxima;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      margin-bottom: 13px;
+    }
+  }
+  .works-text {
+    font-family: $font-ryo;
+    letter-spacing: 0.05em;
+  }
+  .img-gird {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .img-1-1 {
+    width: 100%;
+    margin: 0 0 20px 0;
+    img {
+      width: 100%;
+    }
+  }
+  .img-1-2 {
+    width: 50%;
+    padding-bottom: 20px;
+    &:nth-of-type(2n-1) {
+      padding-right: 10px;
+    }
+    &:nth-of-type(2n) {
+      padding-left: 10px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .works-other {
+    padding-top: 1px;
+    h2 {
+      font-size: 20px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      margin-bottom: 53px;
+    }
+    .works-veiw-img {
+      padding-top: 60.606060%;
+    }
+    .img-1-2 {
+      &:nth-of-type(2n-1) {
+        padding-right: 17px;
+      }
+      &:nth-of-type(2n) {
+        padding-left: 17px;
+      }
+    }
+  }
+
+  .pageback {
+    display: block;
+    width: 100%;
+    background: #f1f2f3;
+    padding: 48px 0;
+    margin: 50px 0 0 0;
+    text-align: center;
+    font-family: $font-serif;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    transition: .3s;
+    .back-arrow {
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        background-color: $colorBlack;
+        left: -35px;
+        transition: .3s;
+      }
+      &::before {
+        top: 12px;
+        width: 19px;
+      }
+      &::after {
+        top: 10px;
+        width: 6px;
+        transform: rotate(-45deg);
+      }
+    }
+    &:hover {
+      color: #969696;
+      .back-arrow {
+        &::before,
+        &::after {
+          background-color: #969696;
         }
       }
     }
@@ -1338,9 +1494,18 @@ footer {
     }
   }
 
-  #p-works {
+  #p-works-view {
     #works-view {
       padding-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 975px) {
+  #p-works {
+    .works-header {
+      height: auto;
+      padding-top: 66.666666%;
     }
   }
 }

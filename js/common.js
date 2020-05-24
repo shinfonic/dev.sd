@@ -139,7 +139,7 @@ $(".sort-menu li").on("click", function () {
   $(".sort-menu li").removeClass('current');
   $(this).addClass('current');
 
-  $('#works-view').fadeOut(500, function () {
+  $('#works-view').fadeOut(300, function () {
     $('#works-view article').each(function () {
       var cateData = $(this).data('category');
 
@@ -149,6 +149,6 @@ $(".sort-menu li").on("click", function () {
         $(this).hide();
       }
     });
-    $('#works-view').fadeIn(300);
+    $('#works-view').fadeIn(2000);
   });
 });
