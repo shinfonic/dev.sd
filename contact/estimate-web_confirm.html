@@ -46,12 +46,12 @@
       <!-- #breadcrumb -->
       <!-- #page-menu -->
     <div id="header-common">
-      <h1>お問い合わせ</h1>
+      <h1>見積もり依頼</h1>
       <div class="flex-box">
         <ul class="breadcrumbs">
           <li><a href="/">HOME</a></li>
           <li><a href="#">CONTACT</a></li>
-          <li>お問い合わせ</li>
+          <li>見積もり依頼 - Web制作</li>
         </ul>
         <ul class="sublink">
           <li><a href="#">見積もり依頼</a></li>
@@ -63,26 +63,93 @@
     <section id="p-contact-sec" class="effect-fade">
       <div class="p-contact-sec-inner">
         <ul class="anker-link">
-          <li><a class="current">お問い合わせ</a></li>
-          <li><a href="/contact/estimate-web.html">見積もり依頼（Web）</a></li>
-          <li><a href="/contact/estimate-movie.html">見積もり依頼（映像）</a></li>
+          <li><a class="disable">お問い合わせ</a></li>
+          <li><a class="current">見積もり依頼（Web）</a></li>
+          <li><a class="disable">見積もり依頼（映像）</a></li>
         </ul>
-        <div class="p-contact-box">
-          <h2>送信完了</h2>
+
+        <div class="p-contact-box confirm">
+          <h2>入力内容をご確認ください</h2>
           <p>
-            入力したメッセージの送信が完了いたしました。<br>
-            <br>
-            折り返し確認メール（自動配信）をお送りしております。<br>
-            お問い合わせ内容につきましては、<br>
-            順次回答させていただきますので、今しばらくお待ちください。<br>
-            <br>
-            今後とも、どうぞよろしくお願い申し上げます。<br>
-            <br>
-            SUGIYAMA DESIGN
+            皆さまとの対話の中で有益な問題解決を探ります。<br>
+            光速対応を心掛けておりますが、お問い合わせ内容によってはお返事に<br>
+            時間がかかる場合や、お答えできない場合がある旨ご了承ください。
           </p>
-          <div class="submit">
-            <a href="/" class="btn-contact">TOPページに戻る</a>
-          </div>
+          <form action="" method="post">
+            <h3>基本情報</h3>
+            <ul>
+              <li>
+                <label for="form-w-name" class="required">お名前</label>
+                <p id="form-w-name">杉山 順哉</p>
+              </li>
+              <li>
+                <label for="form-w-kana" class="required">ふりがな</label>
+                <p id="form-w-kana">すぎやま じゅんや</p>
+              </li>
+              <li>
+                <label for="form-w-company" class="">会社名</label>
+                <p id="form-w-company">SUGIYAMA DESIGN</p>
+              </li>
+              <li>
+                <label for="form-w-tel" class="required">電話番号</label>
+                <p id="form-w-tel">03-6876-9994</p>
+              </li>
+              <li>
+                <label for="form-w-email" class="required">メールアドレス</label>
+                <p id="form-w-email">junya@sugiyamadesign.jp</p>
+              </li>
+            </ul>
+
+            <h3>想定しているホームページ</h3>
+            <ul>
+              <li>
+                <label for="form-w-type" class="required">サイト種類</label>
+                <p id="form-w-type">コーポレートサイト</p>
+              </li>
+              <li>
+                <label for="form-w-volume" class="required">想定ページ数</label>
+                <p id="form-w-volume">15P</p>
+              </li>
+              <li>
+                <label for="form-w-schedule" class="required">サイト公開までの日時</label>
+                <p id="form-w-schedule">3ヶ月以内</p>
+              </li>
+              <li>
+                <label for="form-w-budget" class="required">ご予算</label>
+                <p id="form-w-budget">100万円</p>
+              </li>
+              <li>
+                <label for="form-w-photo" class="required">写真撮影・イラスト</label>
+                <p id="form-w-photo">写真撮影を依頼したい</p>
+              </li>
+              <li>
+                <label for="form-w-detail" class="required">想定しているホームページの<br>詳細をお聞かせください</label>
+                <p id="form-w-detail">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストキスト</p>
+              </li>
+              <li>
+                <label for="form-w-url" class="required">現状ホームページのURL</label>
+                <p id="form-w-url">https://sugiyamadesign.jp/</p>
+              </li>
+            </ul>
+
+            <h3>運営プラン</h3>
+            <ul>
+              <li>
+                <label for="form-w-plan" class="">選択プラン</label>
+                <p id="form-w-plan">ベーシック（法人プラン）<br>¥29,800- (税抜) / 月額</p>
+              </li>
+              <li>
+                <label for="form-w-option" class="">運用追加オプション</label>
+                <p id="form-w-option">アクセス解析レポート<br>¥ 3,000- (税抜) / 月額</p>
+              </li>
+            </ul>
+
+            <div class="submit">
+              <input type="submit" value="送信する" class="btn-contact"><br>
+              <span class="back-arrow"><input type="button" value="戻る" onClick="history.back()"></span>
+            </div>
+          </form>
+
         </div>
       </div>
     </section>

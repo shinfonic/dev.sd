@@ -46,12 +46,12 @@
       <!-- #breadcrumb -->
       <!-- #page-menu -->
     <div id="header-common">
-      <h1>お問い合わせ</h1>
+      <h1>見積もり依頼</h1>
       <div class="flex-box">
         <ul class="breadcrumbs">
           <li><a href="/">HOME</a></li>
           <li><a href="#">CONTACT</a></li>
-          <li>お問い合わせ</li>
+          <li>見積もり依頼 - 映像制作</li>
         </ul>
         <ul class="sublink">
           <li><a href="#">見積もり依頼</a></li>
@@ -63,56 +63,164 @@
     <section id="p-contact-sec" class="effect-fade">
       <div class="p-contact-sec-inner">
         <ul class="anker-link">
-          <li><a class="current">お問い合わせ</a></li>
+          <li><a href="/contact/">お問い合わせ</a></li>
           <li><a href="/contact/estimate-web.html">見積もり依頼（Web）</a></li>
-          <li><a href="/contact/estimate-movie.html">見積もり依頼（映像）</a></li>
+          <li><a class="current">見積もり依頼（映像）</a></li>
         </ul>
+
         <div class="p-contact-box">
-          <h2>お問い合わせ</h2>
+          <h2>見積もり依頼　映像制作</h2>
           <p>
-            皆さまとの対話の中で有益な問題解決を探ります。<br>
-            光速対応を心掛けておりますが、お問い合わせ内容によってはお返事に<br>
-            時間がかかる場合や、お答えできない場合がある旨ご了承ください。
+            この度は、ご検討いただきありがとうございます。<br>
+            以下のをご記入いいただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
+            <a href="" target="_blank" class="btn-estimate">料金表</a>
+            <a href="" target="_blank" class="btn-estimate">FAQ</a>
           </p>
           <form action="" method="post">
+            <h3>基本情報</h3>
             <ul>
               <li>
-                <label for="form-affair" class="required">ご用件</label>
-                <select name="affair" id="form-affair" required>
-                  <option disabled selected>選択肢を表示</option>
-                  <option value="1">ご質問・ご相談</option>
-                  <option value="2">その他</option>
-                </select>
+                <label for="form-m-name" class="required">お名前</label>
+                <input id="form-m-name" name="name" type="text" required>
               </li>
               <li>
-                <label for="form-name" class="required">お名前</label>
-                <input id ="form-name" name="name" type="text" required>
+                <label for="form-m-kana" class="required">ふりがな</label>
+                <input id="form-m-kana" name="kana" type="text" required>
               </li>
               <li>
-                <label for="form-kana" class="required">ふりがな</label>
-                <input id ="form-kana" name="kana" type="text" required>
+                <label for="form-m-company" class="">会社名</label>
+                <input id="form-m-company" name="company" type="text">
               </li>
               <li>
-                <label for="form-company" class="">会社名</label>
-                <input id ="form-company" name="company" type="text">
-              </li>
-              <li>
-                <label for="form-tel" class="required">電話番号</label>
-                <div><input id ="form-tel" name="tel" type="tel" required>
-                <p class="notice">※日中ご連絡の取りやすい番号を入力してください。</p>
+                <label for="form-m-tel" class="required">電話番号</label>
+                <div><input id="form-m-tel" name="tel" type="tel" required>
+                  <p class="notice">※日中ご連絡の取りやすい番号を入力してください。</p>
                 </div>
               </li>
               <li>
-                <label for="form-email" class="required">メールアドレス</label>
-                <input id ="form-email" name="email" type="email" required>
-              </li>
-              <li>
-                <label for="form-content" class="required">お問い合わせ内容</label>
-                <textarea id="form-content" name="content" required></textarea>
+                <label for="form-m-email" class="required">メールアドレス</label>
+                <input id="form-m-email" name="email" type="email" required>
               </li>
             </ul>
-            <label for="form-privacy" class="privacy-label">個人情報保護方針</label>
-            <textarea id="form-privacy" class="privacy-area" readonly>
+          
+            <h3>想定している動画内容</h3>
+            <ul>
+              <li>
+                <label for="form-m-type" class="required">動画種別</label>
+                <select name="type" id="form-m-type" required>
+                  <option disabled selected>選択肢を表示</option>
+                  <option value="1">実写</option>
+                  <option value="2">モーショングラフィックス</option>
+                  <option value="3">2Dアニメーション</option>
+                  <option value="4">コマ撮り</option>
+                </select>
+              </li>
+              <li>
+                <label for="form-m-affair" class="required">制作用途</label>
+                <select name="affair" id="form-m-affair" required>
+                  <option disabled selected>選択肢を表示</option>
+                  <option value="1">コーポレートムービー</option>
+                  <option value="2">サービスプロモーション</option>
+                  <option value="3">TVCM</option>
+                  <option value="4">採用ブランドムービー</option>
+                  <option value="5">学校紹介</option>
+                  <option value="6">その他</option>
+                </select>
+              </li>
+              <li>
+                <label for="form-m-volume" class="required">想定分数</label>
+                <select name="volume" id="form-m-volume" required>
+                  <option disabled selected>選択肢を表示</option>
+                  <option value="1">未定</option>
+                  <option value="2">〜15秒</option>
+                  <option value="3">〜30秒</option>
+                  <option value="4">〜1分</option>
+                  <option value="5">〜2分</option>
+                  <option value="6">〜3分</option>
+                  <option value="7">〜5分</option>
+                  <option value="8">〜10分</option>
+                  <option value="9">〜15分</option>
+                  <option value="10">〜20分</option>
+                  <option value="11">その他</option>
+                </select>
+              </li>
+              <li>
+                <label for="form-m-schedule" class="required">動画公開までの日時</label>
+                <select name="schedule" id="form-m-schedule" required>
+                  <option disabled selected>選択肢を表示</option>
+                  <option value="1">未定</option>
+                  <option value="2">2週間以内</option>
+                  <option value="3">1ヶ月以内</option>
+                  <option value="4">2ヶ月以内</option>
+                  <option value="5">3ヶ月以内</option>
+                  <option value="6">4ヶ月以内</option>
+                  <option value="7">5ヶ月以内</option>
+                  <option value="8">6ヶ月以内</option>
+                  <option value="9">1年以内</option>
+                </select>
+              </li>
+              <li>
+                <label for="form-m-budget" class="required">ご予算</label>
+                <div>
+                  <select name="budget" id="form-m-budget" required>
+                    <option disabled selected>選択肢を表示</option>
+                    <option value="1">未定</option>
+                    <option value="2">15万</option>
+                    <option value="3">20万</option>
+                    <option value="4">30万</option>
+                    <option value="5">40万</option>
+                    <option value="6">50万</option>
+                    <option value="7">60万</option>
+                    <option value="8">70万</option>
+                    <option value="9">80万</option>
+                    <option value="10">90万</option>
+                    <option value="11">100万</option>
+                    <option value="12">〜200万</option>
+                    <option value="13">〜300万</option>
+                    <option value="14">〜400万</option>
+                    <option value="15">〜500万</option>
+                  </select>
+                  <p class="notice">※ご予算内で制作可能な内容をご提案いたします。<br>
+                    　決まっていない場合は「未定」を選択してください。</p>
+                </div>
+              </li>
+              <li>
+                <label for="form-m-detail" class="required">想定している映像制作の<br>詳細をお聞かせください</label>
+                <textarea id="form-m-detail" name="detail" required></textarea>
+              </li>
+              <li>
+                <label>制作追加オプション<span class="required"></span><br><span>※複数選択可能</span></label>
+                <ul class="option-movie">
+                  <li>
+                    <input id="form-m-option1" name="option" value="1" type="checkbox"><label for="form-m-option1">不要</label>
+                  </li>
+                  <li>
+                    <input id="form-m-option2" name="option" value="2" type="checkbox"><label for="form-m-option2">役者</label>
+                  </li>
+                  <li>
+                    <input id="form-m-option3" name="option" value="3" type="checkbox"><label for="form-m-option3">ナレーション</label>
+                  </li>
+                  <li>
+                    <input id="form-m-option4" name="option" value="4" type="checkbox"><label for="form-m-option4">テロップ</label>
+                  </li>
+                  <li>
+                    <input id="form-m-option5" name="option" value="5" type="checkbox"><label for="form-m-option5">作曲</label>
+                  </li>
+                  <li>
+                    <input id="form-m-option6" name="option" value="6" type="checkbox"><label for="form-m-option6">効果音</label>
+                  </li>
+                  <li>
+                    <input id="form-m-option7" name="option" value="7" type="checkbox"><label for="form-m-option7">字幕</label>
+                  </li>
+                  <li>
+                    <input id="form-m-option8" name="option" value="8" type="checkbox"><label for="form-m-option8">ドローン撮影</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          
+            <label for="form-m-privacy" class="privacy-label">個人情報保護方針</label>
+            <textarea id="form-m-privacy" class="privacy-area" readonly>
 SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり、個人情報保護の重要性を認識し、以下の方針に基づき個人情報の保護に努めてまいります。
 
 個人情報保護に関する法令やその他の規範を遵守し、個人情報を適正に取り扱います。
@@ -122,11 +230,12 @@ SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり�
 法令で定める開示請求等手続に関して、適切かつ迅速に対応致します。</textarea>
             <p class="notice">※個人情報保護に対する取り組みは「Privacy Policy」を必ずご確認ください。</p>
             <div class="submit">
-              <input id="form-check" name="check" type="checkbox" required>
-              <label for="form-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
+              <input id="form-m-check" name="check" type="checkbox" required>
+              <label for="form-m-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
               <input type="submit" value="確認画面" class="btn-contact">
             </div>
           </form>
+
         </div>
       </div>
     </section>

@@ -18,7 +18,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020063001">
+  <link rel="stylesheet" href="/css/style.css?v=2020071101">
 </head>
 
 <body id="p-faq" class="common">
@@ -328,7 +328,7 @@
     <div style="display: none;">−＋</div>
 
     <!-- contact -->
-    <section id="contact" class="section effect-fade">
+    <section id="contact" class="effect-fade effect-fade-zerotrans">
       <a href="#" id="pagetop">PAGE TOP<div class="pagetop-arrow"></div></a>
       <h2>Contact</h2>
       <p>ホームページ制作・サイト運営・映像制作のご相談・お見積りはこちらからお問い合わせください。<br>
