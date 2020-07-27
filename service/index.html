@@ -18,7 +18,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020071101">
+  <link rel="stylesheet" href="/css/style.css?v=2020072701">
 </head>
 
 <body id="p-service" class="common">
@@ -30,9 +30,9 @@
     <nav>
       <ul class="flex-box">
         <li><a href="/about/">ABOUT</a></li>
-        <li><a href="">SERVICE</a></li>
+        <li><a href="/service/">SERVICE</a></li>
         <li><a href="/works/">WORKS</a></li>
-        <li><a href="">PRICE</a></li>
+        <li><a href="/price/">PRICE</a></li>
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/contact/">CONTACT</a></li>
       </ul>
@@ -62,7 +62,7 @@
 
     <div class="block-submenu">
       <ul class="anker-link anker-link-noarrow">
-        <li><a href="/service/web.html">Web制作</a></li>
+        <li><a href="/service/web.html" class="current">Web制作</a></li>
         <li><a href="/service/cms.html">更新システムの設置</a></li>
         <li><a href="/service/support.html">サイト運営支援</a></li>
         <li><a href="/service/design.html">デザイン開発</a></li>
@@ -79,14 +79,16 @@
     </section>
 
     <section class="effect-fade check-list">
-      <h2><span>このような方はご相談ください</span></h2>
-      <ul>
-        <li>自社の商品、サービスに自信はあるがデザインに自信がない。</li>
-        <li>価値をうまく伝えられていない。集客率をUPさせたい。</li>
-        <li>Web制作が初めてでよく分からない。もっとよく知りたい。</li>
-        <li>写真撮影、映像制作を含めたサイトが作りたい。インタラクションサイトが作りたい。</li>
-        <li>Web制作から運用まで依頼したい。更新作業をもっと手軽にしたい。</li>
-      </ul>
+      <div>
+        <h2><span>このような方はご相談ください</span></h2>
+        <ul>
+          <li>自社の商品、サービスに自信はあるがデザインに自信がない。</li>
+          <li>価値をうまく伝えられていない。集客率をUPさせたい。</li>
+          <li>Web制作が初めてでよく分からない。もっとよく知りたい。</li>
+          <li>写真撮影、映像制作を含めたサイトが作りたい。インタラクションサイトが作りたい。</li>
+          <li>Web制作から運用まで依頼したい。更新作業をもっと手軽にしたい。</li>
+        </ul>
+      </div>
     </section>
 
     <section class="effect-fade middle-head">
@@ -94,7 +96,7 @@
       <p>幅広いWebクリエイティブワークを提供しています。</p>
       <hr>
     </section>
-
+<!-- 
     <section class="effect-fade grid-img-square">
       <div class="">
         <div class="subtitle"><span>01</span>Total Business</div>
@@ -176,7 +178,7 @@
       </ul>
       <hr>
     </section>
-
+ -->
 
     <!-- contact -->
     <section id="contact" class="effect-fade effect-fade-zerotrans">

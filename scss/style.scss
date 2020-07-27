@@ -405,7 +405,7 @@ header {
     flex-wrap: wrap;
     li {
       position: relative;
-      width: 33.33333%;
+      width: 33.333334%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -413,10 +413,12 @@ header {
       letter-spacing: 0.2em;
       a {
         width: 100%;
-        line-height: 50px;
+        line-height: 48px;
+        padding-bottom: 2px;
         position: relative;
         overflow: hidden;
         z-index: 0;
+        &.current,
         &:hover {
           color: $colorWhite;
           &::before {
@@ -1690,7 +1692,7 @@ a {
           flex-wrap: wrap;
           margin-top: 10px;
           li {
-            width: 33.33333%;
+            width: 33.333334%;
             margin: 15px 0;
             label {
               line-height: 1.5;
@@ -1843,7 +1845,8 @@ a {
         letter-spacing: 0.2em;
         a {
           width: 100%;
-          line-height: 50px;
+          line-height: 48px;
+          padding-bottom: 2px;
           position: relative;
           overflow: hidden;
           z-index: 0;
@@ -1956,6 +1959,7 @@ a {
 
 #p-service {
   .sv-title {
+    padding: 48px 0 10px;
     p {
       font-size: 20px;
       line-height: 2;
@@ -1963,42 +1967,49 @@ a {
     }
   }
   .check-list {
-    background: #f8f8f8;
-    h2 {
-      font-size: 22px;
-      font-weight: normal;
-      letter-spacing: 0.1em;
-      text-align: center;
-      margin-bottom: 50px;
-      span {
-        position: relative;
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -5px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: linear-gradient(to right, $gradation-from, $gradation-to);
+    padding-top: 18px;
+    padding-bottom: 83px;
+    div {
+      background: #f8f8f8;
+      padding: 42px 0;
+      h2 {
+        font-size: 22px;
+        font-weight: normal;
+        letter-spacing: 0.18em;
+        text-align: center;
+        margin-bottom: 45px;
+        span {
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to left, $gradation-from, $gradation-to);
+          }
         }
       }
-    }
-    ul {
-      margin: 0 0 0 200px;
-      li {
-        font-size: 16px;
-        margin: 0 0 20px;
-        padding-left: 50px;
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          background: url("/img/service/checkbox.png") no-repeat;
-          background-size: contain;
-          top: 3px;
-          left: 0;
-          width: 23px;
-          height: 18px;
+      ul {
+        margin: 0 auto;
+        display: table;
+        li {
+          font-size: 16px;
+          letter-spacing: 0.05em;
+          margin: 0 0 16px;
+          padding-left: 50px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            background: url("/img/service/checkbox.png") no-repeat;
+            background-size: contain;
+            top: 3px;
+            left: 0;
+            width: 23px;
+            height: 18px;
+          }
         }
       }
     }
@@ -2052,6 +2063,137 @@ a {
     h3 {
       font-size: 22px;
       margin-bottom: 50px;
+    }
+  }
+  .sv-3col {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      width: calc(100% / 3 - 20px);
+      border: 1px solid #dadada;
+      padding: 45px 35px 35px;
+      margin-bottom: 30px;
+      div {
+        height: 65px;
+        text-align: center;
+        img {
+          height: 100%;
+        }
+      }
+      h3 {
+        text-align: center;
+        font-size: 19px;
+        line-height: 1.36;
+        letter-spacing: 0.1em;
+        margin: 25px auto;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.93;
+        letter-spacing: 0.1em;
+        margin-bottom: 0;
+      }
+    }
+    &.short li {
+      padding: 48px 35px 28px;
+      div {
+        height: 74px;
+      }
+      h3 {
+        font-size: 18px;
+        letter-spacing: 0;
+        margin: 20px auto 16px;
+      }
+      p {
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 1.42;
+      }
+    }
+  }
+  .title-head {
+    margin-bottom: 48px;
+    span {
+      margin-bottom: 38px;
+    }
+    h2 {
+      font-family: $font-sanserif;
+      font-size: 30px;
+      letter-spacing: 0.22em;
+    }
+  }
+  .sv-2col {
+    display: flex;
+    & > div {
+      width: 50%;
+      &:nth-of-type(1) {
+        padding-right: 4.17%;
+      }
+      &:nth-of-type(2) {
+        padding-left: 4.17%;
+      }
+      p {
+        line-height: 2.5;
+        margin-bottom: 25px;
+      }
+      img {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+  .sv-h2 {
+    text-align: center;
+    h2 {
+      font-size: 22px;
+      letter-spacing: 0.15em;
+      margin-bottom: 35px;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 52px;
+    }
+  }
+  .sv-price {
+    padding-top: 10px;
+    padding-bottom: 75px;
+    .sv-price-2col {
+      display: flex;
+      justify-content: space-between;
+      div {
+        width: calc(50% - 15px);
+        background: #f8f8f8;
+        text-align: center;
+        padding: 7px 0 16px;
+      }
+      p {
+        font-size: 20px;
+        letter-spacing: 0;
+        display: inline;
+        position: relative;
+        span {
+          font-size: 35px;
+          margin-left: 8px;
+          margin-right: 8px;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -7px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(to left, $gradation-from, $gradation-to);
+        }
+      }
+    }
+    .link-box {
+      font-size: 16px;
+      width: 400px;
+      padding: 22px 0;
+      margin: 75px auto;
     }
   }
 }
@@ -2159,6 +2301,30 @@ a {
   #p-works-view {
     #works-view {
       padding-right: 10px;
+    }
+  }
+
+  #p-service {
+    .sv-3col {
+      li {
+        padding-left: 3%;
+        padding-right: 3%;
+        h3 {
+          font-size: 16px;
+        }
+      }
+    }
+    .sv-price {
+      .sv-price-2col {
+        div {
+          p {
+            font-size: 15px;
+            span {
+              font-size: 26px;
+            }
+          }
+        }
+      }
     }
   }
 }
