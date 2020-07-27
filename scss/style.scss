@@ -2305,7 +2305,8 @@ a {
   }
 
   #p-service {
-    .sv-3col {
+    .sv-3col,
+    .sv-3col.short {
       li {
         padding-left: 3%;
         padding-right: 3%;

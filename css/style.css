@@ -2267,10 +2267,12 @@ a .works-veiw-text p {
   #p-works-view #works-view {
     padding-right: 10px; }
 
-  #p-service .sv-3col li {
+  #p-service .sv-3col li,
+  #p-service .sv-3col.short li {
     padding-left: 3%;
     padding-right: 3%; }
-    #p-service .sv-3col li h3 {
+    #p-service .sv-3col li h3,
+    #p-service .sv-3col.short li h3 {
       font-size: 16px; }
   #p-service .sv-price .sv-price-2col div p {
     font-size: 15px; }
