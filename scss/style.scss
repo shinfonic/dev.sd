@@ -67,7 +67,8 @@ p {
 }
 
 hr {
-  border: 1px solid #eee;
+  border: 0;
+  border-top: 1px solid #eee;
 }
 
 .color-red {
@@ -82,11 +83,14 @@ hr {
 .text-right {
   text-align: right;
 }
-.ls-0 { letter-spacing: 0 !important; }
-.p-t0 { padding-top: 0 !important; }
+.ls-0  { letter-spacing: 0 !important; }
+.m-0   { margin: 0 !important; }
+.p-0   { padding: 0 !important; }
+.p-t0  { padding-top: 0 !important; }
 .p-t10 { padding-top: 10px !important; }
 .p-t70 { padding-top: 70px !important; }
 .p-t80 { padding-top: 80px !important; }
+.p-b0  { padding-bottom: 0 !important; }
 .p-b10 { padding-bottom: 10px !important; }
 .p-b40 { padding-bottom: 40px !important; }
 .p-b110 { padding-bottom: 110px !important; }
@@ -150,17 +154,26 @@ ul {
 .res-pc {
   display: block;
 }
+.res-tb {
+  display: block;
+}
 .res-sp {
   display: none;
 }
 
+@media screen and (max-width: 1055px) {
+  .res-tb {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .res-pc {
-      display: none;
-    }
+    display: none;
+  }
   .res-sp {
-      display: block;
-    }
+    display: block;
+  }
 }
 
 // fade animation / header
@@ -1236,19 +1249,24 @@ footer {
   }
 }
 
+#works-view {
+  padding-top: 60px;
+  padding-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  article {
+    width: 29.5%;
+    margin-right: 3.833333%;
+    margin-bottom: 10%;
+  }
+  .sv-h2-bold {
+    width: 96%;
+  }
+}
 #p-works-view {
   #works-view {
-    padding-top: 60px;
-    padding-right: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
     transition: opacity 0s;
-    article {
-      width: 29.5%;
-      margin-right: 3.833333%;
-      margin-bottom: 10%;
-    }
   }
 }
 
@@ -2023,6 +2041,11 @@ a {
           }
         }
       }
+      p {
+        margin: -17px auto 5px;
+        width: 76%;
+        letter-spacing: 0.22em;
+      }
     }
   }
   .middle-head {
@@ -2306,6 +2329,82 @@ a {
         margin-bottom: 0;
       }
     }
+    & + p {
+      line-height: 1.92;
+    }
+  }
+  .sv-4col-collapse {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    border-right: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    li {
+      width: calc(100% / 4);
+      border-top: 1px solid #dadada;
+      border-left: 1px solid #dadada;
+      padding: 22px 28px 79px 30px;
+      position: relative;
+      &:first-child::before,
+      &:last-child::before {
+        position: absolute;
+        bottom: 36px;
+        font-size: 12px;
+      }
+      &:first-child::before {
+        content: "KICK OFF";
+        left: 30px;
+      }
+      &:last-child::before {
+        content: "LAUNCH";;
+        right: 30px;
+      }
+      &:first-child::after,
+      &:nth-of-type(5)::after {
+        content: "";
+        position: absolute;
+        bottom: 25px;
+        display: block;
+        height: 1px;
+        width: calc(400% - 27px);
+        border-top: 1px solid #000;
+      }
+      &:first-child::after {
+        left: 30px;
+      }
+      &:nth-of-type(5)::after {
+        left: 0;
+      }
+      &:last-child::after {
+        content: "";
+        position: absolute;
+        bottom: 25px;
+        right: 29px;
+        display: block;
+        height: 0;
+        width: 0;
+        border-left: 4px solid #000;
+        border-right: 4px solid transparent;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid #000;
+      }
+      span {
+        font-size: 18px;
+      }
+      h4 {
+        font-size: 17px;
+        font-weight: normal;
+        letter-spacing: 0.1em;
+        margin: 33px 0 22px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 1.57;
+        letter-spacing: 0.1em;
+        margin-bottom: 0;
+      }
+    }
   }
   table {
     width: 100%;
@@ -2477,13 +2576,16 @@ a {
     }
   }
 
-  #p-works-view {
-    #works-view {
-      padding-right: 10px;
-    }
+  #works-view {
+    padding-right: 10px;
   }
 
   #p-service {
+    .sv-title {
+      p {
+        font-size: 1.87vw;
+      }
+    }
     .sv-2col-small {
       .link-box-wrap {
         position: relative;

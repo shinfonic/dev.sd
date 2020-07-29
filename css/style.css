@@ -573,7 +573,8 @@ p {
   margin-bottom: 30px; }
 
 hr {
-  border: 1px solid #eee; }
+  border: 0;
+  border-top: 1px solid #eee; }
 
 .color-red {
   color: #f00; }
@@ -590,6 +591,12 @@ hr {
 .ls-0 {
   letter-spacing: 0 !important; }
 
+.m-0 {
+  margin: 0 !important; }
+
+.p-0 {
+  padding: 0 !important; }
+
 .p-t0 {
   padding-top: 0 !important; }
 
@@ -601,6 +608,9 @@ hr {
 
 .p-t80 {
   padding-top: 80px !important; }
+
+.p-b0 {
+  padding-bottom: 0 !important; }
 
 .p-b10 {
   padding-bottom: 10px !important; }
@@ -661,9 +671,15 @@ ul {
 .res-pc {
   display: block; }
 
+.res-tb {
+  display: block; }
+
 .res-sp {
   display: none; }
 
+@media screen and (max-width: 1055px) {
+  .res-tb {
+    display: none; } }
 @media screen and (max-width: 768px) {
   .res-pc {
     display: none; }
@@ -1481,17 +1497,21 @@ footer {
       background-repeat: no-repeat;
       background-size: contain; }
 
-#p-works-view #works-view {
+#works-view {
   padding-top: 60px;
   padding-right: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
-  transition: opacity 0s; }
-  #p-works-view #works-view article {
+  justify-content: left; }
+  #works-view article {
     width: 29.5%;
     margin-right: 3.833333%;
     margin-bottom: 10%; }
+  #works-view .sv-h2-bold {
+    width: 96%; }
+
+#p-works-view #works-view {
+  transition: opacity 0s; }
 
 a .works-veiw-img {
   width: 100%;
@@ -2082,6 +2102,10 @@ a .works-veiw-text p {
           left: 0;
           width: 23px;
           height: 18px; }
+    #p-service .check-list div p {
+      margin: -17px auto 5px;
+      width: 76%;
+      letter-spacing: 0.22em; }
 #p-service .middle-head {
   padding-top: 46px;
   padding-bottom: 10px;
@@ -2305,6 +2329,67 @@ a .works-veiw-text p {
       line-height: 1.57;
       letter-spacing: 0.05em;
       margin-bottom: 0; }
+  #p-service .sv-4col + p {
+    line-height: 1.92; }
+#p-service .sv-4col-collapse {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  border-right: 1px solid #dadada;
+  border-bottom: 1px solid #dadada; }
+  #p-service .sv-4col-collapse li {
+    width: calc(100% / 4);
+    border-top: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+    padding: 22px 28px 79px 30px;
+    position: relative; }
+    #p-service .sv-4col-collapse li:first-child::before, #p-service .sv-4col-collapse li:last-child::before {
+      position: absolute;
+      bottom: 36px;
+      font-size: 12px; }
+    #p-service .sv-4col-collapse li:first-child::before {
+      content: "KICK OFF";
+      left: 30px; }
+    #p-service .sv-4col-collapse li:last-child::before {
+      content: "LAUNCH";
+      right: 30px; }
+    #p-service .sv-4col-collapse li:first-child::after, #p-service .sv-4col-collapse li:nth-of-type(5)::after {
+      content: "";
+      position: absolute;
+      bottom: 25px;
+      display: block;
+      height: 1px;
+      width: calc(400% - 27px);
+      border-top: 1px solid #000; }
+    #p-service .sv-4col-collapse li:first-child::after {
+      left: 30px; }
+    #p-service .sv-4col-collapse li:nth-of-type(5)::after {
+      left: 0; }
+    #p-service .sv-4col-collapse li:last-child::after {
+      content: "";
+      position: absolute;
+      bottom: 25px;
+      right: 29px;
+      display: block;
+      height: 0;
+      width: 0;
+      border-left: 4px solid #000;
+      border-right: 4px solid transparent;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid #000; }
+    #p-service .sv-4col-collapse li span {
+      font-size: 18px; }
+    #p-service .sv-4col-collapse li h4 {
+      font-size: 17px;
+      font-weight: normal;
+      letter-spacing: 0.1em;
+      margin: 33px 0 22px; }
+    #p-service .sv-4col-collapse li p {
+      font-size: 13px;
+      line-height: 1.57;
+      letter-spacing: 0.1em;
+      margin-bottom: 0; }
 #p-service table {
   width: 100%; }
   #p-service table tr {
@@ -2420,9 +2505,11 @@ a .works-veiw-text p {
     .anker-link li a::after {
       right: 16px; }
 
-  #p-works-view #works-view {
+  #works-view {
     padding-right: 10px; }
 
+  #p-service .sv-title p {
+    font-size: 1.87vw; }
   #p-service .sv-2col-small .link-box-wrap {
     position: relative; }
   #p-service .sv-2col-small > div:nth-of-type(2) img {
