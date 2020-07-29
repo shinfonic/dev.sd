@@ -18,7 +18,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020072701">
+  <link rel="stylesheet" href="/css/style.css?v=2020072801">
 </head>
 
 <body id="p-service" class="common">
@@ -71,7 +71,7 @@
       </ul>
     </div>
 
-    <section class="effect-fade sv-title">
+    <section class="effect-fade sv-title p-b10">
       <p>
         Webの専門知識がなくても、誰でも手軽に更新できる<br>
         更新システム（SUGIYAMA CMS）を導入しています。
@@ -168,7 +168,7 @@
     </section>
 
     <section class="effect-fade">
-      <div class="sv-h2">
+      <div class="sv-h2-bold">
         <h2>基本機能</h2>
         <p>初心者からプロフェッショナルまで満足のいく更新機能がそろっています。</p>
       </div>
@@ -238,7 +238,7 @@
     </section>
 
     <section class="effect-fade sv-price">
-      <div class="sv-h2">
+      <div class="sv-h2-bold">
         <h2>運営プランの料金</h2>
         <p>当CMSは月額運営プランにご加入でご利用いただけます。</p>
       </div>
@@ -250,7 +250,7 @@
           <p>個人事業主さま　月額<span>5,480 円〜 </span> </p>
         </div>
       </div>
-      <a href="" class="link-box">運営プランについて詳しくみる</a>
+      <a href="/service/support.html" class="link-box">運営プランについて詳しくみる</a>
     </section>
 
 
@@ -320,7 +320,7 @@
             <h3><a href="/faq/">FAQ</a></h3>
             <ul>
             </ul>
-            <h3><a href="#">NEWS</a></h3>
+            <h3><a href="/#news">NEWS</a></h3>
             <ul>
             </ul>
           </div>

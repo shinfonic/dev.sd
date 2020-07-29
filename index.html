@@ -18,7 +18,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020072701">
+  <link rel="stylesheet" href="/css/style.css?v=2020072801">
 </head>
 
 <body id="p-top">
@@ -86,7 +86,7 @@
               <span>About</span>
               <h2>Concept</h2>
             </div>
-            <a href="" class="link-box">詳細はこちら</a>
+            <a href="/about/" class="link-box">詳細はこちら</a>
           </div>
           <!-- 右側のボックス -->
           <div class="sec-content-item">
@@ -134,7 +134,7 @@
         </div>
         <div class="sec-content-lower">
           <p>「Web制作」と「サイト運営」と「映像制作」です。「Web制作」と「サイト運営」はセットになったサービスを提供しています。デザインコンサルの知見で経営課題を解決し最適なデザインをご提案します。</p>
-          <a href="" class="link-box">サービス一覧</a>
+          <a href="/service/" class="link-box">サービス一覧</a>
         </div>
       </div>
     </section>
@@ -162,7 +162,7 @@
         </div>
         <div class="flex-box">
           <p>お客さまの用途に合わせ、さまざまなクリエイティブを制作してきました。</p>
-          <a href="" class="link-box">実績一覧</a>
+          <a href="/works/" class="link-box">実績一覧</a>
         </div>
       </div>
     </section>
@@ -257,7 +257,7 @@
             <h3><a href="/faq/">FAQ</a></h3>
             <ul>
             </ul>
-            <h3><a href="#">NEWS</a></h3>
+            <h3><a href="#news">NEWS</a></h3>
             <ul>
             </ul>
           </div>

@@ -82,9 +82,15 @@ hr {
 .text-right {
   text-align: right;
 }
-.ls-0 {
-  letter-spacing: 0 !important;
-}
+.ls-0 { letter-spacing: 0 !important; }
+.p-t0 { padding-top: 0 !important; }
+.p-t10 { padding-top: 10px !important; }
+.p-t70 { padding-top: 70px !important; }
+.p-t80 { padding-top: 80px !important; }
+.p-b10 { padding-bottom: 10px !important; }
+.p-b40 { padding-bottom: 40px !important; }
+.p-b110 { padding-bottom: 110px !important; }
+
 .a-url {
   font-size: 13px;
   letter-spacing: 0;
@@ -871,7 +877,7 @@ section {
   }
   .news-date {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: bold;
     letter-spacing: 0.2em;
     width: 165px;
     flex-shrink: 0;
@@ -1958,8 +1964,13 @@ a {
 }
 
 #p-service {
+  section h3 {
+    font-size: 20px;
+    letter-spacing: 0.15em;
+    margin-bottom: 17px;
+  }
   .sv-title {
-    padding: 48px 0 10px;
+    padding: 48px 0 43px;
     p {
       font-size: 20px;
       line-height: 2;
@@ -2015,12 +2026,14 @@ a {
     }
   }
   .middle-head {
+    padding-top: 46px;
+    padding-bottom: 10px;
     text-align: center;
     h2 {
       font-size: 25px;
       font-weight: normal;
-      letter-spacing: 0.05em;
-      margin-bottom: 20px;
+      letter-spacing: 0.1em;
+      margin-bottom: 15px;
       span {
         font-weight: bold;
       }
@@ -2031,23 +2044,38 @@ a {
     }
     p {
       font-size: 16px;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
   }
-  .grid-img-square {
+  .sv-2col-small {
     display: flex;
-    &>div {
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    & > div {
+      width: 50%;
+      position: relative;
+      &:nth-of-type(1) {
+        padding-right: 2.08%;
+      }
       &:nth-of-type(2) {
-        flex: 1 0 420px;
+        padding-left: 2.08%;
+        img {
+          padding-left: 8.7%;
+          padding-top: 4px;
+          transition: 0.5s;
+        }
+      }
+      img {
+        width: 100%;
       }
     }
     .subtitle {
       font-size: 16px;
       font-family: $font-proxima;
       letter-spacing: 0.05em;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       span {
-        margin-right: 100px;
+        margin-right: 90px;
         position: relative;
         &::after {
           content: "";
@@ -2063,6 +2091,30 @@ a {
     h3 {
       font-size: 22px;
       margin-bottom: 50px;
+    }
+    h3.small {
+      font-size: 18px;
+      margin-bottom: 42px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.92;
+    }
+    .link-box-wrap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      .link-box {
+        font-size: 12px;
+        padding: 10px 0;
+        margin-right: 15px;
+        width: 170px;
+      }
+    }
+    hr {
+      width: 100%;
+      margin: 75px auto 0;
     }
   }
   .sv-3col {
@@ -2146,6 +2198,20 @@ a {
   }
   .sv-h2 {
     text-align: center;
+    margin-bottom: 84px;
+    h2 {
+      font-size: 30px;
+      font-weight: normal;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .sv-h2-bold {
+    text-align: center;
+    margin-bottom: 52px;
     h2 {
       font-size: 22px;
       letter-spacing: 0.15em;
@@ -2153,7 +2219,6 @@ a {
     }
     p {
       font-size: 14px;
-      margin-bottom: 52px;
     }
   }
   .sv-price {
@@ -2196,6 +2261,120 @@ a {
       margin: 75px auto;
     }
   }
+  .sv-4col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    li {
+      width: calc(100% / 4 - 2.5%);
+      border: 1px solid #dadada;
+      padding: 42px 23px 38px;
+      margin-bottom: 20px;
+      position: relative;
+      text-align: center;
+      span {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        font-size: 14px;
+        text-align: center;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #dadada;
+        padding-top: 3px;
+      }
+      div {
+        height: 32px;
+        text-align: center;
+        img {
+          height: 100%;
+        }
+      }
+      h4 {
+        text-align: center;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        margin: 30px auto 18px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.57;
+        letter-spacing: 0.05em;
+        margin-bottom: 0;
+      }
+    }
+  }
+  table {
+    width: 100%;
+    tr {
+      border-top: 1px solid #dadada;
+      &:last-of-type {
+        border-bottom: 1px solid #dadada;
+      }
+      th {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        padding: 28px 0;
+        width: 26%;
+      }
+      td {
+        font-size: 15px;
+        letter-spacing: 0.1em;
+        padding: 28px 0;
+      }
+      td:nth-of-type(1) {
+        width: 39%;
+      }
+      td:nth-of-type(2) {
+        width: 21%;
+      }
+    }
+  }
+  .sv-site {
+    padding-top: 35px;
+    padding-bottom: 0;
+    img {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    dl {
+      display: flex;
+      border-top: 1px solid #dadada;
+      border-bottom: 1px solid #dadada;
+      margin-left: 6.53%;
+      transition: 0.5s;
+      dt, dd {
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        padding: 24px 0 17px;
+      }
+      dt {
+        font-weight: 500;
+        margin-right: 15px;
+      }
+      dd {
+        margin-right: 37px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  article {
+    section.sv-site:first-of-type {
+      padding-top: 78px;
+    }
+    section.sv-site:last-of-type {
+      padding-bottom: 110px;
+    }
+  }
+
 }
 
 
@@ -2305,6 +2484,18 @@ a {
   }
 
   #p-service {
+    .sv-2col-small {
+      .link-box-wrap {
+        position: relative;
+      }
+      & > div {
+        &:nth-of-type(2) {
+          img {
+            padding-left: 0;
+          }
+        }
+      }
+    }
     .sv-3col,
     .sv-3col.short {
       li {
@@ -2313,6 +2504,12 @@ a {
         h3 {
           font-size: 16px;
         }
+      }
+    }
+    .sv-4col {
+      li {
+        padding-left: 12px;
+        padding-right: 12px;
       }
     }
     .sv-price {
@@ -2324,6 +2521,21 @@ a {
               font-size: 26px;
             }
           }
+        }
+      }
+    }
+    .sv-site {
+      dl {
+        margin-left: 0;
+        dt, dd {
+          font-size: 13px;
+          letter-spacing: 0;
+        }
+        dt {
+          margin-right: 3%;
+        }
+        dd {
+          margin-right: 7%;
         }
       }
     }

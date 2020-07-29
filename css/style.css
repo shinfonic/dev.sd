@@ -590,6 +590,27 @@ hr {
 .ls-0 {
   letter-spacing: 0 !important; }
 
+.p-t0 {
+  padding-top: 0 !important; }
+
+.p-t10 {
+  padding-top: 10px !important; }
+
+.p-t70 {
+  padding-top: 70px !important; }
+
+.p-t80 {
+  padding-top: 80px !important; }
+
+.p-b10 {
+  padding-bottom: 10px !important; }
+
+.p-b40 {
+  padding-bottom: 40px !important; }
+
+.p-b110 {
+  padding-bottom: 110px !important; }
+
 .a-url {
   font-size: 13px;
   letter-spacing: 0; }
@@ -1195,7 +1216,7 @@ section {
       right: 0; }
   #p-top #news .news-date {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: bold;
     letter-spacing: 0.2em;
     width: 165px;
     flex-shrink: 0; }
@@ -2011,8 +2032,12 @@ a .works-veiw-text p {
       top: 4px;
       right: 4px; }
 
+#p-service section h3 {
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  margin-bottom: 17px; }
 #p-service .sv-title {
-  padding: 48px 0 10px; }
+  padding: 48px 0 43px; }
   #p-service .sv-title p {
     font-size: 20px;
     line-height: 2;
@@ -2058,12 +2083,14 @@ a .works-veiw-text p {
           width: 23px;
           height: 18px; }
 #p-service .middle-head {
+  padding-top: 46px;
+  padding-bottom: 10px;
   text-align: center; }
   #p-service .middle-head h2 {
     font-size: 25px;
     font-weight: normal;
-    letter-spacing: 0.05em;
-    margin-bottom: 20px; }
+    letter-spacing: 0.1em;
+    margin-bottom: 15px; }
     #p-service .middle-head h2 span {
       font-weight: bold; }
     #p-service .middle-head h2 .proxima {
@@ -2071,20 +2098,33 @@ a .works-veiw-text p {
       font-family: proxima-nova-condensed, sans-serif !important; }
   #p-service .middle-head p {
     font-size: 16px;
-    margin-bottom: 40px; }
-#p-service .grid-img-square {
-  display: flex; }
-  #p-service .grid-img-square > div:nth-of-type(2) {
-    flex: 1 0 420px; }
-  #p-service .grid-img-square .subtitle {
+    margin-bottom: 50px; }
+#p-service .sv-2col-small {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px; }
+  #p-service .sv-2col-small > div {
+    width: 50%;
+    position: relative; }
+    #p-service .sv-2col-small > div:nth-of-type(1) {
+      padding-right: 2.08%; }
+    #p-service .sv-2col-small > div:nth-of-type(2) {
+      padding-left: 2.08%; }
+      #p-service .sv-2col-small > div:nth-of-type(2) img {
+        padding-left: 8.7%;
+        padding-top: 4px;
+        transition: 0.5s; }
+    #p-service .sv-2col-small > div img {
+      width: 100%; }
+  #p-service .sv-2col-small .subtitle {
     font-size: 16px;
     font-family: proxima-nova-condensed, sans-serif !important;
     letter-spacing: 0.05em;
-    margin-bottom: 50px; }
-    #p-service .grid-img-square .subtitle span {
-      margin-right: 100px;
+    margin-bottom: 40px; }
+    #p-service .sv-2col-small .subtitle span {
+      margin-right: 90px;
       position: relative; }
-      #p-service .grid-img-square .subtitle span::after {
+      #p-service .sv-2col-small .subtitle span::after {
         content: "";
         position: absolute;
         background: linear-gradient(to right, #fb5fb7, #00a1d7);
@@ -2092,9 +2132,28 @@ a .works-veiw-text p {
         left: 35px;
         width: 50px;
         height: 2px; }
-  #p-service .grid-img-square h3 {
+  #p-service .sv-2col-small h3 {
     font-size: 22px;
     margin-bottom: 50px; }
+  #p-service .sv-2col-small h3.small {
+    font-size: 18px;
+    margin-bottom: 42px; }
+  #p-service .sv-2col-small p {
+    font-size: 14px;
+    line-height: 1.92; }
+  #p-service .sv-2col-small .link-box-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex; }
+    #p-service .sv-2col-small .link-box-wrap .link-box {
+      font-size: 12px;
+      padding: 10px 0;
+      margin-right: 15px;
+      width: 170px; }
+  #p-service .sv-2col-small hr {
+    width: 100%;
+    margin: 75px auto 0; }
 #p-service .sv-3col {
   margin: 0;
   display: flex;
@@ -2156,14 +2215,24 @@ a .works-veiw-text p {
       width: 100%;
       margin-top: 10px; }
 #p-service .sv-h2 {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 84px; }
   #p-service .sv-h2 h2 {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    margin-bottom: 32px; }
+  #p-service .sv-h2 p {
+    font-size: 16px; }
+#p-service .sv-h2-bold {
+  text-align: center;
+  margin-bottom: 52px; }
+  #p-service .sv-h2-bold h2 {
     font-size: 22px;
     letter-spacing: 0.15em;
     margin-bottom: 35px; }
-  #p-service .sv-h2 p {
-    font-size: 14px;
-    margin-bottom: 52px; }
+  #p-service .sv-h2-bold p {
+    font-size: 14px; }
 #p-service .sv-price {
   padding-top: 10px;
   padding-bottom: 75px; }
@@ -2197,6 +2266,93 @@ a .works-veiw-text p {
     width: 400px;
     padding: 22px 0;
     margin: 75px auto; }
+#p-service .sv-4col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0; }
+  #p-service .sv-4col li {
+    width: calc(100% / 4 - 2.5%);
+    border: 1px solid #dadada;
+    padding: 42px 23px 38px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center; }
+    #p-service .sv-4col li span {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      font-size: 14px;
+      text-align: center;
+      display: block;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #dadada;
+      padding-top: 3px; }
+    #p-service .sv-4col li div {
+      height: 32px;
+      text-align: center; }
+      #p-service .sv-4col li div img {
+        height: 100%; }
+    #p-service .sv-4col li h4 {
+      text-align: center;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      margin: 30px auto 18px; }
+    #p-service .sv-4col li p {
+      font-size: 14px;
+      line-height: 1.57;
+      letter-spacing: 0.05em;
+      margin-bottom: 0; }
+#p-service table {
+  width: 100%; }
+  #p-service table tr {
+    border-top: 1px solid #dadada; }
+    #p-service table tr:last-of-type {
+      border-bottom: 1px solid #dadada; }
+    #p-service table tr th {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      padding: 28px 0;
+      width: 26%; }
+    #p-service table tr td {
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      padding: 28px 0; }
+    #p-service table tr td:nth-of-type(1) {
+      width: 39%; }
+    #p-service table tr td:nth-of-type(2) {
+      width: 21%; }
+#p-service .sv-site {
+  padding-top: 35px;
+  padding-bottom: 0; }
+  #p-service .sv-site img {
+    width: 100%;
+    margin-bottom: 50px; }
+  #p-service .sv-site dl {
+    display: flex;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    margin-left: 6.53%;
+    transition: 0.5s; }
+    #p-service .sv-site dl dt, #p-service .sv-site dl dd {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      padding: 24px 0 17px; }
+    #p-service .sv-site dl dt {
+      font-weight: 500;
+      margin-right: 15px; }
+    #p-service .sv-site dl dd {
+      margin-right: 37px; }
+      #p-service .sv-site dl dd:last-of-type {
+        margin-right: 0; }
+#p-service article section.sv-site:first-of-type {
+  padding-top: 78px; }
+#p-service article section.sv-site:last-of-type {
+  padding-bottom: 110px; }
 
 @media (max-width: 1640px) {
   header,
@@ -2267,6 +2423,10 @@ a .works-veiw-text p {
   #p-works-view #works-view {
     padding-right: 10px; }
 
+  #p-service .sv-2col-small .link-box-wrap {
+    position: relative; }
+  #p-service .sv-2col-small > div:nth-of-type(2) img {
+    padding-left: 0; }
   #p-service .sv-3col li,
   #p-service .sv-3col.short li {
     padding-left: 3%;
@@ -2274,9 +2434,21 @@ a .works-veiw-text p {
     #p-service .sv-3col li h3,
     #p-service .sv-3col.short li h3 {
       font-size: 16px; }
+  #p-service .sv-4col li {
+    padding-left: 12px;
+    padding-right: 12px; }
   #p-service .sv-price .sv-price-2col div p {
     font-size: 15px; }
     #p-service .sv-price .sv-price-2col div p span {
-      font-size: 26px; } }
+      font-size: 26px; }
+  #p-service .sv-site dl {
+    margin-left: 0; }
+    #p-service .sv-site dl dt, #p-service .sv-site dl dd {
+      font-size: 13px;
+      letter-spacing: 0; }
+    #p-service .sv-site dl dt {
+      margin-right: 3%; }
+    #p-service .sv-site dl dd {
+      margin-right: 7%; } }
 
 /*# sourceMappingURL=style.css.map */

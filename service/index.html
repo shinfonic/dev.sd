@@ -18,7 +18,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020072701">
+  <link rel="stylesheet" href="/css/style.css?v=2020072801">
 </head>
 
 <body id="p-service" class="common">
@@ -96,89 +96,269 @@
       <p>幅広いWebクリエイティブワークを提供しています。</p>
       <hr>
     </section>
-<!-- 
-    <section class="effect-fade grid-img-square">
-      <div class="">
+
+    <section class="effect-fade sv-2col-small">
+      <div>
         <div class="subtitle"><span>01</span>Total Business</div>
         <h3>スモールビジネスからブランディングまで</h3>
-        <p>平均転職回数が3回を数えるという現状。日本の上場企業3500社の半分が、およそ20年で入れ替わっているという事実。「人生100年時代」と言われている中、企業寿命のほうが短命になっている。大きな会社、とか。給料が良い、とか。上場している、とか。歴史がある、とか。</p>
-        <a href="">実績一覧</a>
+        <p>
+          平均転職回数が3回を数えるという現状。日本の上場企業3500社の半分が、およそ20年で入れ替わっているという事実。「人生100年時代」と言われている中、企業寿命のほうが短命になっている。大きな会社、とか。給料が良い、とか。上場している、とか。歴史がある、とか。
+        </p>
+        <div class="link-box-wrap">
+          <a href="/works/" class="link-box">実績一覧</a>
+        </div>
       </div>
-      <div class="">
-        <img src="/img/service/web-01.jpg" alt="">
+      <div>
+        <img src="/img/service/web-101.jpg" alt="">
       </div>
       <hr>
     </section>
 
-    <section class="effect-fade">
-      <div class="">
-        <div><span>02</span><span>Photography & Short Film</span></div>
+    <section class="effect-fade sv-2col-small">
+      <div>
+        <div class="subtitle"><span>02</span>Photography & Short Film</div>
         <h3>写真撮影・映像制作を含めたWeb制作</h3>
-        <p>平均転職回数が3回を数えるという現状。日本の上場企業3500社の半分が、およそ20年で入れ替わっているという事実。「人生100年時代」と言われている中、企業寿命のほうが短命になっている。大きな会社、とか。の人が気付き始めている。</p>
-        <a href="">写真撮影</a><a href="">映像制作</a>
+        <p>
+          平均転職回数が3回を数えるという現状。日本の上場企業3500社の半分が、およそ20年で入れ替わっているという事実。「人生100年時代」と言われている中、企業寿命のほうが短命になっている。大きな会社、とか。の人が気付き始めている。
+        </p>
+        <div class="link-box-wrap">
+          <a href="/service/photo.html" class="link-box">写真撮影</a>
+          <a href="/service/movie.html" class="link-box">映像制作</a>
+        </div>
       </div>
-      <div class="">
-        <img src="" alt="">
+      <div>
+        <img src="/img/service/web-102.jpg" alt="">
       </div>
       <hr>
     </section>
 
-    <section class="effect-fade">
-      <div class="">
-        <div><span>03</span><span>CMS & Support</span></div>
+    <section class="effect-fade sv-2col-small">
+      <div>
+        <div class="subtitle"><span>03</span>CMS & Support</div>
         <h3>更新システム設置と公開後のサポート</h3>
-        <p>平均転職回数が3回を数えるという現状。日本の上場企業3500社の半分が、およそ20年で入れ替わっているという事実。「人生100年時代」と言われている中、企業寿命のほうが短命になっている。大きな会社、とか。給料が良い、とか。なこと、実はどうでもいいことなんじゃないかと多くの人が気付き始めている。</p>
-        <a href="">更新システムについて</a><a href="">運用プランについて</a>
+        <p>
+          平均転職回数が3回を数えるという現状。日本の上場企業3500社の半分が、およそ20年で入れ替わっているという事実。「人生100年時代」と言われている中、企業寿命のほうが短命になっている。大きな会社、とか。給料が良い、とか。なこと、実はどうでもいいことなんじゃないかと多くの人が気付き始めている。
+        </p>
+        <div class="link-box-wrap">
+          <a href="/service/cms.html" class="link-box">更新システムについて</a>
+          <a href="/service/support.html" class="link-box">サイト運営支援について</a>
+        </div>
       </div>
-      <div class="">
-        <img src="" alt="">
+      <div>
+        <img src="/img/service/web-103.jpg" alt="">
       </div>
       <hr>
     </section>
 
-    <section class="effect-fade">
-      <h2>Flow<span>制作の流れ</span></h2>
-      <ul>
+    <section class="effect-fade p-t70 p-b40">
+      <div class="sv-h2">
+        <h2>Webサイト設計</h2>
+        <p>ユーザー視点のマインドで、情報設計を徹底精査しサイト品質を向上させます。</p>
+      </div>
+      <div class="sv-2col-small p-b40">
+        <div>
+          <img src="/img/service/web-201.png" alt="">
+        </div>
+        <div>
+          <h3 class="small">調査、思考、表現、クオリティを徹底精査する</h3>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。<br>
+            <br>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。<br>
+            <br>
+            テキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+      </div>
+      <div class="sv-2col-small">
+        <div>
+          <img src="/img/service/web-202.png" alt="">
+        </div>
+        <div>
+          <h3 class="small">アクセス、お問い合わせ、採用応募数が向上</h3>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。<br>
+            <br>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="effect-fade p-t0">
+      <h3>サービスフロー</h3>
+      <ul class="sv-4col">
         <li>
-          <h3>01　お問い合わせ</h3>
-          <p>お電話、もしくはメールでお問い合わせ下さい。まずは、担当者が電話で概要をヒアリングさせていただいた後、日本全国ご訪問させていただきます。ホームページのデザインについて、文章作成、撮影についてなど、ホームページ完成までの流れと、その後のサイト運営について丁寧にお話させていただきます。</p>
+          <span>1</span>
+          <div>
+            <img src="/img/service/web-301.png" alt="">
+          </div>
+          <h4>お問い合わせ</h4>
+          <p>
+            お問い合わせフォームか、見積もり依頼フォームよりご連絡ください。
+          </p>
         </li>
         <li>
-          <h3>02　初回打合わせ</h3>
-          <p>お電話、もしくはメールでお問い合わせ下さい。まずは、担当者が電話で概要をヒアリングさせていただいた後、日本全国ご訪問させていただきます。ホームページのデザインについて、文章作成、撮影についてなど、ホームページ完成までの流れと、その後のサイト運営について丁寧にお話させていただきます。</p>
+          <span>2</span>
+          <div>
+            <img src="/img/service/web-302.png" alt="">
+          </div>
+          <h4>ヒアリング</h4>
+          <p>
+            ご相談・問題・課題などをヒアリングいたします。
+          </p>
         </li>
         <li>
-          <h3>03　ご契約</h3>
-          <p>お電話、もしくはメールでお問い合わせ下さい。まずは、担当者が電話で概要をヒアリングさせていただいた後、日本全国ご訪問させていただきます。ホームページのデザインについて、文章作成、撮影についてなど、ホームページ完成までの流れと、その後のサイト運営について丁寧にお話させていただきます。</p>
+          <span>3</span>
+          <div>
+            <img src="/img/service/web-303.png" alt="">
+          </div>
+          <h4>ご提案</h4>
+          <p>
+            お客さまの課題の解決策をご提案いたします。
+          </p>
         </li>
         <li>
-          <h3>04　打ち合わせ</h3>
-          <p>お電話、もしくはメールでお問い合わせ下さい。まずは、担当者が電話で概要をヒアリングさせていただいた後、日本全国ご訪問させていただきます。ホームページのデザインについて、文章作成、撮影についてなど、ホームページ完成までの流れと、その後のサイト運営について丁寧にお話させていただきます。</p>
-        </li>
-        <li>
-          <h3>05　デザイン設計</h3>
-          <p>お電話、もしくはメールでお問い合わせ下さい。まずは、担当者が電話で概要をヒアリングさせていただいた後、日本全国ご訪問させていただきます。ホームページのデザインについて、文章作成、撮影についてなど、ホームページ完成までの流れと、その後のサイト運営について丁寧にお話させていただきます。</p>
-        </li>
-        <li>
-          <h3>06　素材のご用意</h3>
-          <p>お電話、もしくはメールでお問い合わせ下さい。まずは、担当者が電話で概要をヒアリングさせていただいた後、日本全国ご訪問させていただきます。ホームページのデザインについて、文章作成、撮影についてなど、ホームページ完成までの流れと、その後のサイト運営について丁寧にお話させていただきます。</p>
-        </li>
-        <li>
-          <h3>07　開発・実装</h3>
-          <p>お電話、もしくはメールでお問い合わせ下さい。まずは、担当者が電話で概要をヒアリングさせていただいた後、日本全国ご訪問させていただきます。ホームページのデザインについて、文章作成、撮影についてなど、ホームページ完成までの流れと、その後のサイト運営について丁寧にお話させていただきます。</p>
-        </li>
-        <li>
-          <h3>08　ご確認</h3>
-          <p>お電話、もしくはメールでお問い合わせ下さい。まずは、担当者が電話で概要をヒアリングさせていただいた後、日本全国ご訪問させていただきます。ホームページのデザインについて、文章作成、撮影についてなど、ホームページ完成までの流れと、その後のサイト運営について丁寧にお話させていただきます。</p>
-        </li>
-        <li>
-          <h3>09　公開</h3>
-          <p>お電話、もしくはメールでお問い合わせ下さい。まずは、担当者が電話で概要をヒアリングさせていただいた後、日本全国ご訪問させていただきます。ホームページのデザインについて、文章作成、撮影についてなど、ホームページ完成までの流れと、その後のサイト運営について丁寧にお話させていただきます。</p>
+          <span>4</span>
+          <div>
+            <img src="/img/service/web-304.png" alt="">
+          </div>
+          <h4>製作開始</h4>
+          <p>
+            制作を開始します。
+          </p>
         </li>
       </ul>
-      <hr>
+      <p>
+        お問い合わせからご提案までに1〜2週、制作開始までに2週〜1.5ヶ月ほどお時間をいただいております。<br>
+        見積依頼フォームよりご連絡の場合は、制作開始までのお時間を短縮することができるのでオススメです。
+      </p>
     </section>
- -->
+
+    <section class="effect-fade p-t10">
+      <h3>料金</h3>
+      <table>
+        <tr>
+          <th>スモールビジネスA</th>
+          <td>1p（全ての情報を掲載）</td>
+          <td>3週-1ヵ月</td>
+          <td>20万〜</td>
+        </tr>
+        <tr>
+          <th>スモールビジネスB</th>
+          <td>5p前後</td>
+          <td>1-2ヵ月</td>
+          <td>50万〜</td>
+        </tr>
+        <tr>
+          <th>ビジネスA</th>
+          <td>10p前後</td>
+          <td>2-4ヵ月</td>
+          <td>100万〜</td>
+        </tr>
+        <tr>
+          <th>ビジネスB</th>
+          <td>10p以上</td>
+          <td>3-6ヵ月</td>
+          <td>300万〜</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="effect-fade sv-site p-t80">
+      <div class="sv-h2">
+        <h2>サイト構成と料金</h2>
+        <p>ボリュームに応じた4つのサイト構成と料金目安をご紹介いたします。</p>
+      </div>
+      <h3>スモールビジネスA</h3>
+      <img src="/img/service/web-401.png" alt="">
+      <div class="sv-2col-small">
+        <div>
+          <p>
+            １ページに全ての情報を掲載。<br>
+            ページ階層が無いのでユーザーが迷子になる心配もありません。
+          </p>
+        </div>
+        <div>
+          <dl>
+            <dt>ページ数</dt>
+            <dd>1p</dd>
+            <dt>期間</dt>
+            <dd>3週-1ヵ月</dd>
+            <dt>料金</dt>
+            <dd>20万〜</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="effect-fade sv-site">
+      <h3>スモールビジネスB</h3>
+      <img src="/img/service/web-402.png" alt="">
+      <div class="sv-2col-small">
+        <div>
+          <p>
+            必須ページをおさえたシンプルな構成です。<br>
+            軽自動車のように小回りが利き手軽で運用もしやすいです。
+          </p>
+        </div>
+        <div>
+          <dl>
+            <dt>ページ数</dt>
+            <dd>5p前後</dd>
+            <dt>期間</dt>
+            <dd>1-2ヵ月</dd>
+            <dt>料金</dt>
+            <dd>50万〜</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="effect-fade sv-site">
+      <h3>ビジネスA</h3>
+      <img src="/img/service/web-403.png" alt="">
+      <div class="sv-2col-small">
+        <div>
+          <p>
+            必須ページを網羅した基本的な構成です。<br>
+            ユーザーが求める情報を全面に提示することができます。
+          </p>
+        </div>
+        <div>
+          <dl>
+            <dt>ページ数</dt>
+            <dd>10p前後</dd>
+            <dt>期間</dt>
+            <dd>2-4ヵ月</dd>
+            <dt>料金</dt>
+            <dd>100万〜</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="effect-fade sv-site p-b110">
+      <h3>ビジネスB</h3>
+      <img src="/img/service/web-404.png" alt="">
+      <div class="sv-2col-small">
+        <div>
+          <p>
+            最新技術を駆使したインタラクションなど、ご要望に応じてカスタム対応するリッチコンテンツサイトです。
+          </p>
+        </div>
+        <div>
+          <dl>
+            <dt>ページ数</dt>
+            <dd>10p以上</dd>
+            <dt>期間</dt>
+            <dd>3-6ヵ月</dd>
+            <dt>料金</dt>
+            <dd>300万〜</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
 
     <!-- contact -->
     <section id="contact" class="effect-fade effect-fade-zerotrans">
@@ -246,7 +426,7 @@
             <h3><a href="/faq/">FAQ</a></h3>
             <ul>
             </ul>
-            <h3><a href="#">NEWS</a></h3>
+            <h3><a href="/#news">NEWS</a></h3>
             <ul>
             </ul>
           </div>

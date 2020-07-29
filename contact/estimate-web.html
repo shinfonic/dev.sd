@@ -18,7 +18,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020072701">
+  <link rel="stylesheet" href="/css/style.css?v=2020072801">
 </head>
 
 <body id="p-contact" class="common">
@@ -72,9 +72,9 @@
           <h2>見積もり依頼　Web制作</h2>
           <p>
             この度は、ご検討いただきありがとうございます。<br>
-            以下のをご記入いいただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
-            <a href="" target="_blank" class="btn-estimate">料金表</a>
-            <a href="" target="_blank" class="btn-estimate">FAQ</a>
+            以下をご記入いただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
+            <a href="/price/" target="_blank" class="btn-estimate">料金表</a>
+            <a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
           </p>
           <form action="" method="post">
             <h3>基本情報</h3>
@@ -422,7 +422,7 @@ SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり�
             <h3><a href="/faq/">FAQ</a></h3>
             <ul>
             </ul>
-            <h3><a href="#">NEWS</a></h3>
+            <h3><a href="/#news">NEWS</a></h3>
             <ul>
             </ul>
           </div>
