@@ -152,3 +152,24 @@ $(".sort-menu li").on("click", function () {
     $('#works-view').fadeIn(1000);
   });
 });
+
+// SERVICE sort
+$(".sort-menu li").on("click", function () {
+  var cateSelected = $(this).data('category');
+
+  $(".sort-menu li").removeClass('current');
+  $(this).addClass('current');
+
+  $('#service-select').fadeOut(200, function () {
+    $('#service-select article').each(function () {
+      var cateData = $(this).data('category');
+
+      if (cateData.match(cateSelected)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+    $('#service-select').fadeIn(1000);
+  });
+});
