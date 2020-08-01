@@ -85,9 +85,11 @@ hr {
 }
 .ls-0  { letter-spacing: 0 !important; }
 .m-0   { margin: 0 !important; }
+.m-b90  { margin-bottom: 90px !important; }
 .p-0   { padding: 0 !important; }
 .p-t0  { padding-top: 0 !important; }
 .p-t10 { padding-top: 10px !important; }
+.p-t10 { padding-top: 20px !important; }
 .p-t70 { padding-top: 70px !important; }
 .p-t80 { padding-top: 80px !important; }
 .p-b0  { padding-bottom: 0 !important; }
@@ -147,6 +149,24 @@ ul {
     transition: all 0.6s cubic-bezier(0.24, 1, 0.32, 1);
     transform: rotate(-8deg) translate(-50%, -50%) scaleX(0);
     transform-origin: 0 0;
+  }
+}
+
+
+.btn-black {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 400px;
+  border: none;
+  background: $colorBlack;
+  color: $colorWhite;
+  font-family: $font-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+  &:hover {
+    color: #969696;
   }
 }
 
@@ -1802,22 +1822,6 @@ a {
           }
         }
       }
-      .btn-contact {
-        display: inline-block;
-        margin: 0 auto;
-        padding: 15px 0;
-        width: 400px;
-        border: none;
-        background: $colorBlack;
-        color: $colorWhite;
-        font-family: $font-serif;
-        font-size: 16px;
-        letter-spacing: 0.1em;
-        transition: 0.3s;
-        &:hover {
-          color: #969696;
-        }
-      }
 
       input[type="radio"],
       input[name="option"] {
@@ -2046,6 +2050,24 @@ a {
         width: 76%;
         letter-spacing: 0.22em;
       }
+      dl {
+        display: flex;
+        flex-wrap: wrap;
+        letter-spacing: 0.22em;
+        width: 85%;
+        margin: -10px auto 0;
+        dt {
+          width: 108px;
+          padding-right: 5px;
+          text-align: right;
+        }
+        dd {
+          width: calc(100% - 108px);
+          span {
+            font-size: 11px;
+          }
+        }
+      }
     }
   }
   .middle-head {
@@ -2138,6 +2160,27 @@ a {
     hr {
       width: 100%;
       margin: 75px auto 0;
+    }
+  }
+  .sv-2col-xsmall {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 140px;
+    & > div {
+      width: 50%;
+      padding-bottom: 10px;
+      position: relative;
+      &:nth-of-type(odd) {
+        padding-right: 5px;
+      }
+      &:nth-of-type(even) {
+        padding-left: 5px;
+      }
+      a {
+        .works-veiw-img {
+          padding-top: 56.211%;
+        }
+      }
     }
   }
   .sv-3col {
@@ -2516,6 +2559,22 @@ a {
     color: #8b8b8b;
     margin: 27px 0 95px;
   }
+  .sv-photo {
+    margin-bottom: 90px;
+    .grid-sizer,
+    .grid-item {
+      width: 24.25%;
+    }
+    .gutter-sizer {
+      width: 1%;
+    }
+    .grid-item {
+      padding-bottom: 1.04%;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 .price-table {
   width: 100%;
@@ -2525,12 +2584,14 @@ a {
       letter-spacing: 0;
       text-align: center;
       height: 61px;
+      border-right: 1px solid #dadada;
+      border-bottom: 1px solid #dadada;
     }
     th {
       font-size: 14px;
       font-weight: normal;
       background: #edf1f4;
-      border-bottom: 1px solid #fff;
+      border-left: 1px solid #dadada;
       span {
         font-size: 12px;
         display: block;
@@ -2540,8 +2601,6 @@ a {
     td {
       font-size: 13px;
       width: 23.2%;
-      border-right: 1px solid #dadada;
-      border-bottom: 1px solid #dadada;
       &.maru {
         font-size: 18px;
       }
@@ -2553,12 +2612,12 @@ a {
         color: #fff;
         background: #575a62;
         height: 55px;
-        border-left: 1px solid #fff;
+        border-left: none;
         border-top: none;
+        border-bottom: none;
         &:first-of-type {
           color: #000;
           background: #d4dde1;
-          border: none;
         }
         &:last-of-type {
           border-right: 1px solid #575a62;
@@ -2566,11 +2625,6 @@ a {
         &.recommend {
           background: linear-gradient(to right, $gradation-from, $gradation-to);
         }
-      }
-    }
-    &:last-of-type {
-      th {
-        border-bottom: 1px solid #edf1f4;
       }
     }
     &.price-row {
@@ -2621,6 +2675,59 @@ a {
     border: 11px solid transparent;
     border-top: 20px solid #fa3ca6;
     z-index: 1;
+  }
+}
+
+#p-privacy {
+  #header-common + section {
+    padding-top: 94px;
+  }
+  section:not(#contact) {
+    h2 {
+      font-size: 20px;
+      letter-spacing: 0.1em;
+      margin-bottom: 50px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+      margin-bottom: 87px;
+    }
+    ul {
+      margin: 25px 0;
+      li {
+        line-height: 1.8;
+        letter-spacing: 0.05em;
+        padding-left: 11px;
+        position: relative;
+        &::before {
+          content: "・";
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+#p-404 {
+  .sec-404 {
+    padding: 237px 0 250px;
+    text-align: center;
+    .notfound {
+      font-size: 50px;
+      font-family: $font-abril;
+      line-height: 1.2;
+      letter-spacing: 0;
+      margin-bottom: 36px;
+    }
+    .btn-black {
+      width: 300px;
+      margin-top: 23px;
+      padding: 18px 0;
+    }
   }
 }
 

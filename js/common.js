@@ -173,3 +173,58 @@ $(".sort-menu li").on("click", function () {
     $('#service-select').fadeIn(1000);
   });
 });
+
+// SERVICE Photo
+$(function () {
+  var $grid = $('.sv-photo').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    gutter: '.gutter-sizer',
+    percentPosition: true,
+    transitionDuration: '1.2s',
+    // horizontalOrder: true,
+    visibleStyle: { opacity: 1 },
+    hiddenStyle: { opacity: 0 },
+  });
+
+  var msnry = $grid.data('masonry');
+
+  // $grid.imagesLoaded(function () {
+  //   $grid.masonry('option', { itemSelector: '.grid__item' });
+  //   var $items = $grid.find('.grid__item');
+  //   $grid.masonry('appended', $items);
+  // });
+
+  // var nextSlugs = [
+  //   'photo-02.html',
+  //   'photo-03.html'
+  // ];
+
+  $grid.infiniteScroll({
+    path: 'photo-{{#}}.html',
+    append: '.grid-item',
+    outlayer: msnry,
+    scrollThreshold: 50,
+    history: false,
+    // status: '.page-load-status',
+    // hideNav: '.pagination',
+  });
+
+  // $container.infinitescroll({
+  //   navSelector: '.navigation',
+  //   nextSelector: '.navigation a',
+  //   itemSelector: '.item',
+  //   animate: true,
+  //   extraScrollPx: -200,
+  //   loading: {
+  //     finishedMsg: '終わりです！',
+  //     img: 'loading.gif'
+  //   }
+  // },
+  //   function (newElements) {
+  //     var $newElems = $(newElements);
+  //     $newElems.imagesLoaded(function () {
+  //       $container.masonry('appended', $newElems, true);
+  //     });
+  //   });
+});

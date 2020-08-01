@@ -18,7 +18,11 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020073002">
+  <link rel="stylesheet" href="/css/style.css?v=2020080102">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/js/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/masonry.pkgd.min.js"></script>
+  <script src="/js/infinite-scroll.pkgd.min.js"></script>
 </head>
 
 <body id="p-service" class="common">
@@ -78,7 +82,33 @@
       </p>
     </section>
 
-    
+    <section class="effect-fade p-t10">
+      <div class="sv-photo">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+        <div class="grid-item"><img src="/img/service/photo-001.jpg" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x225.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x300.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x250.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x150.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x225.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x150.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x225.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x225.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x300.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x250.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x300.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x250.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x250.png" alt=""></div>
+        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
+      </div>
+    </section>
+
     <!-- contact -->
     <section id="contact" class="effect-fade">
       <a href="#" id="pagetop">PAGE TOP<div class="pagetop-arrow"></div></a>
@@ -167,7 +197,6 @@
     <small>©SUGIYAMA DESIGN All Rights Reserved.</small>
   </footer>
   <!-- /footer -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/common.js?v=2020051401"></script>
+  <script src="/js/common.js?v=2020080102"></script>
 </body>
 </html>

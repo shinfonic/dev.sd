@@ -18,7 +18,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020073002">
+  <link rel="stylesheet" href="/css/style.css?v=2020080102">
 </head>
 
 <body id="p-contact" class="common">
@@ -348,7 +348,7 @@ SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり�
             <div class="submit">
               <input id="form-w-check" name="check" type="checkbox" required>
               <label for="form-w-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
-              <input type="submit" value="確認画面" class="btn-contact">
+              <input type="submit" value="確認画面" class="btn-black">
             </div>
           </form>
 

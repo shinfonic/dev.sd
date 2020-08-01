@@ -594,6 +594,9 @@ hr {
 .m-0 {
   margin: 0 !important; }
 
+.m-b90 {
+  margin-bottom: 90px !important; }
+
 .p-0 {
   padding: 0 !important; }
 
@@ -602,6 +605,9 @@ hr {
 
 .p-t10 {
   padding-top: 10px !important; }
+
+.p-t10 {
+  padding-top: 20px !important; }
 
 .p-t70 {
   padding-top: 70px !important; }
@@ -667,6 +673,21 @@ ul {
     transition: all 0.6s cubic-bezier(0.24, 1, 0.32, 1);
     transform: rotate(-8deg) translate(-50%, -50%) scaleX(0);
     transform-origin: 0 0; }
+
+.btn-black {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 400px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-family: source-han-serif-japanese, serif !important;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  transition: 0.3s; }
+  .btn-black:hover {
+    color: #969696; }
 
 .res-pc {
   display: block; }
@@ -1903,20 +1924,6 @@ a .works-veiw-text p {
         color: #969696; }
       #p-contact #p-contact-sec .p-contact-sec-inner .confirm .back-arrow:hover::before, #p-contact #p-contact-sec .p-contact-sec-inner .confirm .back-arrow:hover::after {
         background-color: #969696; }
-    #p-contact #p-contact-sec .p-contact-sec-inner .btn-contact {
-      display: inline-block;
-      margin: 0 auto;
-      padding: 15px 0;
-      width: 400px;
-      border: none;
-      background: #000;
-      color: #fff;
-      font-family: source-han-serif-japanese, serif !important;
-      font-size: 16px;
-      letter-spacing: 0.1em;
-      transition: 0.3s; }
-      #p-contact #p-contact-sec .p-contact-sec-inner .btn-contact:hover {
-        color: #969696; }
     #p-contact #p-contact-sec .p-contact-sec-inner input[type="radio"],
     #p-contact #p-contact-sec .p-contact-sec-inner input[name="option"] {
       display: none; }
@@ -2106,6 +2113,20 @@ a .works-veiw-text p {
       margin: -17px auto 5px;
       width: 76%;
       letter-spacing: 0.22em; }
+    #p-service .check-list div dl {
+      display: flex;
+      flex-wrap: wrap;
+      letter-spacing: 0.22em;
+      width: 85%;
+      margin: -10px auto 0; }
+      #p-service .check-list div dl dt {
+        width: 108px;
+        padding-right: 5px;
+        text-align: right; }
+      #p-service .check-list div dl dd {
+        width: calc(100% - 108px); }
+        #p-service .check-list div dl dd span {
+          font-size: 11px; }
 #p-service .middle-head {
   padding-top: 46px;
   padding-bottom: 10px;
@@ -2178,6 +2199,20 @@ a .works-veiw-text p {
   #p-service .sv-2col-small hr {
     width: 100%;
     margin: 75px auto 0; }
+#p-service .sv-2col-xsmall {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 140px; }
+  #p-service .sv-2col-xsmall > div {
+    width: 50%;
+    padding-bottom: 10px;
+    position: relative; }
+    #p-service .sv-2col-xsmall > div:nth-of-type(odd) {
+      padding-right: 5px; }
+    #p-service .sv-2col-xsmall > div:nth-of-type(even) {
+      padding-left: 5px; }
+    #p-service .sv-2col-xsmall > div a .works-veiw-img {
+      padding-top: 56.211%; }
 #p-service .sv-3col {
   margin: 0;
   display: flex;
@@ -2473,6 +2508,17 @@ a .works-veiw-text p {
   line-height: 1.66;
   color: #8b8b8b;
   margin: 27px 0 95px; }
+#p-service .sv-photo {
+  margin-bottom: 90px; }
+  #p-service .sv-photo .grid-sizer,
+  #p-service .sv-photo .grid-item {
+    width: 24.25%; }
+  #p-service .sv-photo .gutter-sizer {
+    width: 1%; }
+  #p-service .sv-photo .grid-item {
+    padding-bottom: 1.04%; }
+    #p-service .sv-photo .grid-item img {
+      width: 100%; }
 
 .price-table {
   width: 100%; }
@@ -2480,21 +2526,21 @@ a .works-veiw-text p {
     line-height: 1.23;
     letter-spacing: 0;
     text-align: center;
-    height: 61px; }
+    height: 61px;
+    border-right: 1px solid #dadada;
+    border-bottom: 1px solid #dadada; }
   .price-table tr th {
     font-size: 14px;
     font-weight: normal;
     background: #edf1f4;
-    border-bottom: 1px solid #fff; }
+    border-left: 1px solid #dadada; }
     .price-table tr th span {
       font-size: 12px;
       display: block;
       margin-top: 4px; }
   .price-table tr td {
     font-size: 13px;
-    width: 23.2%;
-    border-right: 1px solid #dadada;
-    border-bottom: 1px solid #dadada; }
+    width: 23.2%; }
     .price-table tr td.maru {
       font-size: 18px; }
   .price-table tr:first-of-type th {
@@ -2503,18 +2549,16 @@ a .works-veiw-text p {
     color: #fff;
     background: #575a62;
     height: 55px;
-    border-left: 1px solid #fff;
-    border-top: none; }
+    border-left: none;
+    border-top: none;
+    border-bottom: none; }
     .price-table tr:first-of-type th:first-of-type {
       color: #000;
-      background: #d4dde1;
-      border: none; }
+      background: #d4dde1; }
     .price-table tr:first-of-type th:last-of-type {
       border-right: 1px solid #575a62; }
     .price-table tr:first-of-type th.recommend {
       background: linear-gradient(to right, #fb5fb7, #00a1d7); }
-  .price-table tr:last-of-type th {
-    border-bottom: 1px solid #edf1f4; }
   .price-table tr.price-row th, .price-table tr.price-row td {
     font-weight: 500;
     height: 100px; }
@@ -2553,6 +2597,44 @@ a .works-veiw-text p {
     border: 11px solid transparent;
     border-top: 20px solid #fa3ca6;
     z-index: 1; }
+
+#p-privacy #header-common + section {
+  padding-top: 94px; }
+#p-privacy section:not(#contact) h2 {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 50px; }
+#p-privacy section:not(#contact) p {
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  margin-bottom: 87px; }
+#p-privacy section:not(#contact) ul {
+  margin: 25px 0; }
+  #p-privacy section:not(#contact) ul li {
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    padding-left: 11px;
+    position: relative; }
+    #p-privacy section:not(#contact) ul li::before {
+      content: "・";
+      position: absolute;
+      top: 0;
+      left: 0; }
+
+#p-404 .sec-404 {
+  padding: 237px 0 250px;
+  text-align: center; }
+  #p-404 .sec-404 .notfound {
+    font-size: 50px;
+    font-family: abril-text, serif !important;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-bottom: 36px; }
+  #p-404 .sec-404 .btn-black {
+    width: 300px;
+    margin-top: 23px;
+    padding: 18px 0; }
 
 @media (max-width: 1640px) {
   header,
