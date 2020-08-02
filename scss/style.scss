@@ -95,7 +95,9 @@ hr {
 .p-b0  { padding-bottom: 0 !important; }
 .p-b10 { padding-bottom: 10px !important; }
 .p-b40 { padding-bottom: 40px !important; }
+.p-b80 { padding-bottom: 80px !important; }
 .p-b110 { padding-bottom: 110px !important; }
+.p-b150 { padding-bottom: 150px !important; }
 
 .a-url {
   font-size: 13px;
@@ -1985,7 +1987,8 @@ a {
   }
 }
 
-#p-service {
+#p-service,
+#p-price {
   section h3 {
     font-size: 20px;
     letter-spacing: 0.15em;
@@ -2576,6 +2579,21 @@ a {
     }
   }
 }
+#p-price {
+  .sv-h2-bold {
+    margin-bottom: 46px;
+    h2 {
+      margin-bottom: 25px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 1.86;
+    }
+  }
+  .notice {
+    margin-bottom: 0;
+  }
+}
 .price-table {
   width: 100%;
   tr {
@@ -2637,6 +2655,200 @@ a {
       }
       td {
         font-size: 25px;
+      }
+    }
+  }
+  .gradient {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.76;
+    letter-spacing: 0.05em;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, $gradation-from, $gradation-to);
+    }
+  }
+  .large {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .medium {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .bold {
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+}
+.price-table-web,
+.price-table-movie {
+  border-left: 1px solid #dadada;
+  tr {
+    td {
+      font-size: 14px;
+      line-height: 1.57;
+      letter-spacing: 0.1em;
+      padding: 21px;
+    }
+    &:first-of-type {
+      th {
+        &:first-of-type {
+          color: #fff;
+          background: #575a62;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      td {
+        padding: 32px 0 36px;
+      }
+    }
+    &:nth-of-type(3) {
+      td {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      td {
+        font-size: 16px;
+        .small {
+          font-size: 14px;
+        }
+      }
+    }
+    &:nth-of-type(6) {
+      td {
+        text-align: left;
+      }
+    }
+  }
+}
+.price-table-movie {
+  tr {
+    &:nth-of-type(4) {
+      td {
+        font-size: 15px;
+        line-height: 1.46;
+      }
+    }
+    &:nth-of-type(5) {
+      td {
+        vertical-align: top;
+      }
+    }
+
+    &:nth-of-type(6) {
+      td {
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+  }
+  ul {
+    margin: 0;
+    li {
+      font-size: 13px;
+      line-height: 1.7;
+      letter-spacing: 0.1em;
+      text-align: left;
+      padding-left: 11px;
+      position: relative;
+      &::before {
+        content: "・";
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+.price-table-design {
+  tr {
+    th {
+      &:nth-of-type(1) {
+        width: 23%;
+      }
+    }
+    td {
+      font-size: 14px;
+      line-height: 1.42;
+      letter-spacing: 0.1em;
+      padding: 18px 20px;
+      width: auto;
+      &:nth-of-type(1) {
+        text-align: left;
+        width: 47%;
+      }
+    }
+  }
+}
+.price-table-photo {
+  tr {
+    th, td {
+      span {
+        font-size: 12px;
+      }
+    }
+    th {
+      &:nth-of-type(1) {
+        width: 23%;
+      }
+    }
+    td {
+      font-size: 14px;
+      line-height: 1.42;
+      letter-spacing: 0.1em;
+      padding: 27px 20px;
+      width: auto;
+      &:nth-of-type(1) {
+        text-align: left;
+        width: 47%;
+      }
+    }
+  }
+}
+.price-table-anime {
+  tr {
+    th {
+      &:nth-of-type(1) {
+        width: 23%;
+      }
+    }
+    td {
+      font-size: 14px;
+      line-height: 1.57;
+      letter-spacing: 0.1em;
+      text-align: left;
+      padding: 21px;
+      width: auto;
+    }
+    &:nth-of-type(2),
+    &:nth-of-type(3),
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      th {
+        padding: 38px 0;
+      }
+    }
+    &:nth-of-type(2) {
+      td:nth-of-type(3) {
+        text-align: right;
+        line-height: 1.92;
+      }
+      td:nth-of-type(4),
+      td:nth-of-type(5) {
+        text-align: center;
       }
     }
   }
@@ -2834,7 +3046,8 @@ a {
     padding-right: 10px;
   }
 
-  #p-service {
+  #p-service,
+  #p-price {
     .sv-title {
       p {
         font-size: 1.87vw;
@@ -2893,6 +3106,22 @@ a {
         dd {
           margin-right: 7%;
         }
+      }
+    }
+  }
+  .price-table {
+    .gradient {
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+  }
+  .price-table-anime {
+    tr {
+      td {
+        font-size: 13px;
+        letter-spacing: 0;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   }

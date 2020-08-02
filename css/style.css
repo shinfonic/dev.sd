@@ -624,8 +624,14 @@ hr {
 .p-b40 {
   padding-bottom: 40px !important; }
 
+.p-b80 {
+  padding-bottom: 80px !important; }
+
 .p-b110 {
   padding-bottom: 110px !important; }
+
+.p-b150 {
+  padding-bottom: 150px !important; }
 
 .a-url {
   font-size: 13px;
@@ -2059,31 +2065,39 @@ a .works-veiw-text p {
       top: 4px;
       right: 4px; }
 
-#p-service section h3 {
+#p-service section h3,
+#p-price section h3 {
   font-size: 20px;
   letter-spacing: 0.15em;
   margin-bottom: 17px; }
-#p-service .sv-title {
+#p-service .sv-title,
+#p-price .sv-title {
   padding: 48px 0 43px; }
-  #p-service .sv-title p {
+  #p-service .sv-title p,
+  #p-price .sv-title p {
     font-size: 20px;
     line-height: 2;
     text-align: center; }
-#p-service .check-list {
+#p-service .check-list,
+#p-price .check-list {
   padding-top: 18px;
   padding-bottom: 83px; }
-  #p-service .check-list div {
+  #p-service .check-list div,
+  #p-price .check-list div {
     background: #f8f8f8;
     padding: 42px 0; }
-    #p-service .check-list div h2 {
+    #p-service .check-list div h2,
+    #p-price .check-list div h2 {
       font-size: 22px;
       font-weight: normal;
       letter-spacing: 0.18em;
       text-align: center;
       margin-bottom: 45px; }
-      #p-service .check-list div h2 span {
+      #p-service .check-list div h2 span,
+      #p-price .check-list div h2 span {
         position: relative; }
-        #p-service .check-list div h2 span::after {
+        #p-service .check-list div h2 span::after,
+        #p-price .check-list div h2 span::after {
           content: '';
           position: absolute;
           bottom: -5px;
@@ -2091,16 +2105,19 @@ a .works-veiw-text p {
           width: 100%;
           height: 2px;
           background: linear-gradient(to left, #fb5fb7, #00a1d7); }
-    #p-service .check-list div ul {
+    #p-service .check-list div ul,
+    #p-price .check-list div ul {
       margin: 0 auto;
       display: table; }
-      #p-service .check-list div ul li {
+      #p-service .check-list div ul li,
+      #p-price .check-list div ul li {
         font-size: 16px;
         letter-spacing: 0.05em;
         margin: 0 0 16px;
         padding-left: 50px;
         position: relative; }
-        #p-service .check-list div ul li::before {
+        #p-service .check-list div ul li::before,
+        #p-price .check-list div ul li::before {
           content: "";
           position: absolute;
           background: url("/img/service/checkbox.png") no-repeat;
@@ -2109,67 +2126,86 @@ a .works-veiw-text p {
           left: 0;
           width: 23px;
           height: 18px; }
-    #p-service .check-list div p {
+    #p-service .check-list div p,
+    #p-price .check-list div p {
       margin: -17px auto 5px;
       width: 76%;
       letter-spacing: 0.22em; }
-    #p-service .check-list div dl {
+    #p-service .check-list div dl,
+    #p-price .check-list div dl {
       display: flex;
       flex-wrap: wrap;
       letter-spacing: 0.22em;
       width: 85%;
       margin: -10px auto 0; }
-      #p-service .check-list div dl dt {
+      #p-service .check-list div dl dt,
+      #p-price .check-list div dl dt {
         width: 108px;
         padding-right: 5px;
         text-align: right; }
-      #p-service .check-list div dl dd {
+      #p-service .check-list div dl dd,
+      #p-price .check-list div dl dd {
         width: calc(100% - 108px); }
-        #p-service .check-list div dl dd span {
+        #p-service .check-list div dl dd span,
+        #p-price .check-list div dl dd span {
           font-size: 11px; }
-#p-service .middle-head {
+#p-service .middle-head,
+#p-price .middle-head {
   padding-top: 46px;
   padding-bottom: 10px;
   text-align: center; }
-  #p-service .middle-head h2 {
+  #p-service .middle-head h2,
+  #p-price .middle-head h2 {
     font-size: 25px;
     font-weight: normal;
     letter-spacing: 0.1em;
     margin-bottom: 15px; }
-    #p-service .middle-head h2 span {
+    #p-service .middle-head h2 span,
+    #p-price .middle-head h2 span {
       font-weight: bold; }
-    #p-service .middle-head h2 .proxima {
+    #p-service .middle-head h2 .proxima,
+    #p-price .middle-head h2 .proxima {
       font-size: 36px;
       font-family: proxima-nova-condensed, sans-serif !important; }
-  #p-service .middle-head p {
+  #p-service .middle-head p,
+  #p-price .middle-head p {
     font-size: 16px;
     margin-bottom: 50px; }
-#p-service .sv-2col-small {
+#p-service .sv-2col-small,
+#p-price .sv-2col-small {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 20px; }
-  #p-service .sv-2col-small > div {
+  #p-service .sv-2col-small > div,
+  #p-price .sv-2col-small > div {
     width: 50%;
     position: relative; }
-    #p-service .sv-2col-small > div:nth-of-type(1) {
+    #p-service .sv-2col-small > div:nth-of-type(1),
+    #p-price .sv-2col-small > div:nth-of-type(1) {
       padding-right: 2.08%; }
-    #p-service .sv-2col-small > div:nth-of-type(2) {
+    #p-service .sv-2col-small > div:nth-of-type(2),
+    #p-price .sv-2col-small > div:nth-of-type(2) {
       padding-left: 2.08%; }
-      #p-service .sv-2col-small > div:nth-of-type(2) img {
+      #p-service .sv-2col-small > div:nth-of-type(2) img,
+      #p-price .sv-2col-small > div:nth-of-type(2) img {
         padding-left: 8.7%;
         padding-top: 4px;
         transition: 0.5s; }
-    #p-service .sv-2col-small > div img {
+    #p-service .sv-2col-small > div img,
+    #p-price .sv-2col-small > div img {
       width: 100%; }
-  #p-service .sv-2col-small .subtitle {
+  #p-service .sv-2col-small .subtitle,
+  #p-price .sv-2col-small .subtitle {
     font-size: 16px;
     font-family: proxima-nova-condensed, sans-serif !important;
     letter-spacing: 0.05em;
     margin-bottom: 40px; }
-    #p-service .sv-2col-small .subtitle span {
+    #p-service .sv-2col-small .subtitle span,
+    #p-price .sv-2col-small .subtitle span {
       margin-right: 90px;
       position: relative; }
-      #p-service .sv-2col-small .subtitle span::after {
+      #p-service .sv-2col-small .subtitle span::after,
+      #p-price .sv-2col-small .subtitle span::after {
         content: "";
         position: absolute;
         background: linear-gradient(to right, #fb5fb7, #00a1d7);
@@ -2177,142 +2213,184 @@ a .works-veiw-text p {
         left: 35px;
         width: 50px;
         height: 2px; }
-  #p-service .sv-2col-small h3 {
+  #p-service .sv-2col-small h3,
+  #p-price .sv-2col-small h3 {
     font-size: 22px;
     margin-bottom: 50px; }
-  #p-service .sv-2col-small h3.small {
+  #p-service .sv-2col-small h3.small,
+  #p-price .sv-2col-small h3.small {
     font-size: 18px;
     margin-bottom: 42px; }
-  #p-service .sv-2col-small p {
+  #p-service .sv-2col-small p,
+  #p-price .sv-2col-small p {
     font-size: 14px;
     line-height: 1.92; }
-  #p-service .sv-2col-small .link-box-wrap {
+  #p-service .sv-2col-small .link-box-wrap,
+  #p-price .sv-2col-small .link-box-wrap {
     position: absolute;
     bottom: 0;
     left: 0;
     display: flex; }
-    #p-service .sv-2col-small .link-box-wrap .link-box {
+    #p-service .sv-2col-small .link-box-wrap .link-box,
+    #p-price .sv-2col-small .link-box-wrap .link-box {
       font-size: 12px;
       padding: 10px 0;
       margin-right: 15px;
       width: 170px; }
-  #p-service .sv-2col-small hr {
+  #p-service .sv-2col-small hr,
+  #p-price .sv-2col-small hr {
     width: 100%;
     margin: 75px auto 0; }
-#p-service .sv-2col-xsmall {
+#p-service .sv-2col-xsmall,
+#p-price .sv-2col-xsmall {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 140px; }
-  #p-service .sv-2col-xsmall > div {
+  #p-service .sv-2col-xsmall > div,
+  #p-price .sv-2col-xsmall > div {
     width: 50%;
     padding-bottom: 10px;
     position: relative; }
-    #p-service .sv-2col-xsmall > div:nth-of-type(odd) {
+    #p-service .sv-2col-xsmall > div:nth-of-type(odd),
+    #p-price .sv-2col-xsmall > div:nth-of-type(odd) {
       padding-right: 5px; }
-    #p-service .sv-2col-xsmall > div:nth-of-type(even) {
+    #p-service .sv-2col-xsmall > div:nth-of-type(even),
+    #p-price .sv-2col-xsmall > div:nth-of-type(even) {
       padding-left: 5px; }
-    #p-service .sv-2col-xsmall > div a .works-veiw-img {
+    #p-service .sv-2col-xsmall > div a .works-veiw-img,
+    #p-price .sv-2col-xsmall > div a .works-veiw-img {
       padding-top: 56.211%; }
-#p-service .sv-3col {
+#p-service .sv-3col,
+#p-price .sv-3col {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
-  #p-service .sv-3col li {
+  #p-service .sv-3col li,
+  #p-price .sv-3col li {
     width: calc(100% / 3 - 20px);
     border: 1px solid #dadada;
     padding: 45px 35px 35px;
     margin-bottom: 30px; }
-    #p-service .sv-3col li div {
+    #p-service .sv-3col li div,
+    #p-price .sv-3col li div {
       height: 65px;
       text-align: center; }
-      #p-service .sv-3col li div img {
+      #p-service .sv-3col li div img,
+      #p-price .sv-3col li div img {
         height: 100%; }
-    #p-service .sv-3col li h3 {
+    #p-service .sv-3col li h3,
+    #p-price .sv-3col li h3 {
       text-align: center;
       font-size: 19px;
       line-height: 1.36;
       letter-spacing: 0.1em;
       margin: 25px auto; }
-    #p-service .sv-3col li p {
+    #p-service .sv-3col li p,
+    #p-price .sv-3col li p {
       font-size: 14px;
       line-height: 1.93;
       letter-spacing: 0.1em;
       margin-bottom: 0; }
-  #p-service .sv-3col.short li {
+  #p-service .sv-3col.short li,
+  #p-price .sv-3col.short li {
     padding: 35px 35px 29px; }
-    #p-service .sv-3col.short li div {
+    #p-service .sv-3col.short li div,
+    #p-price .sv-3col.short li div {
       height: 84px; }
-    #p-service .sv-3col.short li h3 {
+    #p-service .sv-3col.short li h3,
+    #p-price .sv-3col.short li h3 {
       font-size: 18px;
       letter-spacing: 0;
       margin: 22px auto 16px; }
-    #p-service .sv-3col.short li p {
+    #p-service .sv-3col.short li p,
+    #p-price .sv-3col.short li p {
       letter-spacing: 0;
       text-align: center;
       line-height: 1.42; }
-#p-service .title-head {
+#p-service .title-head,
+#p-price .title-head {
   margin-bottom: 48px; }
-  #p-service .title-head span {
+  #p-service .title-head span,
+  #p-price .title-head span {
     margin-bottom: 38px; }
-  #p-service .title-head h2 {
+  #p-service .title-head h2,
+  #p-price .title-head h2 {
     font-family: source-han-sans-japanese, sans-serif !important;
     font-size: 30px;
     letter-spacing: 0.22em; }
-#p-service .sv-2col {
+#p-service .sv-2col,
+#p-price .sv-2col {
   display: flex; }
-  #p-service .sv-2col > div {
+  #p-service .sv-2col > div,
+  #p-price .sv-2col > div {
     width: 50%; }
-    #p-service .sv-2col > div:nth-of-type(1) {
+    #p-service .sv-2col > div:nth-of-type(1),
+    #p-price .sv-2col > div:nth-of-type(1) {
       padding-right: 4.17%; }
-    #p-service .sv-2col > div:nth-of-type(2) {
+    #p-service .sv-2col > div:nth-of-type(2),
+    #p-price .sv-2col > div:nth-of-type(2) {
       padding-left: 4.17%; }
-    #p-service .sv-2col > div p {
+    #p-service .sv-2col > div p,
+    #p-price .sv-2col > div p {
       line-height: 2.5;
       margin-bottom: 25px; }
-    #p-service .sv-2col > div img {
+    #p-service .sv-2col > div img,
+    #p-price .sv-2col > div img {
       width: 100%;
       margin-top: 10px; }
-#p-service .sv-h2 {
+#p-service .sv-h2,
+#p-price .sv-h2 {
   text-align: center;
   margin-bottom: 84px; }
-  #p-service .sv-h2 h2 {
+  #p-service .sv-h2 h2,
+  #p-price .sv-h2 h2 {
     font-size: 30px;
     font-weight: normal;
     letter-spacing: 0.05em;
     margin-bottom: 32px; }
-  #p-service .sv-h2 p {
+  #p-service .sv-h2 p,
+  #p-price .sv-h2 p {
     font-size: 16px; }
-#p-service .sv-h2-bold {
+#p-service .sv-h2-bold,
+#p-price .sv-h2-bold {
   text-align: center;
   margin-bottom: 52px; }
-  #p-service .sv-h2-bold h2 {
+  #p-service .sv-h2-bold h2,
+  #p-price .sv-h2-bold h2 {
     font-size: 22px;
     letter-spacing: 0.15em;
     margin-bottom: 35px; }
-  #p-service .sv-h2-bold p {
+  #p-service .sv-h2-bold p,
+  #p-price .sv-h2-bold p {
     font-size: 14px; }
-#p-service .sv-price {
+#p-service .sv-price,
+#p-price .sv-price {
   padding-top: 10px;
   padding-bottom: 75px; }
-  #p-service .sv-price .sv-price-2col {
+  #p-service .sv-price .sv-price-2col,
+  #p-price .sv-price .sv-price-2col {
     display: flex;
     justify-content: space-between; }
-    #p-service .sv-price .sv-price-2col div {
+    #p-service .sv-price .sv-price-2col div,
+    #p-price .sv-price .sv-price-2col div {
       width: calc(50% - 15px);
       background: #f8f8f8;
       text-align: center;
       padding: 7px 0 16px; }
-    #p-service .sv-price .sv-price-2col p {
+    #p-service .sv-price .sv-price-2col p,
+    #p-price .sv-price .sv-price-2col p {
       font-size: 20px;
       letter-spacing: 0;
       display: inline;
       position: relative; }
-      #p-service .sv-price .sv-price-2col p span {
+      #p-service .sv-price .sv-price-2col p span,
+      #p-price .sv-price .sv-price-2col p span {
         font-size: 35px;
         margin-left: 8px;
         margin-right: 8px; }
-      #p-service .sv-price .sv-price-2col p::after {
+      #p-service .sv-price .sv-price-2col p::after,
+      #p-price .sv-price .sv-price-2col p::after {
         content: '';
         position: absolute;
         bottom: -7px;
@@ -2320,24 +2398,28 @@ a .works-veiw-text p {
         width: 100%;
         height: 2px;
         background: linear-gradient(to left, #fb5fb7, #00a1d7); }
-  #p-service .sv-price .link-box {
+  #p-service .sv-price .link-box,
+  #p-price .sv-price .link-box {
     font-size: 16px;
     width: 400px;
     padding: 22px 0;
     margin: 75px auto; }
-#p-service .sv-4col {
+#p-service .sv-4col,
+#p-price .sv-4col {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0; }
-  #p-service .sv-4col li {
+  #p-service .sv-4col li,
+  #p-price .sv-4col li {
     width: calc(100% / 4 - 2.5%);
     border: 1px solid #dadada;
     padding: 42px 23px 38px;
     margin-bottom: 20px;
     position: relative;
     text-align: center; }
-    #p-service .sv-4col li span {
+    #p-service .sv-4col li span,
+    #p-price .sv-4col li span {
       position: absolute;
       top: -1px;
       left: -1px;
@@ -2348,48 +2430,61 @@ a .works-veiw-text p {
       height: 30px;
       border: 1px solid #dadada;
       padding-top: 3px; }
-    #p-service .sv-4col li div {
+    #p-service .sv-4col li div,
+    #p-price .sv-4col li div {
       height: 32px;
       text-align: center; }
-      #p-service .sv-4col li div img {
+      #p-service .sv-4col li div img,
+      #p-price .sv-4col li div img {
         height: 100%; }
-    #p-service .sv-4col li h4 {
+    #p-service .sv-4col li h4,
+    #p-price .sv-4col li h4 {
       text-align: center;
       font-size: 17px;
       font-weight: 500;
       letter-spacing: 0.1em;
       margin: 30px auto 18px; }
-    #p-service .sv-4col li p {
+    #p-service .sv-4col li p,
+    #p-price .sv-4col li p {
       font-size: 14px;
       line-height: 1.57;
       letter-spacing: 0.05em;
       margin-bottom: 0; }
-  #p-service .sv-4col + p {
+  #p-service .sv-4col + p,
+  #p-price .sv-4col + p {
     line-height: 1.92; }
-#p-service .sv-4col-collapse {
+#p-service .sv-4col-collapse,
+#p-price .sv-4col-collapse {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   border-right: 1px solid #dadada;
   border-bottom: 1px solid #dadada; }
-  #p-service .sv-4col-collapse li {
+  #p-service .sv-4col-collapse li,
+  #p-price .sv-4col-collapse li {
     width: calc(100% / 4);
     border-top: 1px solid #dadada;
     border-left: 1px solid #dadada;
     padding: 22px 28px 79px 30px;
     position: relative; }
-    #p-service .sv-4col-collapse li:first-child::before, #p-service .sv-4col-collapse li:last-child::before {
+    #p-service .sv-4col-collapse li:first-child::before, #p-service .sv-4col-collapse li:last-child::before,
+    #p-price .sv-4col-collapse li:first-child::before,
+    #p-price .sv-4col-collapse li:last-child::before {
       position: absolute;
       bottom: 36px;
       font-size: 12px; }
-    #p-service .sv-4col-collapse li:first-child::before {
+    #p-service .sv-4col-collapse li:first-child::before,
+    #p-price .sv-4col-collapse li:first-child::before {
       content: "KICK OFF";
       left: 30px; }
-    #p-service .sv-4col-collapse li:last-child::before {
+    #p-service .sv-4col-collapse li:last-child::before,
+    #p-price .sv-4col-collapse li:last-child::before {
       content: "LAUNCH";
       right: 30px; }
-    #p-service .sv-4col-collapse li:first-child::after, #p-service .sv-4col-collapse li:nth-of-type(5)::after {
+    #p-service .sv-4col-collapse li:first-child::after, #p-service .sv-4col-collapse li:nth-of-type(5)::after,
+    #p-price .sv-4col-collapse li:first-child::after,
+    #p-price .sv-4col-collapse li:nth-of-type(5)::after {
       content: "";
       position: absolute;
       bottom: 25px;
@@ -2397,11 +2492,14 @@ a .works-veiw-text p {
       height: 1px;
       width: calc(400% - 27px);
       border-top: 1px solid #000; }
-    #p-service .sv-4col-collapse li:first-child::after {
+    #p-service .sv-4col-collapse li:first-child::after,
+    #p-price .sv-4col-collapse li:first-child::after {
       left: 30px; }
-    #p-service .sv-4col-collapse li:nth-of-type(5)::after {
+    #p-service .sv-4col-collapse li:nth-of-type(5)::after,
+    #p-price .sv-4col-collapse li:nth-of-type(5)::after {
       left: 0; }
-    #p-service .sv-4col-collapse li:last-child::after {
+    #p-service .sv-4col-collapse li:last-child::after,
+    #p-price .sv-4col-collapse li:last-child::after {
       content: "";
       position: absolute;
       bottom: 25px;
@@ -2413,70 +2511,92 @@ a .works-veiw-text p {
       border-right: 4px solid transparent;
       border-top: 2px solid transparent;
       border-bottom: 2px solid #000; }
-    #p-service .sv-4col-collapse li span {
+    #p-service .sv-4col-collapse li span,
+    #p-price .sv-4col-collapse li span {
       font-size: 18px; }
-    #p-service .sv-4col-collapse li h4 {
+    #p-service .sv-4col-collapse li h4,
+    #p-price .sv-4col-collapse li h4 {
       font-size: 17px;
       font-weight: normal;
       letter-spacing: 0.1em;
       margin: 33px 0 22px; }
-    #p-service .sv-4col-collapse li p {
+    #p-service .sv-4col-collapse li p,
+    #p-price .sv-4col-collapse li p {
       font-size: 13px;
       line-height: 1.57;
       letter-spacing: 0.1em;
       margin-bottom: 0; }
-#p-service .simple-table {
+#p-service .simple-table,
+#p-price .simple-table {
   width: 100%; }
-  #p-service .simple-table tr {
+  #p-service .simple-table tr,
+  #p-price .simple-table tr {
     border-top: 1px solid #dadada; }
-    #p-service .simple-table tr:last-of-type {
+    #p-service .simple-table tr:last-of-type,
+    #p-price .simple-table tr:last-of-type {
       border-bottom: 1px solid #dadada; }
-    #p-service .simple-table tr th {
+    #p-service .simple-table tr th,
+    #p-price .simple-table tr th {
       font-size: 16px;
       font-weight: 500;
       letter-spacing: 0.1em;
       padding: 28px 0;
       width: 26%; }
-    #p-service .simple-table tr td {
+    #p-service .simple-table tr td,
+    #p-price .simple-table tr td {
       font-size: 15px;
       letter-spacing: 0.1em;
       padding: 28px 0; }
-    #p-service .simple-table tr td:nth-of-type(1) {
+    #p-service .simple-table tr td:nth-of-type(1),
+    #p-price .simple-table tr td:nth-of-type(1) {
       width: 39%; }
-    #p-service .simple-table tr td:nth-of-type(2) {
+    #p-service .simple-table tr td:nth-of-type(2),
+    #p-price .simple-table tr td:nth-of-type(2) {
       width: 21%; }
-#p-service .sv-site {
+#p-service .sv-site,
+#p-price .sv-site {
   padding-top: 35px;
   padding-bottom: 0; }
-  #p-service .sv-site img {
+  #p-service .sv-site img,
+  #p-price .sv-site img {
     width: 100%;
     margin-bottom: 50px; }
-  #p-service .sv-site dl {
+  #p-service .sv-site dl,
+  #p-price .sv-site dl {
     display: flex;
     border-top: 1px solid #dadada;
     border-bottom: 1px solid #dadada;
     margin-left: 6.53%;
     transition: 0.5s; }
-    #p-service .sv-site dl dt, #p-service .sv-site dl dd {
+    #p-service .sv-site dl dt, #p-service .sv-site dl dd,
+    #p-price .sv-site dl dt,
+    #p-price .sv-site dl dd {
       font-size: 14px;
       letter-spacing: 0.1em;
       line-height: 1;
       padding: 24px 0 17px; }
-    #p-service .sv-site dl dt {
+    #p-service .sv-site dl dt,
+    #p-price .sv-site dl dt {
       font-weight: 500;
       margin-right: 15px; }
-    #p-service .sv-site dl dd {
+    #p-service .sv-site dl dd,
+    #p-price .sv-site dl dd {
       margin-right: 37px; }
-      #p-service .sv-site dl dd:last-of-type {
+      #p-service .sv-site dl dd:last-of-type,
+      #p-price .sv-site dl dd:last-of-type {
         margin-right: 0; }
-#p-service article section.sv-site:first-of-type {
+#p-service article section.sv-site:first-of-type,
+#p-price article section.sv-site:first-of-type {
   padding-top: 78px; }
-#p-service article section.sv-site:last-of-type {
+#p-service article section.sv-site:last-of-type,
+#p-price article section.sv-site:last-of-type {
   padding-bottom: 110px; }
-#p-service .sort-menu {
+#p-service .sort-menu,
+#p-price .sort-menu {
   display: flex;
   margin: 0 0 50px; }
-  #p-service .sort-menu li {
+  #p-service .sort-menu li,
+  #p-price .sort-menu li {
     width: 50%;
     color: #979b9e;
     font-size: 20px;
@@ -2486,7 +2606,8 @@ a .works-veiw-text p {
     transition: 0.5s;
     cursor: pointer;
     padding: 17px 0 25px; }
-    #p-service .sort-menu li::before {
+    #p-service .sort-menu li::before,
+    #p-price .sort-menu li::before {
       content: '';
       position: absolute;
       bottom: 0;
@@ -2495,30 +2616,49 @@ a .works-veiw-text p {
       height: 1px;
       background: #dadada;
       transition: 0.5s; }
-    #p-service .sort-menu li.current {
+    #p-service .sort-menu li.current,
+    #p-price .sort-menu li.current {
       color: #000;
       cursor: auto;
       pointer-events: none; }
-      #p-service .sort-menu li.current::before {
+      #p-service .sort-menu li.current::before,
+      #p-price .sort-menu li.current::before {
         height: 3px;
         background: linear-gradient(to right, #fb5fb7, #00a1d7); }
-#p-service .notice {
+#p-service .notice,
+#p-price .notice {
   font-size: 12px;
   letter-spacing: 0;
   line-height: 1.66;
   color: #8b8b8b;
   margin: 27px 0 95px; }
-#p-service .sv-photo {
+#p-service .sv-photo,
+#p-price .sv-photo {
   margin-bottom: 90px; }
   #p-service .sv-photo .grid-sizer,
-  #p-service .sv-photo .grid-item {
+  #p-service .sv-photo .grid-item,
+  #p-price .sv-photo .grid-sizer,
+  #p-price .sv-photo .grid-item {
     width: 24.25%; }
-  #p-service .sv-photo .gutter-sizer {
+  #p-service .sv-photo .gutter-sizer,
+  #p-price .sv-photo .gutter-sizer {
     width: 1%; }
-  #p-service .sv-photo .grid-item {
+  #p-service .sv-photo .grid-item,
+  #p-price .sv-photo .grid-item {
     padding-bottom: 1.04%; }
-    #p-service .sv-photo .grid-item img {
+    #p-service .sv-photo .grid-item img,
+    #p-price .sv-photo .grid-item img {
       width: 100%; }
+
+#p-price .sv-h2-bold {
+  margin-bottom: 46px; }
+  #p-price .sv-h2-bold h2 {
+    margin-bottom: 25px; }
+  #p-price .sv-h2-bold p {
+    font-size: 15px;
+    line-height: 1.86; }
+#p-price .notice {
+  margin-bottom: 0; }
 
 .price-table {
   width: 100%; }
@@ -2566,6 +2706,130 @@ a .works-veiw-text p {
     font-size: 20px; }
   .price-table tr.price-row td {
     font-size: 25px; }
+  .price-table .gradient {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.76;
+    letter-spacing: 0.05em;
+    position: relative; }
+    .price-table .gradient::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #fb5fb7, #00a1d7); }
+  .price-table .large {
+    font-size: 30px;
+    font-weight: 500; }
+  .price-table .medium {
+    font-size: 17px;
+    font-weight: 500; }
+  .price-table .bold {
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 6px; }
+
+.price-table-web,
+.price-table-movie {
+  border-left: 1px solid #dadada; }
+  .price-table-web tr td,
+  .price-table-movie tr td {
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: 0.1em;
+    padding: 21px; }
+  .price-table-web tr:first-of-type th:first-of-type,
+  .price-table-movie tr:first-of-type th:first-of-type {
+    color: #fff;
+    background: #575a62; }
+  .price-table-web tr:nth-of-type(2) td,
+  .price-table-movie tr:nth-of-type(2) td {
+    padding: 32px 0 36px; }
+  .price-table-web tr:nth-of-type(3) td,
+  .price-table-movie tr:nth-of-type(3) td {
+    padding-left: 0;
+    padding-right: 0; }
+  .price-table-web tr:nth-of-type(4) td, .price-table-web tr:nth-of-type(5) td,
+  .price-table-movie tr:nth-of-type(4) td,
+  .price-table-movie tr:nth-of-type(5) td {
+    font-size: 16px; }
+    .price-table-web tr:nth-of-type(4) td .small, .price-table-web tr:nth-of-type(5) td .small,
+    .price-table-movie tr:nth-of-type(4) td .small,
+    .price-table-movie tr:nth-of-type(5) td .small {
+      font-size: 14px; }
+  .price-table-web tr:nth-of-type(6) td,
+  .price-table-movie tr:nth-of-type(6) td {
+    text-align: left; }
+
+.price-table-movie tr:nth-of-type(4) td {
+  font-size: 15px;
+  line-height: 1.46; }
+.price-table-movie tr:nth-of-type(5) td {
+  vertical-align: top; }
+.price-table-movie tr:nth-of-type(6) td {
+  font-weight: 500;
+  text-align: center; }
+.price-table-movie ul {
+  margin: 0; }
+  .price-table-movie ul li {
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    text-align: left;
+    padding-left: 11px;
+    position: relative; }
+    .price-table-movie ul li::before {
+      content: "・";
+      position: absolute;
+      top: 0;
+      left: 0; }
+
+.price-table-design tr th:nth-of-type(1) {
+  width: 23%; }
+.price-table-design tr td {
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0.1em;
+  padding: 18px 20px;
+  width: auto; }
+  .price-table-design tr td:nth-of-type(1) {
+    text-align: left;
+    width: 47%; }
+
+.price-table-photo tr th span, .price-table-photo tr td span {
+  font-size: 12px; }
+.price-table-photo tr th:nth-of-type(1) {
+  width: 23%; }
+.price-table-photo tr td {
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0.1em;
+  padding: 27px 20px;
+  width: auto; }
+  .price-table-photo tr td:nth-of-type(1) {
+    text-align: left;
+    width: 47%; }
+
+.price-table-anime tr th:nth-of-type(1) {
+  width: 23%; }
+.price-table-anime tr td {
+  font-size: 14px;
+  line-height: 1.57;
+  letter-spacing: 0.1em;
+  text-align: left;
+  padding: 21px;
+  width: auto; }
+.price-table-anime tr:nth-of-type(2) th, .price-table-anime tr:nth-of-type(3) th, .price-table-anime tr:nth-of-type(4) th, .price-table-anime tr:nth-of-type(5) th {
+  padding: 38px 0; }
+.price-table-anime tr:nth-of-type(2) td:nth-of-type(3) {
+  text-align: right;
+  line-height: 1.92; }
+.price-table-anime tr:nth-of-type(2) td:nth-of-type(4),
+.price-table-anime tr:nth-of-type(2) td:nth-of-type(5) {
+  text-align: center; }
 
 .balloon {
   position: relative;
@@ -2705,34 +2969,59 @@ a .works-veiw-text p {
   #works-view {
     padding-right: 10px; }
 
-  #p-service .sv-title p {
+  #p-service .sv-title p,
+  #p-price .sv-title p {
     font-size: 1.87vw; }
-  #p-service .sv-2col-small .link-box-wrap {
+  #p-service .sv-2col-small .link-box-wrap,
+  #p-price .sv-2col-small .link-box-wrap {
     position: relative; }
-  #p-service .sv-2col-small > div:nth-of-type(2) img {
+  #p-service .sv-2col-small > div:nth-of-type(2) img,
+  #p-price .sv-2col-small > div:nth-of-type(2) img {
     padding-left: 0; }
   #p-service .sv-3col li,
-  #p-service .sv-3col.short li {
+  #p-service .sv-3col.short li,
+  #p-price .sv-3col li,
+  #p-price .sv-3col.short li {
     padding-left: 3%;
     padding-right: 3%; }
     #p-service .sv-3col li h3,
-    #p-service .sv-3col.short li h3 {
+    #p-service .sv-3col.short li h3,
+    #p-price .sv-3col li h3,
+    #p-price .sv-3col.short li h3 {
       font-size: 16px; }
-  #p-service .sv-4col li {
+  #p-service .sv-4col li,
+  #p-price .sv-4col li {
     padding-left: 12px;
     padding-right: 12px; }
-  #p-service .sv-price .sv-price-2col div p {
+  #p-service .sv-price .sv-price-2col div p,
+  #p-price .sv-price .sv-price-2col div p {
     font-size: 15px; }
-    #p-service .sv-price .sv-price-2col div p span {
+    #p-service .sv-price .sv-price-2col div p span,
+    #p-price .sv-price .sv-price-2col div p span {
       font-size: 26px; }
-  #p-service .sv-site dl {
+  #p-service .sv-site dl,
+  #p-price .sv-site dl {
     margin-left: 0; }
-    #p-service .sv-site dl dt, #p-service .sv-site dl dd {
+    #p-service .sv-site dl dt, #p-service .sv-site dl dd,
+    #p-price .sv-site dl dt,
+    #p-price .sv-site dl dd {
       font-size: 13px;
       letter-spacing: 0; }
-    #p-service .sv-site dl dt {
+    #p-service .sv-site dl dt,
+    #p-price .sv-site dl dt {
       margin-right: 3%; }
-    #p-service .sv-site dl dd {
-      margin-right: 7%; } }
+    #p-service .sv-site dl dd,
+    #p-price .sv-site dl dd {
+      margin-right: 7%; }
+
+  .price-table .gradient {
+    font-size: 15px;
+    letter-spacing: 0; }
+
+  .price-table-anime tr td {
+    font-size: 13px;
+    letter-spacing: 0;
+    padding-left: 10px;
+    padding-right: 10px; } }
 
 /*# sourceMappingURL=style.css.map */

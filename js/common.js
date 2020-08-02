@@ -228,3 +228,9 @@ $(function () {
   //     });
   //   });
 });
+
+
+// Gallety Movie
+$(document).ready(function () {
+  $("#gallery-movie").lightGallery();
+});

@@ -18,10 +18,10 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020080102">
+  <link rel="stylesheet" href="/css/style.css?v=2020080201">
 </head>
 
-<body id="p-privacy" class="common">
+<body id="p-price" class="common">
   <!-- header -->
   <header class="flex-box">
     <div class="logo">
@@ -60,15 +60,651 @@
       </div>
     </div>
 
-    <section class="effect-fade">
-      <div class="sv-h2">
+    <div class="block-submenu">
+      <ul class="anker-link">
+        <li><a href="#web">Web制作</a></li>
+        <li><a href="#cms">サイト運営プラン</a></li>
+        <li><a href="#design">デザイン開発</a></li>
+        <li><a href="#photo">写真撮影</a></li>
+        <li><a href="#movie">実写映像</a></li>
+        <li><a href="#anime">アニメーション</a></li>
+      </ul>
+    </div>
+
+    <section id="web" class="effect-fade">
+      <div class="sv-h2-bold">
         <h2>Web制作</h2>
         <p>
           ボリュームに応じた4つのサイト構成と料金目安をご紹介いたします。<br>
           ご希望をお伺いし最適なご提案をいたします。
+        </p>
+      </div>
+      <table class="price-table price-table-web">
+        <tr>
+          <th>スモールビジネスA</th>
+          <th>スモールビジネスB</th>
+          <th>ビジネスA</th>
+          <th>ビジネスB</th>
+        </tr>
+        <tr>
+          <td><span class="large">20</span><span class="medium">万円〜</span><br>料金の目安</td>
+          <td><span class="large">50</span><span class="medium">万円〜</span><br>料金の目安</td>
+          <td><span class="large">100</span><span class="medium">万円〜</span><br>料金の目安</td>
+          <td><span class="large">300</span><span class="medium">万円〜</span><br>料金の目安</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="gradient">１ページに全ての</span><br>
+            <span class="gradient">情報を掲載</span>
+          </td>
+          <td>
+            <span class="gradient">必須ページをおさえた</span><br>
+            <span class="gradient">シンプルな構成</span>
+          </td>
+          <td>
+            <span class="gradient">基本的な構成による</span><br>
+            <span class="gradient">集客向上サイト</span>
+          </td>
+          <td>
+            <span class="gradient">カスタム対応による</span><br>
+            <span class="gradient">リッチコンテンツ</span>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="bold">ページ数</span><br>1p<span class="small">（全ての情報を掲載）</span></td>
+          <td><span class="bold">ページ数</span><br>5p前後</td>
+          <td><span class="bold">ページ数</span><br>10p前後</td>
+          <td><span class="bold">ページ数</span><br>10p以上</td>
+        </tr>
+        <tr>
+          <td><span class="bold">想定制作期間</span><br>3週-1ヵ月</td>
+          <td><span class="bold">想定制作期間</span><br>1-2ヵ月</td>
+          <td><span class="bold">想定制作期間</span><br>2-4ヵ月</td>
+          <td><span class="bold">想定制作期間</span><br>3-6ヵ月</td>
+        </tr>
+        <tr>
+          <td>１ページに全ての情報を掲載。ページ階層が無いのでユーザーが迷子になる心配もありません。</td>
+          <td>必須ページをおさえたシンプルな構成です。軽自動車のように小回りが利き手軽で運用もしやすいです。</td>
+          <td>必須ページを網羅した基本的な構成です。ユーザーが求める情報を全面に提示することができます。</td>
+          <td>最新技術を駆使したインタラクションなど、ご要望に応じてカスタム対応するリッチコンテンツサイトです。</td>
+        </tr>
+      </table>
+      <p class="notice">
+        ※ 料金・内容等は予告なく改定する場合がございますので、あらかじめご了承ください。<br>
+        ※ 制作期間は状況により変動いたします。お打ち合わせ時に納期のご相談をさせていただきます。<br>
+        ※ 価格は全て税抜価格です。別途消費税がかかります。
       </p>
+    </section>
+
+    <section class="effect-fade sv-site">
+      <h3>スモールビジネスA</h3>
+      <img src="/img/service/web-401.png" alt="">
+      <div class="sv-2col-small">
+        <div>
+          <p>
+            １ページに全ての情報を掲載。<br>
+            ページ階層が無いのでユーザーが迷子になる心配もありません。
+          </p>
+        </div>
+        <div>
+          <dl>
+            <dt>ページ数</dt>
+            <dd>1p</dd>
+            <dt>期間</dt>
+            <dd>3週-1ヵ月</dd>
+            <dt>料金</dt>
+            <dd>20万〜</dd>
+          </dl>
+        </div>
       </div>
     </section>
+    
+    <section class="effect-fade sv-site">
+      <h3>スモールビジネスB</h3>
+      <img src="/img/service/web-402.png" alt="">
+      <div class="sv-2col-small">
+        <div>
+          <p>
+            必須ページをおさえたシンプルな構成です。<br>
+            軽自動車のように小回りが利き手軽で運用もしやすいです。
+          </p>
+        </div>
+        <div>
+          <dl>
+            <dt>ページ数</dt>
+            <dd>5p前後</dd>
+            <dt>期間</dt>
+            <dd>1-2ヵ月</dd>
+            <dt>料金</dt>
+            <dd>50万〜</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+    
+    <section class="effect-fade sv-site">
+      <h3>ビジネスA</h3>
+      <img src="/img/service/web-403.png" alt="">
+      <div class="sv-2col-small">
+        <div>
+          <p>
+            必須ページを網羅した基本的な構成です。<br>
+            ユーザーが求める情報を全面に提示することができます。
+          </p>
+        </div>
+        <div>
+          <dl>
+            <dt>ページ数</dt>
+            <dd>10p前後</dd>
+            <dt>期間</dt>
+            <dd>2-4ヵ月</dd>
+            <dt>料金</dt>
+            <dd>100万〜</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+    
+    <section class="effect-fade sv-site p-b40">
+      <h3>ビジネスB</h3>
+      <img src="/img/service/web-404.png" alt="">
+      <div class="sv-2col-small">
+        <div>
+          <p>
+            最新技術を駆使したインタラクションなど、ご要望に応じてカスタム対応するリッチコンテンツサイトです。
+          </p>
+        </div>
+        <div>
+          <dl>
+            <dt>ページ数</dt>
+            <dd>10p以上</dd>
+            <dt>期間</dt>
+            <dd>3-6ヵ月</dd>
+            <dt>料金</dt>
+            <dd>300万〜</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="cms" class="effect-fade p-b80">
+      <div class="sv-h2-bold">
+        <h2>サイト運営プラン</h2>
+        <p>Webサイト運営にかかる月額プランになります。こちらのご利用は任意です。</p>
+      </div>
+    
+      <ul class="sort-menu">
+        <li data-category="hojin" class="current">法人プラン</li>
+        <li data-category="kojin">個人事業主プラン</li>
+      </ul>
+    
+      <div id="service-select">
+        <article data-category="hojin">
+          <div class="balloon">
+            月１の更新作業代行<br>
+            オススメのプラン！
+          </div>
+          <table class="price-table">
+            <tr>
+              <th>運営プラン</th>
+              <th>エコノミー</th>
+              <th class="recommend">ベーシック</th>
+              <th>ビジネス</th>
+            </tr>
+            <tr class="price-row">
+              <th>月額</th>
+              <td>12,800円</td>
+              <td>29,800円</td>
+              <td>49,800円</td>
+            </tr>
+            <tr>
+              <th>更新システム機能<span>SUGIYAMA CMS</span></th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+            </tr>
+            <tr>
+              <th>Webサーバー<span>国内サーバー (3GB)</span></th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+            </tr>
+            <tr>
+              <th>メールサーバー<span>アカウント数無制限 (10GB)</span></th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+            </tr>
+            <tr>
+              <th>常時SSL<span>無料</span></th>
+              <td class="maru">○</td>
+              <td>SSL証明書用<br>CSR発行</td>
+              <td>SSL証明書用<br>CSR発行</td>
+            </tr>
+            <tr>
+              <th>独自ドメイン<span>初年度無料※1</span></th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+            </tr>
+            <tr>
+              <th>サーバー障害チェック</th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+            </tr>
+            <tr>
+              <th>バックアップ</th>
+              <td class="maru">-</td>
+              <td>月1回</td>
+              <td>月2回</td>
+            </tr>
+            <tr>
+              <th>更新作業代行※2</th>
+              <td class="maru">-</td>
+              <td>月1回</td>
+              <td>月2回</td>
+            </tr>
+            <tr>
+              <th>電話サポート</th>
+              <td>メールのみ</td>
+              <td>メールのみ</td>
+              <td class="maru">○</td>
+            </tr>
+          </table>
+        </article>
+    
+        <article data-category="kojin" style="display: none;">
+          <div class="balloon">
+            月１の更新作業代行<br>
+            オススメのプラン！
+          </div>
+          <table class="price-table">
+            <tr>
+              <th>運営プラン</th>
+              <th>エコノミー</th>
+              <th class="recommend">ベーシック</th>
+              <th>ビジネス</th>
+            </tr>
+            <tr class="price-row">
+              <th>月額</th>
+              <td>5,480円</td>
+              <td>14,800円</td>
+              <td>29,800円</td>
+            </tr>
+            <tr>
+              <th>更新システム機能<span>SUGIYAMA CMS</span></th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+            </tr>
+            <tr>
+              <th>Webサーバー<span>国内サーバー (3GB)</span></th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+            </tr>
+            <tr>
+              <th>メールサーバー<span>アカウント数無制限 (10GB)</span></th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+            </tr>
+            <tr>
+              <th>常時SSL<span>無料</span></th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td>SSL証明書用<br>CSR発行</td>
+            </tr>
+            <tr>
+              <th>独自ドメイン<span>初年度無料※1</span></th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+            </tr>
+            <tr>
+              <th>サーバー障害チェック</th>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+              <td class="maru">○</td>
+            </tr>
+            <tr>
+              <th>バックアップ</th>
+              <td class="maru">-</td>
+              <td>月1回</td>
+              <td>月2回</td>
+            </tr>
+            <tr>
+              <th>更新作業代行※2</th>
+              <td class="maru">-</td>
+              <td>月1回</td>
+              <td>月2回</td>
+            </tr>
+            <tr>
+              <th>電話サポート</th>
+              <td>メールのみ</td>
+              <td>メールのみ</td>
+              <td class="maru">○</td>
+            </tr>
+          </table>
+        </article>
+      </div>
+      <p class="notice">
+        ※ 料金・内容等は予告なく改定する場合がございますのであらかじめご了承ください。<br>
+        ※ 価格は全て税抜価格です。別途消費税がかかります。<br>
+        ※1 ドメイン月額料金の3,000円までのものが無料になります。<br>
+        ※2 更新作業の分量は予めご相談の上決定させていただきます。
+      </p>
+    </section>
+
+    <section id="design" class="effect-fade p-b80">
+      <div class="sv-h2-bold">
+        <h2>デザイン開発</h2>
+        <p>デザイン開発における料金の目安です。</p>
+      </div>
+      <table class="price-table price-table-design">
+        <tr>
+          <th>項目</th>
+          <th>詳細</th>
+          <th>数量</th>
+          <th>料金</th>
+        </tr>
+        <tr>
+          <th>CI/VI<span>（ロゴ/シンボルマーク）</span></th>
+          <td>デザイン開発にかかる料金の目安です。<br>
+            紙、加工、印刷サイズ、部数等の仕様により料金が変動します。試し刷りには実費が掛かります。</td>
+          <td>1点</td>
+          <td>¥120,000〜</td>
+        </tr>
+        <tr>
+          <th>チラシ/ポスター</th>
+          <td>デザイン開発にかかる料金の目安です。<br>
+            紙、加工、印刷サイズ、部数等の仕様により料金が変動します。試し刷りには実費が掛かります。</td>
+          <td>1p</td>
+          <td>¥100,000〜</td>
+        </tr>
+        <tr>
+          <th>冊子</th>
+          <td>デザイン開発にかかる料金の目安です。<br>
+            ページ数、紙、加工、印刷サイズ、部数等の仕様により料金が変動します。試し刷りには実費が掛かります。</td>
+          <td>6p</td>
+          <td>¥500,000〜</td>
+        </tr>
+        <tr>
+          <th>パッケージデザイン</th>
+          <td>デザイン開発にかかる料金の目安です。<br>
+            紙、加工、部数等の仕様により料金が変動します。試し刷りには実費が掛かります。</td>
+          <td>1点</td>
+          <td>¥300,000〜</td>
+        </tr>
+        <tr>
+          <th>名刺</th>
+          <td>デザイン開発にかかる料金の目安です。<br>
+            紙、加工、部数等の仕様により料金が変動します。試し刷りには実費が掛かります。</td>
+          <td>1名</td>
+          <td>¥100,000〜</td>
+        </tr>
+        <tr>
+          <th>イラストレーション</th>
+          <td>
+            S: 複数パーツが組み合わさったもの（フルHD画面）<br>
+            A: 複数パーツが組み合わさったもの（A4チラシ半分）<br>
+            B: 複数パーツが組み合わさったもの（A4チラシ1/4）<br>
+            C: ２〜３個のパーツが組み合わさったもの<br>
+            D: ワンポイント程度のイラスト
+          </td>
+          <td>1点</td>
+          <td>
+            ¥240,000〜<br>
+            ¥120,000〜<br>
+            ¥80,000〜<br>
+            ¥30,000〜<br>
+            ¥10,000〜
+          </td>
+        </tr>
+      </table>
+      <p class="notice">
+        ※ 料金・内容等は予告なく改定する場合がございますのであらかじめご了承ください。<br>
+        ※ 価格は全て税抜価格です。別途消費税がかかります。
+      </p>
+    </section>
+
+    <section id="photo" class="effect-fade p-b80">
+      <div class="sv-h2-bold">
+        <h2>写真撮影</h2>
+        <p>写真撮影から現像までの料金の目安です。撮影香盤作成やロケハンも含まれます。</p>
+      </div>
+      <table class="price-table price-table-photo">
+        <tr>
+          <th>項目</th>
+          <th>詳細</th>
+          <th>数量</th>
+          <th>料金</th>
+        </tr>
+        <tr>
+          <th>簡易撮影</th>
+          <td>スナップショット、半日程度の撮影です。</td>
+          <td>半日</td>
+          <td>¥35,000〜<br><span>（出張費別途）</span></td>
+        </tr>
+        <tr>
+          <th>写真撮影</th>
+          <td>自然光の撮影が基本です。</td>
+          <td>1日</td>
+          <td>¥70,000〜<br><span>（出張費別途）</span></td>
+        </tr>
+        <tr>
+          <th>写真撮影<span>照明セッティング有り</span></th>
+          <td>照明セッティングが必要な撮影料金です。</td>
+          <td>1日</td>
+          <td>¥120,000〜<br><span>（出張費別途）</span></td>
+        </tr>
+      </table>
+      <p class="notice">
+        ※ 料金・内容等は予告なく改定する場合がございますのであらかじめご了承ください。<br>
+        ※ 価格は全て税抜価格です。別途消費税がかかります。
+      </p>
+    </section>
+
+    <section id="movie" class="effect-fade p-b80">
+      <div class="sv-h2-bold">
+        <h2>実写映像</h2>
+        <p>
+          実写映像制作のお見積り例を4つご紹介いたします。
+        </p>
+      </div>
+      <table class="price-table price-table-movie">
+        <tr>
+          <th>エントリー</th>
+          <th>ライト</th>
+          <th>ベーシック</th>
+          <th>プレミアム</th>
+        </tr>
+        <tr>
+          <td><span class="large">30</span><span class="medium">万円〜</span><br>料金の目安</td>
+          <td><span class="large">60</span><span class="medium">万円〜</span><br>料金の目安</td>
+          <td><span class="large">120</span><span class="medium">万円〜</span><br>料金の目安</td>
+          <td><span class="large">500</span><span class="medium">万円〜</span><br>料金の目安</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="gradient">ワンオペ撮影で制作する</span><br>
+            <span class="gradient">エントリープラン</span>
+          </td>
+          <td>
+            <span class="gradient">動画広告やWeb動画に</span><br>
+            <span class="gradient">最適な制作プラン</span>
+          </td>
+          <td>
+            <span class="gradient">役者による演出ありの</span><br>
+            <span class="gradient">高品質な映像制作</span>
+          </td>
+          <td>
+            <span class="gradient">映画制作工程による</span><br>
+            <span class="gradient">フィルムメイキング</span>
+          </td>
+        </tr>
+        <tr>
+          <td>会社案内 /PV<br>（15〜30秒）</td>
+          <td>会社案内 /PV<br>（15秒〜1分弱）</td>
+          <td>会社案内 /PV/CM/MV<br>（15秒〜3分弱）</td>
+          <td>会社案内 /PV/CM/MV<br>（15秒〜3分弱）</td>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>企画（構成案）</li>
+              <li>撮影（現場/ワンオペ）</li>
+              <li>音楽（著作権フリー）</li>
+              <li>編集</li>
+              <li>グレーディング</li>
+              <li>コンポジット（合成）</li>
+              <li>レンダリング（出力）</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>企画（構成案）</li>
+              <li>シナリオ制作（台本）</li>
+              <li>ディレクション（進行/演出）</li>
+              <li>撮影（現場）</li>
+              <li>ナレーション（簡易収録）</li>
+              <li>MIX</li>
+              <li>音楽（著作権フリー）</li>
+              <li>グレーディング</li>
+              <li>コンポジット（合成）</li>
+              <li>レンダリング（出力）</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>企画設計（構成案）</li>
+              <li>シナリオ制作（台本）</li>
+              <li>ディレクション（進行/演出）</li>
+              <li>撮影（現場/スタジオセット）</li>
+              <li>照明/音声/スタイリスト</li>
+              <li>役者（オーディション）</li>
+              <li>編集</li>
+              <li>グレーディング</li>
+              <li>コンポジット（合成）</li>
+              <li>ナレーション（スタジオ収録）</li>
+              <li>MIX</li>
+              <li>音楽（作曲）</li>
+              <li>レンダリング（出力）</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>企画設計（構成案）</li>
+              <li>シナリオ制作（台本）</li>
+              <li>ディレクション（進行/演出）</li>
+              <li>撮影（現場/スタジオセット）</li>
+              <li>照明/音声/スタイリスト</li>
+              <li>役者（オーディション）</li>
+              <li>ビジュアルデザイン</li>
+              <li>編集</li>
+              <li>グレーディング</li>
+              <li>コンポジット（合成/CG/VFX）</li>
+              <li>ナレーション（スタジオ収録）</li>
+              <li>MIX</li>
+              <li>音楽（作曲）</li>
+              <li>レンダリング（出力）</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>4K RAW撮影</td>
+          <td>4K RAW撮影</td>
+          <td>4K RAW撮影</td>
+          <td>4K RAW撮影</td>
+        </tr>
+        <tr>
+          <td><span class="bold">想定制作期間</span><br>数週間〜1.5ヶ月</td>
+          <td><span class="bold">想定制作期間</span><br>1ヶ月〜</td>
+          <td><span class="bold">想定制作期間</span><br>2ヶ月〜</td>
+          <td><span class="bold">想定制作期間</span><br>4ヶ月〜</td>
+        </tr>
+      </table>
+      <p class="notice">
+        ※ 料金・内容等は予告なく改定する場合がございますので、あらかじめご了承ください。<br>
+        ※ 制作期間は状況により変動いたします。お打ち合わせ時に納期のご相談をさせていただきます。<br>
+        ※ 価格は全て税抜価格です。別途消費税がかかります。
+      </p>
+    </section>
+
+    <section id="anime" class="effect-fade p-b150">
+      <div class="sv-h2-bold">
+        <h2>アニメーション</h2>
+        <p>
+          アニメーション制作のお見積り例をご紹介いたします。<br>
+          制作手法や内容によって料金が変動します。詳しくはお問い合わせください。
+      </p>
+      </div>
+      <table class="price-table price-table-anime">
+        <tr>
+          <th>手法</th>
+          <th>ジャンル</th>
+          <th>工程</th>
+          <th>尺</th>
+          <th>期間</th>
+          <th>料金</th>
+        </tr>
+        <tr>
+          <th>モーショングラフィックス</th>
+          <td rowspan="4">
+            TVCM/PV/MV<br>
+            子供向け教材<br>
+            イベント映像<br>
+            etc.
+          </td>
+          <td rowspan="4">
+            ディレクション（進行/演出）<br>
+            企画設計（構成案）<br>
+            シナリオ制作<br>
+            絵コンテ/ V コンテ<br>
+            原画/背景/照明/セット<br>
+            作画/アニメーション<br>
+            編集<br>
+            コンポジット（合成/CG/VFX）<br>
+            ナレーション<br>
+            音楽<br>
+            MIX<br>
+            レンダリング（出力）
+          </td>
+          <td rowspan="4">
+            5秒<br>
+            15秒<br>
+            30秒<br>
+            〜1分<br>
+            〜2分<br>
+            〜3分<br>
+            〜5分
+          </td>
+          <td rowspan="4">
+            数週〜6ヶ月
+          </td>
+          <td rowspan="4">
+            15〜500万
+          </td>
+        </tr>
+        <tr>
+          <th>Webアニメーション</th>
+        </tr>
+        <tr>
+          <th>2Dアニメーション</th>
+        </tr>
+        <tr>
+          <th>ストップモーション</th>
+        </tr>
+      </table>
+      <p class="notice">
+        ※ 料金・内容等は予告なく改定する場合がございますので、あらかじめご了承ください。<br>
+        ※ 制作期間は状況により変動いたします。お打ち合わせ時に納期のご相談をさせていただきます。<br>
+        ※ 価格は全て税抜価格です。別途消費税がかかります。
+      </p>
+    </section>
+
+
 
     <!-- contact -->
     <section id="contact" class="effect-fade">
@@ -159,6 +795,6 @@
   </footer>
   <!-- /footer -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/common.js?v=2020080102"></script>
+  <script src="/js/common.js?v=2020080201"></script>
 </body>
 </html>
