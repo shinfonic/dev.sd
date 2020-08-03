@@ -177,7 +177,7 @@ $(".sort-menu li").on("click", function () {
 // SERVICE Photo
 $(function () {
   var $grid = $('.sv-photo').masonry({
-    itemSelector: '.grid-item',
+    itemSelector: 'none', // select none at first
     columnWidth: '.grid-sizer',
     gutter: '.gutter-sizer',
     percentPosition: true,
@@ -189,11 +189,11 @@ $(function () {
 
   var msnry = $grid.data('masonry');
 
-  // $grid.imagesLoaded(function () {
-  //   $grid.masonry('option', { itemSelector: '.grid__item' });
-  //   var $items = $grid.find('.grid__item');
-  //   $grid.masonry('appended', $items);
-  // });
+  $grid.imagesLoaded(function () {
+    $grid.masonry('option', { itemSelector: '.grid-item' });
+    var $items = $grid.find('.grid-item');
+    $grid.masonry('appended', $items);
+  });
 
   // var nextSlugs = [
   //   'photo-02.html',
@@ -204,7 +204,7 @@ $(function () {
     path: 'photo-{{#}}.html',
     append: '.grid-item',
     outlayer: msnry,
-    scrollThreshold: 50,
+    scrollThreshold: 0,
     history: false,
     // status: '.page-load-status',
     // hideNav: '.pagination',
@@ -221,16 +221,127 @@ $(function () {
   //     img: 'loading.gif'
   //   }
   // },
-  //   function (newElements) {
-  //     var $newElems = $(newElements);
-  //     $newElems.imagesLoaded(function () {
-  //       $container.masonry('appended', $newElems, true);
-  //     });
+  // function (newElements) {
+  //   var $newElems = $(newElements);
+  //   $newElems.imagesLoaded(function () {
+  //     $container.masonry('appended', $newElems, true);
   //   });
+  // });
 });
 
+
+// Gallety Photo
+$(function () {
+  var $lg = $('#gallery-photo');
+
+  $lg.lightGallery({
+    addClass: 'lg-outer-photo',
+    mode: 'lg-fade',
+    cssEasing: 'ease-in',
+    speed: 800,
+    width: '91%',
+    startClass: '',
+    closable: false,
+    controls: false,
+    preload: 2,
+    selector: '.grid-item',
+    download: false,
+    counter: false,
+    enableDrag: false,
+    thumbnail: false,
+    autoplayControls: false,
+    fullScreen: false,
+    zoom: false,
+    hash: false,
+    share: false,
+  });
+
+  $lg.on('onAferAppendSlide.lg', function (event) {
+    var y = $(window).scrollTop();
+    $(window).scrollTop(y + 1);
+  });
+});
 
 // Gallety Movie
-$(document).ready(function () {
-  $("#gallery-movie").lightGallery();
+$(function () {
+  var $lg = $('#gallery-movie');
+
+  $lg.lightGallery({
+    addClass: 'lg-outer-movie',
+    mode: 'lg-fade',
+    cssEasing: 'ease-in',
+    speed: 800,
+    startClass: '',
+    closable: false,
+    controls: false,
+    preload: 2,
+    download: false,
+    counter: false,
+    enableDrag: false,
+    thumbnail: false,
+    // autoplay: false,
+    autoplayControls: false,
+    // autoplayFirstVideo: false,
+    videoMaxWidth: '91%',
+    youtubePlayerParams: { modestbranding: 1, rel: 0 },
+    vimeoPlayerParams: { byline: 0, portrait: 0, title: false },
+    fullScreen: false,
+    zoom: false,
+    hash: false,
+    share: false,
+    // loadYoutubeThumbnail: true,
+    // youtubeThumbSize: 'default',
+    // loadVimeoThumbnail: true,
+    // vimeoThumbSize: 'thumbnail_medium',
+  });
+  // var _this = this;
+  // this.$outer.find('.lgc-prev').on('click.lg', function () {
+  //   _this.goToPrevSlide();
+  // });
+  // this.find('.lgc-next').on('click', function () {
+  //   $lg.data('lightGallery').goToNextSlide();
+  // });
+  $lg.on('onAfterAppendSubHtml.lg', function (event) {
+
+    $('#lgc-close').on('click', function () {
+      $lg.data('lightGallery').destroy(true);
+    });
+  });
+
+  $lg.on('onAferAppendSlide.lg', function (event) {
+    var y = $(window).scrollTop();
+    $(window).scrollTop(y + 1);
+  });
+
 });
+
+
+function closebtn() {
+  var $lg = $('#gallery-movie');
+  $lg.data('lightGallery').destroy(true);
+}
+
+function prevbtn() {
+  var $lg = $('#gallery-movie');
+  $lg.data('lightGallery').goToPrevSlide();
+}
+
+function nextbtn() {
+  var $lg = $('#gallery-movie');
+  $lg.data('lightGallery').goToNextSlide();
+}
+
+function closebtn_p() {
+  var $lg = $('#gallery-photo');
+  $lg.data('lightGallery').destroy(true);
+}
+
+function prevbtn_p() {
+  var $lg = $('#gallery-photo');
+  $lg.data('lightGallery').goToPrevSlide();
+}
+
+function nextbtn_p() {
+  var $lg = $('#gallery-photo');
+  $lg.data('lightGallery').goToNextSlide();
+}

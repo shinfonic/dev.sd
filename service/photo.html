@@ -18,11 +18,13 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020080201">
+  <link rel="stylesheet" href="/lib/lg/css/lightgallery.min.css">
+  <link rel="stylesheet" href="/css/style.css?v=2020080301">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="/js/imagesloaded.pkgd.min.js"></script>
   <script src="/js/masonry.pkgd.min.js"></script>
   <script src="/js/infinite-scroll.pkgd.min.js"></script>
+  <script src="/lib/lg/js/lightgallery-all.min.js"></script>
 </head>
 
 <body id="p-service" class="common">
@@ -83,29 +85,169 @@
     </section>
 
     <section class="effect-fade p-t10">
-      <div class="sv-photo">
+      <div class="sv-photo" id="gallery-photo">
         <div class="grid-sizer"></div>
         <div class="gutter-sizer"></div>
-        <div class="grid-item"><img src="/img/service/photo-001.jpg" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x225.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x300.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x250.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x150.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x225.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x150.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x225.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x225.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x300.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x250.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x300.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x250.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x250.png" alt=""></div>
-        <div class="grid-item"><img src="https://placehold.jp/eee/fff/232x180.png" alt=""></div>
+        <a href="/img/service/photo/001.jpg" class="grid-item"
+        data-sub-html="
+        <div>軽井沢</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/001-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/002.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 2</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/002-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/003.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 3</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/003-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/004.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 4</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/004-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/005.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 5</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/005-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/006.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 6</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/006-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/007.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 7</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/007-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/008.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 8</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/008-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/009.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 9</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/009-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/010.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 10</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/010-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/011.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 11</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/011-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/012.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 12</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/012-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/013.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 13</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/013-thumb.jpg" alt="">
+        </a>
+        <a href="/img/service/photo/014.jpg" class="grid-item"
+        data-sub-html="
+        <div>キャプション 14</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="/img/service/photo/014-thumb.jpg" alt="">
+        </a>
+        <a href="https://placehold.jp/eee/fff/1440x960.png" class="grid-item"
+        data-sub-html="
+        <div>キャプション 15</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="https://placehold.jp/eee/fff/232x180.png" alt="">
+        </a>
+        <a href="https://placehold.jp/eee/fff/1440x810.png" class="grid-item"
+        data-sub-html="
+        <div>キャプション 16</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="https://placehold.jp/eee/fff/232x300.png" alt="">
+        </a>
+        <a href="https://placehold.jp/eee/fff/1440x960.png" class="grid-item"
+        data-sub-html="
+        <div>キャプション 17</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="https://placehold.jp/eee/fff/232x180.png" alt="">
+        </a>
+        <a href="https://placehold.jp/eee/fff/1440x810.png" class="grid-item"
+        data-sub-html="
+        <div>キャプション 18</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="https://placehold.jp/eee/fff/232x250.png" alt="">
+        </a>
+        <a href="https://placehold.jp/eee/fff/1440x960.png" class="grid-item"
+        data-sub-html="
+        <div>キャプション 19</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="https://placehold.jp/eee/fff/232x250.png" alt="">
+        </a>
+        <a href="https://placehold.jp/eee/fff/1440x810.png" class="grid-item"
+        data-sub-html="
+        <div>キャプション 20</div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-prev&quot; onclick=&quot;prevbtn_p()&quot;></button><button type=&quot;button&quot; class=&quot;lgc-next&quot; onclick=&quot;nextbtn_p()&quot;></button></div>
+        <div><button type=&quot;button&quot; class=&quot;lgc-close&quot; onclick=&quot;closebtn_p()&quot;></button></div>
+        ">
+          <img src="https://placehold.jp/eee/fff/232x180.png" alt="">
+        </a>
       </div>
     </section>
 
@@ -155,7 +297,7 @@
               <li><a href="/service/cms.html">更新システムの設置</a></li>
               <li><a href="/service/support.html">サイト運営支援</a></li>
               <li><a href="/service/design.html">デザイン開発</a></li>
-              <li><a href="/service/photo.html">写真撮影</a></li>
+              <li><a href="/service/photo/html">写真撮影</a></li>
               <li><a href="/service/movie.html">映像制作</a></li>
             </ul>
           </div>
@@ -197,6 +339,6 @@
     <small>©SUGIYAMA DESIGN All Rights Reserved.</small>
   </footer>
   <!-- /footer -->
-  <script src="/js/common.js?v=2020080201"></script>
+  <script src="/js/common.js?v=2020080301"></script>
 </body>
 </html>

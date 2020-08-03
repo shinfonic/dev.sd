@@ -2169,7 +2169,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 140px;
-    & > div {
+    & > a {
       width: 50%;
       padding-bottom: 10px;
       position: relative;
@@ -2179,10 +2179,8 @@ a {
       &:nth-of-type(even) {
         padding-left: 5px;
       }
-      a {
-        .works-veiw-img {
-          padding-top: 56.211%;
-        }
+      .works-veiw-img {
+        padding-top: 56.211%;
       }
     }
   }
@@ -2575,6 +2573,12 @@ a {
       padding-bottom: 1.04%;
       img {
         width: 100%;
+        transition: 0.8s;
+      }
+      &:hover {
+        img {
+          filter: grayscale(100%);
+        }
       }
     }
   }
@@ -2943,6 +2947,134 @@ a {
   }
 }
 
+.lg-outer {
+  .lg {
+    width: 142vh !important;
+    height: 100vh !important;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: 5%;
+      width: 163px;
+      height: 45px;
+      background: url("/img/logo-w.svg") no-repeat;
+      background-size: contain;
+    }
+    .lg-toolbar {
+      display: none;
+    }
+    .lg-inner {
+      .lg-video-cont {
+        vertical-align: top;
+        margin-top: 160px;
+      }
+    }
+    .lg-sub-html {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin: 0 auto;
+      padding: 0;
+      margin-top: calc(54% + 160px);
+      position: relative;
+      background-color: transparent;
+      & > div {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        color: #fff;
+        &:nth-of-type(1) {
+          text-align: left;
+          flex: 1 1 36%;
+        }
+        &:nth-of-type(2) {
+          text-align: center;
+          flex: 0 1 auto;
+        }
+        &:nth-of-type(3) {
+          text-align: right;
+          flex: 1 1 36%;
+        }
+      }
+      a {
+        color: #fff;
+        margin-left: 32px;
+        position: relative;
+        &::after {
+          content:"";
+          position: absolute;
+          top: 4px;
+          right: -13px;
+          width: 10px;
+          height: 10px;
+          background: url("/img/window.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      .lgc-prev,
+      .lgc-next,
+      .lgc-close {
+        cursor: pointer;
+        background-color: transparent;
+        color: #fff;
+        font-size: 11px;
+        border: none;
+        outline: 0;
+      }
+      .lgc-prev {
+        display: inline-block;
+        &::before {
+          content: "BACK"
+        }
+        &::after {
+          content: "I";
+          margin-left: 35px;
+        }
+      }
+      .lgc-next {
+        display: inline-block;
+        margin-left: 20px;
+        &::before {
+          content: "NEXT"
+        }
+      }
+      .lgc-close {
+        &::after {
+          content: "✕ 閉じる";
+        }
+      }
+    }
+  }
+}
+
+.lg-outer-photo {
+  background: #fff;
+  .lg {
+    width: 118vh !important;
+    &::before {
+      background: url("/img/logo.svg") no-repeat;
+    }
+    .lg-sub-html {
+      margin-top: calc(63% + 160px);
+      & > div,
+      .lgc-prev,
+      .lgc-next,
+      .lgc-close {
+        color: #000;
+      }
+    }
+  }
+  .lg-img-wrap:before,
+  .lg-item:before {
+    content: none;
+  }
+  &.lg-show-after-load .lg-item.lg-complete .lg-object {
+    margin-top: 160px;
+    max-width: 91%;
+  }
+}
+
 @media (max-width: 1640px) {
   header,
   #p-top #main-visual,
@@ -3122,6 +3254,12 @@ a {
         letter-spacing: 0;
         padding-left: 10px;
         padding-right: 10px;
+      }
+    }
+  }
+  .lg-outer {
+    .lg {
+      .lg-sub-html {
       }
     }
   }
