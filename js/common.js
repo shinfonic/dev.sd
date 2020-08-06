@@ -241,7 +241,8 @@ $(function () {
     speed: 800,
     width: '91%',
     startClass: '',
-    closable: false,
+    backdropDuration: 800,
+    // closable: false,
     controls: false,
     preload: 2,
     selector: '.grid-item',
@@ -263,7 +264,7 @@ $(function () {
 });
 
 // Gallety Movie
-$(function () {
+$(document).ready(function () {
   var $lg = $('#gallery-movie');
 
   $lg.lightGallery({
@@ -272,6 +273,7 @@ $(function () {
     cssEasing: 'ease-in',
     speed: 800,
     startClass: '',
+    backdropDuration: 800,
     closable: false,
     controls: false,
     preload: 2,
@@ -279,9 +281,9 @@ $(function () {
     counter: false,
     enableDrag: false,
     thumbnail: false,
-    // autoplay: false,
+    autoplay: false,
     autoplayControls: false,
-    // autoplayFirstVideo: false,
+    autoplayFirstVideo: false,
     videoMaxWidth: '91%',
     youtubePlayerParams: { modestbranding: 1, rel: 0 },
     vimeoPlayerParams: { byline: 0, portrait: 0, title: false },
@@ -318,7 +320,7 @@ $(function () {
 
 function closebtn() {
   var $lg = $('#gallery-movie');
-  $lg.data('lightGallery').destroy(true);
+  $lg.data('lightGallery').destroy();
 }
 
 function prevbtn() {
@@ -333,7 +335,7 @@ function nextbtn() {
 
 function closebtn_p() {
   var $lg = $('#gallery-photo');
-  $lg.data('lightGallery').destroy(true);
+  $lg.data('lightGallery').destroy();
 }
 
 function prevbtn_p() {

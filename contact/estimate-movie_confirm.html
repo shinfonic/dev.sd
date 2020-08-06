@@ -18,7 +18,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020080301">
+  <link rel="stylesheet" href="/css/style.css?v=2020080401">
 </head>
 
 <body id="p-contact" class="common">
@@ -29,11 +29,11 @@
     </div>
     <nav>
       <ul class="flex-box">
-        <li><a href="/about/">ABOUT</a></li>
-        <li><a href="/service/">SERVICE</a></li>
         <li><a href="/works/">WORKS</a></li>
+        <li><a href="/service/">SERVICE</a></li>
         <li><a href="/price/">PRICE</a></li>
         <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/about/">ABOUT</a></li>
         <li><a href="/contact/">CONTACT</a></li>
       </ul>
     </nav>
@@ -183,11 +183,11 @@
         <!-- 右側のボックス -->
         <div class="sec-content-item flex-box">
           <div class="content-link">
-            <h3><a href="/about/">ABOUT</a></h3>
+            <h3><a href="/#news">NEWS</a></h3>
             <ul>
-              <li><a href="/about/#about-concept">コンセプト</a></li>
-              <li><a href="/about/#profile">プロフィール</a></li>
-              <li><a href="/about/#access">アクセス</a></li>
+            </ul>
+            <h3><a href="/works/">WORKS</a></h3>
+            <ul>
             </ul>
             <h3><a href="/service/">SERVICE</a></h3>
             <ul>
@@ -200,9 +200,6 @@
             </ul>
           </div>
           <div class="content-link">
-            <h3><a href="/works/">WORKS</a></h3>
-            <ul>
-            </ul>
             <h3><a href="/price/">PRICE</a></h3>
             <ul>
               <li><a href="/price/#web">Web制作</a></li>
@@ -210,24 +207,27 @@
               <li><a href="/price/#design">デザイン開発</a></li>
               <li><a href="/price/#photo">写真撮影</a></li>
               <li><a href="/price/#movie">実写映像</a></li>
-              <li><a href="/price/#animation">アニメーション</a></li>
+              <li><a href="/price/#anime">アニメーション</a></li>
             </ul>
             <h3><a href="/faq/">FAQ</a></h3>
             <ul>
             </ul>
-            <h3><a href="/#news">NEWS</a></h3>
+            <h3><a href="#">BLOG</a></h3>
             <ul>
             </ul>
           </div>
           <div class="content-link">
+            <h3><a href="/about/">ABOUT</a></h3>
+            <ul>
+              <li><a href="/about/#about-concept">コンセプト</a></li>
+              <li><a href="/about/#profile">プロフィール</a></li>
+              <li><a href="/about/#access">アクセス</a></li>
+            </ul>
             <h3><a href="/contact/">CONTACT</a></h3>
             <ul>
               <li><a href="/contact/">お問い合わせ</a></li>
               <li><a href="/contact/estimate-web.html">見積もり依頼（Web）</a></li>
               <li><a href="/contact/estimate-movie.html">見積もり依頼（映像）</a></li>
-            </ul>
-            <h3><a href="#">BLOG</a></h3>
-            <ul>
             </ul>
             <h3><a href="/privacypolicy/">PRIVACY POLICY</a></h3>
           </div>
@@ -238,7 +238,7 @@
   </footer>
   <!-- /footer -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/common.js?v=2020042501"></script>
+  <script src="/js/common.js?v=2020080401"></script>
   <script src="/js/gmap.js?v=2020042702"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANDUaW95y0VkmzEaOkacKuoqw3dfzIsxE&callback=initMap" async defer></script>
 </body>
