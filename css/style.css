@@ -2651,7 +2651,9 @@ a .works-view-text p {
     width: 1%; }
   #p-service .sv-photo .grid-item,
   #p-price .sv-photo .grid-item {
-    padding-bottom: 1.04%; }
+    transition: initial;
+    padding-bottom: 1.04%;
+    display: block; }
     #p-service .sv-photo .grid-item img,
     #p-price .sv-photo .grid-item img {
       width: 100%;
@@ -2924,13 +2926,13 @@ a .works-view-text p {
 .lg-outer {
   outline: unset; }
   .lg-outer .lg {
-    width: 142vh !important;
+    width: 157vh !important;
     height: 100vh !important;
     position: relative; }
     .lg-outer .lg::before {
       content: "";
       position: absolute;
-      top: 60px;
+      top: 27px;
       left: 5%;
       width: 163px;
       height: 45px;
@@ -2938,18 +2940,19 @@ a .works-view-text p {
       background-size: contain; }
     .lg-outer .lg .lg-toolbar {
       display: none; }
-    .lg-outer .lg .lg-inner .lg-video-cont {
-      vertical-align: top;
-      margin-top: 160px; }
+    .lg-outer .lg .lg-inner {
+      margin-top: 100px;
+      height: 80vh; }
     .lg-outer .lg .lg-sub-html {
       display: flex;
       justify-content: space-between;
       width: 90%;
       margin: 0 auto;
       padding: 0;
-      margin-top: calc(54% + 160px);
-      position: relative;
-      background-color: transparent; }
+      background-color: transparent;
+      position: absolute;
+      left: 0;
+      bottom: 30px; }
       .lg-outer .lg .lg-sub-html > div {
         font-size: 11px;
         letter-spacing: 0.1em;
@@ -3000,24 +3003,21 @@ a .works-view-text p {
       .lg-outer .lg .lg-sub-html .lgc-close::after {
         content: "✕ 閉じる"; }
 
+.lg-photo .lg-backdrop {
+  background: #fff; }
+
 .lg-outer-photo {
   background: #fff; }
   .lg-outer-photo .lg {
-    width: 118vh !important; }
+    width: 133vh !important; }
     .lg-outer-photo .lg::before {
       background: url("/img/logo.svg") no-repeat; }
-    .lg-outer-photo .lg .lg-sub-html {
-      margin-top: calc(63% + 160px); }
-      .lg-outer-photo .lg .lg-sub-html > div,
-      .lg-outer-photo .lg .lg-sub-html .lgc-prev,
-      .lg-outer-photo .lg .lg-sub-html .lgc-next,
-      .lg-outer-photo .lg .lg-sub-html .lgc-close {
-        color: #000; }
-  .lg-outer-photo .lg-img-wrap:before,
-  .lg-outer-photo .lg-item:before {
-    content: none; }
+    .lg-outer-photo .lg .lg-sub-html > div,
+    .lg-outer-photo .lg .lg-sub-html .lgc-prev,
+    .lg-outer-photo .lg .lg-sub-html .lgc-next,
+    .lg-outer-photo .lg .lg-sub-html .lgc-close {
+      color: #000; }
   .lg-outer-photo.lg-show-after-load .lg-item.lg-complete .lg-object {
-    margin-top: 160px;
     max-width: 91%; }
 
 @media (max-width: 1640px) {

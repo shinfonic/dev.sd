@@ -2573,7 +2573,9 @@ a {
       width: 1%;
     }
     .grid-item {
+      transition: initial;
       padding-bottom: 1.04%;
+      display: block;
       img {
         width: 100%;
         transition: 0.8s;
@@ -2971,16 +2973,19 @@ a {
   }
 }
 
+
+
 .lg-outer {
   outline: unset;
   .lg {
-    width: 142vh !important;
+    width: 157vh !important;
     height: 100vh !important;
     position: relative;
     &::before {
       content: "";
       position: absolute;
-      top: 60px;
+      // top: 60px;
+      top: 27px;
       left: 5%;
       width: 163px;
       height: 45px;
@@ -2991,9 +2996,11 @@ a {
       display: none;
     }
     .lg-inner {
+      margin-top: 100px;
+      height: 80vh;
       .lg-video-cont {
-        vertical-align: top;
-        margin-top: 160px;
+        // vertical-align: top;
+        // margin-top: 160px;
       }
     }
     .lg-sub-html {
@@ -3002,9 +3009,12 @@ a {
       width: 90%;
       margin: 0 auto;
       padding: 0;
-      margin-top: calc(54% + 160px);
-      position: relative;
+      // margin-top: calc(54% + 160px);
+      // position: relative;
       background-color: transparent;
+      position: absolute;
+      left: 0;
+      bottom: 30px;
       & > div {
         font-size: 11px;
         letter-spacing: 0.1em;
@@ -3073,15 +3083,27 @@ a {
   }
 }
 
+.lg-photo .lg-backdrop {
+  background: #fff;
+}
+
 .lg-outer-photo {
   background: #fff;
   .lg {
-    width: 118vh !important;
+    width: 133vh !important;
     &::before {
+      // top: 27px;
       background: url("/img/logo.svg") no-repeat;
     }
+    .lg-inner {
+      // margin-top: 100px;
+      // height: 80vh;
+    }
     .lg-sub-html {
-      margin-top: calc(63% + 160px);
+      // margin-top: calc(63% + 160px);
+      // position: absolute;
+      // left: 0;
+      // bottom: 30px;
       & > div,
       .lgc-prev,
       .lgc-next,
@@ -3090,12 +3112,8 @@ a {
       }
     }
   }
-  .lg-img-wrap:before,
-  .lg-item:before {
-    content: none;
-  }
   &.lg-show-after-load .lg-item.lg-complete .lg-object {
-    margin-top: 160px;
+    // margin-top: 100px;
     max-width: 91%;
   }
 }

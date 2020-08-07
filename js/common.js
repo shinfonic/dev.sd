@@ -182,7 +182,6 @@ $(function () {
     gutter: '.gutter-sizer',
     percentPosition: true,
     transitionDuration: '1.2s',
-    // horizontalOrder: true,
     visibleStyle: { opacity: 1 },
     hiddenStyle: { opacity: 0 },
   });
@@ -195,44 +194,29 @@ $(function () {
     $grid.masonry('appended', $items);
   });
 
-  // var nextSlugs = [
-  //   'photo-02.html',
-  //   'photo-03.html'
-  // ];
-
   $grid.infiniteScroll({
     path: 'photo-{{#}}.html',
     append: '.grid-item',
     outlayer: msnry,
-    scrollThreshold: 0,
+    scrollThreshold: 100,
     history: false,
-    // status: '.page-load-status',
-    // hideNav: '.pagination',
   });
 
-  // $container.infinitescroll({
-  //   navSelector: '.navigation',
-  //   nextSelector: '.navigation a',
-  //   itemSelector: '.item',
-  //   animate: true,
-  //   extraScrollPx: -200,
-  //   loading: {
-  //     finishedMsg: '終わりです！',
-  //     img: 'loading.gif'
-  //   }
-  // },
-  // function (newElements) {
-  //   var $newElems = $(newElements);
-  //   $newElems.imagesLoaded(function () {
-  //     $container.masonry('appended', $newElems, true);
-  //   });
-  // });
+  $grid.on('append.infiniteScroll', function (event, response, path, items) {
+    // console.log('Loaded: ' + path);
+    galleryPhoto();
+  });
 });
 
 
 // Gallety Photo
-$(function () {
+function galleryPhoto() {
+
   var $lg = $('#gallery-photo');
+
+  if ($lg.data('lightGallery') != null) {
+    $lg.data('lightGallery').destroy(true);
+  }
 
   $lg.lightGallery({
     addClass: 'lg-outer-photo',
@@ -242,7 +226,6 @@ $(function () {
     width: '91%',
     startClass: '',
     backdropDuration: 800,
-    // closable: false,
     controls: false,
     preload: 2,
     selector: '.grid-item',
@@ -253,18 +236,34 @@ $(function () {
     autoplayControls: false,
     fullScreen: false,
     zoom: false,
-    hash: false,
     share: false,
+    hash: true,
+    galleryId: 1,
   });
 
   $lg.on('onAferAppendSlide.lg', function (event) {
     var y = $(window).scrollTop();
     $(window).scrollTop(y + 1);
   });
+
+  $lg.on('onAfterAppendSubHtml.lg', function (event) {
+    $('.lgc-close').on('click', function () {
+      $lg.data('lightGallery').destroy();
+    });
+    $('.lgc-prev').on('click', function () {
+      $lg.data('lightGallery').goToPrevSlide();
+    });
+    $('.lgc-next').on('click', function () {
+      $lg.data('lightGallery').goToNextSlide();
+    });
+  });
+}
+$(function () {
+  galleryPhoto();
 });
 
 // Gallety Movie
-$(document).ready(function () {
+$(function () {
   var $lg = $('#gallery-movie');
 
   $lg.lightGallery({
@@ -274,7 +273,7 @@ $(document).ready(function () {
     speed: 800,
     startClass: '',
     backdropDuration: 800,
-    closable: false,
+    // closable: false,
     controls: false,
     preload: 2,
     download: false,
@@ -289,25 +288,13 @@ $(document).ready(function () {
     vimeoPlayerParams: { byline: 0, portrait: 0, title: false },
     fullScreen: false,
     zoom: false,
-    hash: false,
     share: false,
+    hash: true,
+    galleryId: 2,
     // loadYoutubeThumbnail: true,
     // youtubeThumbSize: 'default',
     // loadVimeoThumbnail: true,
     // vimeoThumbSize: 'thumbnail_medium',
-  });
-  // var _this = this;
-  // this.$outer.find('.lgc-prev').on('click.lg', function () {
-  //   _this.goToPrevSlide();
-  // });
-  // this.find('.lgc-next').on('click', function () {
-  //   $lg.data('lightGallery').goToNextSlide();
-  // });
-  $lg.on('onAfterAppendSubHtml.lg', function (event) {
-
-    $('#lgc-close').on('click', function () {
-      $lg.data('lightGallery').destroy(true);
-    });
   });
 
   $lg.on('onAferAppendSlide.lg', function (event) {
@@ -315,35 +302,16 @@ $(document).ready(function () {
     $(window).scrollTop(y + 1);
   });
 
+  $lg.on('onAfterAppendSubHtml.lg', function (event) {
+    $('.lgc-close').on('click', function () {
+      $lg.data('lightGallery').destroy();
+    });
+    $('.lgc-prev').on('click', function () {
+      $lg.data('lightGallery').goToPrevSlide();
+    });
+    $('.lgc-next').on('click', function () {
+      $lg.data('lightGallery').goToNextSlide();
+    });
+  });
+
 });
-
-
-function closebtn() {
-  var $lg = $('#gallery-movie');
-  $lg.data('lightGallery').destroy();
-}
-
-function prevbtn() {
-  var $lg = $('#gallery-movie');
-  $lg.data('lightGallery').goToPrevSlide();
-}
-
-function nextbtn() {
-  var $lg = $('#gallery-movie');
-  $lg.data('lightGallery').goToNextSlide();
-}
-
-function closebtn_p() {
-  var $lg = $('#gallery-photo');
-  $lg.data('lightGallery').destroy();
-}
-
-function prevbtn_p() {
-  var $lg = $('#gallery-photo');
-  $lg.data('lightGallery').goToPrevSlide();
-}
-
-function nextbtn_p() {
-  var $lg = $('#gallery-photo');
-  $lg.data('lightGallery').goToNextSlide();
-}
