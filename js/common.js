@@ -81,42 +81,50 @@ $(function () {
   });
 });
 
-$(function () {
-  var sld_wrap = '#slider',
-    sld = '.p-index-kv-img__item',
-    sld_length = $(sld).length,
-    pager = '.p-index-kv-pager__item',
-    sld_pre = 'sld',
-    pager_pre = 'pager',
-    sld_time = 1000,
-    sld_wait = 6000;
+// $(function () {
+//   var sld_wrap = '#slider',
+//     sld = '.p-index-kv-img__item',
+//     sld_length = $(sld).length,
+//     pager = '.p-index-kv-pager__item',
+//     sld_pre = 'sld',
+//     pager_pre = 'pager',
+//     sld_time = 1000,
+//     sld_wait = 6000,
+//     sld_timer;
 
-  $.fn.slide_fade = function () {
-    return this.each(function (i, elem) {
-      var sldnum = parseInt($(this).data('sldnum'));
-      var sldnum_next = sldnum < sld_length ? (sldnum + 1) : 1;
-      $(sld).not('#' + sld_pre + sldnum_next).addClass('is-shown');
-      $('#' + sld_pre + sldnum_next).removeClass('is-shown');
-      $(pager).not('#' + pager_pre + sldnum).addClass('is-not-current');
-      $(pager).not('#' + pager_pre + sldnum).removeClass('is-current');
-      $('#' + pager_pre + sldnum).addClass('is-current');
-      $('#' + pager_pre + sldnum).removeClass('is-not-current');
+//   $.fn.slide_fade = function () {
+//     return this.each(function (i, elem) {
+//       var sldnum = parseInt($(this).data('sldnum'));
+//       var sldnum_next = sldnum < sld_length ? (sldnum + 1) : 1;
 
-      var sld_timer = setTimeout(function () {
-        sldnum++;
-        if (sldnum > sld_length) {
-          sldnum = 1;
-        }
-        $(sld_wrap).data('sldnum', sldnum);
-        $(sld_wrap).slide_fade();
-      },
-      sld_wait);
-    });
-  };
-  $(window).on('load', function () {
-    $(sld_wrap).data('sldnum', 1).slide_fade();
-  });
-});
+//       $(sld).not('#' + sld_pre + sldnum_next).addClass('is-shown');
+//       $('#' + sld_pre + sldnum_next).removeClass('is-shown');
+//       $(sld).not('#' + sld_pre + sldnum).removeClass('is-current');
+//       $('#' + sld_pre + sldnum).addClass('is-current');
+      
+//       $(pager).not('#' + pager_pre + sldnum).removeClass('is-current');
+//       $('#' + pager_pre + sldnum).addClass('is-current');
+
+//       clearTimeout(sld_timer);
+//       sld_timer = setTimeout(function () {
+//         sldnum++;
+//         if (sldnum > sld_length) {
+//           sldnum = 1;
+//         }
+//         $(sld_wrap).data('sldnum', sldnum).slide_fade();
+//       },
+//       sld_wait);
+//     });
+//   };
+//   $(window).on('load', function () {
+//     $(sld_wrap).data('sldnum', 1).slide_fade();
+//   });
+//   $('.p-index-kv-pager__item').on('click', function () {
+
+//     var pagernum = $(this).attr('id').slice(-1);
+//     $(sld_wrap).data('sldnum', pagernum).slide_fade();
+//   });
+// });
 
 
 // FAQ accordion
@@ -241,9 +249,10 @@ function galleryPhoto() {
     galleryId: 1,
   });
 
-  $lg.on('onAferAppendSlide.lg', function (event) {
+  $lg.on('onSlideItemLoad.lg', function (event) {
     var y = $(window).scrollTop();
     $(window).scrollTop(y + 1);
+    $('.lg').addClass('lg-open');
   });
 
   $lg.on('onAfterAppendSubHtml.lg', function (event) {
@@ -297,7 +306,7 @@ $(function () {
     // vimeoThumbSize: 'thumbnail_medium',
   });
 
-  $lg.on('onAferAppendSlide.lg', function (event) {
+  $lg.on('onSlideItemLoad.lg', function (event) {
     var y = $(window).scrollTop();
     $(window).scrollTop(y + 1);
   });

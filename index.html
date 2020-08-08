@@ -18,7 +18,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020080702">
+  <link rel="stylesheet" href="/css/style.css?v=2020080801">
 </head>
 
 <body id="p-top">
@@ -55,20 +55,31 @@
           <div class="p-index-kv-pager__item-label">03</div>
           <div class="p-index-kv-pager__item-circle"></div>
         </div>
+        <div id="pager4" class="p-index-kv-pager__item">
+          <div class="p-index-kv-pager__item-label">04</div>
+          <div class="p-index-kv-pager__item-circle"></div>
+        </div>
       </div>
       <div id="slider">
         <div id="sld1" class="p-index-kv-img__item">
           <img src="/img/top/mv-01.jpg" alt="">
+          <!-- <img src="https://placehold.jp/3d4070/ffffff/1600x900.png?text=01" alt=""> -->
           <div class="sld-label"><span>HAKUO</span><span>Promotion Video</span></div>
         </div>
         <div id="sld2" class="p-index-kv-img__item is-shown">
           <img src="/img/top/mv-02.jpg" alt="">
+          <!-- <img src="https://placehold.jp/a1e6ac/ffffff/1600x450.png?text=02" alt=""> -->
           <div class="sld-label"><span>KARUIZAWA</span><span>Photography</span></div>
         </div>
         <div id="sld3" class="p-index-kv-img__item is-shown">
           <img src="/img/top/mv-03.jpg" alt="">
+          <!-- <img src="https://placehold.jp/e1a1e6/ffffff/1600x225.png?text=03" alt=""> -->
           <div class="sld-label"><span>KOBE</span><span>Photography</span></div>
         </div>
+        <!-- <div id="sld4" class="p-index-kv-img__item is-shown">
+          <img src="https://placehold.jp/e0e6a1/ffffff/1600x112.png?text=04" alt="">
+          <div class="sld-label"><span>04 TEST</span><span>Photography</span></div>
+        </div> -->
       </div>
     </div>
     <div class="arrowWrap">
@@ -280,6 +291,6 @@
   </footer>
   <!-- /footer -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/common.js?v=2020080702"></script>
+  <script src="/js/common.js?v=2020080801"></script>
 </body>
 </html>
