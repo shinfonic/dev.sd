@@ -94,7 +94,6 @@ $(window).on('load', function () {
 
   $('.sld-img').each(function (index, element) {
     var img_url = $(element).data('img');
-    console.log(img_url);
     $(element).css('background-image', 'url("' + img_url + '")');
   });
 
@@ -128,6 +127,10 @@ $(window).on('load', function () {
   $(function () {
     $(sld_wrap).data('sldnum', 1).slide_fade();
   });
+
+  // $(sld_wrap).removeClass('is-initial');
+  $(sld_wrap).css('opacity', 0);
+  $(sld_wrap).animate({ 'opacity': '1' }, 2700);
 
   $('.p-index-kv-pager__item').on('click', function () {
     var selectrnum = $(this).attr('id').slice(-1);
