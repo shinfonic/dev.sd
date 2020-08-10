@@ -276,7 +276,11 @@ template {
   width: 100%;
   margin: 0 auto;
   padding: 56.25% 0 0;
-  position: relative; }
+  position: relative;
+  opacity: 0;
+  transition: opacity 3s cubic-bezier(0.5, 0, 1, 0.5); }
+  #slider.initloading {
+    opacity: 1; }
   #slider .sld-label {
     position: absolute;
     top: 50%;
@@ -286,8 +290,6 @@ template {
     letter-spacing: 0.05em;
     line-height: 1;
     z-index: 400;
-    opacity: 0;
-    transition: 1s;
     width: 100%; }
     #slider .sld-label span {
       position: absolute;
@@ -304,11 +306,21 @@ template {
       #slider .sld-label span:nth-child(2) {
         transform: translate(100%, -50%);
         text-align: left; }
+  #slider .is-current .sld-label,
+  #slider .is-select .sld-label {
+    -webkit-animation-name: showKvImage_label;
+    animation-name: showKvImage_label;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both; }
   #slider .sld-label {
     opacity: 0;
     transition: 0.8s; }
-  #slider .is-current .sld-label {
-    opacity: 1; }
 
 .sld_fade {
   width: 100%;
@@ -347,10 +359,10 @@ template {
 .p-index-kv-img__item.is-current .sld-img-wrap {
   -webkit-animation-name: showKvImageWrap;
   animation-name: showKvImageWrap;
-  -webkit-animation-duration: 6s;
-  animation-duration: 6s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
+  -webkit-animation-duration: 1.1s;
+  animation-duration: 1.1s;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  animation-timing-function: cubic-bezier(0, 1, 0.5, 1);
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-fill-mode: both;
@@ -368,14 +380,38 @@ template {
   width: 100%;
   transform: scale(1); }
 
-.p-index-kv-img__item .sld-img {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
 .p-index-kv-img__item.is-current {
   z-index: 200; }
 
 .p-index-kv-img__item.is-current .sld-img {
+  -webkit-animation-name: showKvImage2;
+  animation-name: showKvImage2;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transform: scale(1.1); }
+
+.p-index-kv-img__item.is-select {
+  z-index: 250; }
+
+.p-index-kv-img__item.is-select .sld-img-wrap {
+  -webkit-animation-name: showKvImageWrap;
+  animation-name: showKvImageWrap;
+  -webkit-animation-duration: 1.1s;
+  animation-duration: 1.1s;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  animation-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.p-index-kv-img__item.is-select .sld-img {
   -webkit-animation-name: showKvImage2;
   animation-name: showKvImage2;
   -webkit-animation-duration: 6s;
@@ -416,20 +452,16 @@ template {
 @keyframes showKvImageWrap {
   0% {
     clip-path: inset(0 100% 0 0); }
-  6% {
-    clip-path: inset(0 0% 0 0); }
   100% {
     clip-path: inset(0 0% 0 0); } }
 @keyframes showKvImage_label {
   0% {
-    z-index: 400;
     opacity: 0; }
-  4% {
+  6% {
     opacity: 1; }
   94% {
     opacity: 1; }
   100% {
-    z-index: 300;
     opacity: 0; } }
 .p-index-kv-pager {
   display: -webkit-box;

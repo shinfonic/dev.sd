@@ -81,7 +81,8 @@ $(function () {
   });
 });
 
-$(window).on('load', function () {
+// $(window).on('load', function () {
+$(function () {
   var sld_wrap = '#slider',
     sld = '.p-index-kv-img__item',
     sld_length = $(sld).length,
@@ -124,17 +125,59 @@ $(window).on('load', function () {
     });
   };
 
+  $.fn.slide_select = function () {
+    return this.each(function (i, elem) {
+      clearTimeout(sld_timer);
+
+      var num = parseInt($(this).data('selectrnum'));
+      var num_next = num < sld_length ? (num + 1) : 1;
+
+      $('#' + sld_pre + num).removeClass('is-next');
+      $(sld).not('#' + sld_pre + num).removeClass('is-select');
+      $('#' + sld_pre + num).addClass('is-select');
+
+      setTimeout(function () {
+        $(sld).not('#' + sld_pre + num).removeClass('is-current');
+        $('#' + sld_pre + num).addClass('is-current');
+
+
+        $(sld).not('#' + sld_pre + num_next).removeClass('is-next');
+        $('#' + sld_pre + num_next).addClass('is-next');
+      },
+      900);
+
+      $(pager).not('#' + pager_pre + num).removeClass('is-current');
+      $('#' + pager_pre + num).addClass('is-current');
+
+      sldnum = num;
+      sld_timer = setTimeout(function () {
+        $('#' + sld_pre + num).removeClass('is-select');
+        
+        sldnum++;
+        if (sldnum > sld_length) {
+          sldnum = 1;
+        }
+        $(sld_wrap).data('sldnum', sldnum).slide_fade();
+        
+      },
+      sld_wait);
+
+
+    });
+  };
+
   $(function () {
     $(sld_wrap).data('sldnum', 1).slide_fade();
   });
 
-  // $(sld_wrap).removeClass('is-initial');
-  $(sld_wrap).css('opacity', 0);
-  $(sld_wrap).animate({ 'opacity': '1' }, 2700);
+  $(sld_wrap).addClass('initloading');
+  // $(sld_wrap).css('opacity', 0);
+  // $(sld_wrap).animate({ 'opacity': '1' }, 4000);
 
   $('.p-index-kv-pager__item').on('click', function () {
     var selectrnum = $(this).attr('id').slice(-1);
-    $(sld_wrap).data('sldnum', selectrnum).slide_fade();
+    // $(sld_wrap).data('sldnum', selectrnum).slide_fade();
+    $(sld_wrap).data('selectrnum', selectrnum).slide_select();
   });
 });
 
