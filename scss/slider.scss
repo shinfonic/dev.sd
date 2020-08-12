@@ -74,7 +74,7 @@
     animation-iteration-count: 1;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    will-change: clip-path;
+    // will-change: clip-path;
   }
   .sld-img {
     -webkit-animation-name: showKvImage;
@@ -89,7 +89,7 @@
     animation-fill-mode: both;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-    will-change: transform;
+    // will-change: transform;
   }
   .sld-label {
     -webkit-animation-name: showKvImage_label;
@@ -102,7 +102,7 @@
     animation-iteration-count: 1;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    will-change: opacity;
+    // will-change: opacity;
   }
 }
 .p-index-kv-img__item.is-current {
@@ -127,11 +127,11 @@
 }
 @keyframes showKvImageWrap {
   0% {
-    // -webkit-clip-path: inset(0 100% 0 0);
+    -webkit-clip-path: inset(0 100% 0 0);
     clip-path: inset(0 100% 0 0);
   }
   100% {
-    // -webkit-clip-path: inset(0 0% 0 0);
+    -webkit-clip-path: inset(0 0% 0 0);
     clip-path: inset(0 0% 0 0);
   }
 }
@@ -248,7 +248,7 @@
         transition-delay: 0s;
         -webkit-transition-timing-function: cubic-bezier(.3,1.81,.57,.83);
         transition-timing-function: cubic-bezier(.3,1.81,.57,.83);
-        will-change: transform;
+        // will-change: transform;
       }
     }
   }

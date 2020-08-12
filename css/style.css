@@ -338,8 +338,7 @@ template {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  will-change: clip-path; }
+  animation-fill-mode: both; }
 .p-index-kv-img__item.is-current .sld-img,
 .p-index-kv-img__item.is-select .sld-img {
   -webkit-animation-name: showKvImage;
@@ -353,8 +352,7 @@ template {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  will-change: transform; }
+  transform: scale(1.1); }
 .p-index-kv-img__item.is-current .sld-label,
 .p-index-kv-img__item.is-select .sld-label {
   -webkit-animation-name: showKvImage_label;
@@ -366,8 +364,7 @@ template {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  will-change: opacity; }
+  animation-fill-mode: both; }
 
 .p-index-kv-img__item.is-current {
   z-index: 200; }
@@ -385,8 +382,10 @@ template {
     transform: scale(1); } }
 @keyframes showKvImageWrap {
   0% {
+    -webkit-clip-path: inset(0 100% 0 0);
     clip-path: inset(0 100% 0 0); }
   100% {
+    -webkit-clip-path: inset(0 0% 0 0);
     clip-path: inset(0 0% 0 0); } }
 @keyframes showKvImage_label {
   0% {
@@ -483,8 +482,7 @@ template {
       -webkit-transition-delay: 0s;
       transition-delay: 0s;
       -webkit-transition-timing-function: cubic-bezier(0.3, 1.81, 0.57, 0.83);
-      transition-timing-function: cubic-bezier(0.3, 1.81, 0.57, 0.83);
-      will-change: transform; }
+      transition-timing-function: cubic-bezier(0.3, 1.81, 0.57, 0.83); }
   .p-index-kv-pager .p-index-kv-pager__item.is-current,
   .p-index-kv-pager .p-index-kv-pager__item.now-sliding {
     cursor: default;
