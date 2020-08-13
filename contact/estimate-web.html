@@ -15,7 +15,10 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020081007">
+  <link rel="stylesheet" href="/css/style.css?v=2020081002">
+<!--メールフォームプロ用CSS-->
+<link rel="stylesheet" href="mfp.statics/mailformpro.css" type="text/css">
+<!--/メールフォームプロ用CSS-->
 </head>
 
 <body id="p-contact" class="common">
@@ -73,30 +76,32 @@
             <a href="/price/" target="_blank" class="btn-estimate">料金表</a>
             <a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
           </p>
-          <form action="" method="post">
+          <!--メールフォームプロ-->
+          <form id="mailformpro" action="mailformpro/mailformpro.cgi" method="POST">
             <h3>基本情報</h3>
             <ul>
               <li>
                 <label for="form-w-name" class="required">お名前</label>
-                <input id ="form-w-name" name="name" type="text" required>
+                <div><input id="form-w-name" name="お名前" data-kana="フリガナ" type="text" required="required"></div>
               </li>
               <li>
-                <label for="form-w-kana" class="required">ふりがな</label>
-                <input id ="form-w-kana" name="kana" type="text" required>
+                <label for="form-w-kana" class="required">フリガナ</label>
+                <div><input id="form-w-kana" name="フリガナ" type="text" required="required"></div>
               </li>
               <li>
                 <label for="form-w-company" class="">会社名</label>
-                <input id ="form-w-company" name="company" type="text">
+                <div><input id="form-w-company" name="会社名" type="text"></div>
               </li>
               <li>
                 <label for="form-w-tel" class="required">電話番号</label>
-                <div><input id ="form-w-tel" name="tel" type="tel" required>
-                <p class="notice">※日中ご連絡の取りやすい番号を入力してください。</p>
+                <div>
+                  <input id="form-w-tel" name="電話番号" type="tel" required="required">
+                  <p class="notice">※日中ご連絡の取りやすい番号を入力してください。</p>
                 </div>
               </li>
               <li>
                 <label for="form-w-email" class="required">メールアドレス</label>
-                <input id ="form-w-email" name="email" type="email" required>
+                <div><input id="form-w-email" name="email" type="email" required="required"></div>
               </li>
             </ul>
 
@@ -104,59 +109,65 @@
             <ul>
               <li>
                 <label for="form-w-type" class="required">サイト種類</label>
-                <select name="type" id="form-w-type" required>
-                  <option disabled selected>選択肢を表示</option>
-                  <option value="1">コーポレートサイト</option>
-                  <option value="2">採用サイト</option>
-                  <option value="3">サービスサイト</option>
-                  <option value="4">店舗サイト</option>
-                  <option value="5">ポートフォリオサイト</option>
-                  <option value="6">ECサイト</option>
-                  <option value="7">LPサイト</option>
-                  <option value="8">特設サイト</option>
-                  <option value="9">その他</option>
-                </select>
+                <div>
+                  <select name="サイト種類" id="form-w-type" required="required">
+                    <option value="" disabled selected>選択肢を表示</option>
+                    <option value="1">コーポレートサイト</option>
+                    <option value="2">採用サイト</option>
+                    <option value="3">サービスサイト</option>
+                    <option value="4">店舗サイト</option>
+                    <option value="5">ポートフォリオサイト</option>
+                    <option value="6">ECサイト</option>
+                    <option value="7">LPサイト</option>
+                    <option value="8">特設サイト</option>
+                    <option value="9">その他</option>
+                  </select>
+                </div>
               </li>
               <li>
                 <label for="form-w-volume" class="required">想定ページ数</label>
-                <select name="volume" id="form-w-volume" required>
-                  <option disabled selected>選択肢を表示</option>
-                  <option value="1">未定</option>
-                  <option value="2">1P</option>
-                  <option value="3">2P</option>
-                  <option value="4">3P</option>
-                  <option value="5">〜5p</option>
-                  <option value="6">〜10P</option>
-                  <option value="7">〜15P</option>
-                  <option value="8">〜20P</option>
-                  <option value="9">〜25p</option>
-                  <option value="10">〜30p</option>
-                  <option value="11">〜35p</option>
-                  <option value="12">〜50p</option>
-                  <option value="13">〜100p</option>
-                  <option value="14">その他</option>
-                </select>
+                <div>
+                  <select name="想定ページ数" id="form-w-volume" required="required">
+                    <option value="" disabled selected>選択肢を表示</option>
+                    <option value="1">未定</option>
+                    <option value="2">1P</option>
+                    <option value="3">2P</option>
+                    <option value="4">3P</option>
+                    <option value="5">〜5p</option>
+                    <option value="6">〜10P</option>
+                    <option value="7">〜15P</option>
+                    <option value="8">〜20P</option>
+                    <option value="9">〜25p</option>
+                    <option value="10">〜30p</option>
+                    <option value="11">〜35p</option>
+                    <option value="12">〜50p</option>
+                    <option value="13">〜100p</option>
+                    <option value="14">その他</option>
+                  </select>
+                </div>
               </li>
               <li>
                 <label for="form-w-schedule" class="required">サイト公開までの日時</label>
-                <select name="schedule" id="form-w-schedule" required>
-                  <option disabled selected>選択肢を表示</option>
-                  <option value="1">未定</option>
-                  <option value="2">2週間以内</option>
-                  <option value="3">1ヶ月以内</option>
-                  <option value="4">2ヶ月以内</option>
-                  <option value="5">3ヶ月以内</option>
-                  <option value="6">4ヶ月以内</option>
-                  <option value="7">5ヶ月以内</option>
-                  <option value="8">6ヶ月以内</option>
-                  <option value="9">1年以内</option>
-                </select>
+                <div>
+                  <select name="サイト公開までの日時" id="form-w-schedule" required="required">
+                    <option value="" disabled selected>選択肢を表示</option>
+                    <option value="1">未定</option>
+                    <option value="2">2週間以内</option>
+                    <option value="3">1ヶ月以内</option>
+                    <option value="4">2ヶ月以内</option>
+                    <option value="5">3ヶ月以内</option>
+                    <option value="6">4ヶ月以内</option>
+                    <option value="7">5ヶ月以内</option>
+                    <option value="8">6ヶ月以内</option>
+                    <option value="9">1年以内</option>
+                  </select>
+                </div>
               </li>
               <li>
                 <label for="form-w-budget" class="required">ご予算</label>
                 <div>
-                  <select name="budget" id="form-w-budget" required>
-                    <option disabled selected>選択肢を表示</option>
+                  <select name="ご予算" id="form-w-budget" required="required">
+                    <option value="" disabled selected>選択肢を表示</option>
                     <option value="1">未定</option>
                     <option value="2">15万</option>
                     <option value="3">20万</option>
@@ -179,23 +190,27 @@
               </li>
               <li>
                 <label for="form-w-photo" class="required">写真撮影・イラスト</label>
-                <select name="photo" id="form-w-photo" required>
-                  <option disabled selected>選択肢を表示</option>
-                  <option value="1">不要</option>
-                  <option value="2">写真撮影を依頼したい</option>
-                  <option value="3">イラスト制作を依頼したい</option>
-                  <option value="4">写真とイラストを依頼したい</option>
-                  <option value="5">その他</option>
-                </select>
+                <div>
+                  <select name="写真撮影・イラスト" id="form-w-photo" required="required">
+                    <option value="" disabled selected>選択肢を表示</option>
+                    <option value="1">不要</option>
+                    <option value="2">写真撮影を依頼したい</option>
+                    <option value="3">イラスト制作を依頼したい</option>
+                    <option value="4">写真とイラストを依頼したい</option>
+                    <option value="5">その他</option>
+                  </select>
+                </div>
               </li>
               <li>
                 <label for="form-w-detail" class="required">想定しているホームページの<br>詳細をお聞かせください</label>
-                <textarea id="form-w-detail" name="detail" required></textarea>
+                <div>
+                  <textarea id="form-w-detail" name="想定しているホームページの詳細" required="required"></textarea>
+                </div>
               </li>
               <li>
                 <label for="form-w-url" class="required">現状ホームページのURL</label>
                 <div>
-                  <input id="form-w-url" name="url" type="text" required>
+                  <input id="form-w-url" name="現状ホームページのURL" type="text" required="required">
                   <p class="notice">※新規ご依頼の際は「新規」とご記入ください。</p>
                 </div>
               </li>
@@ -215,15 +230,15 @@
               <tr class="price">
                 <td>
                   <span>¥ 12,800-</span>
-                  <input id="form-w-plan1" name="plan" value="1" type="radio"><label for="form-w-plan1">選択</label>
+                  <input id="form-w-plan1" name="運営プラン" value="1" type="radio"><label for="form-w-plan1">選択</label>
                 </td>
                 <td>
                   <span>¥ 29,800-</span>
-                  <input id="form-w-plan2" name="plan" value="2" type="radio"><label for="form-w-plan2">選択</label>
+                  <input id="form-w-plan2" name="運営プラン" value="2" type="radio"><label for="form-w-plan2">選択</label>
                 </td>
                 <td>
                   <span>¥ 49,800-</span>
-                  <input id="form-w-plan3" name="plan" value="3" type="radio"><label for="form-w-plan3">選択</label>
+                  <input id="form-w-plan3" name="運営プラン" value="3" type="radio"><label for="form-w-plan3">選択</label>
                 </td>
               </tr>
               <tr class="desc">
@@ -265,15 +280,15 @@
               <tr class="price">
                 <td>
                   <span>¥ 5,480-</span>
-                  <input id="form-w-plan4" name="plan" value="4" type="radio"><label for="form-w-plan4">選択</label>
+                  <input id="form-w-plan4" name="運営プラン" value="4" type="radio"><label for="form-w-plan4">選択</label>
                 </td>
                 <td>
                   <span>¥ 14,800-</span>
-                  <input id="form-w-plan5" name="plan" value="5" type="radio"><label for="form-w-plan5">選択</label>
+                  <input id="form-w-plan5" name="運営プラン" value="5" type="radio"><label for="form-w-plan5">選択</label>
                 </td>
                 <td>
                   <span>¥ 29,800-</span>
-                  <input id="form-w-plan6" name="plan" value="6" type="radio"><label for="form-w-plan6">選択</label>
+                  <input id="form-w-plan6" name="運営プラン" value="6" type="radio"><label for="form-w-plan6">選択</label>
                 </td>
               </tr>
               <tr class="desc">
@@ -320,13 +335,13 @@
                 <label>運用追加オプション<br><span>※複数選択可能</span></label>
                 <ul>
                   <li>
-                    <input id="form-w-option1" name="option" value="1" type="checkbox"><label for="form-w-option1">アクセス解析レポート　¥ 3,000(税抜) / 月額</label>
+                    <input id="form-w-option1" name="運用追加オプション" value="1" type="checkbox"><label for="form-w-option1">アクセス解析レポート　¥ 3,000(税抜) / 月額</label>
                   </li>
                   <li>
-                    <input id="form-w-option2" name="option" value="2" type="checkbox"><label for="form-w-option2">SSL証明書用CSR発行　¥10,000〜</label>
+                    <input id="form-w-option2" name="運用追加オプション" value="2" type="checkbox"><label for="form-w-option2">SSL証明書用CSR発行　¥10,000〜</label>
                   </li>
                   <li>
-                    <input id="form-w-option3" name="option" value="3" type="checkbox"><label for="form-w-option3">リスティング広告（最低 ¥100,000〜）</label>
+                    <input id="form-w-option3" name="運用追加オプション" value="3" type="checkbox"><label for="form-w-option3">リスティング広告（最低 ¥100,000〜）</label>
                   </li>
                 </ul>
               </li>
@@ -343,12 +358,17 @@ SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり�
 法令で定める開示請求等手続に関して、適切かつ迅速に対応致します。</textarea>
             <p class="notice">※個人情報保護に対する取り組みは「Privacy Policy」を必ずご確認ください。</p>
             <div class="submit">
-              <input id="form-w-check" name="check" type="checkbox" required>
-              <label for="form-w-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
+              <div>
+                <input id="form-w-check" name="個人情報の取り扱いについて" type="checkbox" required="required">
+                <label for="form-w-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
+                <div id="errormsg_個人情報の取り扱いについて" class="mfp_err"></div>
+              </div>
+
               <input type="submit" value="確認画面" class="btn-black">
             </div>
           </form>
-
+          <script type="text/javascript" id="mfpjs" src="mailformpro/mailformpro.cgi" charset="UTF-8"></script>
+<!--/メールフォームプロ-->
         </div>
       </div>
     </section>
@@ -442,6 +462,6 @@ SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり�
   </footer>
   <!-- /footer -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/common.js?v=2020081007"></script>
+  <script src="/js/common.js?v=2020081002"></script>
 </body>
 </html>

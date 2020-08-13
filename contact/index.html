@@ -15,7 +15,10 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020081007">
+  <link rel="stylesheet" href="/css/style.css?v=2020081002">
+<!--メールフォームプロ用CSS-->
+<link rel="stylesheet" href="mfp.statics/mailformpro.css" type="text/css">
+<!--/メールフォームプロ用CSS-->
 </head>
 
 <body id="p-contact" class="common">
@@ -68,44 +71,46 @@
           <h2>お問い合わせ</h2>
           <p>
             皆さまとの対話の中で有益な問題解決を探ります。<br>
-            光速対応を心掛けておりますが、お問い合わせ内容によってはお返事に<br>
+            対応を心掛けておりますが、お問い合わせ内容によってはお返事に<br>
             時間がかかる場合や、お答えできない場合がある旨ご了承ください。
           </p>
-          <form action="" method="post">
+          <!--メールフォームプロ-->
+          <form id="mailformpro" action="mailformpro/mailformpro.cgi" method="POST">
             <ul>
               <li>
                 <label for="form-affair" class="required">ご用件</label>
-                <select name="affair" id="form-affair" required>
-                  <option disabled selected>選択肢を表示</option>
-                  <option value="1">ご質問・ご相談</option>
-                  <option value="2">その他</option>
-                </select>
+                <div><select name="ご用件" id="form-affair" required="required">
+                <option disabled selected value="">選択肢を表示</option>
+                  <option value="1">案件のご相談</option>
+                  <option value="2">採用について</option>
+                  <option value="3">その他</option>
+                </select></div>
               </li>
               <li>
                 <label for="form-name" class="required">お名前</label>
-                <input id ="form-name" name="name" type="text" required>
+                <div><input id="form-name" name="お名前" data-kana="フリガナ" type="text" required="required"></div>
               </li>
               <li>
-                <label for="form-kana" class="required">ふりがな</label>
-                <input id ="form-kana" name="kana" type="text" required>
+                <label for="form-kana" class="required">フリガナ</label>
+                <div><input id="form-kana" name="フリガナ" type="text" required="required"></div>
               </li>
               <li>
                 <label for="form-company" class="">会社名</label>
-                <input id ="form-company" name="company" type="text">
+                <div><input id="form-company" name="会社名" type="text"></div>
               </li>
               <li>
                 <label for="form-tel" class="required">電話番号</label>
-                <div><input id ="form-tel" name="tel" type="tel" required>
+                <div><input id="form-tel" name="電話番号" type="tel" required="required">
                 <p class="notice">※日中ご連絡の取りやすい番号を入力してください。</p>
                 </div>
               </li>
               <li>
                 <label for="form-email" class="required">メールアドレス</label>
-                <input id ="form-email" name="email" type="email" required>
+                <div><input id="form-email" name="email" type="email" required="required"></div>
               </li>
               <li>
                 <label for="form-content" class="required">お問い合わせ内容</label>
-                <textarea id="form-content" name="content" required></textarea>
+                <div><textarea id="form-content" name="お問い合わせ内容" required="required"></textarea></div>
               </li>
             </ul>
             <label for="form-privacy" class="privacy-label">個人情報保護方針</label>
@@ -119,11 +124,17 @@ SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり�
 法令で定める開示請求等手続に関して、適切かつ迅速に対応致します。</textarea>
             <p class="notice">※個人情報保護に対する取り組みは「Privacy Policy」を必ずご確認ください。</p>
             <div class="submit">
-              <input id="form-check" name="check" type="checkbox" required>
-              <label for="form-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
+              <div>
+                <input id="form-check" name="個人情報の取り扱いについて" type="checkbox" required="required">
+                <label for="form-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
+                <div id="errormsg_個人情報の取り扱いについて" class="mfp_err"></div>
+              </div>
+
               <input type="submit" value="確認画面" class="btn-black">
             </div>
           </form>
+          <script type="text/javascript" id="mfpjs" src="mailformpro/mailformpro.cgi" charset="UTF-8"></script>
+<!--/メールフォームプロ-->
         </div>
       </div>
     </section>
@@ -217,6 +228,6 @@ SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり�
   </footer>
   <!-- /footer -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/common.js?v=2020081007"></script>
+  <script src="/js/common.js?v=2020081002"></script>
 </body>
 </html>

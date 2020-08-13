@@ -15,7 +15,10 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020081007">
+  <link rel="stylesheet" href="/css/style.css?v=2020081002">
+<!--メールフォームプロ用CSS-->
+<link rel="stylesheet" href="mfp.statics/mailformpro.css" type="text/css">
+<!--/メールフォームプロ用CSS-->
 </head>
 
 <body id="p-contact" class="common">
@@ -73,94 +76,104 @@
             <a href="/price/" target="_blank" class="btn-estimate">料金表</a>
             <a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
           </p>
-          <form action="" method="post">
+          <!--メールフォームプロ-->
+          <form id="mailformpro" action="mailformpro/mailformpro.cgi" method="POST">
             <h3>基本情報</h3>
             <ul>
               <li>
                 <label for="form-m-name" class="required">お名前</label>
-                <input id="form-m-name" name="name" type="text" required>
+                <div><input id="form-m-name" name="お名前" data-kana="フリガナ" type="text" required="required"></div>
               </li>
               <li>
-                <label for="form-m-kana" class="required">ふりがな</label>
-                <input id="form-m-kana" name="kana" type="text" required>
+                <label for="form-m-kana" class="required">フリガナ</label>
+                <div><input id="form-m-kana" name="フリガナ" type="text" required="required"></div>
               </li>
               <li>
                 <label for="form-m-company" class="">会社名</label>
-                <input id="form-m-company" name="company" type="text">
+                <div><input id="form-m-company" name="会社名" type="text"></div>
               </li>
               <li>
                 <label for="form-m-tel" class="required">電話番号</label>
-                <div><input id="form-m-tel" name="tel" type="tel" required>
+                <div>
+                  <input id="form-m-tel" name="電話番号" type="tel" required="required">
                   <p class="notice">※日中ご連絡の取りやすい番号を入力してください。</p>
                 </div>
               </li>
               <li>
                 <label for="form-m-email" class="required">メールアドレス</label>
-                <input id="form-m-email" name="email" type="email" required>
+                <div><input id="form-m-email" name="email" type="email" required="required"></div>
               </li>
             </ul>
-          
+
             <h3>想定している動画内容</h3>
             <ul>
               <li>
                 <label for="form-m-type" class="required">動画種別</label>
-                <select name="type" id="form-m-type" required>
-                  <option disabled selected>選択肢を表示</option>
-                  <option value="1">実写</option>
-                  <option value="2">モーショングラフィックス</option>
-                  <option value="3">2Dアニメーション</option>
-                  <option value="4">コマ撮り</option>
-                </select>
+                <div>
+                  <select name="動画種別" id="form-m-type" required="required">
+                    <option value="" disabled selected>選択肢を表示</option>
+                    <option value="1">実写</option>
+                    <option value="2">モーショングラフィックス</option>
+                    <option value="3">2Dアニメーション</option>
+                    <option value="4">コマ撮り</option>
+                  </select>
+                </div>
               </li>
               <li>
                 <label for="form-m-affair" class="required">制作用途</label>
-                <select name="affair" id="form-m-affair" required>
-                  <option disabled selected>選択肢を表示</option>
-                  <option value="1">コーポレートムービー</option>
-                  <option value="2">サービスプロモーション</option>
-                  <option value="3">TVCM</option>
-                  <option value="4">採用ブランドムービー</option>
-                  <option value="5">学校紹介</option>
-                  <option value="6">その他</option>
-                </select>
+                <div>
+                  <select name="制作用途" id="form-m-affair" required="required">
+                    <option value="" disabled selected>選択肢を表示</option>
+                    <option value="1">コーポレートムービー</option>
+                    <option value="2">サービスプロモーション</option>
+                    <option value="3">TVCM</option>
+                    <option value="4">採用ブランドムービー</option>
+                    <option value="5">学校紹介</option>
+                    <option value="6">その他</option>
+                  </select>
+                </div>
               </li>
               <li>
                 <label for="form-m-volume" class="required">想定分数</label>
-                <select name="volume" id="form-m-volume" required>
-                  <option disabled selected>選択肢を表示</option>
-                  <option value="1">未定</option>
-                  <option value="2">〜15秒</option>
-                  <option value="3">〜30秒</option>
-                  <option value="4">〜1分</option>
-                  <option value="5">〜2分</option>
-                  <option value="6">〜3分</option>
-                  <option value="7">〜5分</option>
-                  <option value="8">〜10分</option>
-                  <option value="9">〜15分</option>
-                  <option value="10">〜20分</option>
-                  <option value="11">その他</option>
-                </select>
+                <div>
+                  <select name="想定分数" id="form-m-volume" required="required">
+                    <option value="" disabled selected>選択肢を表示</option>
+                    <option value="1">未定</option>
+                    <option value="2">〜15秒</option>
+                    <option value="3">〜30秒</option>
+                    <option value="4">〜1分</option>
+                    <option value="5">〜2分</option>
+                    <option value="6">〜3分</option>
+                    <option value="7">〜5分</option>
+                    <option value="8">〜10分</option>
+                    <option value="9">〜15分</option>
+                    <option value="10">〜20分</option>
+                    <option value="11">その他</option>
+                  </select>
+                </div>
               </li>
               <li>
                 <label for="form-m-schedule" class="required">動画公開までの日時</label>
-                <select name="schedule" id="form-m-schedule" required>
-                  <option disabled selected>選択肢を表示</option>
-                  <option value="1">未定</option>
-                  <option value="2">2週間以内</option>
-                  <option value="3">1ヶ月以内</option>
-                  <option value="4">2ヶ月以内</option>
-                  <option value="5">3ヶ月以内</option>
-                  <option value="6">4ヶ月以内</option>
-                  <option value="7">5ヶ月以内</option>
-                  <option value="8">6ヶ月以内</option>
-                  <option value="9">1年以内</option>
-                </select>
+                <div>
+                  <select name="動画公開までの日時" id="form-m-schedule" required="required">
+                    <option value="" disabled selected>選択肢を表示</option>
+                    <option value="1">未定</option>
+                    <option value="2">2週間以内</option>
+                    <option value="3">1ヶ月以内</option>
+                    <option value="4">2ヶ月以内</option>
+                    <option value="5">3ヶ月以内</option>
+                    <option value="6">4ヶ月以内</option>
+                    <option value="7">5ヶ月以内</option>
+                    <option value="8">6ヶ月以内</option>
+                    <option value="9">1年以内</option>
+                  </select>
+                </div>
               </li>
               <li>
                 <label for="form-m-budget" class="required">ご予算</label>
                 <div>
-                  <select name="budget" id="form-m-budget" required>
-                    <option disabled selected>選択肢を表示</option>
+                  <select name="ご予算" id="form-m-budget" required="required">
+                    <option value="" disabled selected>選択肢を表示</option>
                     <option value="1">未定</option>
                     <option value="2">15万</option>
                     <option value="3">20万</option>
@@ -183,39 +196,42 @@
               </li>
               <li>
                 <label for="form-m-detail" class="required">想定している映像制作の<br>詳細をお聞かせください</label>
-                <textarea id="form-m-detail" name="detail" required></textarea>
+                <div><textarea id="form-m-detail" name="想定している映像制作の詳細" required="required"></textarea></div>
               </li>
               <li>
                 <label>制作追加オプション<span class="required"></span><br><span>※複数選択可能</span></label>
-                <ul class="option-movie">
-                  <li>
-                    <input id="form-m-option1" name="option" value="1" type="checkbox"><label for="form-m-option1">不要</label>
-                  </li>
-                  <li>
-                    <input id="form-m-option2" name="option" value="2" type="checkbox"><label for="form-m-option2">役者</label>
-                  </li>
-                  <li>
-                    <input id="form-m-option3" name="option" value="3" type="checkbox"><label for="form-m-option3">ナレーション</label>
-                  </li>
-                  <li>
-                    <input id="form-m-option4" name="option" value="4" type="checkbox"><label for="form-m-option4">テロップ</label>
-                  </li>
-                  <li>
-                    <input id="form-m-option5" name="option" value="5" type="checkbox"><label for="form-m-option5">作曲</label>
-                  </li>
-                  <li>
-                    <input id="form-m-option6" name="option" value="6" type="checkbox"><label for="form-m-option6">効果音</label>
-                  </li>
-                  <li>
-                    <input id="form-m-option7" name="option" value="7" type="checkbox"><label for="form-m-option7">字幕</label>
-                  </li>
-                  <li>
-                    <input id="form-m-option8" name="option" value="8" type="checkbox"><label for="form-m-option8">ドローン撮影</label>
-                  </li>
-                </ul>
+                <div>
+                  <ul class="option-movie">
+                    <li>
+                      <input id="form-m-option1" name="制作追加オプション" value="1" type="checkbox" required="required"><label for="form-m-option1">不要</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option2" name="制作追加オプション" value="2" type="checkbox" required="required"><label for="form-m-option2">役者</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option3" name="制作追加オプション" value="3" type="checkbox" required="required"><label for="form-m-option3">ナレーション</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option4" name="制作追加オプション" value="4" type="checkbox" required="required"><label for="form-m-option4">テロップ</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option5" name="制作追加オプション" value="5" type="checkbox" required="required"><label for="form-m-option5">作曲</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option6" name="制作追加オプション" value="6" type="checkbox" required="required"><label for="form-m-option6">効果音</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option7" name="制作追加オプション" value="7" type="checkbox" required="required"><label for="form-m-option7">字幕</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option8" name="制作追加オプション" value="8" type="checkbox" required="required"><label for="form-m-option8">ドローン撮影</label>
+                    </li>
+                  </ul>
+                  <div id="errormsg_制作追加オプション" class="mfp_err"></div>
+                </div>
               </li>
             </ul>
-          
+
             <label for="form-m-privacy" class="privacy-label">個人情報保護方針</label>
             <textarea id="form-m-privacy" class="privacy-area" readonly>
 SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり、個人情報保護の重要性を認識し、以下の方針に基づき個人情報の保護に努めてまいります。
@@ -227,12 +243,17 @@ SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり�
 法令で定める開示請求等手続に関して、適切かつ迅速に対応致します。</textarea>
             <p class="notice">※個人情報保護に対する取り組みは「Privacy Policy」を必ずご確認ください。</p>
             <div class="submit">
-              <input id="form-m-check" name="check" type="checkbox" required>
-              <label for="form-m-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
+              <div>
+                <input id="form-m-check" name="個人情報の取り扱いについて" type="checkbox" required="required">
+                <label for="form-m-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
+                <div id="errormsg_個人情報の取り扱いについて" class="mfp_err"></div>
+              </div>
+
               <input type="submit" value="確認画面" class="btn-black">
             </div>
           </form>
-
+          <script type="text/javascript" id="mfpjs" src="mailformpro/mailformpro.cgi" charset="UTF-8"></script>
+<!--/メールフォームプロ-->
         </div>
       </div>
     </section>
@@ -326,6 +347,6 @@ SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり�
   </footer>
   <!-- /footer -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/js/common.js?v=2020081007"></script>
+  <script src="/js/common.js?v=2020081002"></script>
 </body>
 </html>

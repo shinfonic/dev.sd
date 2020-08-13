@@ -1743,32 +1743,36 @@ a .works-view-text p {
         margin-top: 80px; }
         #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .submit input[type="checkbox"] {
           display: none; }
-        #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .submit label {
-          margin: 0 0 70px;
-          padding-left: 45px;
-          letter-spacing: 0.05em;
-          position: relative;
-          cursor: pointer; }
-          #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .submit label::before {
+        #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .submit > div {
+          margin-bottom: 70px; }
+          #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .submit > div .mfp_err {
+            text-align: center; }
+          #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .submit > div label {
+            margin: 0;
+            padding-left: 45px;
+            letter-spacing: 0.05em;
+            position: relative;
+            cursor: pointer; }
+            #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .submit > div label::before {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              border: 1px solid #000; }
+          #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .submit > div input[type="checkbox"]:checked ~ label::after {
             content: "";
             display: block;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 20px;
-            height: 20px;
-            border: 1px solid #000; }
-        #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .submit input[type="checkbox"]:checked + label::after {
-          content: "";
-          display: block;
-          position: absolute;
-          top: -1px;
-          left: 6px;
-          width: 8px;
-          height: 15px;
-          transform: rotate(40deg);
-          border-bottom: 2px solid #000;
-          border-right: 2px solid #000; }
+            top: -1px;
+            left: 6px;
+            width: 8px;
+            height: 15px;
+            transform: rotate(40deg);
+            border-bottom: 2px solid #000;
+            border-right: 2px solid #000; }
       #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .table-plan {
         margin-bottom: 10px; }
         #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .table-plan th {
@@ -1881,15 +1885,18 @@ a .works-view-text p {
       #p-contact #p-contact-sec .p-contact-sec-inner .confirm .back-arrow:hover::before, #p-contact #p-contact-sec .p-contact-sec-inner .confirm .back-arrow:hover::after {
         background-color: #969696; }
     #p-contact #p-contact-sec .p-contact-sec-inner input[type="radio"],
-    #p-contact #p-contact-sec .p-contact-sec-inner input[name="option"] {
+    #p-contact #p-contact-sec .p-contact-sec-inner .option-web input,
+    #p-contact #p-contact-sec .p-contact-sec-inner .option-movie input {
       display: none; }
-      #p-contact #p-contact-sec .p-contact-sec-inner input[type="radio"] + label,
-      #p-contact #p-contact-sec .p-contact-sec-inner input[name="option"] + label {
+      #p-contact #p-contact-sec .p-contact-sec-inner input[type="radio"] ~ label,
+      #p-contact #p-contact-sec .p-contact-sec-inner .option-web input ~ label,
+      #p-contact #p-contact-sec .p-contact-sec-inner .option-movie input ~ label {
         padding-left: 40px;
         position: relative;
         cursor: pointer; }
-        #p-contact #p-contact-sec .p-contact-sec-inner input[type="radio"] + label::before,
-        #p-contact #p-contact-sec .p-contact-sec-inner input[name="option"] + label::before {
+        #p-contact #p-contact-sec .p-contact-sec-inner input[type="radio"] ~ label::before,
+        #p-contact #p-contact-sec .p-contact-sec-inner .option-web input ~ label::before,
+        #p-contact #p-contact-sec .p-contact-sec-inner .option-movie input ~ label::before {
           content: "";
           display: block;
           position: absolute;
@@ -1900,8 +1907,9 @@ a .works-view-text p {
           height: 20px;
           border-radius: 100%;
           background: #dadada; }
-      #p-contact #p-contact-sec .p-contact-sec-inner input[type="radio"]:checked + label::after,
-      #p-contact #p-contact-sec .p-contact-sec-inner input[name="option"]:checked + label::after {
+      #p-contact #p-contact-sec .p-contact-sec-inner input[type="radio"]:checked ~ label::after,
+      #p-contact #p-contact-sec .p-contact-sec-inner .option-web input:checked ~ label::after,
+      #p-contact #p-contact-sec .p-contact-sec-inner .option-movie input:checked ~ label::after {
         content: "";
         display: block;
         position: absolute;

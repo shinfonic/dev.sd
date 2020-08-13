@@ -1642,34 +1642,41 @@ a {
           input[type="checkbox"] {
             display: none;
           }
-          label {
-            margin: 0 0 70px;
-            padding-left: 45px;
-            letter-spacing: 0.05em;
-            position:relative;
-            cursor: pointer;
-            &::before {
+          & > div {
+            margin-bottom: 70px;
+            .mfp_err {
+              text-align: center;
+            }
+            label {
+              // margin: 0 0 70px;
+              margin: 0;
+              padding-left: 45px;
+              letter-spacing: 0.05em;
+              position:relative;
+              cursor: pointer;
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                border: 1px solid #000;
+              }
+            }
+            input[type="checkbox"]:checked ~ label::after {
               content: "";
               display: block;
               position: absolute;
-              top: 0;
-              left: 0;
-              width: 20px;
-              height: 20px;
-              border: 1px solid #000;
+              top: -1px;
+              left: 6px;
+              width: 8px;
+              height: 15px;
+              transform: rotate(40deg);
+              border-bottom: 2px solid #000;
+              border-right: 2px solid #000;
             }
-          }
-          input[type="checkbox"]:checked + label::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: -1px;
-            left: 6px;
-            width: 8px;
-            height: 15px;
-            transform: rotate(40deg);
-            border-bottom: 2px solid #000;
-            border-right: 2px solid #000;
           }
         }
         .table-plan {
@@ -1828,9 +1835,10 @@ a {
       }
 
       input[type="radio"],
-      input[name="option"] {
+      .option-web input,
+      .option-movie input {
         display: none;
-        & + label {
+        & ~ label {
           padding-left: 40px;
           position:relative;
           cursor: pointer;
@@ -1847,7 +1855,7 @@ a {
             background: #dadada;
           }
         }
-        &:checked + label::after{
+        &:checked ~ label::after{
           content: "";
           display: block;
           position: absolute;
