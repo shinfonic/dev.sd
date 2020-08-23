@@ -9,7 +9,7 @@ $config{'ConfirmationMode'} = 1;
 $config{'sendmail'} = '/usr/sbin/sendmail';
 
 ## フォームの宛先
-push @mailto,'info@sugiyamadesign.jp';
+push @mailto,'info@houseblend.jp';
 
 ## 自動返信メールの差出人名
 $config{'fromname'} = 'SUGIYAMA DESIGN';
@@ -71,8 +71,7 @@ SUGIYAMA DESIGN
 代表／クリエイティブディレクター
 杉山 順哉
 
-Mail : junya@sugiyamadesign.jp
-Mobile : 080-4151-7710
+Mail : info@sugiyamadesign.jp
 URL : https://sugiyamadesign.jp
 
 〒101-0052　東京都千代田区神田小川町3-9-6 EIKOビル3F
@@ -87,7 +86,7 @@ $config{"ReturnSubject"} = '[ %s ] お問い合せありがとうございまし
 
 ## 自動返信メールの本文
 $_TEXT{'responder'} = <<'__return_body__';
-<_姓_> 様
+<_お名前_> 様
 ──────────────────────────
 
 
@@ -110,8 +109,7 @@ SUGIYAMA DESIGN
 代表／クリエイティブディレクター
 杉山 順哉
 
-Mail : junya@sugiyamadesign.jp
-Mobile : 080-4151-7710
+Mail : info@sugiyamadesign.jp
 URL : https://sugiyamadesign.jp
 
 〒101-0052　東京都千代田区神田小川町3-9-6 EIKOビル3F
@@ -173,7 +171,7 @@ $config{'dir.AddOns'} = './add-ons/';
 push @AddOns,'charactercheck.js';		## 文字校正
 push @AddOns,'prefcode/prefcode.js';	## 郵便番号からの住所入力
 #push @AddOns,'prefcodeadv/prefcode.js';## 郵便番号からの住所入力(高機能・高負荷)
-push @AddOns,'furigana.js';			## フリガナ(Firefox非対応)
+#push @AddOns,'furigana.js';			## フリガナ(Firefox非対応)
 #push @AddOns,'datelist.js';			## 日付リストの生成機能 [Update]
 #push @AddOns,'ok.js';					## OKアドオン [New]
 #push @AddOns,'okng.js';				## OKアドオン [New]
@@ -184,7 +182,7 @@ push @AddOns,'toggle.js';				## 入力欄の可変
 #push @AddOns,'phase.js';				## 段階的入力機能
 #push @AddOns,'drilldown.js';			## ドリルダウン機能
 #push @AddOns,'charformat.js';			## テキスト整形(Xperia非対応)
-#push @AddOns,'noresume.js';			## 入力された内容をレジュームしない
+push @AddOns,'noresume.js';			## 入力された内容をレジュームしない
 #push @AddOns,'switching.js';			## スイッチング機能サンプル
 #push @AddOns,'prevention.js';			## イタズラ防止
 #push @AddOns,'wellcome.js';			## (技術デモ)ウェルカムメッセージ
@@ -196,7 +194,7 @@ push @AddOns,'submitdisabled.js';		## エラー時に送信ボタンを無効化
 push @AddOns,'sizeajustdisabled.js';	## 入力欄の自動調整機能を無効化
 #push @AddOns,'defaultValue.js';		## 初期値を無効
 #push @AddOns,'estimate.js';			## 見積計算(ベータ版)
-#push @AddOns,'beforeunload.js';		## ページを離脱する際のアラート(ベータ版)
+push @AddOns,'beforeunload.js';		## ページを離脱する際のアラート(ベータ版)
 #push @AddOns,'setValue.js';			## 初期値をセット
 #push @AddOns,'errorScroll.js';			## エラー時に対象エレメントまでスクロール(ベータ版)
 #push @AddOns,'reserve.js';				## 予約受付 [New]
@@ -207,7 +205,7 @@ push @AddOns,'taboowords/taboowords.js';## 禁止ワードの指定 [New]
 #push @AddOns,'confirm.js';				## 確認用エレメント
 #push @AddOns,'record.js';				## 記録用
 #push @AddOns,'birthday.js';			## 生年月日選択補助
-#push @AddOns,'unchecked.js';			## radioのチェック解除
+push @AddOns,'unchecked.js';			## radioのチェック解除
 push @AddOns,'smoothScroll.js';			## モバイル端末エラー時のスクロール調整
 #push @AddOns,'suggest/suggest.js';		## サジェスト機能
 #push @AddOns,'search/search.js';		## サーチ機能

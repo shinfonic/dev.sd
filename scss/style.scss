@@ -822,6 +822,9 @@ section {
         }
         &:nth-child(4) {
           margin-top: 40px;
+          img {
+            width: calc(100% + 2px);
+          }
         }
         img {
           width: 100%;
@@ -838,6 +841,9 @@ section {
   }
   .loop-box ul + ul {
     animation: loop2 120s linear infinite;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
   }
 
   @keyframes loop {

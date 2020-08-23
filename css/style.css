@@ -1145,6 +1145,8 @@ section {
           margin-top: 20px; }
         #p-top #top-works .loop-box ul li:nth-child(4) {
           margin-top: 40px; }
+          #p-top #top-works .loop-box ul li:nth-child(4) img {
+            width: calc(100% + 2px); }
         #p-top #top-works .loop-box ul li img {
           width: 100%; }
   #p-top #top-works .loop-box ul:first-child {
@@ -1153,7 +1155,10 @@ section {
     backface-visibility: hidden;
     will-change: transform; }
   #p-top #top-works .loop-box ul + ul {
-    animation: loop2 120s linear infinite; }
+    animation: loop2 120s linear infinite;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform; }
 @keyframes loop {
   0% {
     transform: translateX(70%); }

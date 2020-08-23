@@ -48,7 +48,7 @@ var mfpLang = {
 	'ErrorSelectFieldType1': '$nameが選択されていません。',
 	'ErrorFileFieldType1': '$nameが選択されていません。',
 	'ErrorFileFieldType2': '$nameに対応していないファイルが選択されています。',
-	'SpamBlockError': '入力内容にURLを含める事はできません。',
+	'SpamBlockError': '入力内容に「https://」を含める事はできません。',
 	'WarningCode': [
 		_%%WarningCode%%_
 	],
