@@ -15,7 +15,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020081002">
+  <link rel="stylesheet" href="/css/style.css?v=2020082401">
 </head>
 
 <body id="p-contact" class="common">
@@ -71,6 +71,50 @@
             光速対応を心掛けておりますが、お問い合わせ内容によってはお返事に<br>
             時間がかかる場合や、お答えできない場合がある旨ご了承ください。
           </p>
+
+          <div id="mfp_phase_confirm" style="display: block;">
+            <div id="mfp_phase_confirm_inner">
+              <h4>入力内容をご確認ください</h4>
+              <table id="mfp_confirm_table">
+                <tbody>
+                  <tr class="mfp_achroma">
+                    <th id="th_form-affair">ご用件</th>
+                    <td id="td_form-affair">採用について</td>
+                  </tr>
+                  <tr class="mfp_colored">
+                    <th id="th_form-name">お名前</th>
+                    <td id="td_form-name">安川</td>
+                  </tr>
+                  <tr class="mfp_achroma">
+                    <th id="th_form-kana">フリガナ</th>
+                    <td id="td_form-kana">ヤスカワ</td>
+                  </tr>
+                  <tr class="mfp_colored">
+                    <th id="th_form-tel">電話番号</th>
+                    <td id="td_form-tel">0234-124214-1234</td>
+                  </tr>
+                  <tr class="mfp_achroma">
+                    <th id="th_form-email">メールアドレス</th>
+                    <td id="td_form-email">asfdlksaf@asf.asdfa</td>
+                  </tr>
+                  <tr class="mfp_colored">
+                    <th id="th_form-content">お問い合わせ内容</th>
+                    <td id="td_form-content">SUGIYAMA
+                      DESIGNは、個人情報の取得・利用・管理などに当たり、個人情報保護の重要性を認識し、以下の方針に基づき個人情報の保護に努めてまいります。<br><br>個人情報保護に関する法令やその他の規範を遵守し、個人情報を適正に取り扱います。<br>適切かつ適正な方法により個人情報を取得し、偽りその他不正な手段による取得は致しません。<br>個人情報の所有者本人の同意を得た目的の範囲でのみこれを利用致します。<br>個人情報を所有者本人の同意を得ずに第三者に提供致しません。<br>法令で定める開示請求等手続に関して、適切かつ迅速に対応致します。
+                    </td>
+                  </tr>
+                  <tr class="mfp_achroma">
+                    <th id="th_form-check">個人情報の取り扱いについて</th>
+                    <td id="td_form-check">on</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="mfp_buttons"><button id="mfp_button_send" class="mfp_element_button"
+                  onclick="mfp.sendmail()">送信する</button>&nbsp;<button id="mfp_button_cancel" class="mfp_element_button"
+                  onclick="mfp.cancel()">キャンセル</button></div>
+            </div>
+          </div>
+
           <form action="" method="post">
             <ul>
               <li>

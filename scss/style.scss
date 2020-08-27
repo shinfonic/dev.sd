@@ -156,7 +156,8 @@ ul {
 }
 
 
-.btn-black {
+.btn-black,
+#mfp_button_send {
   display: inline-block;
   margin: 0 auto;
   padding: 15px 0;
@@ -545,7 +546,13 @@ header {
       position: absolute;
       top: 0;
       left: 0;
-      animation: scroll_effect 2s 2s cubic-bezier(.3,.4,.1,1) infinite;
+      transform: translateY(0);
+      animation-name: scroll_effect;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-timing-function: cubic-bezier(.3,.4,.1,1);
+      animation-iteration-count: infinite;
+      // animation-fill-mode: both;
     }
   }
   p {
@@ -560,19 +567,18 @@ header {
   }
 }
 
-
 @keyframes scroll_effect {
   0% {
-    height: 0
+    height: 0;
   }
   50% {
-    height: 70px
+    height: 70px;
   }
   75% {
-    transform: translateY(0)
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(100%)
+    transform: translateY(100%);
   }
 }
 
@@ -1490,7 +1496,8 @@ a {
       .p-contact-box {
         background: #fff;
         padding: 90px 0 110px;
-        h2 {
+        h2,
+        h4 {
           font-size: 25px;
           letter-spacing: 0.1em;
           text-align: center;
@@ -1531,20 +1538,24 @@ a {
         h3 + p {
           margin-bottom: 40px;
         }
-        form {
+        form,
+        #mfp_phase_confirm_inner {
           padding: 0 130px;
           transition: 0.3s;
         }
-        ul {
+        ul,
+        #mfp_confirm_table {
           margin-bottom: 86px;
-          li {
+          li,
+          tr {
             display: flex;
             align-items: center;
             margin: 0 0 30px;
             &:first-child {
               // margin-bottom: 50px;
             }
-            label {
+            label,
+            th {
               flex: 1 1 auto;
               margin: 0;
               letter-spacing: 0.05em;
@@ -1642,9 +1653,11 @@ a {
             background: #fff;
           }
         }
-        .submit {
+        .submit,
+        .mfp_buttons {
           text-align: center;
-          margin-top: 80px;
+          // margin-top: 80px;
+          margin-top: 45px;
           input[type="checkbox"] {
             display: none;
           }
@@ -1682,6 +1695,20 @@ a {
               transform: rotate(40deg);
               border-bottom: 2px solid #000;
               border-right: 2px solid #000;
+            }
+          }
+          #mfp_button_cancel {
+            display: block;
+            margin: 60px auto 0;
+            font-family: $font-serif;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            border: none;
+            background: none;
+            padding: 0;
+            transition: .3s;
+            &:hover {
+              color: #969696;
             }
           }
         }
@@ -1763,20 +1790,35 @@ a {
         }
       }
 
-      .confirm {
-        ul {
-          margin-bottom: 98px !important;
-          li {
+      .confirm,
+      #mfp_phase_confirm_inner {
+        ul,
+        #mfp_confirm_table {
+          // margin-bottom: 98px !important;
+          margin-bottom: 0 !important;
+          li,
+          tr {
             align-items: flex-start;
             margin-bottom: 50px;
-            label {
+            background-color: transparent !important;
+            label,
+            th {
               margin-bottom: 0 !important;
+              font-weight: normal;
+              font-size: 14px;
+              width: auto;
+              border: none;
+              padding: 0;
             }
-            p {
+            p,
+            td {
               flex: 0 0 64%;
               font-size: 16px;
               text-align: left;
               margin: 0;
+              line-height: 1.86;
+              border: none;
+              padding: 0;
             }
             .option-movie {
               li {
@@ -3230,7 +3272,8 @@ a {
       .p-contact-sec-inner {
         width: auto;
         .p-contact-box {
-          form {
+          form,
+          #mfp_phase_confirm_inner {
             padding-left: 10%;
             padding-right: 10%;
           }
