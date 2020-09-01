@@ -15,7 +15,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020082401">
+  <link rel="stylesheet" href="/css/style.css?v=2020082803">
 <!--メールフォームプロ用CSS-->
 <link rel="stylesheet" href="mfp.statics/mailformpro.css" type="text/css">
 <!--/メールフォームプロ用CSS-->
@@ -69,15 +69,15 @@
         </ul>
 
         <div class="p-contact-box">
-          <h2>見積もり依頼　Web制作</h2>
-          <p>
-            この度は、ご検討いただきありがとうございます。<br>
-            以下をご記入いただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
-            <a href="/price/" target="_blank" class="btn-estimate">料金表</a>
-            <a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
-          </p>
           <!--メールフォームプロ-->
           <form id="mailformpro" action="mailformpro/mailformpro.cgi" method="POST">
+            <h2>見積もり依頼　Web制作</h2>
+            <p>
+              この度は、ご検討いただきありがとうございます。<br>
+              以下をご記入いただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
+              <a href="/price/" target="_blank" class="btn-estimate">料金表</a>
+              <a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
+            </p>
             <h3>基本情報</h3>
             <ul>
               <li>

@@ -934,12 +934,9 @@ header {
       position: absolute;
       top: 0;
       left: 0;
-      transform: translateY(0);
-      animation-name: scroll_effect;
-      animation-duration: 2s;
-      animation-delay: 1s;
-      animation-timing-function: cubic-bezier(0.3, 0.4, 0.1, 1);
-      animation-iteration-count: infinite; }
+      height: 0;
+      transform: translateY(0%);
+      animation: scroll_effect 2s cubic-bezier(0.3, 0.4, 0.1, 1) 2s infinite; }
   .arrowWrap p {
     font-family: proxima-nova-condensed, sans-serif !important;
     font-weight: 400;
@@ -952,13 +949,15 @@ header {
 
 @keyframes scroll_effect {
   0% {
-    height: 0; }
+    height: 0;
+    transform: translateY(0%); }
   50% {
     height: 70px; }
   75% {
-    transform: translateY(0); }
+    transform: translateY(0%); }
   100% {
-    transform: translateY(100%); } }
+    height: 70px;
+    transform: translateY(120%); } }
 .title-head {
   position: relative;
   margin-bottom: 40px; }
@@ -1141,7 +1140,11 @@ section {
     #p-top #top-works .loop-box ul {
       display: flex;
       flex-flow: row nowrap;
-      margin: 0; }
+      margin: 0;
+      transform-origin: left center;
+      position: relative;
+      top: 0;
+      left: 0; }
       #p-top #top-works .loop-box ul li {
         width: calc(100vw / 3.2); }
         #p-top #top-works .loop-box ul li:nth-child(1) {
@@ -1157,12 +1160,12 @@ section {
         #p-top #top-works .loop-box ul li img {
           width: 100%; }
   #p-top #top-works .loop-box ul:first-child {
-    animation: loop 120s -60s linear infinite;
+    animation: loop 120s linear -60s infinite;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     will-change: transform; }
   #p-top #top-works .loop-box ul + ul {
-    animation: loop2 120s linear infinite;
+    animation: loop2 120s linear 0s infinite;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     will-change: transform; }
@@ -1988,7 +1991,8 @@ a .works-view-text p {
           font-size: 14px;
           width: auto;
           border: none;
-          padding: 0; }
+          padding: 0;
+          white-space: normal !important; }
         #p-contact #p-contact-sec .p-contact-sec-inner .confirm ul li p,
         #p-contact #p-contact-sec .p-contact-sec-inner .confirm ul li td,
         #p-contact #p-contact-sec .p-contact-sec-inner .confirm ul tr p,

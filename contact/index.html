@@ -15,7 +15,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=2020082401">
+  <link rel="stylesheet" href="/css/style.css?v=2020082803">
 <!--メールフォームプロ用CSS-->
 <link rel="stylesheet" href="mfp.statics/mailformpro.css" type="text/css">
 <!--/メールフォームプロ用CSS-->
@@ -68,14 +68,14 @@
           <li><a href="/contact/estimate-movie.html">見積もり依頼（映像）</a></li>
         </ul>
         <div class="p-contact-box">
+          <!--メールフォームプロ-->
+          <form id="mailformpro" action="mailformpro/mailformpro.cgi" method="POST">
           <h2>お問い合わせ</h2>
           <p>
             皆さまとの対話の中で有益な問題解決を探ります。<br>
             対応を心掛けておりますが、お問い合わせ内容によってはお返事に<br>
             時間がかかる場合や、お答えできない場合がある旨ご了承ください。
           </p>
-          <!--メールフォームプロ-->
-          <form id="mailformpro" action="mailformpro/mailformpro.cgi" method="POST">
             <ul>
               <li>
                 <label for="form-affair" class="required">ご用件</label>
