@@ -49,7 +49,7 @@ var mfpLang = {
 'ErrorSelectFieldType1': '$nameが選択されていません。',
 'ErrorFileFieldType1': '$nameが選択されていません。',
 'ErrorFileFieldType2': '$nameに対応していないファイルが選択されています。',
-'SpamBlockError': '入力内容にURLを含める事はできません。',
+'SpamBlockError': '入力内容に「https://」を含める事はできません。',
 'WarningCode': [
 'Javascriptが有効ではありません。<br />Javascript isn&rsquo;t enabled.',
 '日本語が含まれない送信は許可されていません。<br />You cannot send only English.',
@@ -1816,106 +1816,6 @@ mfp.check(mfp.$(mfp.Elements[a2].group[0]));
 mfp.check(mfp.$(mfp.Elements[a3].group[0]));
 }
 }
-// datelist.js 1.0.1
-// 2014-11-13
-mfpLang['week'] = new Array('日','月','火','水','木','金','土');
-mfpLang['dayOptgroup'] = '$y年$m月';
-mfpLang['dayText'] = '$y年$m月$d日($w)';
-//mfpLang['dayText'] = '$d日($w)';
-mfpLang['dayValue'] = '$y-$m-$d';
-mfpConfigs['weekColors'] = new Array('#FEE','#FFF','#FFF','#FFF','#FFF','#FFF','#EEF');
-// data-daystart="5"
-// 5日後から表示
-// data-daymax="60"
-// 60日間分表示
-// data-dayexc="2014-12-24,2015-01-01"
-// 2014年12月24日と2015年01月01日は非表示
-// data-dayexcon="2014-12-25,2015-01-02"
-// 2014年12月25日と2015年01月02日は表示
-// data-weekexc="1,0,0,0,0,0,0"
-// 日・月・火・水・木・金・土 で非表示は1
-// 上記の例では日曜日は非表示
-function mfpDayFormat(y,m,d,w,str){
-str = str.replace('$y',y);
-str = str.replace('$m',m);
-str = str.replace('$d',d);
-str = str.replace('$w',w);
-return str;
-}
-mfp.extend.event('init',
-function(obj){
-if(obj.getAttribute('data-daystart') && obj.getAttribute('data-daymax')){
-var daymax = Number(obj.getAttribute('data-daymax'));
-var daystart = Number(obj.getAttribute('data-daystart'));
-var daytype = obj.getAttribute('data-daytype');
-var excweek = new Array();
-var excdates = new Array();
-var excday = "";
-var excdayon = "";
-if(obj.getAttribute('data-weekexc'))
-excweek = obj.getAttribute('data-weekexc').split(',');
-if(obj.getAttribute('data-dayexc'))
-excday = obj.getAttribute('data-dayexc');
-if(obj.getAttribute('data-dayexcon'))
-excdayon = obj.getAttribute('data-dayexcon');
-var daycount = 0;
-var dayAcount = 0;
-var optgroup = "";
-var enabled = false;
-while(daycount < daymax){
-var t = (Number(mfpConfigs['Time']) + (daycount * 86400))  * 1000;
-var dayDate = new Date(t);
-var num = obj.length;
-var y = dayDate.getFullYear();
-var m = dayDate.getMonth() + 1;
-var d = dayDate.getDate();
-var w = dayDate.getDay();
-if(m < 10){
-m = '0'+m;
-};
-if(d < 10){
-d = '0'+d;
-};
-var daystr = y+"-"+m+"-"+d;
-if(!daytype && daycount >= daystart){
-enabled = true;
-}
-else if(daytype && dayAcount >= daystart){
-enabled = true;
-};
-if(excweek[dayDate.getDay()] == undefined || excweek[dayDate.getDay()] == 0 || excdayon.indexOf(daystr) > -1){
-if(excday.indexOf(daystr) == -1){
-// Active Day
-if(enabled){
-if(navigator.userAgent.indexOf("MSIE") == -1) {
-if(optgroup != (obj.id+'-'+y+'-'+m)){
-var elm = mfp.d.createElement('optgroup');
-elm.label = mfpDayFormat(y,m,d,w,mfpLang['dayOptgroup']);
-elm.id = (obj.id+'-'+y+'-'+m);
-obj.appendChild(elm);
-optgroup = (obj.id+'-'+y+'-'+m);
-};
-var elm = mfp.d.createElement('option');
-elm.text = mfpDayFormat(y,m,d,mfpLang['week'][w],mfpLang['dayText']);
-elm.value = mfpDayFormat(y,m,d,mfpLang['week'][w],mfpLang['dayValue']);
-elm.style.backgroundColor = mfpConfigs['weekColors'][w];
-mfp.$(optgroup).appendChild(elm);
-}
-else {
-obj.length++;
-obj.options[num].text = mfpDayFormat(y,m,d,mfpLang['week'][w],mfpLang['dayText']);
-obj.options[num].value = mfpDayFormat(y,m,d,w,mfpLang['dayValue']);
-obj.options[num].style.backgroundColor = mfpConfigs['weekColors'][w];
-};
-};
-dayAcount++;
-};
-};
-daycount++;
-}
-}
-}
-);
 var mfpToggleIds = 0;
 var mfpToggleObjects = [];
 mfp.extend.event('init',
@@ -2025,6 +1925,58 @@ function(obj){
 mfpToggle();
 }
 );
+mfpConfigs['ResumeCancel'] = true;
+mfp.extend.event('init',
+function(obj){
+obj.setAttribute('data-exc',1);
+}
+);
+var mfpSubmitDisabledLabels = new Array();
+mfp.extend.event('startup',
+function(){
+var tObj = mfp.Mfp.getElementsByTagName('button');
+var buttonCnt = 0;
+for(var i=0;i<tObj.length;i++){
+if(tObj[i].type == "submit" && tObj[i].getAttribute('data-disabled')){
+if(!tObj[i].id){
+tObj[i].id = 'mfp_submit_button_' + buttonCnt;
+};
+mfpSubmitDisabledLabels[tObj[i].id] = tObj[i].innerHTML;
+buttonCnt++;
+}
+}
+}
+);
+mfp.extend.event('problem',
+function(obj){
+var tObj = mfp.Mfp.getElementsByTagName('button');
+for(var i=0;i<tObj.length;i++){
+if(tObj[i].type == "submit" && tObj[i].getAttribute('data-disabled')){
+tObj[i].innerHTML = tObj[i].getAttribute('data-disabled');
+tObj[i].className = 'mfp_submit_disable';
+tObj[i].disabled = true;
+}
+}
+}
+);
+mfp.extend.event('noproblem',
+function(obj){
+var tObj = mfp.Mfp.getElementsByTagName('button');
+for(var i=0;i<tObj.length;i++){
+if(tObj[i].type == "submit" && tObj[i].getAttribute('data-disabled')){
+tObj[i].innerHTML = mfpSubmitDisabledLabels[tObj[i].id];
+tObj[i].className = 'mfp_submit_disable';
+tObj[i].disabled = false;
+}
+}
+}
+);
+mfpConfigs["SizeAjustPx"] = null;
+mfp.extend.event('startup',
+function(){
+mfp.beforeunload = true;
+}
+);
 //
 // taboowords.js 1.0.0 / 2015-03-03
 //
@@ -2052,6 +2004,20 @@ mfp.TabooWords = arr;
 mfp.extend.event('startup',
 function(){
 mfp.call(mfp.$('mfpjs').src,'addon=taboowords/taboowords.js&callback=setTaboowords');
+}
+);
+var radioObjects = [];
+mfp.extend.event('click',
+function(obj){
+if(obj.type == 'radio'){
+if(radioObjects[obj.id]){
+obj.checked = false;
+radioObjects[obj.id] = null;
+mfp.check(obj);
+mfp.extend.run('blur',obj);
+};
+radioObjects[obj.id] = obj.checked;
+};
 }
 );
 mfpConfigs['ErrorFocusDisabled'] = true;

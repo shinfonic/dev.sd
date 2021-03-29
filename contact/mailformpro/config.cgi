@@ -9,7 +9,7 @@ $config{'ConfirmationMode'} = 1;
 $config{'sendmail'} = '/usr/sbin/sendmail';
 
 ## フォームの宛先
-push @mailto,'info@houseblend.jp';
+push @mailto,'info@sugiyamadesign.jp';
 
 ## 自動返信メールの差出人名
 $config{'fromname'} = 'SUGIYAMA DESIGN';
@@ -22,7 +22,7 @@ $config{'mailfrom'} = $mailto[0];
 
 ## 念のためBCC送信宛先 (解除する場合は下記1行をコメントアウト)
 ## 以下をコメントアウトしていない場合は自動返信メールの控えが届きます。
-#$config{'bcc'} = $mailto[0];
+$config{'bcc'} = $mailto[0];
 
 ## メールの差出人を固定 (0:無効 / 1:固定)
 ## 固定にした場合、Reply-Toにお客様のアドレスがセットされます。
@@ -65,24 +65,24 @@ $_TEXT{'posted'} = <<'__posted_body__';
 
 <_mfp_env_>
 
-_________________________________________________________ 
+─
 SUGIYAMA DESIGN
 
-代表／クリエイティブディレクター
-杉山 順哉
+Founder / Designer / Filmmaker
+JUNYA SUGIYAMA
 
-Mail : info@sugiyamadesign.jp
-URL : https://sugiyamadesign.jp
+Mail : junya@sugiyamadesign.jp
+URL : https://sugiyamadesign.jp/
 
-〒101-0052　東京都千代田区神田小川町3-9-6 EIKOビル3F
-_________________________________________________________
+3F 3-9-6 KANDA-OGAWAMACHI CHIYODA-KU TOKYO JAPAN 101-0052
+─
 __posted_body__
 
 ## ※※※！！！※※※！！！※※※！！！※※※！！！※※※！！！※※※
 ## 自動返信メールの件名 (有効にする場合は下記の行頭#を外してください。)
 ## ※※※！！！※※※！！！※※※！！！※※※！！！※※※！！！※※※
 
-$config{"ReturnSubject"} = '[ %s ] お問い合せありがとうございました';
+$config{"ReturnSubject"} = 'お問い合せありがとうございました';
 
 ## 自動返信メールの本文
 $_TEXT{'responder'} = <<'__return_body__';
@@ -103,17 +103,17 @@ $_TEXT{'responder'} = <<'__return_body__';
 
 この度はお問い合わせ重ねてお礼申し上げます。
 
-_________________________________________________________ 
+─
 SUGIYAMA DESIGN
 
-代表／クリエイティブディレクター
-杉山 順哉
+Founder / Designer / Filmmaker
+JUNYA SUGIYAMA
 
-Mail : info@sugiyamadesign.jp
-URL : https://sugiyamadesign.jp
+Mail : junya@sugiyamadesign.jp
+URL : https://sugiyamadesign.jp/
 
-〒101-0052　東京都千代田区神田小川町3-9-6 EIKOビル3F
-_________________________________________________________
+3F 3-9-6 KANDA-OGAWAMACHI CHIYODA-KU TOKYO JAPAN 101-0052
+─
 __return_body__
 
 
@@ -231,7 +231,7 @@ push @AddOns,'smoothScroll.js';			## モバイル端末エラー時のスクロ�
 
 @Modules = ();
 push @Modules,'MultiConfig';	## 複数の設定ファイルを分岐させる
-push @Modules,'check';			## CGI動作環境チェック ※本番では消してください
+#push @Modules,'check';			## CGI動作環境チェック ※本番では消してください
 push @Modules,'logger';			## アクセス解析ログモジュール
 #push @Modules,'thanks';		## サンクスページへの引き継ぎ
 #push @Modules,'cart';			## ショッピングカート機能

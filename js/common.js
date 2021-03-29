@@ -248,6 +248,27 @@ $(".sort-menu li").on("click", function () {
   });
 });
 
+// Price sort
+$(".sortprice-menu li").on("click", function () {
+  var cateSelected = $(this).data('price');
+
+  $(".sortprice-menu li").removeClass('current');
+  $(this).addClass('current');
+
+  $('#price-select').fadeOut(200, function () {
+    $('#price-select article').each(function () {
+      var cateData = $(this).data('price');
+
+      if (cateData.match(cateSelected)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+    $('#price-select').fadeIn(1000);
+  });
+});
+
 
 // SERVICE Photo
 $(function () {

@@ -590,6 +590,11 @@ hr {
   letter-spacing: 0;
   border-bottom: 1px solid #000;
   margin-bottom: 2px; }
+ 
+.a-textline {
+　letter-spacing: 0;
+  border-bottom: 1px solid #000;
+  margin-bottom: 2px; }
 
 .flex-align-start {
   align-items: flex-start !important; }
@@ -1189,6 +1194,7 @@ section {
   #p-top #news ul li {
     font-size: 14px;
     padding: 10px 0 11px;
+    letter-spacing: 0.18em; 
     position: relative; }
     #p-top #news ul li a {
       letter-spacing: 0.18em; }
@@ -1312,7 +1318,11 @@ footer {
 
 #p-about #profile .profile-img {
   width: 370px;
-  margin-bottom: 18px; }
+  margin-bottom: 0px; }
+
+#p-about #profile .profile-caption {
+  font-size: 12px; }
+  
 #p-about #profile .profile-name {
   font-size: 15px;
   line-height: 1.7;
@@ -1531,18 +1541,34 @@ a .works-view-text p {
   line-height: 1.2;
   margin: 0; }
 
-#p-works .works-header {
-  margin: 160px 0 36px;
-  width: 100%; }
+section {
+  width: 1040px;
+  padding: 53px 40px;
+  margin: 0 auto; }
+
+  #p-works .works-header {
+  margin: 160px auto 0;
+  padding: 0 50px;
+  width: 1210px; }
+    #p-works .works-header img {
+    width: 100%; }
+
+@media screen and (max-width: 1210px) {
+    #p-works .works-header {
+  margin: 160px auto 0;
+  padding: 0 40px;
+  width: auto; }
   #p-works .works-header img {
     width: 100%; }
+}
+    
 #p-works .works-text-wrap-01 {
   margin: 0 0 40px; }
   #p-works .works-text-wrap-01 h1 {
     font-size: 28px;
     font-weight: 400;
     letter-spacing: 0.1em;
-    margin-bottom: 88px; }
+    margin-bottom: 40px; }
     #p-works .works-text-wrap-01 h1 span {
       font-size: 14px;
       letter-spacing: 0.05em;
@@ -1583,6 +1609,11 @@ a .works-view-text p {
   margin: 0 0 20px 0; }
   #p-works .img-1-1 img,
   #p-works .img-1-1 video {
+    width: 100%; }
+#p-works .img-1-1 {
+  width: 100%;
+  margin: 0 0 20px 0; }
+  #p-works .img-1-1 img {
     width: 100%; }
 #p-works .img-1-2 {
   width: 50%;
@@ -2793,6 +2824,45 @@ a .works-view-text p {
       #p-price .sort-menu li.current::before {
         height: 3px;
         background: linear-gradient(to right, #fb5fb7, #00a1d7); }
+
+
+#p-service .sortprice-menu,
+#p-price .sortprice-menu {
+  display: flex;
+  margin: 0 0 50px; }
+  #p-service .sortprice-menu li,
+  #p-price .sortprice-menu li {
+    width: 50%;
+    color: #979b9e;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 17px 0 25px; }
+    #p-service .sortprice-menu li::before,
+    #p-price .sortprice-menu li::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #dadada;
+      transition: 0.5s; }
+    #p-service .sortprice-menu li.current,
+    #p-price .sortprice-menu li.current {
+      color: #000;
+      cursor: auto;
+      pointer-events: none; }
+      #p-service .sortprice-menu li.current::before,
+      #p-price .sortprice-menu li.current::before {
+        height: 3px;
+        background: linear-gradient(to right, #fb5fb7, #00a1d7); }
+
+
+
 #p-service .notice,
 #p-price .notice {
   font-size: 12px;
@@ -2843,7 +2913,9 @@ a .works-view-text p {
     font-size: 15px;
     line-height: 1.86; }
 #p-price .notice {
-  margin-bottom: 0; }
+  margin-bottom: 0px; }
+#p-price .noteweb {
+  margin-bottom: 95px; }
 
 .price-table {
   width: 100%; }
@@ -2891,6 +2963,8 @@ a .works-view-text p {
     font-size: 20px; }
   .price-table tr.price-row td {
     font-size: 25px; }
+  .price-table tr.price-row  span {
+    font-size: 12px; }    
   .price-table .gradient {
     font-size: 17px;
     font-weight: 500;
