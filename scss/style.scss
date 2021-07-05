@@ -185,13 +185,13 @@ ul {
   display: none;
 }
 
-@media screen and (max-width: 1055px) {
+@media (max-width: 1055px) {
   .res-tb {
     display: none;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .res-pc {
     display: none;
   }
@@ -421,7 +421,9 @@ header {
           background-image: url("/img/yen.png");
         }
         &:nth-child(2) a::before {
-          background-image: url("/img/pen.png");
+          // background-image: url("/img/pen.png");
+          background-image: url("/img/question.png");
+          left: -14px;
         }
       }
     }
@@ -3399,6 +3401,10 @@ a {
       }
     }
   }
+}
+
+@media (max-width: 1055px) {
+  // header 
 }
 
 @media (max-width: 768px) {
