@@ -38,16 +38,38 @@
     <div class="logo">
       <h1><a href="/"><img src="/img/logo.svg" alt="SUGIYAMA DESIGN"></a></h1>
     </div>
-    <nav>
-      <ul class="flex-box">
-        <li><a href="/works/">WORKS</a></li>
-        <li><a href="/service/">SERVICE</a></li>
-        <li><a href="/price/">PRICE</a></li>
-        <li><a href="https://blog.sugiyamadesign.jp/" target="_blank">BLOG</a></li>
-        <li><a href="/about/">ABOUT</a></li>
-        <li><a href="/contact/">CONTACT</a></li>
-      </ul>
-    </nav>
+    <input type="checkbox" id="menu"><label for="menu"></label>
+    <div class="wrapper">
+      <nav>
+        <ul class="flex-box">
+          <li><a href="/works/">WORKS</a></li>
+          <li><a href="/service/">SERVICE</a></li>
+          <li><a href="/price/">PRICE</a></li>
+          <li>
+            <a href="https://blog.sugiyamadesign.jp/" target="_blank">BLOG</a>
+            <input type="checkbox" id="nest-menu"><label for="nest-menu"></label>
+            <!-- <div class="wrapper"> -->
+              <ul>
+                <li><a href="https://blog.sugiyamadesign.jp/xxx/all" target="_blank">ALL</a></li>
+                <li><a href="https://blog.sugiyamadesign.jp/xxx/design" target="_blank">DESIGN</a></li>
+                <li><a href="https://blog.sugiyamadesign.jp/xxx/web" target="_blank">WEB</a></li>
+                <li><a href="https://blog.sugiyamadesign.jp/xxx/movie" target="_blank">MOVIE</a></li>
+                <li><a href="https://blog.sugiyamadesign.jp/xxx/photo" target="_blank">PHOTO</a></li>
+                <li><a href="https://blog.sugiyamadesign.jp/xxx/life" target="_blank">LIFE</a></li>
+                <li><a href="https://blog.sugiyamadesign.jp/xxx/NEWS" target="_blank">NEWS</a></li>
+              </ul>
+            <!-- </div> -->
+          </li>
+          <li><a href="/about/">ABOUT</a></li>
+          <li><a href="/contact/">CONTACT</a></li>
+        </ul>
+        <ul class="flex-box sub-menu">
+          <li><a href="/#news">NEWS</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/privacypolicy/">PRIVACY POLICY</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <!-- /header -->
   <!-- main contents -->
