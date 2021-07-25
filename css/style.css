@@ -1719,9 +1719,14 @@ footer {
     letter-spacing: 0.1em;
     margin-bottom: 30px; }
 
+#p-about .block-submenu {
+  padding-top: 100px;
+  padding-bottom: 100px; }
 #p-about #profile .profile-img {
   width: 370px;
-  margin-bottom: 18px; }
+  margin-bottom: 6px; }
+#p-about #profile .profile-caption {
+  font-size: 12px; }
 #p-about #profile .profile-name {
   font-size: 15px;
   line-height: 1.7;
@@ -3802,6 +3807,9 @@ a .works-view-text p {
     #header-common h1 {
       margin-bottom: 36px; }
 
+  .common .title-head {
+    margin-bottom: 60px; }
+
   #p-top #main-visual {
     margin-top: 130px; }
   #p-top #concept {
@@ -3936,6 +3944,21 @@ a .works-view-text p {
     #p-faq .faq-sec .faq-block {
       margin-bottom: 20px; }
 
+  #p-about section:not(#contact) {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  #p-about .block-submenu {
+    margin-bottom: 15px; }
+  #p-about #profile dl {
+    margin-top: 35px; }
+    #p-about #profile dl dt {
+      width: 16%; }
+    #p-about #profile dl dd {
+      width: 84%;
+      padding-right: 110px; }
+  #p-about #access {
+    padding-bottom: 70px !important; }
+
   #contact,
   #p-top #contact {
     padding: 70px 0; }
@@ -4008,6 +4031,18 @@ a .works-view-text p {
     #header-common h1 {
       font-size: 30px;
       margin-bottom: 30px; }
+      #header-common h1::after {
+        content: none; }
+      #header-common h1 span {
+        position: relative; }
+        #header-common h1 span::after {
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(to right, #fb5fb7, #00a1d7); }
     #header-common .flex-box {
       display: none; }
 
@@ -4025,6 +4060,9 @@ a .works-view-text p {
       width: 40px; }
   .title-head h2 {
     font-size: 30px; }
+
+  .common .title-head {
+    margin-bottom: 45px; }
 
   #p-top #main-visual {
     margin-top: 80px; }
@@ -4616,6 +4654,38 @@ a .works-view-text p {
         left: 25px;
         width: 24px;
         height: 20px; }
+
+  #p-about section:not(#contact) {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  #p-about .block-submenu {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    #p-about .block-submenu .anker-link {
+      flex-direction: column; }
+      #p-about .block-submenu .anker-link li {
+        width: 100%; }
+        #p-about .block-submenu .anker-link li a::after {
+          right: 20px; }
+  #p-about #profile .profile-img {
+    width: 100%; }
+  #p-about #profile .profile-name {
+    margin-bottom: 20px; }
+  #p-about #profile h3 {
+    margin-top: 28px; }
+  #p-about #profile dl {
+    margin-top: -5px;
+    margin-bottom: 25px; }
+    #p-about #profile dl dt, #p-about #profile dl dd {
+      width: 100%;
+      line-height: 1.42; }
+    #p-about #profile dl dt {
+      border: none;
+      padding: 22px 0 0; }
+    #p-about #profile dl dd {
+      padding: 10px 0 20px; }
+  #p-about #access {
+    padding-bottom: 40px !important; }
 
   #contact,
   #p-top #contact {
