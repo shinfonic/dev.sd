@@ -572,7 +572,7 @@ header {
       li {
         position: relative;
         display: inline-block;
-        margin-left: 40px;
+        margin-left: 55px;
         line-height: 1;
         a {
           &::before {
@@ -637,7 +637,7 @@ header {
         justify-content: center;
         align-items: center;
         text-align: center;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.1em;
         position: relative;
         overflow: hidden;
         z-index: 0;
@@ -667,7 +667,7 @@ header {
         &::after {
           content: "";
           position: absolute;
-          top: 18px;
+          top: 20px;
           right: 28px;
           width: 8px;
           height: 8px;
@@ -2941,6 +2941,7 @@ a {
           border-right: 1px solid #575a62;
         }
         &.recommend {
+          position: relative;
           background: linear-gradient(to right, $gradation-from, $gradation-to);
         }
       }
@@ -2988,6 +2989,9 @@ a {
     display: inline-block;
     margin-bottom: 6px;
   }
+}
+.price-table-plan {
+  margin-top: 140px;
 }
 .price-table-web,
 .price-table-movie {
@@ -3153,7 +3157,8 @@ a {
     }
   }
 }
-.balloon {
+.balloon,
+.balloon2 {
   position: relative;
   display: inline-block;
   margin: 0 0 33px 53.9%;
@@ -3188,6 +3193,14 @@ a {
     border-top: 20px solid #fa3ca6;
     z-index: 1;
   }
+}
+
+.balloon2 {
+  position: absolute;
+  top: -89px;
+  left: 0;
+  margin: 0;
+  width: 100%;
 }
 
 #p-privacy {
@@ -3330,7 +3343,7 @@ a {
       .lgc-prev {
         display: inline-block;
         &::before {
-          content: "BACK"
+          content: "BACK";
         }
         &::after {
           content: "I";
@@ -3475,7 +3488,17 @@ a {
   }
 }
 
+
+@media (min-width: 1056px) {
+  .pcNone {
+    display: none;
+  }
+}
 @media (max-width: 1055px) {
+  .pcOnly {
+    display: none;
+  }
+  
   header {
     height: 130px;
     &::before {
@@ -3751,6 +3774,15 @@ a {
 
   .block-submenu {
     // margin-bottom: 12px;
+    .anker-link {
+      li {
+        a {
+          &::after {
+            right: 10px;
+          }
+        }
+      }
+    }
   }
 
   .anker-link li a {
@@ -3849,6 +3881,21 @@ a {
   .lg-outer {
     .lg {
       .lg-sub-html {
+      }
+    }
+  }
+
+  #p-faq {
+    .faq-title {
+      padding-top: 0;
+    }
+    .faq-sec {
+      padding-top: 20px;
+      h2 {
+        margin-bottom: 30px;
+      }
+      .faq-block {
+        margin-bottom: 20px;
       }
     }
   }
@@ -4300,6 +4347,10 @@ a {
             }
           }
         }
+        p {
+          margin: 0px auto 10px;
+          width: 100%;
+        }
       }
     }
     .title-head {
@@ -4391,6 +4442,17 @@ a {
         margin-top: 50px;
       }
     }
+    .sv-2col-xsmall {
+      & > a {
+        padding-bottom: 4px;
+        &:nth-of-type(odd) {
+          padding-right: 2px;
+        }
+        &:nth-of-type(even) {
+          padding-left: 2px;
+        }
+      }
+    }
     .sv-h2-bold {
       margin-bottom: 10px;
       h2 {
@@ -4423,6 +4485,46 @@ a {
       }
       & + p {
         margin-bottom: 0;
+      }
+    }
+    .sv-4col-collapse {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 25px;
+        right: 45px;
+        display: block;
+        width: 1px;
+        height: calc(100% - 50px);
+        border-left: 1px solid #000;
+      }
+      li {
+        width: 100%;
+        padding-right: 70px;
+        padding-bottom: 30px;
+        &:first-child::before {
+          bottom: auto;
+          left: auto;
+          top: 40px;
+          right: 4px;
+          transform: rotate(90deg);
+        }
+        &:last-child::before {
+          right: 4px;
+          transform: rotate(90deg);
+        }
+        &:first-child::after,
+        &:nth-of-type(5)::after {
+          content: none;
+        }
+        &:last-child::after {
+          right: 40px;
+          transform: rotate(90deg);
+        }
+        h4 {
+          margin: 12px 0 10px;
+        }
       }
     }
     .sv-price {
@@ -4517,9 +4619,58 @@ a {
     .notice {
       margin: 20px 0 50px;
     }
+    .sv-photo {
+      margin-bottom: 20px;
+      .grid-sizer,
+      .grid-item {
+        width: 48.5%;
+      }
+      .gutter-sizer {
+        width: 3%;
+      }
+      .grid-item {
+        padding-bottom: 3%;
+      }
+    }
   }
 
   .price-table {
+    tr.price-row {
+      th, td {
+        height: 80px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      th {
+        font-size: 20px;
+      }
+      td {
+        font-size: 18px;
+        span {
+          font-size: 12px;
+          display: block;
+        }
+      }
+    }
+  }
+  #service-select {
+    position: relative;
+  }
+  .price-table-plan {
+    margin-top: 90px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 100%;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+      z-index: 1;
+    }
+  }
+
+  .price-table-web {
     tr {
       th, td {
         width: 50%;
@@ -4534,7 +4685,7 @@ a {
       }
     }
   }
-  .price-table.clone {
+  .price-table-web.clone {
     margin-top: 30px;
     tr {
       th, td {
@@ -4563,6 +4714,16 @@ a {
       }
     }
   }
+  #service-select article {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+  };
+
+  .balloon2 {
+    font-size: 11px;
+    // display: none;
+  }
 
   #price-select {
     .sv-2col-small {
@@ -4570,6 +4731,107 @@ a {
         line-height: 1.57;
         letter-spacing: 0.1em;
         margin-bottom: 20px;
+      }
+    }
+  }
+
+  .lg-outer {
+    .lg {
+      .lg-sub-html {
+        flex-wrap: wrap;
+        justify-content: center;
+        & > div {
+          &:nth-of-type(1) {
+            flex: 1 1 50%;
+            order: 1;
+          }
+          &:nth-of-type(2) {
+            order: 3;
+            margin-top: 25px;
+          }
+          &:nth-of-type(3) {
+            flex: 1 1 50%;
+            order: 2;
+          }
+        }
+        a {
+          margin-top: 10px;
+          margin-left: 0;
+          display: block;
+          &::after {
+            right: auto;
+            left: 35px;
+          }
+        }
+        .lgc-prev {
+          &::after {
+            // margin-left: 22px;
+          }
+        }
+        .lgc-next {
+          // margin-left: 10px;
+        }
+      }
+      .lg-inner {
+        margin-top: 0;
+      }
+    }
+  }
+
+  #p-faq {
+    .faq-title {
+      padding-top: 10px;
+      div {
+        font-size: 22px;
+        letter-spacing: 0;
+        margin-bottom: 18px;
+      }
+      p {
+        text-align: left;
+        font-size: 14px;
+      }
+    }
+    section:nth-last-of-type(2) {
+      padding-bottom: 50px;
+    }
+    .faq-sec {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      h2 {
+      }
+      .faq-block {
+        padding: 24px 50px 4px 65px;
+        input[type=checkbox] {
+          &:checked + h3 label:before {
+            padding: 2px 0 0 1px;
+          }
+        }
+        h3 {
+          font-size: 16px;
+          label {
+            &::before {
+              top: 5px;
+              right: -26px;
+              width: 22px;
+              height: 22px;
+              font-size: 16px;
+              padding: 2px 0 0 1px;
+            }
+          }
+        }
+        .block-accordion {
+          p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+          }
+        }
+        &::before {
+          top: 28px;
+          left: 25px;
+          width: 24px;
+          height: 20px;
+        }
       }
     }
   }

@@ -1219,7 +1219,7 @@ header {
       #header-common .flex-box .sublink li {
         position: relative;
         display: inline-block;
-        margin-left: 40px;
+        margin-left: 55px;
         line-height: 1; }
         #header-common .flex-box .sublink li a::before {
           content: "";
@@ -1268,7 +1268,7 @@ header {
         justify-content: center;
         align-items: center;
         text-align: center;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.1em;
         position: relative;
         overflow: hidden;
         z-index: 0; }
@@ -1293,7 +1293,7 @@ header {
         .block-submenu .anker-link li a::after {
           content: "";
           position: absolute;
-          top: 18px;
+          top: 20px;
           right: 28px;
           width: 8px;
           height: 8px;
@@ -3297,6 +3297,7 @@ a .works-view-text p {
     .price-table tr:first-of-type th:last-of-type {
       border-right: 1px solid #575a62; }
     .price-table tr:first-of-type th.recommend {
+      position: relative;
       background: linear-gradient(to right, #fb5fb7, #00a1d7); }
   .price-table tr.price-row th, .price-table tr.price-row td {
     font-weight: 500;
@@ -3330,6 +3331,9 @@ a .works-view-text p {
     font-weight: bold;
     display: inline-block;
     margin-bottom: 6px; }
+
+.price-table-plan {
+  margin-top: 140px; }
 
 .price-table-web,
 .price-table-movie {
@@ -3430,7 +3434,8 @@ a .works-view-text p {
 .price-table-anime tr:nth-of-type(2) td:nth-of-type(5) {
   text-align: center; }
 
-.balloon {
+.balloon,
+.balloon2 {
   position: relative;
   display: inline-block;
   margin: 0 0 33px 53.9%;
@@ -3444,22 +3449,33 @@ a .works-view-text p {
   border: solid 2px #fa3ca6;
   border-radius: 5px;
   box-sizing: border-box; }
-  .balloon::before, .balloon::after {
+  .balloon::before, .balloon::after,
+  .balloon2::before,
+  .balloon2::after {
     content: "";
     position: absolute;
     left: 50%; }
-  .balloon::before {
+  .balloon::before,
+  .balloon2::before {
     bottom: -27px;
     margin-left: -12px;
     border: 11px solid transparent;
     border-top: 20px solid #fff;
     z-index: 2; }
-  .balloon::after {
+  .balloon::after,
+  .balloon2::after {
     bottom: -31px;
     margin-left: -12px;
     border: 11px solid transparent;
     border-top: 20px solid #fa3ca6;
     z-index: 1; }
+
+.balloon2 {
+  position: absolute;
+  top: -89px;
+  left: 0;
+  margin: 0;
+  width: 100%; }
 
 #p-privacy #header-common + section {
   padding-top: 94px; }
@@ -3659,7 +3675,13 @@ a .works-view-text p {
   #p-top .concept-bg {
     margin-left: 40px;
     margin-right: 40px; } }
+@media (min-width: 1056px) {
+  .pcNone {
+    display: none; } }
 @media (max-width: 1055px) {
+  .pcOnly {
+    display: none; }
+
   header {
     height: 130px; }
     header::before {
@@ -3838,6 +3860,9 @@ a .works-view-text p {
   #p-works .works-header {
     margin-top: 130px; }
 
+  .block-submenu .anker-link li a::after {
+    right: 10px; }
+
   .anker-link li a::after {
     right: 16px; }
 
@@ -3901,6 +3926,15 @@ a .works-view-text p {
     letter-spacing: 0;
     padding-left: 10px;
     padding-right: 10px; }
+
+  #p-faq .faq-title {
+    padding-top: 0; }
+  #p-faq .faq-sec {
+    padding-top: 20px; }
+    #p-faq .faq-sec h2 {
+      margin-bottom: 30px; }
+    #p-faq .faq-sec .faq-block {
+      margin-bottom: 20px; }
 
   #contact,
   #p-top #contact {
@@ -4183,6 +4217,10 @@ a .works-view-text p {
       #p-service .check-list div ul li::before,
       #p-price .check-list div ul li::before {
         top: 6px; }
+    #p-service .check-list div p,
+    #p-price .check-list div p {
+      margin: 0px auto 10px;
+      width: 100%; }
   #p-service .title-head,
   #p-price .title-head {
     margin-bottom: 30px; }
@@ -4272,6 +4310,15 @@ a .works-view-text p {
     #p-service .sv-2col-small hr,
     #p-price .sv-2col-small hr {
       margin-top: 50px; }
+  #p-service .sv-2col-xsmall > a,
+  #p-price .sv-2col-xsmall > a {
+    padding-bottom: 4px; }
+    #p-service .sv-2col-xsmall > a:nth-of-type(odd),
+    #p-price .sv-2col-xsmall > a:nth-of-type(odd) {
+      padding-right: 2px; }
+    #p-service .sv-2col-xsmall > a:nth-of-type(even),
+    #p-price .sv-2col-xsmall > a:nth-of-type(even) {
+      padding-left: 2px; }
   #p-service .sv-h2-bold,
   #p-price .sv-h2-bold {
     margin-bottom: 10px; }
@@ -4307,6 +4354,46 @@ a .works-view-text p {
     #p-service .sv-4col + p,
     #p-price .sv-4col + p {
       margin-bottom: 0; }
+  #p-service .sv-4col-collapse,
+  #p-price .sv-4col-collapse {
+    position: relative; }
+    #p-service .sv-4col-collapse::before,
+    #p-price .sv-4col-collapse::before {
+      content: "";
+      position: absolute;
+      top: 25px;
+      right: 45px;
+      display: block;
+      width: 1px;
+      height: calc(100% - 50px);
+      border-left: 1px solid #000; }
+    #p-service .sv-4col-collapse li,
+    #p-price .sv-4col-collapse li {
+      width: 100%;
+      padding-right: 70px;
+      padding-bottom: 30px; }
+      #p-service .sv-4col-collapse li:first-child::before,
+      #p-price .sv-4col-collapse li:first-child::before {
+        bottom: auto;
+        left: auto;
+        top: 40px;
+        right: 4px;
+        transform: rotate(90deg); }
+      #p-service .sv-4col-collapse li:last-child::before,
+      #p-price .sv-4col-collapse li:last-child::before {
+        right: 4px;
+        transform: rotate(90deg); }
+      #p-service .sv-4col-collapse li:first-child::after, #p-service .sv-4col-collapse li:nth-of-type(5)::after,
+      #p-price .sv-4col-collapse li:first-child::after,
+      #p-price .sv-4col-collapse li:nth-of-type(5)::after {
+        content: none; }
+      #p-service .sv-4col-collapse li:last-child::after,
+      #p-price .sv-4col-collapse li:last-child::after {
+        right: 40px;
+        transform: rotate(90deg); }
+      #p-service .sv-4col-collapse li h4,
+      #p-price .sv-4col-collapse li h4 {
+        margin: 12px 0 10px; }
   #p-service .sv-price .sv-price-2col,
   #p-price .sv-price .sv-price-2col {
     flex-direction: column; }
@@ -4394,19 +4481,60 @@ a .works-view-text p {
   #p-service .notice,
   #p-price .notice {
     margin: 20px 0 50px; }
+  #p-service .sv-photo,
+  #p-price .sv-photo {
+    margin-bottom: 20px; }
+    #p-service .sv-photo .grid-sizer,
+    #p-service .sv-photo .grid-item,
+    #p-price .sv-photo .grid-sizer,
+    #p-price .sv-photo .grid-item {
+      width: 48.5%; }
+    #p-service .sv-photo .gutter-sizer,
+    #p-price .sv-photo .gutter-sizer {
+      width: 3%; }
+    #p-service .sv-photo .grid-item,
+    #p-price .sv-photo .grid-item {
+      padding-bottom: 3%; }
 
-  .price-table tr th, .price-table tr td {
+  .price-table tr.price-row th, .price-table tr.price-row td {
+    height: 80px;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .price-table tr.price-row th {
+    font-size: 20px; }
+  .price-table tr.price-row td {
+    font-size: 18px; }
+    .price-table tr.price-row td span {
+      font-size: 12px;
+      display: block; }
+
+  #service-select {
+    position: relative; }
+
+  .price-table-plan {
+    margin-top: 90px; }
+    .price-table-plan::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 100%;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+      z-index: 1; }
+
+  .price-table-web tr th, .price-table-web tr td {
     width: 50%; }
-    .price-table tr th:nth-of-type(n+3), .price-table tr td:nth-of-type(n+3) {
+    .price-table-web tr th:nth-of-type(n+3), .price-table-web tr td:nth-of-type(n+3) {
       display: none; }
-  .price-table tr:first-of-type th {
+  .price-table-web tr:first-of-type th {
     font-size: 14px; }
 
-  .price-table.clone {
+  .price-table-web.clone {
     margin-top: 30px; }
-    .price-table.clone tr th:nth-of-type(n+3), .price-table.clone tr td:nth-of-type(n+3) {
+    .price-table-web.clone tr th:nth-of-type(n+3), .price-table-web.clone tr td:nth-of-type(n+3) {
       display: table-cell; }
-    .price-table.clone tr th:nth-of-type(-n+2), .price-table.clone tr td:nth-of-type(-n+2) {
+    .price-table-web.clone tr th:nth-of-type(-n+2), .price-table-web.clone tr td:nth-of-type(-n+2) {
       display: none; }
 
   .price-table-web tr:nth-of-type(2) td,
@@ -4417,10 +4545,77 @@ a .works-view-text p {
   .price-table-movie tr:nth-of-type(5) td {
     font-size: 14px; }
 
+  #service-select article {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap; }
+
+  .balloon2 {
+    font-size: 11px; }
+
   #price-select .sv-2col-small p {
     line-height: 1.57;
     letter-spacing: 0.1em;
     margin-bottom: 20px; }
+
+  .lg-outer .lg .lg-sub-html {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .lg-outer .lg .lg-sub-html > div:nth-of-type(1) {
+      flex: 1 1 50%;
+      order: 1; }
+    .lg-outer .lg .lg-sub-html > div:nth-of-type(2) {
+      order: 3;
+      margin-top: 25px; }
+    .lg-outer .lg .lg-sub-html > div:nth-of-type(3) {
+      flex: 1 1 50%;
+      order: 2; }
+    .lg-outer .lg .lg-sub-html a {
+      margin-top: 10px;
+      margin-left: 0;
+      display: block; }
+      .lg-outer .lg .lg-sub-html a::after {
+        right: auto;
+        left: 35px; }
+  .lg-outer .lg .lg-inner {
+    margin-top: 0; }
+
+  #p-faq .faq-title {
+    padding-top: 10px; }
+    #p-faq .faq-title div {
+      font-size: 22px;
+      letter-spacing: 0;
+      margin-bottom: 18px; }
+    #p-faq .faq-title p {
+      text-align: left;
+      font-size: 14px; }
+  #p-faq section:nth-last-of-type(2) {
+    padding-bottom: 50px; }
+  #p-faq .faq-sec {
+    padding-top: 10px;
+    padding-bottom: 20px; }
+    #p-faq .faq-sec .faq-block {
+      padding: 24px 50px 4px 65px; }
+      #p-faq .faq-sec .faq-block input[type=checkbox]:checked + h3 label:before {
+        padding: 2px 0 0 1px; }
+      #p-faq .faq-sec .faq-block h3 {
+        font-size: 16px; }
+        #p-faq .faq-sec .faq-block h3 label::before {
+          top: 5px;
+          right: -26px;
+          width: 22px;
+          height: 22px;
+          font-size: 16px;
+          padding: 2px 0 0 1px; }
+      #p-faq .faq-sec .faq-block .block-accordion p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px; }
+      #p-faq .faq-sec .faq-block::before {
+        top: 28px;
+        left: 25px;
+        width: 24px;
+        height: 20px; }
 
   #contact,
   #p-top #contact {
