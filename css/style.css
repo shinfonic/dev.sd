@@ -3172,12 +3172,6 @@ a .works-view-text p {
       #p-service .sv-site dl dd:last-of-type,
       #p-price .sv-site dl dd:last-of-type {
         margin-right: 0; }
-#p-service article section.sv-site:first-of-type,
-#p-price article section.sv-site:first-of-type {
-  padding-top: 78px; }
-#p-service article section.sv-site:last-of-type,
-#p-price article section.sv-site:last-of-type {
-  padding-bottom: 110px; }
 #p-service .sort-menu,
 #p-price .sort-menu {
   display: flex;
@@ -4034,7 +4028,8 @@ a .works-view-text p {
       #header-common h1.h1-long::after {
         content: none; }
       #header-common h1 span {
-        position: relative; }
+        position: relative;
+        display: inline-block; }
         #header-common h1 span::after {
           content: '';
           position: absolute;

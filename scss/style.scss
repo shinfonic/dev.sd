@@ -2791,14 +2791,6 @@ a {
     }
   }
 
-  article {
-    section.sv-site:first-of-type {
-      padding-top: 78px;
-    }
-    section.sv-site:last-of-type {
-      padding-bottom: 110px;
-    }
-  }
   .sort-menu {
     display: flex;
     margin: 0 0 50px;
@@ -4078,6 +4070,7 @@ a {
       }
       span {
         position: relative;
+        display: inline-block;
         &::after{
           content: '';
           position: absolute;

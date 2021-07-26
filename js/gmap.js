@@ -1,7 +1,7 @@
 function initMap() {
   var latlng = {
-    lat: 35.694057,
-    lng: 139.761723
+    lat: 35.74390,
+    lng: 139.7818
   }
   var latlng_view = {
     lat: latlng.lat + 0.0004,
