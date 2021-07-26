@@ -4073,7 +4073,7 @@ a {
     h1 {
       font-size: 30px;
       margin-bottom: 30px;
-      &::after{
+      &.h1-long::after{
         content: none;
       }
       span {
@@ -4416,6 +4416,18 @@ a {
           margin: 0px auto 10px;
           width: 100%;
         }
+        dl {
+          width: 100%;
+          dt {
+            width: 100%;
+            text-align: left;
+          }
+          dd {
+            width: 100%;
+            margin-bottom: 10px;
+            padding-left: 10px;
+          }
+        }
       }
     }
     .title-head {
@@ -4720,18 +4732,32 @@ a {
   }
   #service-select {
     position: relative;
-  }
-  .price-table-plan {
-    margin-top: 90px;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 30px;
-      height: 100%;
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-      z-index: 1;
+    article {
+      display: block;
+      overflow-x: scroll;
+      white-space: nowrap;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 100%;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+        z-index: 1;
+      }
+      .price-table-plan {
+        margin-top: 90px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          right: -15px;
+          top: 0;
+          width: 15px;
+          height: 1px;
+        }
+      }
     }
   }
 
@@ -4779,11 +4805,7 @@ a {
       }
     }
   }
-  #service-select article {
-    display: block;
-    overflow-x: scroll;
-    white-space: nowrap;
-  };
+
 
   .balloon2 {
     font-size: 11px;

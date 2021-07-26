@@ -4031,7 +4031,7 @@ a .works-view-text p {
     #header-common h1 {
       font-size: 30px;
       margin-bottom: 30px; }
-      #header-common h1::after {
+      #header-common h1.h1-long::after {
         content: none; }
       #header-common h1 span {
         position: relative; }
@@ -4259,6 +4259,18 @@ a .works-view-text p {
     #p-price .check-list div p {
       margin: 0px auto 10px;
       width: 100%; }
+    #p-service .check-list div dl,
+    #p-price .check-list div dl {
+      width: 100%; }
+      #p-service .check-list div dl dt,
+      #p-price .check-list div dl dt {
+        width: 100%;
+        text-align: left; }
+      #p-service .check-list div dl dd,
+      #p-price .check-list div dl dd {
+        width: 100%;
+        margin-bottom: 10px;
+        padding-left: 10px; }
   #p-service .title-head,
   #p-price .title-head {
     margin-bottom: 30px; }
@@ -4548,18 +4560,29 @@ a .works-view-text p {
 
   #service-select {
     position: relative; }
-
-  .price-table-plan {
-    margin-top: 90px; }
-    .price-table-plan::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 30px;
-      height: 100%;
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-      z-index: 1; }
+    #service-select article {
+      display: block;
+      overflow-x: scroll;
+      white-space: nowrap; }
+      #service-select article::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 100%;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+        z-index: 1; }
+      #service-select article .price-table-plan {
+        margin-top: 90px;
+        position: relative; }
+        #service-select article .price-table-plan::after {
+          content: "";
+          position: absolute;
+          right: -15px;
+          top: 0;
+          width: 15px;
+          height: 1px; }
 
   .price-table-web tr th, .price-table-web tr td {
     width: 50%; }
@@ -4582,11 +4605,6 @@ a .works-view-text p {
   .price-table-movie tr:nth-of-type(4) td,
   .price-table-movie tr:nth-of-type(5) td {
     font-size: 14px; }
-
-  #service-select article {
-    display: block;
-    overflow-x: scroll;
-    white-space: nowrap; }
 
   .balloon2 {
     font-size: 11px; }
