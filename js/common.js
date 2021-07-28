@@ -249,10 +249,10 @@ $(".sort-menu li").on("click", function () {
 });
 
 // Price sort
-$(".sort-menu li").on("click", function () {
+$(".sortprice-menu li").on("click", function () {
   var cateSelected = $(this).data('price');
 
-  $(".sort-menu li").removeClass('current');
+  $(".sortprice-menu li").removeClass('current');
   $(this).addClass('current');
 
   $('#price-select').fadeOut(200, function () {
@@ -270,16 +270,14 @@ $(".sort-menu li").on("click", function () {
 });
 
 $(function () {
-  var tableOriginal = $('#price-select [data-price="original"] .price-table-web');
-  var tableTemplate = $('#price-select [data-price="template"] .price-table-web');
   var tableClone;
-  tableClone = tableOriginal.clone();
-  tableClone.addClass('clone');
-  tableOriginal.after(tableClone);
 
-  tableClone = tableTemplate.clone();
-  tableClone.addClass('clone');
-  tableTemplate.after(tableClone);
+  $('.price-table-web, .price-table-movie').each(function(i, elem) {
+
+    tableClone = $(elem).clone();
+    tableClone.addClass('clone');
+    $(elem).after(tableClone);
+  })
 })
 
 // SERVICE Photo

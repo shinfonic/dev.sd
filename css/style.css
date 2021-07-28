@@ -496,7 +496,8 @@ body {
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "palt"; }
 
-html, body {
+html#p-top-html,
+body#p-top {
   overflow-x: hidden; }
 
 .flex-box {
@@ -525,13 +526,13 @@ hr {
   color: #f00; }
 
 .text-left {
-  text-align: left; }
+  text-align: left m !important; }
 
 .text-center {
-  text-align: center; }
+  text-align: center !important; }
 
 .text-right {
-  text-align: right; }
+  text-align: right !important; }
 
 .ls-0 {
   letter-spacing: 0 !important; }
@@ -3173,11 +3174,15 @@ a .works-view-text p {
       #p-price .sv-site dl dd:last-of-type {
         margin-right: 0; }
 #p-service .sort-menu,
-#p-price .sort-menu {
+#p-service .sortprice-menu,
+#p-price .sort-menu,
+#p-price .sortprice-menu {
   display: flex;
   margin: 0 0 50px; }
   #p-service .sort-menu li,
-  #p-price .sort-menu li {
+  #p-service .sortprice-menu li,
+  #p-price .sort-menu li,
+  #p-price .sortprice-menu li {
     width: 50%;
     color: #979b9e;
     font-size: 20px;
@@ -3188,7 +3193,9 @@ a .works-view-text p {
     cursor: pointer;
     padding: 17px 0 25px; }
     #p-service .sort-menu li::before,
-    #p-price .sort-menu li::before {
+    #p-service .sortprice-menu li::before,
+    #p-price .sort-menu li::before,
+    #p-price .sortprice-menu li::before {
       content: '';
       position: absolute;
       bottom: 0;
@@ -3198,12 +3205,16 @@ a .works-view-text p {
       background: #dadada;
       transition: 0.5s; }
     #p-service .sort-menu li.current,
-    #p-price .sort-menu li.current {
+    #p-service .sortprice-menu li.current,
+    #p-price .sort-menu li.current,
+    #p-price .sortprice-menu li.current {
       color: #000;
       cursor: auto;
       pointer-events: none; }
       #p-service .sort-menu li.current::before,
-      #p-price .sort-menu li.current::before {
+      #p-service .sortprice-menu li.current::before,
+      #p-price .sort-menu li.current::before,
+      #p-price .sortprice-menu li.current::before {
         height: 3px;
         background: linear-gradient(to right, #fb5fb7, #00a1d7); }
 #p-service .notice,
@@ -3257,6 +3268,8 @@ a .works-view-text p {
     line-height: 1.86; }
 #p-price .notice {
   margin-bottom: 0; }
+#p-price .price-table-web + .notice {
+  margin-bottom: 95px; }
 
 .price-table {
   width: 100%; }
@@ -3365,6 +3378,9 @@ a .works-view-text p {
   .price-table-web tr:nth-of-type(6) td,
   .price-table-movie tr:nth-of-type(6) td {
     text-align: left; }
+  .price-table-web.clone,
+  .price-table-movie.clone {
+    display: none; }
 
 .price-table-movie tr:nth-of-type(4) td {
   font-size: 15px;
@@ -3433,13 +3449,14 @@ a .works-view-text p {
 .price-table-anime tr:nth-of-type(2) td:nth-of-type(5) {
   text-align: center; }
 
-.balloon,
-.balloon2 {
-  position: relative;
+.balloon {
+  position: absolute;
+  top: -89px;
+  left: 0;
   display: inline-block;
-  margin: 0 0 33px 53.9%;
+  margin: 0;
   padding: 8px 0;
-  width: 23.2%;
+  width: 100%;
   color: #fa3ca6;
   font-size: 14px;
   font-weight: bold;
@@ -3448,33 +3465,22 @@ a .works-view-text p {
   border: solid 2px #fa3ca6;
   border-radius: 5px;
   box-sizing: border-box; }
-  .balloon::before, .balloon::after,
-  .balloon2::before,
-  .balloon2::after {
+  .balloon::before, .balloon::after {
     content: "";
     position: absolute;
     left: 50%; }
-  .balloon::before,
-  .balloon2::before {
+  .balloon::before {
     bottom: -27px;
     margin-left: -12px;
     border: 11px solid transparent;
     border-top: 20px solid #fff;
     z-index: 2; }
-  .balloon::after,
-  .balloon2::after {
+  .balloon::after {
     bottom: -31px;
     margin-left: -12px;
     border: 11px solid transparent;
     border-top: 20px solid #fa3ca6;
     z-index: 1; }
-
-.balloon2 {
-  position: absolute;
-  top: -89px;
-  left: 0;
-  margin: 0;
-  width: 100%; }
 
 #p-privacy #header-common + section {
   padding-top: 94px; }
@@ -3919,9 +3925,14 @@ a .works-view-text p {
     #p-price .sv-site dl dd {
       margin-right: 7%; }
 
+  .price-table tr th, .price-table tr td {
+    letter-spacing: 0; }
+    .price-table tr th ul li, .price-table tr td ul li {
+      letter-spacing: 0; }
   .price-table .gradient {
     font-size: 14px;
-    letter-spacing: 0; }
+    letter-spacing: 0;
+    line-height: 1.85; }
 
   .price-table-anime tr td {
     font-size: 13px;
@@ -4374,6 +4385,7 @@ a .works-view-text p {
       letter-spacing: 0; }
     #p-service .sv-h2-bold p,
     #p-price .sv-h2-bold p {
+      font-size: 14px;
       text-align: left;
       margin-bottom: 0; }
   #p-service .sv-3col li,
@@ -4479,8 +4491,7 @@ a .works-view-text p {
     #p-price .simple-table tr td {
       width: 100%;
       display: block;
-      margin-left: 30px;
-      padding: 2px 0;
+      padding: 2px 0 2px 30px;
       letter-spacing: 0; }
     #p-service .simple-table tr td:nth-of-type(1),
     #p-price .simple-table tr td:nth-of-type(1) {
@@ -4517,14 +4528,25 @@ a .works-view-text p {
     #p-price .sv-site dl dd {
       padding: 10px 0 20px; }
   #p-service .sort-menu,
-  #p-price .sort-menu {
-    margin-bottom: 30px; }
+  #p-service .sortprice-menu,
+  #p-price .sort-menu,
+  #p-price .sortprice-menu {
+    position: sticky;
+    top: 45px;
+    z-index: 10;
+    background: #fff;
+    margin-bottom: 15px;
+    border-bottom: 5px solid #fff; }
     #p-service .sort-menu li,
-    #p-price .sort-menu li {
+    #p-service .sortprice-menu li,
+    #p-price .sort-menu li,
+    #p-price .sortprice-menu li {
       font-size: 14px;
       padding: 17px 0 17px; }
   #p-service .notice,
-  #p-price .notice {
+  #p-service .price-table-web + .notice,
+  #p-price .notice,
+  #p-price .price-table-web + .notice {
     margin: 20px 0 50px; }
   #p-service .sv-photo,
   #p-price .sv-photo {
@@ -4553,13 +4575,35 @@ a .works-view-text p {
       font-size: 12px;
       display: block; }
 
-  #service-select {
+  #service-select,
+  #design,
+  #photo,
+  #anime {
     position: relative; }
-    #service-select article {
+    #service-select .wrap2,
+    #design .wrap2,
+    #photo .wrap2,
+    #anime .wrap2 {
+      position: relative; }
+    #service-select article,
+    #service-select .wrap,
+    #design article,
+    #design .wrap,
+    #photo article,
+    #photo .wrap,
+    #anime article,
+    #anime .wrap {
       display: block;
       overflow-x: scroll;
       white-space: nowrap; }
-      #service-select article::before {
+      #service-select article::before,
+      #service-select .wrap::before,
+      #design article::before,
+      #design .wrap::before,
+      #photo article::before,
+      #photo .wrap::before,
+      #anime article::before,
+      #anime .wrap::before {
         content: "";
         position: absolute;
         top: 0;
@@ -4568,41 +4612,167 @@ a .works-view-text p {
         height: 100%;
         background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white);
         z-index: 1; }
-      #service-select article .price-table-plan {
-        margin-top: 90px;
-        position: relative; }
-        #service-select article .price-table-plan::after {
+      #service-select article .price-table-plan,
+      #service-select .wrap .price-table-plan,
+      #design article .price-table-plan,
+      #design .wrap .price-table-plan,
+      #photo article .price-table-plan,
+      #photo .wrap .price-table-plan,
+      #anime article .price-table-plan,
+      #anime .wrap .price-table-plan {
+        margin-top: 80px; }
+      #service-select article .price-table-plan,
+      #service-select article .price-table-design,
+      #service-select article .price-table-photo,
+      #service-select article .price-table-anime,
+      #service-select .wrap .price-table-plan,
+      #service-select .wrap .price-table-design,
+      #service-select .wrap .price-table-photo,
+      #service-select .wrap .price-table-anime,
+      #design article .price-table-plan,
+      #design article .price-table-design,
+      #design article .price-table-photo,
+      #design article .price-table-anime,
+      #design .wrap .price-table-plan,
+      #design .wrap .price-table-design,
+      #design .wrap .price-table-photo,
+      #design .wrap .price-table-anime,
+      #photo article .price-table-plan,
+      #photo article .price-table-design,
+      #photo article .price-table-photo,
+      #photo article .price-table-anime,
+      #photo .wrap .price-table-plan,
+      #photo .wrap .price-table-design,
+      #photo .wrap .price-table-photo,
+      #photo .wrap .price-table-anime,
+      #anime article .price-table-plan,
+      #anime article .price-table-design,
+      #anime article .price-table-photo,
+      #anime article .price-table-anime,
+      #anime .wrap .price-table-plan,
+      #anime .wrap .price-table-design,
+      #anime .wrap .price-table-photo,
+      #anime .wrap .price-table-anime {
+        position: relative;
+        border-collapse: separate;
+        border-spacing: 0; }
+        #service-select article .price-table-plan::after,
+        #service-select article .price-table-design::after,
+        #service-select article .price-table-photo::after,
+        #service-select article .price-table-anime::after,
+        #service-select .wrap .price-table-plan::after,
+        #service-select .wrap .price-table-design::after,
+        #service-select .wrap .price-table-photo::after,
+        #service-select .wrap .price-table-anime::after,
+        #design article .price-table-plan::after,
+        #design article .price-table-design::after,
+        #design article .price-table-photo::after,
+        #design article .price-table-anime::after,
+        #design .wrap .price-table-plan::after,
+        #design .wrap .price-table-design::after,
+        #design .wrap .price-table-photo::after,
+        #design .wrap .price-table-anime::after,
+        #photo article .price-table-plan::after,
+        #photo article .price-table-design::after,
+        #photo article .price-table-photo::after,
+        #photo article .price-table-anime::after,
+        #photo .wrap .price-table-plan::after,
+        #photo .wrap .price-table-design::after,
+        #photo .wrap .price-table-photo::after,
+        #photo .wrap .price-table-anime::after,
+        #anime article .price-table-plan::after,
+        #anime article .price-table-design::after,
+        #anime article .price-table-photo::after,
+        #anime article .price-table-anime::after,
+        #anime .wrap .price-table-plan::after,
+        #anime .wrap .price-table-design::after,
+        #anime .wrap .price-table-photo::after,
+        #anime .wrap .price-table-anime::after {
           content: "";
           position: absolute;
           right: -15px;
           top: 0;
           width: 15px;
           height: 1px; }
+        #service-select article .price-table-plan tr th:first-of-type,
+        #service-select article .price-table-design tr th:first-of-type,
+        #service-select article .price-table-photo tr th:first-of-type,
+        #service-select article .price-table-anime tr th:first-of-type,
+        #service-select .wrap .price-table-plan tr th:first-of-type,
+        #service-select .wrap .price-table-design tr th:first-of-type,
+        #service-select .wrap .price-table-photo tr th:first-of-type,
+        #service-select .wrap .price-table-anime tr th:first-of-type,
+        #design article .price-table-plan tr th:first-of-type,
+        #design article .price-table-design tr th:first-of-type,
+        #design article .price-table-photo tr th:first-of-type,
+        #design article .price-table-anime tr th:first-of-type,
+        #design .wrap .price-table-plan tr th:first-of-type,
+        #design .wrap .price-table-design tr th:first-of-type,
+        #design .wrap .price-table-photo tr th:first-of-type,
+        #design .wrap .price-table-anime tr th:first-of-type,
+        #photo article .price-table-plan tr th:first-of-type,
+        #photo article .price-table-design tr th:first-of-type,
+        #photo article .price-table-photo tr th:first-of-type,
+        #photo article .price-table-anime tr th:first-of-type,
+        #photo .wrap .price-table-plan tr th:first-of-type,
+        #photo .wrap .price-table-design tr th:first-of-type,
+        #photo .wrap .price-table-photo tr th:first-of-type,
+        #photo .wrap .price-table-anime tr th:first-of-type,
+        #anime article .price-table-plan tr th:first-of-type,
+        #anime article .price-table-design tr th:first-of-type,
+        #anime article .price-table-photo tr th:first-of-type,
+        #anime article .price-table-anime tr th:first-of-type,
+        #anime .wrap .price-table-plan tr th:first-of-type,
+        #anime .wrap .price-table-design tr th:first-of-type,
+        #anime .wrap .price-table-photo tr th:first-of-type,
+        #anime .wrap .price-table-anime tr th:first-of-type {
+          position: sticky;
+          left: 0;
+          z-index: 1; }
 
-  .price-table-web tr th, .price-table-web tr td {
-    width: 50%; }
-    .price-table-web tr th:nth-of-type(n+3), .price-table-web tr td:nth-of-type(n+3) {
-      display: none; }
-  .price-table-web tr:first-of-type th {
-    font-size: 14px; }
-
-  .price-table-web.clone {
+  .price-table-web.clone,
+  .price-table-movie.clone {
     margin-top: 30px; }
-    .price-table-web.clone tr th:nth-of-type(n+3), .price-table-web.clone tr td:nth-of-type(n+3) {
+    .price-table-web.clone tr th:nth-of-type(n+3), .price-table-web.clone tr td:nth-of-type(n+3),
+    .price-table-movie.clone tr th:nth-of-type(n+3),
+    .price-table-movie.clone tr td:nth-of-type(n+3) {
       display: table-cell; }
-    .price-table-web.clone tr th:nth-of-type(-n+2), .price-table-web.clone tr td:nth-of-type(-n+2) {
+    .price-table-web.clone tr th:nth-of-type(-n+2), .price-table-web.clone tr td:nth-of-type(-n+2),
+    .price-table-movie.clone tr th:nth-of-type(-n+2),
+    .price-table-movie.clone tr td:nth-of-type(-n+2) {
       display: none; }
 
-  .price-table-web tr:nth-of-type(2) td,
-  .price-table-movie tr:nth-of-type(2) td {
-    padding: 10px 0 20px; }
-  .price-table-web tr:nth-of-type(4) td, .price-table-web tr:nth-of-type(5) td,
-  .price-table-movie tr:nth-of-type(4) td,
-  .price-table-movie tr:nth-of-type(5) td {
-    font-size: 14px; }
+  .price-table-web,
+  .price-table-movie {
+    display: table !important; }
+    .price-table-web tr:nth-of-type(2) td,
+    .price-table-movie tr:nth-of-type(2) td {
+      padding: 10px 0 20px; }
+    .price-table-web tr:nth-of-type(4) td, .price-table-web tr:nth-of-type(5) td,
+    .price-table-movie tr:nth-of-type(4) td,
+    .price-table-movie tr:nth-of-type(5) td {
+      font-size: 14px; }
+    .price-table-web tr th, .price-table-web tr td,
+    .price-table-movie tr th,
+    .price-table-movie tr td {
+      width: 50%; }
+      .price-table-web tr th:nth-of-type(n+3), .price-table-web tr td:nth-of-type(n+3),
+      .price-table-movie tr th:nth-of-type(n+3),
+      .price-table-movie tr td:nth-of-type(n+3) {
+        display: none; }
+    .price-table-web tr:first-of-type th,
+    .price-table-movie tr:first-of-type th {
+      font-size: 14px;
+      position: sticky;
+      top: 60px;
+      z-index: 1; }
 
-  .balloon2 {
-    font-size: 11px; }
+  .price-table-web tr:first-of-type th {
+    top: 100px; }
+
+  .balloon {
+    font-size: 11px;
+    top: -79px; }
 
   #price-select .sv-2col-small p {
     line-height: 1.57;

@@ -37,6 +37,10 @@ body {
 }
 
 html, body {
+  // overflow-x: hidden;
+}
+html#p-top-html,
+body#p-top {
   overflow-x: hidden;
 }
 
@@ -74,13 +78,13 @@ hr {
   color: #f00;
 }
 .text-left {
-  text-align: left;
+  text-align: left m !important;
 }
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 .text-right {
-  text-align: right;
+  text-align: right !important;
 }
 .ls-0  { letter-spacing: 0 !important; }
 .m-0   { margin: 0 !important; }
@@ -2791,7 +2795,8 @@ a {
     }
   }
 
-  .sort-menu {
+  .sort-menu,
+  .sortprice-menu {
     display: flex;
     margin: 0 0 50px;
     li {
@@ -2891,6 +2896,9 @@ a {
   }
   .notice {
     margin-bottom: 0;
+  }
+  .price-table-web + .notice {
+    margin-bottom: 95px;
   }
 }
 .price-table {
@@ -3036,6 +3044,9 @@ a {
       }
     }
   }
+  &.clone {
+    display: none;
+  }
 }
 .price-table-movie {
   tr {
@@ -3156,13 +3167,14 @@ a {
     }
   }
 }
-.balloon,
-.balloon2 {
-  position: relative;
+.balloon {
+  position: absolute;
+  top: -89px;
+  left: 0;
   display: inline-block;
-  margin: 0 0 33px 53.9%;
+  margin: 0;
   padding: 8px 0;
-  width: 23.2%;
+  width: 100%;
   color: #fa3ca6;
   font-size: 14px;
   font-weight: bold;
@@ -3192,14 +3204,6 @@ a {
     border-top: 20px solid #fa3ca6;
     z-index: 1;
   }
-}
-
-.balloon2 {
-  position: absolute;
-  top: -89px;
-  left: 0;
-  margin: 0;
-  width: 100%;
 }
 
 #p-privacy {
@@ -3868,9 +3872,20 @@ a {
     }
   }
   .price-table {
+    tr {
+      th, td {
+        letter-spacing: 0;
+        ul {
+          li {
+            letter-spacing: 0;
+          }
+        }
+      }
+    }
     .gradient {
       font-size: 14px;
       letter-spacing: 0;
+      line-height: 1.85;
     }
   }
   .price-table-anime {
@@ -4531,6 +4546,7 @@ a {
         letter-spacing: 0;
       }
       p {
+        font-size: 14px;
         text-align: left;
         margin-bottom: 0;
       }
@@ -4638,8 +4654,8 @@ a {
         td {
           width: 100%;
           display: block;
-          margin-left: 30px;
-          padding: 2px 0;
+          // margin-left: 30px;
+          padding: 2px 0 2px 30px;
           letter-spacing: 0;
         }
         td:nth-of-type(1) {
@@ -4679,14 +4695,21 @@ a {
         }
       }
     }
-    .sort-menu {
-      margin-bottom: 30px;
+    .sort-menu,
+    .sortprice-menu {
+      position: sticky;
+      top: 45px;
+      z-index: 10;
+      background: #fff;
+      margin-bottom: 15px;
+      border-bottom: 5px solid #fff;
       li {
         font-size: 14px;
         padding: 17px 0 17px;
       }
     }
-    .notice {
+    .notice,
+    .price-table-web + .notice {
       margin: 20px 0 50px;
     }
     .sv-photo {
@@ -4723,9 +4746,16 @@ a {
       }
     }
   }
-  #service-select {
+  #service-select,
+  #design,
+  #photo,
+  #anime {
     position: relative;
-    article {
+    .wrap2 {
+      position: relative;
+    }
+    article,
+    .wrap {
       display: block;
       overflow-x: scroll;
       white-space: nowrap;
@@ -4740,8 +4770,15 @@ a {
         z-index: 1;
       }
       .price-table-plan {
-        margin-top: 90px;
+        margin-top: 80px;
+      }
+      .price-table-plan,
+      .price-table-design,
+      .price-table-photo,
+      .price-table-anime {
         position: relative;
+        border-collapse: separate;
+        border-spacing: 0;
         &::after {
           content: "";
           position: absolute;
@@ -4750,26 +4787,19 @@ a {
           width: 15px;
           height: 1px;
         }
+        tr {
+          th:first-of-type {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+          }
+        }
       }
     }
   }
 
-  .price-table-web {
-    tr {
-      th, td {
-        width: 50%;
-        &:nth-of-type(n+3) {
-          display: none;
-        }
-      }
-      &:first-of-type {
-        th {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-  .price-table-web.clone {
+  .price-table-web.clone,
+  .price-table-movie.clone {
     margin-top: 30px;
     tr {
       th, td {
@@ -4784,6 +4814,7 @@ a {
   }
   .price-table-web,
   .price-table-movie {
+    display: table !important;
     tr {
       &:nth-of-type(2) {
         td {
@@ -4796,13 +4827,36 @@ a {
           font-size: 14px;
         }
       }
+      th, td {
+        width: 50%;
+        &:nth-of-type(n+3) {
+          display: none;
+        }
+      }
+      &:first-of-type {
+        th {
+          font-size: 14px;
+          position: sticky;
+          top: 60px;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  .price-table-web {
+    tr {
+      &:first-of-type {
+        th {
+          top: 100px;
+        }
+      }
     }
   }
 
 
-  .balloon2 {
+  .balloon {
     font-size: 11px;
-    // display: none;
+    top: -79px;
   }
 
   #price-select {
