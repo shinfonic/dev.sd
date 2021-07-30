@@ -444,6 +444,7 @@ header {
       line-height: 0;
       img {
         width: 163px;
+        height: 45px;
       }
     }
   }
@@ -517,7 +518,28 @@ header {
     }
   }
 }
-
+@media all and (-ms-high-contrast: none) {
+  header {
+    .logo {
+      width: 100%;
+    }
+    .wrapper {
+      nav {
+        ul {
+          li {
+            a {
+              background-image: none;
+              &:hover {
+                color: $gradation-from;
+                background-image: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // common parts (scrolled)
 #header-common {
@@ -3531,6 +3553,7 @@ a {
       h1 {
         img {
           width: 145px;
+          height: 40px;
         }
       }
     }
@@ -4077,6 +4100,7 @@ a {
       h1 {
         img {
           width: 118px;
+          height: 40px;
         }
       }
     }

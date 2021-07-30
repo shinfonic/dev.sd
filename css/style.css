@@ -1120,7 +1120,8 @@ header {
       margin: 0;
       line-height: 0; }
       header .logo h1 img {
-        width: 163px; }
+        width: 163px;
+        height: 45px; }
   header #menu,
   header #nest-menu {
     display: none; }
@@ -1173,6 +1174,14 @@ header {
     header .wrapper nav .sub-menu {
       display: none; }
 
+@media all and (-ms-high-contrast: none) {
+  header .logo {
+    width: 100%; }
+  header .wrapper nav ul li a {
+    background-image: none; }
+    header .wrapper nav ul li a:hover {
+      color: #fb5fb7;
+      background-image: none; } }
 #header-common {
   width: 1040px;
   padding: 0 40px;
@@ -3670,7 +3679,8 @@ a .works-view-text p {
     header::before {
       height: 130px; }
     header .logo h1 img {
-      width: 145px; }
+      width: 145px;
+      height: 40px; }
     header #menu + label {
       position: absolute;
       top: 50%;
@@ -4011,7 +4021,8 @@ a .works-view-text p {
       header.scrolled::before {
         height: 60px; }
     header .logo h1 img {
-      width: 118px; }
+      width: 118px;
+      height: 40px; }
     header .wrapper nav {
       margin: 110px 0 70px 50px; }
       header .wrapper nav ul li a {
