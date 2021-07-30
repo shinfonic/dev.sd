@@ -13,7 +13,7 @@ var mfpLang = {
 	'ButtonPrev': '&lt; $1 へもどる',
 	'Phase': 'Step.$1',
 	'PhaseConfirm': '確認画面',
-	'ConfirmTitle': '<h4>入力内容をご確認ください</h4>',
+	'ConfirmTitle': '<h4>入力内容を<br class="spOnly">ご確認ください</h4>',
 	'ConfirmMessage': '送信してもよろしいですか？',
 	'CloseConfirmMessage': '入力中の内容が破棄されます。',
 	'TimeDay': '$1 日',

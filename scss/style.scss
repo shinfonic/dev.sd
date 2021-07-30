@@ -536,7 +536,7 @@ header {
     &::after{
       content: '';
       position: absolute;
-      bottom: 2px;
+      bottom: 0;
       left: 0;
       width: 100%;
       height: 2px;
@@ -1553,8 +1553,10 @@ a {
 }
 #p-works {
   .works-header {
-    margin: 160px 0 36px;
-    width: 100%;
+    margin: 160px auto 0;
+    // width: 100%;
+    max-width: 1190px;
+    padding: 0 40px;
     transition: .3s;
     // height: 37.5vw;
     // overflow: hidden;
@@ -1711,7 +1713,7 @@ a {
     width: 100%;
     padding: 75px 40px 110px;
     background: url("/img/bg-p-contact.jpg");
-    background-size: cover;
+    background-size: 100% 100%;
     .p-contact-sec-inner {
       width: 960px;
       margin: 0 auto;
@@ -1738,7 +1740,7 @@ a {
           line-height: 1.5;
           color: #9c9c9c;
           text-align: left;
-          margin: 4px 0 0;
+          margin: 6px 0 0;
         }
         h3 {
           font-size: 20px;
@@ -1782,6 +1784,7 @@ a {
               margin: 0;
               letter-spacing: 0.05em;
               line-height: 1.8;
+              white-space: unset;
               &.required::after {
                 content: "必須";
                 margin-left: 7px;
@@ -1809,7 +1812,6 @@ a {
             textarea {
               flex: 0 0 64%;
               border: 1px solid #ccc;
-              border-radius: 0;
               padding: 14px 25px 13px;
             }
             div {
@@ -1826,9 +1828,6 @@ a {
             }
             select {
               font-size: 13px;
-              -webkit-appearance: none;
-              -moz-appearance: none;
-              appearance: none;
               cursor: pointer;
               box-sizing: border-box;
               background-image:
@@ -1843,6 +1842,9 @@ a {
                 &:first-child {
                   display: none;
                 }
+              }
+              &:invalid {
+                color: #9c9c9c;
               }
             }
             textarea {
@@ -1878,8 +1880,8 @@ a {
         .submit,
         .mfp_buttons {
           text-align: center;
-          // margin-top: 80px;
-          margin-top: 45px;
+          margin-top: 80px;
+          // margin-top: 45px;
           input[type="checkbox"] {
             display: none;
           }
@@ -1895,6 +1897,7 @@ a {
               letter-spacing: 0.05em;
               position:relative;
               cursor: pointer;
+              white-space: normal;
               &::before {
                 content: "";
                 display: block;
@@ -1934,6 +1937,20 @@ a {
             }
           }
         }
+        input,
+        select,
+        textarea {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border-radius: 0;
+        }
+        textarea:disabled {
+          background-color: #fff;
+          color: #000;
+          -webkit-text-fill-color: black;
+          opacity: 1;
+        }
         .table-plan {
           margin-bottom: 10px;
           th {
@@ -1959,10 +1976,11 @@ a {
               text-align: center;
               padding: 20px 0 16px;
               border: 1px solid #e7ecee;
+              font-size: 25px;
               span {
-                font-size: 25px;
-                display: block;
-                margin-bottom: 12px;
+                font-size: 14px;
+                // display: block;
+                // margin-bottom: 12px;
               }
               label {
                 font-size: 14px;
@@ -2012,7 +2030,6 @@ a {
         }
       }
 
-      .confirm,
       #mfp_phase_confirm_inner {
         ul,
         #mfp_confirm_table {
@@ -2235,7 +2252,7 @@ a {
       text-align: center;
       width: 150px;
       line-height: 33px;
-      margin: 25px 7px 0;
+      margin: 25px 10px 0;
       &:hover {
         background: #000;
         color: #fff;
@@ -2963,6 +2980,9 @@ a {
       }
       td {
         font-size: 25px;
+        span {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -3754,10 +3774,30 @@ a {
             padding-left: 10%;
             padding-right: 10%;
           }
+          ul,
+          #mfp_confirm_table {
+            li,
+            tr {
+              input,
+              select,
+              textarea {
+                font-size: 16px;
+              }
+            }
+          }
+          .table-plan {
+            tr.desc {
+              td {
+                padding-left: 15px;
+                padding-right: 15px;
+              }
+            }
+          }
         }
       }
     }
   }
+  #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box .table-plan tr.desc td
 
   #p-works-view {
     .sort-menu {
@@ -3778,6 +3818,8 @@ a {
   #p-works {
     .works-header {
       margin-top: 130px;
+      max-width: 100%;
+      padding: 0;
     }
   }
 
@@ -5017,6 +5059,257 @@ a {
     #access {
       padding-bottom: 40px !important;
     }
+  }
+
+  #p-contact {
+    #p-contact-sec {
+      padding: 34px 25px 70px;
+      .p-contact-sec-inner {
+        .p-contact-box {
+          padding: 44px 0 70px;
+          h2,
+          h4 {
+            font-size: 22px;
+            margin-bottom: 30px;
+            line-height: 1.18;
+          }
+          p {
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 26px;
+          }
+          .notice {
+            margin-top: 8px;
+          }
+          h3 {
+            margin-top: 50px;
+            margin-bottom: 30px;
+          }
+          h3 + p {
+            margin-bottom: 30px;
+          }
+          form,
+          #mfp_phase_confirm_inner {
+            padding-left: 25px;
+            padding-right: 25px;
+          }
+          ul,
+          #mfp_confirm_table {
+            margin-bottom: 40px;
+            li,
+            tr {
+              flex-direction: column;
+              align-items: flex-start;
+              margin-bottom: 30px;
+              label,
+              th {
+                margin-bottom: 10px;
+                line-height: 1.43;
+                &[for$="-tel"],
+                &[for$="-url"],
+                &[for$="-budget"] {
+                  margin-bottom: 8px;
+                }
+              }
+              input,
+              select,
+              textarea {
+                // flex: 0 0 100%;
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+              }
+              div {
+                // flex: 0 0 100%;
+                width: 100%;
+              }
+              ul {
+                // flex: 0 0 100%;
+                width: 100%;
+              }
+              select {
+                option:nth-of-type(2) {
+                  color: #9C9C9C;
+                  background-color: #f00;
+                }
+              }
+            }
+          }
+          .privacy-area {
+            padding: 10px 15px;
+            line-height: 1.8;
+          }
+          .submit,
+          .mfp_buttons {
+            // text-align: center;
+            margin-top: 30px;
+            & > div {
+              margin-bottom: 50px;
+              .mfp_err {
+              }
+              label {
+                font-size: 13px;
+                text-align: left;
+              }
+            }
+          }
+          .wrap2 {
+            position: relative;
+          }
+          .wrap {
+            display: block;
+            overflow-x: scroll;
+            white-space: normal;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 20px;
+              height: 100%;
+              background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+              z-index: 1;
+            }
+          }
+          .table-plan {
+            width: 510px;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              right: -15px;
+              top: 0;
+              width: 15px;
+              height: 1px;
+            }
+            th {
+            }
+            .th2 {
+            }
+            tr.price {
+              td {
+                padding-top: 10px;
+                span {
+                  display: block;
+                }
+                label {
+                  input {
+                  }
+                }
+              }
+            }
+            tr.desc {
+              td {
+                padding: 20px 10px;
+              }
+            }
+          }
+          .option-web {
+            margin: 30px 0 25px;
+            li {
+              label {
+                margin-bottom: 18px;
+              }
+              li {
+                label {
+                  padding-left: 36px;
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+          .option-movie {
+            li {
+              width: 100%;
+              margin: 10px 0;
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        #mfp_phase_confirm_inner {
+          #mfp_confirm_table {
+            margin-top: 50px;
+            tr {
+              margin-bottom: 38px;
+              th {
+                margin-bottom: 7px !important;
+              }
+              td {
+              }
+              .option-movie {
+                li {
+                  &::before {
+                  }
+                }
+              }
+            }
+            .option-movie {
+              width: 100%;
+            }
+          }
+          .mfp_buttons {
+            margin-top: 15px;
+            #mfp_button_cancel {
+              margin-top: 30px;
+            }
+          }
+        }
+
+        input[type="radio"],
+        .option-web input,
+        .option-movie input {
+          & ~ label {
+            &::before {
+              top: 11px;
+            }
+          }
+          &:checked ~ label::after{
+            top: 11px;
+          }
+        }
+        .finish {
+          padding-left: 25px;
+          padding-right: 25px;
+          h2 {
+            margin-bottom: 50px;
+          }
+          p {
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      .anker-link {
+        margin-bottom: 50px;
+        li {
+          width: 100%;
+          letter-spacing: 0.1em;
+        }
+      }
+
+      .btn-estimate {
+        width: 47%;
+        margin: 15px 0 0;
+        &:first-of-type {
+          margin-right: 6%;
+        }
+        &::before,
+        &::after {
+        }
+        &::before {
+        }
+        &::after {
+        }
+      }
+    }
+  }
+
+  .btn-black,
+  #mfp_button_send {
+    width: 100%;
   }
 
   #contact,

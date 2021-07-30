@@ -96,84 +96,199 @@
           <li><a class="current">見積もり依頼（映像）</a></li>
         </ul>
 
-        <div class="p-contact-box confirm">
-          <h2>入力内容をご確認ください</h2>
-          <p>
-            皆さまとの対話の中で有益な問題解決を探ります。<br>
-            光速対応を心掛けておりますが、お問い合わせ内容によってはお返事に<br>
-            時間がかかる場合や、お答えできない場合がある旨ご了承ください。
-          </p>
-          <form action="" method="post">
+        <div class="p-contact-box">
+          <!--メールフォームプロ-->
+          <div id="mfp_error"></div><div id="mfp_warning"></div><script type="text/javascript" src="https://sugiyamadesign.jp/contact/mailformpro/mailformpro.cgi?addon=taboowords/taboowords.js&amp;callback=setTaboowords"></script><div id="mfp_phase_confirm" style="display: block;"><div id="mfp_phase_confirm_inner"><h4>入力内容を<br class="spOnly">ご確認ください</h4><table id="mfp_confirm_table"><tbody><tr class="mfp_achroma"><th id="th_form-m-name">お名前</th><td id="td_form-m-name">杉山　順哉</td></tr><tr class="mfp_colored"><th id="th_form-m-kana">フリガナ</th><td id="td_form-m-kana">スギヤマ　ジュンヤ</td></tr><tr class="mfp_achroma"><th id="th_form-m-company">会社名</th><td id="td_form-m-company">SUGIYAMA DESIGN</td></tr><tr class="mfp_colored"><th id="th_form-m-tel">電話番号</th><td id="td_form-m-tel">03-6876-9994</td></tr><tr class="mfp_achroma"><th id="th_form-m-email">メールアドレス</th><td id="td_form-m-email">junya@sugiyamadesign.jp</td></tr><tr class="mfp_colored"><th id="th_form-m-type">動画種別</th><td id="td_form-m-type">実写</td></tr><tr class="mfp_achroma"><th id="th_form-m-affair">制作用途</th><td id="td_form-m-affair">コーポレートムービー</td></tr><tr class="mfp_colored"><th id="th_form-m-volume">想定分数</th><td id="td_form-m-volume">〜30秒</td></tr><tr class="mfp_achroma"><th id="th_form-m-schedule">動画公開までの日時</th><td id="td_form-m-schedule">3週間以内</td></tr><tr class="mfp_colored"><th id="th_form-m-budget">ご予算</th><td id="td_form-m-budget">〜500万</td></tr><tr class="mfp_achroma"><th id="th_form-m-detail">想定している映像制作の詳細をお聞かせください
+</th><td id="td_form-m-detail">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td></tr><tr class="mfp_colored"><th id="th_form-m-option1">制作追加オプション</th><td id="td_form-m-option1">ナレーション<br>作曲<br>効果音</td></tr></tbody></table><div class="mfp_buttons"><button id="mfp_button_send" class="mfp_element_button" onclick="mfp.sendmail()">送信する</button>&nbsp;<button id="mfp_button_cancel" class="mfp_element_button" onclick="mfp.cancel()">キャンセル</button></div></div></div><form id="mailformpro" action="https://sugiyamadesign.jp/contact/mailformpro/mailformpro.cgi" method="post" accept-charset="UTF-8" novalidate="" style="display: none;"><div id="mfp_hidden"><input type="submit"><input type="hidden" id="mfp_input_time" name="mfp_input_time" value="0"><input type="hidden" id="mfp_confirm_time" name="mfp_confirm_time" value="0"><input type="hidden" id="mfp_referrer" name="mfp_referrer" value="https://sugiyamadesign.jp/contact/"><input type="hidden" id="mfp_errorlog" name="mfp_errorlog" value=""><input type="hidden" id="mfp_timeline" name="mfp_timeline" value=""><input type="hidden" id="mfp_domain" name="mfp_domain" value="sugiyamadesign.jp"><input type="hidden" id="mfp_uri" name="mfp_uri" value="https://sugiyamadesign.jp/contact/estimate-movie.html"><input type="hidden" id="mfp_jssemantics" name="mfp_jssemantics" value="1"><input type="hidden" id="mfp_cart" name="mfp_cart" value=""><input type="hidden" id="mfp_cartprice" name="mfp_cartprice" value=""><input type="hidden" id="mfp_paypal" name="mfp_paypal" value="0"><input type="hidden" id="mfp_elementsQty" name="mfp_elementsQty" value="13"><input type="hidden" id="mfp_requiredElementsQty" name="mfp_requiredElementsQty" value="11"><input type="hidden" id="mfp_elementsArch" name="mfp_elementsArch" value="text:3,tel:1,email:1,select-one:5,textarea:1,checkbox:2"><input type="hidden" id="mfp_script" name="mfp_script" value="https://sugiyamadesign.jp/contact/mailformpro/mailformpro.cgi"></div>
+            <h2>見積もり依頼　映像制作</h2>
+            <p>
+              この度は、ご検討いただきありがとうございます。<br>
+              以下をご記入いただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
+              ご不明の場合は<a href="index.html" class="a-textline">お問い合わせフォーム</a>よりご相談ください。<br>
+              <a href="/price/" target="_blank" class="btn-estimate">料金表</a>
+              <a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
+            </p>
+
             <h3>基本情報</h3>
             <ul>
               <li>
                 <label for="form-m-name" class="required">お名前</label>
-                <p id="form-m-name">杉山 順哉</p>
+                <div><input id="form-m-name" name="お名前" data-kana="フリガナ" type="text" class=" mfp_element_text mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_お名前" style="display: none;">お名前が入力されていません。</div></div>
               </li>
               <li>
-                <label for="form-m-kana" class="required">ふりがな</label>
-                <p id="form-m-kana">すぎやま じゅんや</p>
+                <label for="form-m-kana" class="required">フリガナ</label>
+                <div><input id="form-m-kana" name="フリガナ" type="text" class=" mfp_element_text mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_フリガナ" style="display: none;">フリガナが入力されていません。</div></div>
               </li>
               <li>
                 <label for="form-m-company" class="">会社名</label>
-                <p id="form-m-company">SUGIYAMA DESIGN</p>
+                <div><input id="form-m-company" name="会社名" type="text" class=" mfp_element_text mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_会社名" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-m-tel" class="required">電話番号</label>
-                <p id="form-m-tel">03-6876-9994</p>
+                <div>
+                  <input id="form-m-tel" name="電話番号" type="tel" class=" mfp_element_tel mfp_element_all" data-exc="1">
+                  <p class="notice">※日中ご連絡の取りやすい番号を入力してください。</p>
+                <div class="mfp_err" id="errormsg_電話番号" style="display: none;">電話番号が入力されていません。</div></div>
               </li>
               <li>
                 <label for="form-m-email" class="required">メールアドレス</label>
-                <p id="form-m-email">junya@sugiyamadesign.jp</p>
+                <div><input id="form-m-email" name="email" type="email" class=" mfp_element_email mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_email" style="display: none;">メールアドレスが入力されていません。</div></div>
               </li>
             </ul>
-          
+
             <h3>想定している動画内容</h3>
             <ul>
               <li>
                 <label for="form-m-type" class="required">動画種別</label>
-                <p id="form-m-type">実写</p>
+                <div>
+                  <select name="動画種別" id="form-m-type" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="実写">実写</option>
+                    <option value="モーショングラフィックス">モーショングラフィックス</option>
+                    <option value="2Dアニメーション">2Dアニメーション</option>
+                    <option value="コマ撮り">コマ撮り</option>
+                  </select>
+                <div class="mfp_err" id="errormsg_動画種別" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-m-affair" class="required">制作用途</label>
-                <p id="form-m-affair">コーポレートムービー</p>
+                <div>
+                  <select name="制作用途" id="form-m-affair" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="コーポレートムービー">コーポレートムービー</option>
+                    <option value="サービスプロモーション">サービスプロモーション</option>
+                    <option value="TVCM">TVCM</option>
+                    <option value="採用ブランドムービー">採用ブランドムービー</option>
+                    <option value="学校紹介">学校紹介</option>
+                    <option value="その他">その他</option>
+                  </select>
+                <div class="mfp_err" id="errormsg_制作用途" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-m-volume" class="required">想定分数</label>
-                <p id="form-m-volume">〜30秒</p>
+                <div>
+                  <select name="想定分数" id="form-m-volume" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="未定">未定</option>
+                    <option value="〜15秒">〜15秒</option>
+                    <option value="〜30秒">〜30秒</option>
+                    <option value="〜1分">〜1分</option>
+                    <option value="〜2分">〜2分</option>
+                    <option value="〜3分">〜3分</option>
+                    <option value="〜5分">〜5分</option>
+                    <option value="〜10分">〜10分</option>
+                    <option value="15分">〜15分</option>
+                    <option value="その他">その他</option>
+                  </select>
+                <div class="mfp_err" id="errormsg_想定分数" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-m-schedule" class="required">動画公開までの日時</label>
-                <p id="form-m-schedule">2ヶ月以内</p>
+                <div>
+                  <select name="動画公開までの日時" id="form-m-schedule" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="未定">未定</option>
+                    <option value="3週間以内">3週間以内</option>
+                    <option value="1ヶ月以内">1ヶ月以内</option>
+                    <option value="1.5ヶ月以内">1.5ヶ月以内</option>
+                    <option value="2ヶ月以内">2ヶ月以内</option>
+                    <option value="3ヶ月以内">3ヶ月以内</option>
+                    <option value="4ヶ月以内">4ヶ月以内</option>
+                    <option value="5ヶ月以内">5ヶ月以内</option>
+                    <option value="6ヶ月以内">6ヶ月以内</option>
+                    <option value="1年以内">1年以内</option>
+                  </select>
+                <div class="mfp_err" id="errormsg_動画公開までの日時" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-m-budget" class="required">ご予算</label>
-                <p id="form-m-budget">100万円</p>
+                <div>
+                  <select name="ご予算" id="form-m-budget" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="未定">未定</option>
+                    <option value="30万">30万</option>
+                    <option value="40万">40万</option>
+                    <option value="50万">50万</option>
+                    <option value="60万">60万</option>
+                    <option value="70万">70万</option>
+                    <option value="80万">80万</option>
+                    <option value="90万">90万</option>
+                    <option value="100万">100万</option>
+                    <option value="120万">120万</option>
+                    <option value="〜200万">〜200万</option>
+                    <option value="〜300万">〜300万</option>
+                    <option value="〜400万">〜400万</option>
+                    <option value="〜500万">〜500万</option>
+                    <option value="〜1000万">〜1000万</option>
+                  </select>
+                  <p class="notice">※ご予算内で制作可能な内容をご提案いたします。<br>
+                    　決まっていない場合は「未定」を選択してください。</p>
+                <div class="mfp_err" id="errormsg_ご予算" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-m-detail" class="required">想定している映像制作の<br>詳細をお聞かせください</label>
-                <p id="form-m-detail">
-                  テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストキスト
-                </p>
+                <div><textarea id="form-m-detail" name="想定している映像制作の詳細" class=" mfp_element_textarea mfp_element_all" data-exc="1"></textarea><div class="mfp_err" id="errormsg_想定している映像制作の詳細" style="display: none;"></div></div>
               </li>
               <li>
-                <label>制作追加オプション<span class="required"></span><br><span>※複数選択可能</span></label>
-                <ul class="option-movie">
-                  <li>役者</li>
-                  <li>ナレーション</li>
-                  <li>作曲</li>
-                  <li>効果音</li>
-                </ul>
+                <label>制作追加オプション<br><span>※複数選択可能</span></label>
+                <div>
+                  <ul class="option-movie">
+                    <li>
+                      <input id="form-m-option1" name="制作追加オプション" value="不要" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><input type="hidden" name="mfp_制作追加オプション_checkobj" id="mfp_制作追加オプション_checkobj" value="1" class=" mfp_element_hidden mfp_element_all" data-exc="1"><label for="form-m-option1">不要</label>
+                    <div class="mfp_err" id="errormsg_mfp_制作追加オプション_checkobj"></div></li>
+                    <li>
+                      <input id="form-m-option2" name="制作追加オプション" value="役者" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><label for="form-m-option2">役者</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option3" name="制作追加オプション" value="ナレーション" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><label for="form-m-option3">ナレーション</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option4" name="制作追加オプション" value="テロップ" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><label for="form-m-option4">テロップ</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option5" name="制作追加オプション" value="BGM" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><label for="form-m-option5">BGM</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option6" name="制作追加オプション" value="作曲" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><label for="form-m-option6">作曲</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option7" name="制作追加オプション" value="効果音" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><label for="form-m-option7">効果音</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option8" name="制作追加オプション" value="字幕" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><label for="form-m-option8">字幕</label>
+                    </li>
+                    <li>
+                      <input id="form-m-option9" name="制作追加オプション" value="ドローン撮影" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><label for="form-m-option9">ドローン撮影</label>
+                    </li>
+                  </ul>
+                  <div id="errormsg_制作追加オプション" class="mfp_err" style="display: none;"></div>
+                </div>
               </li>
             </ul>
-          
+
+            <label for="form-m-privacy" class="privacy-label">個人情報保護方針</label>
+            <textarea id="form-m-privacy" class="privacy-area mfp_element_textarea mfp_element_all" disabled>SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり、個人情報保護の重要性を認識し、以下の方針に基づき個人情報の保護に努めてまいります。
+
+個人情報保護に関する法令やその他の規範を遵守し、個人情報を適正に取り扱います。
+適切かつ適正な方法により個人情報を取得し、偽りその他不正な手段による取得は致しません。
+個人情報の所有者本人の同意を得た目的の範囲でのみこれを利用致します。
+個人情報を所有者本人の同意を得ずに第三者に提供致しません。
+法令で定める開示請求等手続に関して、適切かつ迅速に対応致します。</textarea>
+            <p class="notice">※個人情報保護に対する取り組みは「Privacy Policy」を必ずご確認ください。</p>
             <div class="submit">
-              <input type="submit" value="送信する" class="btn-black"><br>
-              <span class="back-arrow"><input type="button" value="戻る" onClick="history.back()"></span>
+              <div>
+                <input id="form-m-check" name="個人情報の取り扱いについて" type="checkbox" data-post-disable="1" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><input type="hidden" name="mfp_個人情報の取り扱いについて_checkobj" id="mfp_個人情報の取り扱いについて_checkobj" value="1" class=" mfp_element_hidden mfp_element_all" data-exc="1">
+                <label for="form-m-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
+                <div id="errormsg_個人情報の取り扱いについて" class="mfp_err" style="display: none;"></div>
+              <div class="mfp_err" id="errormsg_mfp_個人情報の取り扱いについて_checkobj"></div></div>
+
+              <input type="submit" value="確認画面" class="btn-black mfp_element_submit mfp_element_all">
             </div>
           </form>
-
+          <script type="text/javascript" id="mfpjs" src="mailformpro/mailformpro.cgi" charset="UTF-8"></script>
+<!--/メールフォームプロ-->
         </div>
+        
       </div>
     </section>    <!-- contact -->
     <section id="contact" class="effect-fade effect-fade-zerotrans">

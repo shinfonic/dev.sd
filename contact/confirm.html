@@ -95,50 +95,77 @@
           <li><a class="disable">見積もり依頼（Web）</a></li>
           <li><a class="disable">見積もり依頼（映像）</a></li>
         </ul>
-        <div class="p-contact-box confirm">
-          <h2>入力内容をご確認ください</h2>
+        
+        <div class="p-contact-box">
+          <!--メールフォームプロ-->
+          <div id="mfp_error"></div><div id="mfp_warning"></div><script type="text/javascript" src="https://sugiyamadesign.jp/contact/mailformpro/mailformpro.cgi?addon=taboowords/taboowords.js&amp;callback=setTaboowords"></script><div id="mfp_phase_confirm" style="display: block;"><div id="mfp_phase_confirm_inner"><h4>入力内容を<br class="spOnly">ご確認ください</h4><table id="mfp_confirm_table"><tbody><tr class="mfp_achroma"><th id="th_form-affair">ご用件</th><td id="td_form-affair">採用へのご応募</td></tr><tr class="mfp_colored"><th id="th_form-name">お名前</th><td id="td_form-name">杉山　順哉</td></tr><tr class="mfp_achroma"><th id="th_form-kana">フリガナ</th><td id="td_form-kana">スギヤマ　ジュンヤ</td></tr><tr class="mfp_colored"><th id="th_form-company">会社名</th><td id="td_form-company">SUGIYAMA DESIGN</td></tr><tr class="mfp_achroma"><th id="th_form-tel">電話番号</th><td id="td_form-tel">03-6876-9994</td></tr><tr class="mfp_colored"><th id="th_form-email">メールアドレス</th><td id="td_form-email">junya@sugiyamadesign.jp</td></tr><tr class="mfp_achroma"><th id="th_form-content">お問い合わせ内容</th><td id="td_form-content">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td></tr></tbody></table><div class="mfp_buttons"><button id="mfp_button_send" class="mfp_element_button" onclick="mfp.sendmail()">送信する</button>&nbsp;<button id="mfp_button_cancel" class="mfp_element_button" onclick="mfp.cancel()">キャンセル</button></div></div></div><form id="mailformpro" action="https://sugiyamadesign.jp/contact/mailformpro/mailformpro.cgi" method="post" accept-charset="UTF-8" novalidate="" style="display: none;"><div id="mfp_hidden"><input type="submit"><input type="hidden" id="mfp_input_time" name="mfp_input_time" value="0"><input type="hidden" id="mfp_confirm_time" name="mfp_confirm_time" value="0"><input type="hidden" id="mfp_referrer" name="mfp_referrer" value="https://sugiyamadesign.jp/price/"><input type="hidden" id="mfp_errorlog" name="mfp_errorlog" value=""><input type="hidden" id="mfp_timeline" name="mfp_timeline" value=""><input type="hidden" id="mfp_domain" name="mfp_domain" value="sugiyamadesign.jp"><input type="hidden" id="mfp_uri" name="mfp_uri" value="https://sugiyamadesign.jp/contact/"><input type="hidden" id="mfp_jssemantics" name="mfp_jssemantics" value="1"><input type="hidden" id="mfp_cart" name="mfp_cart" value=""><input type="hidden" id="mfp_cartprice" name="mfp_cartprice" value=""><input type="hidden" id="mfp_paypal" name="mfp_paypal" value="0"><input type="hidden" id="mfp_elementsQty" name="mfp_elementsQty" value="8"><input type="hidden" id="mfp_requiredElementsQty" name="mfp_requiredElementsQty" value="7"><input type="hidden" id="mfp_elementsArch" name="mfp_elementsArch" value="select-one:1,text:3,tel:1,email:1,textarea:1,checkbox:1"><input type="hidden" id="mfp_script" name="mfp_script" value="https://sugiyamadesign.jp/contact/mailformpro/mailformpro.cgi"></div>
+          <h2>お問い合わせ</h2>
           <p>
-            皆さまとの対話の中で有益な問題解決を探ります。<br>
-            光速対応を心掛けておりますが、お問い合わせ内容によってはお返事に<br>
-            時間がかかる場合や、お答えできない場合がある旨ご了承ください。
+            案件のご相談やご不明な点など、どうぞお気軽にお問い合わせください。<br>
+            迅速な対応を心掛けておりますが、内容によってはお返事に時間がかかる場合や、<br>
+            お答えできない場合がある旨ご了承ください。
           </p>
-          <form action="" method="post">
             <ul>
               <li>
                 <label for="form-affair" class="required">ご用件</label>
-                <p id="form-affair">ご質問・ご相談</p>
+                <div><select name="ご用件" id="form-affair" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                <option disabled="" selected="" value="">選択肢を表示</option>
+                  <option value="案件のご相談">案件のご相談</option>
+                  <option value="採用へのご応募">採用へのご応募</option>
+                  <option value="取材ご依頼">取材ご依頼</option>
+                  <option value="その他お問い合わせ">その他お問い合わせ</option>
+                </select><div class="mfp_err" id="errormsg_ご用件" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-name" class="required">お名前</label>
-                <p id="form-name">杉山 順哉</p>
+                <div><input id="form-name" name="お名前" data-kana="フリガナ" type="text" class=" mfp_element_text mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_お名前" style="display: none;"></div></div>
               </li>
               <li>
-                <label for="form-kana" class="required">ふりがな</label>
-                <p id="form-kana">すぎやま じゅんや</p>
+                <label for="form-kana" class="required">フリガナ</label>
+                <div><input id="form-kana" name="フリガナ" type="text" class=" mfp_element_text mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_フリガナ" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-company" class="">会社名</label>
-                <p id="form-company">SUGIYAMA DESIGN</p>
+                <div><input id="form-company" name="会社名" type="text" class=" mfp_element_text mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_会社名" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-tel" class="required">電話番号</label>
-                <p id="form-tel">03-6876-9994</p>
+                <div><input id="form-tel" name="電話番号" type="tel" class=" mfp_element_tel mfp_element_all" data-exc="1">
+                <p class="notice">※日中ご連絡の取りやすい番号を入力してください。</p>
+                <div class="mfp_err" id="errormsg_電話番号" style="display: none;">電話番号が入力されていません。</div></div>
               </li>
               <li>
                 <label for="form-email" class="required">メールアドレス</label>
-                <p id="form-email">junya@sugiyamadesign.jp</p>
+                <div><input id="form-email" name="email" type="email" class=" mfp_element_email mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_email" style="display: none;">メールアドレスが入力されていません。</div></div>
               </li>
               <li>
                 <label for="form-content" class="required">お問い合わせ内容</label>
-                <p id="form-content">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストキスト</p>
+                <div><textarea id="form-content" name="お問い合わせ内容" class=" mfp_element_textarea mfp_element_all" data-exc="1"></textarea><div class="mfp_err" id="errormsg_お問い合わせ内容" style="display: none;">お問い合わせ内容が入力されていません。</div></div>
               </li>
             </ul>
+            <label for="form-privacy" class="privacy-label">個人情報保護方針</label>
+            <textarea id="form-privacy" class="privacy-area mfp_element_textarea mfp_element_all" disabled>SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり、個人情報保護の重要性を認識し、以下の方針に基づき個人情報の保護に努めてまいります。
+
+個人情報保護に関する法令やその他の規範を遵守し、個人情報を適正に取り扱います。
+適切かつ適正な方法により個人情報を取得し、偽りその他不正な手段による取得は致しません。
+個人情報の所有者本人の同意を得た目的の範囲でのみこれを利用致します。
+個人情報を所有者本人の同意を得ずに第三者に提供致しません。
+法令で定める開示請求等手続に関して、適切かつ迅速に対応致します。</textarea>
+            <p class="notice">※個人情報保護に対する取り組みは「Privacy Policy」を必ずご確認ください。</p>
             <div class="submit">
-              <input type="submit" value="送信する" class="btn-black"><br>
-              <span class="back-arrow"><input type="button" value="戻る" onClick="history.back()"></span>
+              <div>
+                <input id="form-check" name="個人情報の取り扱いについて" type="checkbox" data-post-disable="1" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><input type="hidden" name="mfp_個人情報の取り扱いについて_checkobj" id="mfp_個人情報の取り扱いについて_checkobj" value="1" class=" mfp_element_hidden mfp_element_all" data-exc="1">
+                <label for="form-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
+                <div id="errormsg_個人情報の取り扱いについて" class="mfp_err" style="display: none;"></div>
+              <div class="mfp_err" id="errormsg_mfp_個人情報の取り扱いについて_checkobj"></div></div>
+
+              <input type="submit" value="確認画面" class="btn-black mfp_element_submit mfp_element_all">
             </div>
           </form>
+          <script type="text/javascript" id="mfpjs" src="mailformpro/mailformpro.cgi" charset="UTF-8"></script>
+<!--/メールフォームプロ-->
         </div>
+
       </div>
     </section>    <!-- contact -->
     <section id="contact" class="effect-fade effect-fade-zerotrans">

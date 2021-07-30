@@ -96,35 +96,41 @@
           <li><a class="disable">見積もり依頼（映像）</a></li>
         </ul>
 
-        <div class="p-contact-box confirm">
-          <h2>入力内容をご確認ください</h2>
-          <p>
-            皆さまとの対話の中で有益な問題解決を探ります。<br>
-            光速対応を心掛けておりますが、お問い合わせ内容によってはお返事に<br>
-            時間がかかる場合や、お答えできない場合がある旨ご了承ください。
-          </p>
-          <form action="" method="post">
+        <div class="p-contact-box">
+          <!--メールフォームプロ-->
+          <div id="mfp_error"></div><div id="mfp_warning"></div><script type="text/javascript" src="https://sugiyamadesign.jp/contact/mailformpro/mailformpro.cgi?addon=taboowords/taboowords.js&amp;callback=setTaboowords"></script><div id="mfp_phase_confirm" style="display: block;"><div id="mfp_phase_confirm_inner"><h4>入力内容を<br class="spOnly">ご確認ください</h4><table id="mfp_confirm_table"><tbody><tr class="mfp_achroma"><th id="th_form-w-name">お名前</th><td id="td_form-w-name">杉山　順哉</td></tr><tr class="mfp_colored"><th id="th_form-w-kana">フリガナ</th><td id="td_form-w-kana">スギヤマ　ジュンヤ</td></tr><tr class="mfp_achroma"><th id="th_form-w-company">会社名</th><td id="td_form-w-company">SUGIYAMA DESIGN</td></tr><tr class="mfp_colored"><th id="th_form-w-tel">電話番号</th><td id="td_form-w-tel">03-6876-9994</td></tr><tr class="mfp_achroma"><th id="th_form-w-email">メールアドレス</th><td id="td_form-w-email">junya@sugiyamadesign.jp</td></tr><tr class="mfp_colored"><th id="th_form-w-type">サイト種類</th><td id="td_form-w-type">コーポレートサイト</td></tr><tr class="mfp_achroma"><th id="th_form-w-original">テンプレート利用の有無</th><td id="td_form-w-original">オリジナルデザインを希望</td></tr><tr class="mfp_colored"><th id="th_form-w-volume">想定ページ数</th><td id="td_form-w-volume">〜20P</td></tr><tr class="mfp_achroma"><th id="th_form-w-schedule">サイト公開までの日時</th><td id="td_form-w-schedule">3ヶ月以内</td></tr><tr class="mfp_colored"><th id="th_form-w-budget">ご予算</th><td id="td_form-w-budget">〜500万</td></tr><tr class="mfp_achroma"><th id="th_form-w-photo">写真撮影・イラスト</th><td id="td_form-w-photo">写真撮影を依頼したい</td></tr><tr class="mfp_colored"><th id="th_form-w-detail">想定しているホームページの詳細</th><td id="td_form-w-detail">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td></tr><tr class="mfp_achroma"><th id="th_form-w-url">現状WebサイトのURL</th><td id="td_form-w-url">houseblend.jp</td></tr><tr class="mfp_colored"><th id="th_form-w-plan1">運営プラン</th><td id="td_form-w-plan1">法人のお客さま ベーシック ¥ 29,800-</td></tr><tr class="mfp_achroma"><th id="th_form-w-option1">運用追加オプション</th><td id="td_form-w-option1">リスティング広告</td></tr></tbody></table><div class="mfp_buttons"><button id="mfp_button_send" class="mfp_element_button" onclick="mfp.sendmail()">送信する</button>&nbsp;<button id="mfp_button_cancel" class="mfp_element_button" onclick="mfp.cancel()">キャンセル</button></div></div></div><form id="mailformpro" action="https://sugiyamadesign.jp/contact/mailformpro/mailformpro.cgi" method="post" accept-charset="UTF-8" novalidate="" style="display: none;"><div id="mfp_hidden"><input type="submit"><input type="hidden" id="mfp_input_time" name="mfp_input_time" value="0"><input type="hidden" id="mfp_confirm_time" name="mfp_confirm_time" value="0"><input type="hidden" id="mfp_referrer" name="mfp_referrer" value="https://sugiyamadesign.jp/contact/estimate-movie.html"><input type="hidden" id="mfp_errorlog" name="mfp_errorlog" value=""><input type="hidden" id="mfp_timeline" name="mfp_timeline" value=""><input type="hidden" id="mfp_domain" name="mfp_domain" value="sugiyamadesign.jp"><input type="hidden" id="mfp_uri" name="mfp_uri" value="https://sugiyamadesign.jp/contact/estimate-web.html"><input type="hidden" id="mfp_jssemantics" name="mfp_jssemantics" value="1"><input type="hidden" id="mfp_cart" name="mfp_cart" value=""><input type="hidden" id="mfp_cartprice" name="mfp_cartprice" value=""><input type="hidden" id="mfp_paypal" name="mfp_paypal" value="0"><input type="hidden" id="mfp_elementsQty" name="mfp_elementsQty" value="16"><input type="hidden" id="mfp_requiredElementsQty" name="mfp_requiredElementsQty" value="12"><input type="hidden" id="mfp_elementsArch" name="mfp_elementsArch" value="text:4,tel:1,email:1,select-one:6,textarea:1,radio:1,checkbox:2"><input type="hidden" id="mfp_script" name="mfp_script" value="https://sugiyamadesign.jp/contact/mailformpro/mailformpro.cgi"></div>
+            <h2>見積もり依頼　Web制作</h2>
+            <p>
+              この度は、ご検討いただきありがとうございます。<br>
+              以下をご記入いただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
+              ご不明の場合は<a href="index.html" class="a-textline">お問い合わせフォーム</a>よりご相談ください。<br>
+              <a href="/price/" target="_blank" class="btn-estimate">料金表</a>
+              <a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
+            </p>
             <h3>基本情報</h3>
             <ul>
               <li>
                 <label for="form-w-name" class="required">お名前</label>
-                <p id="form-w-name">杉山 順哉</p>
+                <div><input id="form-w-name" name="お名前" data-kana="フリガナ" type="text" class=" mfp_element_text mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_お名前" style="display: none;"></div></div>
               </li>
               <li>
-                <label for="form-w-kana" class="required">ふりがな</label>
-                <p id="form-w-kana">すぎやま じゅんや</p>
+                <label for="form-w-kana" class="required">フリガナ</label>
+                <div><input id="form-w-kana" name="フリガナ" type="text" class=" mfp_element_text mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_フリガナ" style="display: none;">フリガナが入力されていません。</div></div>
               </li>
               <li>
                 <label for="form-w-company" class="">会社名</label>
-                <p id="form-w-company">SUGIYAMA DESIGN</p>
+                <div><input id="form-w-company" name="会社名" type="text" class=" mfp_element_text mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_会社名" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-w-tel" class="required">電話番号</label>
-                <p id="form-w-tel">03-6876-9994</p>
+                <div>
+                  <input id="form-w-tel" name="電話番号" type="tel" class=" mfp_element_tel mfp_element_all" data-exc="1">
+                  <p class="notice">※日中ご連絡の取りやすい番号を入力してください。</p>
+                <div class="mfp_err" id="errormsg_電話番号" style="display: none;">電話番号が入力されていません。</div></div>
               </li>
               <li>
                 <label for="form-w-email" class="required">メールアドレス</label>
-                <p id="form-w-email">junya@sugiyamadesign.jp</p>
+                <div><input id="form-w-email" name="email" type="email" class=" mfp_element_email mfp_element_all" data-exc="1"><div class="mfp_err" id="errormsg_email" style="display: none;">メールアドレスが入力されていません。</div></div>
               </li>
             </ul>
 
@@ -132,56 +138,275 @@
             <ul>
               <li>
                 <label for="form-w-type" class="required">サイト種類</label>
-                <p id="form-w-type">コーポレートサイト</p>
+                <div>
+                  <select name="サイト種類" id="form-w-type" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="コーポレートサイト">コーポレートサイト</option>
+                    <option value="採用サイト">採用サイト</option>
+                    <option value="サービスサイト">サービスサイト</option>
+                    <option value="店舗サイト">店舗サイト</option>
+                    <option value="ポートフォリオサイト">ポートフォリオサイト</option>
+                    <option value="ECサイト">ECサイト</option>
+                    <option value="LPサイト">LPサイト</option>
+                    <option value="特設サイト">特設サイト</option>
+                    <option value="その">その他</option>
+                  </select>
+                <div class="mfp_err" id="errormsg_サイト種類" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-w-original" class="required">テンプレート利用の有無</label>
-                <p id="form-w-original">オリジナルデザインを希望</p>
+                <div>
+                  <select name="テンプレート利用の有無" id="form-w-original" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="オリジナルデザインを希望">オリジナルデザインを希望</option>
+                    <option value="テンプレート利用のカスタムデザイン（安価）">テンプレート利用のカスタムデザインを希望（安価）</option>
+                    </select>
+                <div class="mfp_err" id="errormsg_テンプレート利用の有無" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-w-volume" class="required">想定ページ数</label>
-                <p id="form-w-volume">15P</p>
+                <div>
+                  <select name="想定ページ数" id="form-w-volume" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="未定">未定</option>
+                    <option value="1P">1P</option>
+                    <option value="2P">2P</option>
+                    <option value="3P">3P</option>
+                    <option value="4P">4P</option>
+                    <option value="5p">5p</option>
+                    <option value="〜10P">〜10P</option>
+                    <option value="〜15P">〜15P</option>
+                    <option value="〜20P">〜20P</option>
+                    <option value="〜30p">〜30p</option>
+                    <option value="その他">その他</option>
+                  </select>
+                <div class="mfp_err" id="errormsg_想定ページ数" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-w-schedule" class="required">サイト公開までの日時</label>
-                <p id="form-w-schedule">3ヶ月以内</p>
+                <div>
+                  <select name="サイト公開までの日時" id="form-w-schedule" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="未定">未定</option>
+                    <option value="3週間以内">3週間以内</option>
+                    <option value="1ヶ月以内">1ヶ月以内</option>
+                    <option value="2ヶ月以内">2ヶ月以内</option>
+                    <option value="3ヶ月以内">3ヶ月以内</option>
+                    <option value="4ヶ月以内">4ヶ月以内</option>
+                    <option value="5ヶ月以内">5ヶ月以内</option>
+                    <option value="6ヶ月以内">6ヶ月以内</option>
+                    <option value="1年以内">1年以内</option>
+                  </select>
+                <div class="mfp_err" id="errormsg_サイト公開までの日時" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-w-budget" class="required">ご予算</label>
-                <p id="form-w-budget">100万円</p>
+                <div>
+                  <select name="ご予算" id="form-w-budget" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="未定">未定</option>
+                    <option value="20万">15万</option>
+                    <option value="20万">20万</option>
+                    <option value="30万">30万</option>
+                    <option value="40万">40万</option>
+                    <option value="50万">50万</option>
+                    <option value="60万">60万</option>
+                    <option value="70万">70万</option>
+                    <option value="80万">80万</option>
+                    <option value="90万">90万</option>
+                    <option value="100万">100万</option>
+                    <option value="〜200万">〜200万</option>
+                    <option value="〜300万">〜300万</option>
+                    <option value="〜500万">〜500万</option>
+                    <option value="〜1000万">〜1000万</option>
+                  </select>
+                  <p class="notice">※ご予算内で制作可能な内容をご提案いたします。<br>
+                  　決まっていない場合は「未定」を選択してください。</p>
+                <div class="mfp_err" id="errormsg_ご予算" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-w-photo" class="required">写真撮影・イラスト</label>
-                <p id="form-w-photo">写真撮影を依頼したい</p>
+                <div>
+                  <select name="写真撮影・イラスト" id="form-w-photo" class=" mfp_element_select-one mfp_element_all" data-exc="1">
+                    <option value="" disabled="" selected="">選択肢を表示</option>
+                    <option value="不要">不要</option>
+                    <option value="写真撮影を依頼したい">写真撮影を依頼したい</option>
+                    <option value="イラスト制作を依頼したい">イラスト制作を依頼したい</option>
+                    <option value="写真とイラストを依頼したい">写真とイラストを依頼したい</option>
+                    <option value="その他">その他</option>
+                  </select>
+                <div class="mfp_err" id="errormsg_写真撮影・イラスト" style="display: none;"></div></div>
               </li>
               <li>
                 <label for="form-w-detail" class="required">想定しているホームページの<br>詳細をお聞かせください</label>
-                <p id="form-w-detail">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストキスト</p>
+                <div>
+                  <textarea id="form-w-detail" name="想定しているホームページの詳細" class=" mfp_element_textarea mfp_element_all" data-exc="1"></textarea>
+                <div class="mfp_err" id="errormsg_想定しているホームページの詳細" style="display: none;">想定しているホームページの詳細が入力されていません。</div></div>
               </li>
               <li>
-                <label for="form-w-url" class="required">現状ホームページのURL</label>
-                <p id="form-w-url">https://sugiyamadesign.jp/</p>
+                <label for="form-w-url">現状WebサイトのURL</label>
+                <div>
+                  <input id="form-w-url" name="現状WebサイトのURL" type="text" class=" mfp_element_text mfp_element_all" data-exc="1">
+                  <p class="notice">※「https://」以降よりご記入ください。<br>
+                  ※新規ご依頼の際は「新規」とご記入ください。</p>
+                <div class="mfp_err" id="errormsg_現状WebサイトのURL" style="display: none;"></div></div>
               </li>
             </ul>
 
             <h3>運営プラン</h3>
-            <ul>
+            <p>運営に掛かる月額プランになります。こちらのご利用は任意です。</p>
+            <table class="table-plan">
+              <tbody><tr>
+                <th>エコノミー</th>
+                <th>ベーシック</th>
+                <th>ビジネス</th>
+              </tr>
+              <tr>
+                <td colspan="3" class="th2">法人のお客さま</td>
+              </tr>
+              <tr class="price">
+                <td>
+                  <span>¥ 10,000-</span>
+                  <input id="form-w-plan1" name="運営プラン" value="法人のお客さま エコノミー ¥ 10,000-" type="radio" class=" mfp_element_radio mfp_element_all" data-exc="1"><input type="hidden" name="mfp_運営プラン_checkobj" id="mfp_運営プラン_checkobj" value="1" class=" mfp_element_hidden mfp_element_all" data-exc="1"><label for="form-w-plan1">選択</label>
+                <div class="mfp_err" id="errormsg_運営プラン" style="display: none;"></div><div class="mfp_err" id="errormsg_mfp_運営プラン_checkobj"></div></td>
+                <td>
+                  <span>¥ 30,000-</span>
+                  <input id="form-w-plan2" name="運営プラン" value="法人のお客さま ベーシック ¥ 29,800-" type="radio" class=" mfp_element_radio mfp_element_all" data-exc="1"><label for="form-w-plan2">選択</label>
+                </td>
+                <td>
+                  <span>¥ 50,000-</span>
+                  <input id="form-w-plan3" name="運営プラン" value="法人のお客さま ビジネス ¥ 49,800-" type="radio" class=" mfp_element_radio mfp_element_all" data-exc="1"><label for="form-w-plan3">選択</label>
+                </td>
+              </tr>
+              <tr class="desc">
+                <td>
+                  更新システム機能（SUGIYAMA CMS）<br>
+                  Webサーバー 3GB<br>
+                  メールサーバ10GB（アカウント無制限）<br>
+                  常時SSL　無料<br>
+                  独自ドメイン　初年度無料<br>
+                  サーバー障害チェック<br>
+                  メールサポート
+                </td>
+                <td>
+                  更新システム機能（SUGIYAMA CMS）<br>
+                  Webサーバー 3GB<br>
+                  メールサーバ10GB（アカウント無制限）<br>
+                  常時SSL証明書用CSR発行<br>
+                  独自ドメイン　初年度無料<br>
+                  サーバー障害チェック<br>
+                  バックアップ<br>
+                  更新サポート　月1回<br>
+                  メール・電話サポート
+                </td>
+                <td>
+                  更新システム機能（SUGIYAMA CMS）<br>
+                  Webサーバー 3GB<br>
+                  メールサーバ10GB（アカウント無制限）<br>
+                  常時SSL証明書用CSR発行<br>
+                  独自ドメイン　初年度無料<br>
+                  サーバー障害チェック<br>
+                  バックアップ<br>
+                  更新サポート　月2回<br>
+                  メール・電話サポート
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" class="th2">個人事業主のお客さま</td>
+              </tr>
+              <tr class="price">
+                <td>
+                  <span>¥ 5,000-</span>
+                  <input id="form-w-plan4" name="運営プラン" value="個人事業主のお客さま エコノミー ¥ 5,480-" type="radio" class=" mfp_element_radio mfp_element_all" data-exc="1"><label for="form-w-plan4">選択</label>
+                </td>
+                <td>
+                  <span>¥ 15,000-</span>
+                  <input id="form-w-plan5" name="運営プラン" value="個人事業主のお客さま ベーシック ¥ 14,800-" type="radio" class=" mfp_element_radio mfp_element_all" data-exc="1"><label for="form-w-plan5">選択</label>
+                </td>
+                <td>
+                  <span>¥ 30,000-</span>
+                  <input id="form-w-plan6" name="運営プラン" value="個人事業主のお客さま ビジネス ¥ 29,800-" type="radio" class=" mfp_element_radio mfp_element_all" data-exc="1"><label for="form-w-plan6">選択</label>
+                </td>
+              </tr>
+              <tr class="desc">
+                <td>
+                  更新システム機能（SUGIYAMA CMS）<br>
+                  Webサーバー 3GB<br>
+                  メールサーバ10GB（アカウント無制限）<br>
+                  常時SSL　無料<br>
+                  独自ドメイン　初年度無料<br>
+                  サーバー障害チェック<br>
+                  メールサポート
+                </td>
+                <td>
+                  更新システム機能（SUGIYAMA CMS）<br>
+                  Webサーバー 3GB<br>
+                  メールサーバ10GB（アカウント無制限）<br>
+                  常時SSL　無料<br>
+                  独自ドメイン　初年度無料<br>
+                  サーバー障害チェック<br>
+                  バックアップ<br>
+                  更新サポート　月1回<br>
+                  メール・電話サポート
+                </td>
+                <td>
+                  更新システム機能（SUGIYAMA CMS）<br>
+                  Webサーバー 3GB<br>
+                  メールサーバ10GB（アカウント無制限）<br>
+                  常時SSL証明書用CSR発行<br>
+                  独自ドメイン　初年度無料<br>
+                  サーバー障害チェック<br>
+                  バックアップ<br>
+                  更新サポート　月2回<br>
+                  メール・電話サポート
+                </td>
+              </tr>
+            </tbody></table>
+            <p class="notice">
+              ※ 料金・内容等は予告なく改定する場合がございますので、あらかじめご了承ください。<br>
+              ※ 表示価格は税抜です。
+            </p>
+
+            <ul class="option-web">
               <li>
-                <label for="form-w-plan" class="">選択プラン</label>
-                <p id="form-w-plan">ベーシック（法人プラン）<br>¥29,800- (税抜) / 月額</p>
-              </li>
-              <li>
-                <label for="form-w-option" class="">運用追加オプション</label>
-                <p id="form-w-option">アクセス解析レポート<br>¥ 3,000- (税抜) / 月額</p>
+                <label>運用追加オプション<br><span>※複数選択可能</span></label>
+                <ul>
+                  <li>
+                    <input id="form-w-option1" name="運用追加オプション" value="アクセス解析レポート" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><input type="hidden" name="mfp_運用追加オプション_checkobj" id="mfp_運用追加オプション_checkobj" value="1" class=" mfp_element_hidden mfp_element_all" data-exc="1"><label for="form-w-option1">アクセス解析レポート　¥ 3,000(税抜) / 月額</label>
+                  <div class="mfp_err" id="errormsg_運用追加オプション" style="display: none;"></div><div class="mfp_err" id="errormsg_mfp_運用追加オプション_checkobj"></div></li>
+                  <li>
+                    <input id="form-w-option2" name="運用追加オプション" value="SSL証明書用CSR発行" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><label for="form-w-option2">SSL証明書用CSR発行　¥10,000〜</label>
+                  </li>
+                  <li>
+                    <input id="form-w-option3" name="運用追加オプション" value="リスティング広告" type="checkbox" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><label for="form-w-option3">リスティング広告（最低 ¥100,000〜）</label>
+                  </li>
+                </ul>
               </li>
             </ul>
 
+            <label for="form-w-privacy" class="privacy-label">個人情報保護方針</label>
+            <textarea id="form-w-privacy" class="privacy-area mfp_element_textarea mfp_element_all" readonly="">SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり、個人情報保護の重要性を認識し、以下の方針に基づき個人情報の保護に努めてまいります。
+
+個人情報保護に関する法令やその他の規範を遵守し、個人情報を適正に取り扱います。
+適切かつ適正な方法により個人情報を取得し、偽りその他不正な手段による取得は致しません。
+個人情報の所有者本人の同意を得た目的の範囲でのみこれを利用致します。
+個人情報を所有者本人の同意を得ずに第三者に提供致しません。
+法令で定める開示請求等手続に関して、適切かつ迅速に対応致します。</textarea>
+            <p class="notice">※個人情報保護に対する取り組みは「Privacy Policy」を必ずご確認ください。</p>
             <div class="submit">
-              <input type="submit" value="送信する" class="btn-black"><br>
-              <span class="back-arrow"><input type="button" value="戻る" onClick="history.back()"></span>
+              <div>
+                <input id="form-w-check" name="個人情報の取り扱いについて" type="checkbox" data-post-disable="1" class=" mfp_element_checkbox mfp_element_all" data-exc="1"><input type="hidden" name="mfp_個人情報の取り扱いについて_checkobj" id="mfp_個人情報の取り扱いについて_checkobj" value="1" class=" mfp_element_hidden mfp_element_all" data-exc="1">
+                <label for="form-w-check">個人情報の取り扱いについて、上記事項に同意の上送信します。</label>
+                <div id="errormsg_個人情報の取り扱いについて" class="mfp_err" style="display: none;">個人情報の取り扱いについてがチェックされていません。</div>
+              <div class="mfp_err" id="errormsg_mfp_個人情報の取り扱いについて_checkobj"></div></div>
+
+              <input type="submit" value="確認画面" class="btn-black mfp_element_submit mfp_element_all">
             </div>
           </form>
-
+          <script type="text/javascript" id="mfpjs" src="mailformpro/mailformpro.cgi" charset="UTF-8"></script>
+<!--/メールフォームプロ-->
+        </div>
+        
         </div>
       </div>
     </section>    <!-- contact -->

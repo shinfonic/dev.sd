@@ -101,13 +101,10 @@
         <div class="p-contact-box">
           <!--メールフォームプロ-->
           <form id="mailformpro" action="mailformpro/mailformpro.cgi" method="POST">
-            <h2>見積もり依頼　Web制作</h2>
+            <h2>見積もり依頼<br class="spOnly"><span class="spNone">　</span>Web制作</h2>
             <p>
-              この度は、ご検討いただきありがとうございます。<br>
-              以下をご記入いただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
-              ご不明の場合は<a href="index.html" class="a-textline">お問い合わせフォーム</a>よりご相談ください。<br>
-              <a href="/price/" target="_blank" class="btn-estimate">料金表</a>
-              <a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
+              この度は、ご検討いただきありがとうございます。<br class="spNone">以下をご記入いただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
+              <a href="/price/" target="_blank" class="btn-estimate">料金表</a><a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
             </p>
             <h3>基本情報</h3>
             <ul>
@@ -136,7 +133,7 @@
               </li>
             </ul>
 
-            <h3>想定しているホームページ</h3>
+            <h3 class="ls-0">想定しているホームページ</h3>
             <ul>
               <li>
                 <label for="form-w-type" class="required">サイト種類</label>
@@ -155,7 +152,7 @@
                   </select>
                 </div>
               </li>
-              <li>
+              <!-- <li>
                 <label for="form-w-original" class="required">テンプレート利用の有無</label>
                 <div>
                   <select name="テンプレート利用の有無" id="form-w-original" required="required">
@@ -164,7 +161,7 @@
                     <option value="テンプレート利用のカスタムデザイン（安価）">テンプレート利用のカスタムデザインを希望（安価）</option>
                     </select>
                 </div>
-              </li>
+              </li> -->
               <li>
                 <label for="form-w-volume" class="required">想定ページ数</label>
                 <div>
@@ -222,8 +219,7 @@
                     <option value="〜500万">〜500万</option>
                     <option value="〜1000万">〜1000万</option>
                   </select>
-                  <p class="notice">※ご予算内で制作可能な内容をご提案いたします。<br>
-                  　決まっていない場合は「未定」を選択してください。</p>
+                  <p class="notice">※ご予算内で制作可能な内容をご提案いたします。<span class="spNone"><br>　</span>決まっていない場合は「未定」を選択してください。</p>
                 </div>
               </li>
               <li>
@@ -240,13 +236,13 @@
                 </div>
               </li>
               <li>
-                <label for="form-w-detail" class="required">想定しているホームページの<br>詳細をお聞かせください</label>
+                <label for="form-w-detail" class="required">想定しているホームページの<br class="spNone">詳細をお聞かせください</label>
                 <div>
                   <textarea id="form-w-detail" name="想定しているホームページの詳細" required="required"></textarea>
                 </div>
               </li>
               <li>
-                <label for="form-w-url">現状WebサイトのURL</label>
+                <label for="form-w-url">現状ホームページのURL</label>
                 <div>
                   <input id="form-w-url" name="現状WebサイトのURL" type="text">
                   <p class="notice">※「https://」以降よりご記入ください。<br>
@@ -257,6 +253,8 @@
 
             <h3>運営プラン</h3>
             <p>運営に掛かる月額プランになります。こちらのご利用は任意です。</p>
+            <div class="wrap2">
+            <div class="wrap">
             <table class="table-plan">
               <tr>
                 <th>エコノミー</th>
@@ -268,15 +266,15 @@
               </tr>
               <tr class="price">
                 <td>
-                  <span>¥ 12,800-</span>
+                  10,000円<span>(税込)</span><br class="spNone">
                   <input id="form-w-plan1" name="運営プラン" value="法人のお客さま エコノミー ¥ 12,800-" type="radio"><label for="form-w-plan1">選択</label>
                 </td>
                 <td>
-                  <span>¥ 29,800-</span>
+                  20,000円<span>(税込)</span><br class="spNone">
                   <input id="form-w-plan2" name="運営プラン" value="法人のお客さま ベーシック ¥ 29,800-" type="radio"><label for="form-w-plan2">選択</label>
                 </td>
                 <td>
-                  <span>¥ 49,800-</span>
+                  50,000円<span>(税込)</span><br class="spNone">
                   <input id="form-w-plan3" name="運営プラン" value="法人のお客さま ビジネス ¥ 49,800-" type="radio"><label for="form-w-plan3">選択</label>
                 </td>
               </tr>
@@ -318,15 +316,15 @@
               </tr>
               <tr class="price">
                 <td>
-                  <span>¥ 5,480-</span>
+                  5,000円<span>(税込)</span><br class="spNone">
                   <input id="form-w-plan4" name="運営プラン" value="個人事業主のお客さま エコノミー ¥ 5,480-" type="radio"><label for="form-w-plan4">選択</label>
                 </td>
                 <td>
-                  <span>¥ 14,800-</span>
+                  10,000円<span>(税込)</span><br class="spNone">
                   <input id="form-w-plan5" name="運営プラン" value="個人事業主のお客さま ベーシック ¥ 14,800-" type="radio"><label for="form-w-plan5">選択</label>
                 </td>
                 <td>
-                  <span>¥ 29,800-</span>
+                  30,000円<span>(税込)</span><br class="spNone">
                   <input id="form-w-plan6" name="運営プラン" value="個人事業主のお客さま ビジネス ¥ 29,800-" type="radio"><label for="form-w-plan6">選択</label>
                 </td>
               </tr>
@@ -364,30 +362,33 @@
                 </td>
               </tr>
             </table>
+            </div>
+            </div>
             <p class="notice">
-              ※ 料金・内容等は予告なく改定する場合がございますので、あらかじめご了承ください。<br>
-              ※ 表示価格は税抜です。
+              ※ 料金・内容等は予告なく改定する場合がございますのであらかじめご了承ください。<br>
+              ※1 ドメイン月額料金の3,000円までのものが無料になります。<br>
+              ※2 更新作業の分量は予めご相談の上決定させていただきます。
             </p>
 
             <ul class="option-web">
               <li>
-                <label>運用追加オプション<br><span>※複数選択可能</span></label>
+                <label>運営追加オプション<br><span>※複数選択可能</span></label>
                 <ul>
                   <li>
-                    <input id="form-w-option1" name="運用追加オプション" value="アクセス解析レポート" type="checkbox"><label for="form-w-option1">アクセス解析レポート　¥ 3,000(税抜) / 月額</label>
+                    <input id="form-w-option1" name="運営追加オプション" value="アクセス解析レポート" type="checkbox"><label for="form-w-option1">アクセス解析レポート　<br class="spOnly">¥3,000(税抜) / 月額</label>
                   </li>
                   <li>
-                    <input id="form-w-option2" name="運用追加オプション" value="SSL証明書用CSR発行" type="checkbox"><label for="form-w-option2">SSL証明書用CSR発行　¥10,000〜</label>
+                    <input id="form-w-option2" name="運営追加オプション" value="SSL証明書用CSR発行" type="checkbox"><label for="form-w-option2">SSL証明書用CSR発行　<br class="spOnly">¥10,000〜</label>
                   </li>
                   <li>
-                    <input id="form-w-option3" name="運用追加オプション" value="リスティング広告" type="checkbox"><label for="form-w-option3">リスティング広告（最低 ¥100,000〜）</label>
+                    <input id="form-w-option3" name="運営追加オプション" value="リスティング広告" type="checkbox"><label for="form-w-option3">リスティング広告 <br class="spOnly">（最低 ¥100,000〜）</label>
                   </li>
                 </ul>
               </li>
             </ul>
 
             <label for="form-w-privacy" class="privacy-label">個人情報保護方針</label>
-            <textarea id="form-w-privacy" class="privacy-area" readonly>
+            <textarea id="form-w-privacy" class="privacy-area" disabled>
 SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり、個人情報保護の重要性を認識し、以下の方針に基づき個人情報の保護に努めてまいります。
 
 個人情報保護に関する法令やその他の規範を遵守し、個人情報を適正に取り扱います。

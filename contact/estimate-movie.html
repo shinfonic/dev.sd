@@ -102,13 +102,10 @@
         <div class="p-contact-box">
           <!--メールフォームプロ-->
           <form id="mailformpro" action="mailformpro/mailformpro.cgi" method="POST">
-            <h2>見積もり依頼　映像制作</h2>
+            <h2>見積もり依頼<br class="spOnly"><span class="spNone">　</span>映像制作</h2>
             <p>
-              この度は、ご検討いただきありがとうございます。<br>
-              以下をご記入いただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
-              ご不明の場合は<a href="index.html" class="a-textline">お問い合わせフォーム</a>よりご相談ください。<br>
-              <a href="/price/" target="_blank" class="btn-estimate">料金表</a>
-              <a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
+              この度は、ご検討いただきありがとうございます。<br class="spNone">以下をご記入いただきお送りください。<span class="color-red">料金表、FAQ</span>もご参考にしてください。<br>
+              <a href="/price/" target="_blank" class="btn-estimate">料金表</a><a href="/faq/" target="_blank" class="btn-estimate">FAQ</a>
             </p>
 
             <h3>基本情報</h3>
@@ -223,16 +220,15 @@
                     <option value="〜500万">〜500万</option>
                     <option value="〜1000万">〜1000万</option>
                   </select>
-                  <p class="notice">※ご予算内で制作可能な内容をご提案いたします。<br>
-                    　決まっていない場合は「未定」を選択してください。</p>
+                  <p class="notice">※ご予算内で制作可能な内容をご提案いたします。<span class="spNone"><br>　</span>決まっていない場合は「未定」を選択してください。</p>
                 </div>
               </li>
               <li>
-                <label for="form-m-detail" class="required">想定している映像制作の<br>詳細をお聞かせください</label>
+                <label for="form-m-detail" class="required">想定している映像制作の<br class="spNone">詳細をお聞かせください</label>
                 <div><textarea id="form-m-detail" name="想定している映像制作の詳細" required="required"></textarea></div>
               </li>
               <li>
-                <label>制作追加オプション</span><br><span>※複数選択可能</label>
+                <label>制作追加オプション<br><span>※複数選択可能</span></label>
                 <div>
                   <ul class="option-movie">
                     <li>
@@ -246,9 +242,6 @@
                     </li>
                     <li>
                       <input id="form-m-option4" name="制作追加オプション" value="テロップ" type="checkbox"><label for="form-m-option4">テロップ</label>
-                    </li>
-                    <li>
-                      <input id="form-m-option5" name="制作追加オプション" value="BGM" type="checkbox"><label for="form-m-option5">BGM</label>
                     </li>
                     <li>
                       <input id="form-m-option6" name="制作追加オプション" value="作曲" type="checkbox"><label for="form-m-option6">作曲</label>
@@ -269,7 +262,7 @@
             </ul>
 
             <label for="form-m-privacy" class="privacy-label">個人情報保護方針</label>
-            <textarea id="form-m-privacy" class="privacy-area" readonly>
+            <textarea id="form-m-privacy" class="privacy-area" disabled>
 SUGIYAMA DESIGNは、個人情報の取得・利用・管理などに当たり、個人情報保護の重要性を認識し、以下の方針に基づき個人情報の保護に努めてまいります。
 
 個人情報保護に関する法令やその他の規範を遵守し、個人情報を適正に取り扱います。
