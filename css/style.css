@@ -1040,16 +1040,6 @@ ul {
   opacity: 1;
   transform: translate(0, 0); }
 
-.cont-fade {
-  opacity: 0;
-  transition: all .5s ease; }
-  .cont-fade.show {
-    opacity: 1;
-    transform: none; }
-
-.cont-fade.slide-up {
-  transform: translate(0, 100px); }
-
 #pagetop {
   position: absolute;
   right: 0;
@@ -1818,7 +1808,7 @@ footer {
     font-size: 15px;
     letter-spacing: 0.23em; }
 #p-faq section:nth-last-of-type(2) {
-  padding-bottom: 120px; }
+  padding-bottom: 80px; }
 #p-faq .faq-sec {
   padding-bottom: 68px; }
   #p-faq .faq-sec h2 {
@@ -2243,6 +2233,7 @@ a .works-view-text p {
             font-size: 13px;
             cursor: pointer;
             box-sizing: border-box;
+            background-color: #fff;
             background-image: linear-gradient(45deg, transparent 50%, #9c9c9c 50%), linear-gradient(135deg, #9c9c9c 50%, transparent 50%);
             background-position: calc(100% - 25px) 20px, calc(100% - 19px) 20px;
             background-size: 6px 6px, 6px 6px;
@@ -2347,6 +2338,8 @@ a .works-view-text p {
         -moz-appearance: none;
         appearance: none;
         border-radius: 0; }
+      #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box select::-ms-expand {
+        display: none; }
       #p-contact #p-contact-sec .p-contact-sec-inner .p-contact-box textarea:disabled {
         background-color: #fff;
         color: #000;
@@ -3948,9 +3941,12 @@ a .works-view-text p {
     padding-right: 10px; }
 
   #p-faq .faq-title {
-    padding-top: 0; }
+    padding-top: 0;
+    padding-bottom: 0; }
+    #p-faq .faq-title p {
+      margin-bottom: 0; }
   #p-faq .faq-sec {
-    padding-top: 20px; }
+    padding-bottom: 25px; }
     #p-faq .faq-sec h2 {
       margin-bottom: 30px; }
     #p-faq .faq-sec .faq-block {
