@@ -1594,12 +1594,14 @@ section {
   background-color: #fff; }
   #p-top #news ul li {
     font-size: 14px;
+    letter-spacing: 0.18em;
     padding: 10px 0 11px;
     position: relative; }
     #p-top #news ul li a {
       letter-spacing: 0.18em; }
       #p-top #news ul li a:hover {
-        color: #000; }
+        color: #000;
+        text-decoration: underline; }
     #p-top #news ul li::after {
       content: "";
       height: 1px;
